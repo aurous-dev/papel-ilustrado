@@ -1,0 +1,20 @@
+### Wordpress config file
+wp-config.php
+
+### Wordpress uploads folder
+/wp-content/uploads/*
+
+### Wordpress snapshots folder
+wp-snapshots
+
+### Sass cache folder
+/wp-content/themes/base-theme/.sass-cache/*
+
+### Node modules
+node_modules
+
+### Miscellaneous
+wp-content/plugins/.DS_Store
+.DS_Store
+Thumbs.db
+.htaccess

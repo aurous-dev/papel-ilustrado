@@ -1,0 +1,57 @@
+{
+  "name": "wp-base",
+  "version": "1.0.0",
+  "description": "This is a base WP installation theme, with custom plugins inside to work with.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --watch --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erasmoh/wp-base.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erasmoh/wp-base/issues"
+  },
+  "homepage": "https://github.com/erasmoh/wp-base#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "babel-preset-env": "^1.7.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-notifier": "^7.0.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.0",
+    "vue-button-spinner": "^2.2.1",
+    "vue-loader": "^15.9.3",
+    "vue-recaptcha-v3": "^1.9.0",
+    "vue-sweetalert2": "^3.0.6",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-messages": "^2.0.4",
+    "webpack-notifier": "^1.8.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "babel-loader": "^8.1.0",
+    "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
+    "popper.js": "^1.16.1",
+    "resolve-url-loader": "^3.1.1",
+    "sass-loader": "^8.0.2",
+    "slick-carousel": "^1.8.1",
+    "url-loader": "^4.1.0",
+    "vee-validate": "^2.1.7",
+    "vue": "^2.6.11",
+    "vue-router": "^3.3.4",
+    "webpack-mix": "^3.0.0"
+  }
+}

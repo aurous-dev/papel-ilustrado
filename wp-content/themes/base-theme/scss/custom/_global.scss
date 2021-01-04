@@ -1,0 +1,24 @@
+body {
+    color: #bdc3c7;
+}
+i {
+    color:#2ecc71;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+#app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*-------------------------------------------*\
+
+🚫 ¡ Don't DELETE THIS .grecaptcha-badge ! 🚫
+👉 This code is hiding the recaptcha badge 👈
+\*-------------------------------------------*/
+
+.grecaptcha-badge {
+    display: none !important;
+}
