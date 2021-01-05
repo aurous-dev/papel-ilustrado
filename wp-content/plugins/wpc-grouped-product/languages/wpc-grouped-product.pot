@@ -1,0 +1,424 @@
+# Copyright (C) 2020 WPClever.net
+# This file is distributed under the same license as the WPC Grouped Product for WooCommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPC Grouped Product for WooCommerce 2.2.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpc-grouped-product\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-12-11T02:35:19+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.2.0\n"
+"X-Domain: wpc-grouped-product\n"
+
+#. Plugin Name of the plugin
+msgid "WPC Grouped Product for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wpclever.net/"
+msgstr ""
+
+#. Description of the plugin
+msgid "WPC Grouped Product helps you made up standalone products that are presented as a group."
+msgstr ""
+
+#. Author of the plugin
+msgid "WPClever.net"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://wpclever.net"
+msgstr ""
+
+#: wpc-grouped-product.php:65
+#: wpc-grouped-product.php:475
+#: wpc-grouped-product.php:644
+msgid "Select options"
+msgstr ""
+
+#: wpc-grouped-product.php:71
+#: wpc-grouped-product.php:481
+msgid "Read more"
+msgstr ""
+
+#: wpc-grouped-product.php:82
+#: wpc-grouped-product.php:492
+#: wpc-grouped-product.php:645
+msgid "Add to cart"
+msgstr ""
+
+#: wpc-grouped-product.php:204
+msgid "WPC Grouped Product"
+msgstr ""
+
+#: wpc-grouped-product.php:204
+msgid "Grouped Product"
+msgstr ""
+
+#: wpc-grouped-product.php:223
+msgid "Reviews"
+msgstr ""
+
+#: wpc-grouped-product.php:225
+msgid "Changelog"
+msgstr ""
+
+#: wpc-grouped-product.php:227
+msgid "Discussion"
+msgstr ""
+
+#: wpc-grouped-product.php:234
+msgid "How to use?"
+msgstr ""
+
+#: wpc-grouped-product.php:238
+#: wpc-grouped-product.php:682
+msgid "Settings"
+msgstr ""
+
+#: wpc-grouped-product.php:243
+#: wpc-grouped-product.php:683
+msgid "Premium Version"
+msgstr ""
+
+#: wpc-grouped-product.php:247
+msgid "Essential Kit"
+msgstr ""
+
+#: wpc-grouped-product.php:255
+msgid "When creating the product, please choose product data is \"Smart grouped\" then you can see the search field to start search and add products."
+msgstr ""
+
+#: wpc-grouped-product.php:267
+msgid "General"
+msgstr ""
+
+#: wpc-grouped-product.php:271
+msgid "Price format"
+msgstr ""
+
+#: wpc-grouped-product.php:274
+msgid "Normal price"
+msgstr ""
+
+#: wpc-grouped-product.php:275
+msgid "From price"
+msgstr ""
+
+#: wpc-grouped-product.php:276
+msgid "None"
+msgstr ""
+
+#: wpc-grouped-product.php:279
+msgid "Choose the price format for grouped product on the shop page."
+msgstr ""
+
+#: wpc-grouped-product.php:285
+#: wpc-grouped-product.php:942
+msgid "Grouped products"
+msgstr ""
+
+#: wpc-grouped-product.php:289
+msgid "Position"
+msgstr ""
+
+#: wpc-grouped-product.php:294
+msgid "Above add to cart button"
+msgstr ""
+
+#: wpc-grouped-product.php:298
+msgid "Under add to cart button"
+msgstr ""
+
+#: wpc-grouped-product.php:302
+msgid "In a new tab"
+msgstr ""
+
+#: wpc-grouped-product.php:305
+msgid "Choose the position to show the grouped product list."
+msgstr ""
+
+#: wpc-grouped-product.php:310
+msgid "Variations selector"
+msgstr ""
+
+#: wpc-grouped-product.php:315
+msgid "Default"
+msgstr ""
+
+#: wpc-grouped-product.php:319
+msgid "Use WPC Variations Radio Buttons"
+msgstr ""
+
+#: wpc-grouped-product.php:328
+msgid "Show thumbnail"
+msgstr ""
+
+#: wpc-grouped-product.php:333
+#: wpc-grouped-product.php:348
+#: wpc-grouped-product.php:363
+#: wpc-grouped-product.php:378
+#: wpc-grouped-product.php:419
+#: wpc-grouped-product.php:437
+#: wpc-grouped-product.php:506
+#: wpc-grouped-product.php:535
+#: wpc-grouped-product.php:550
+#: wpc-grouped-product.php:566
+#: wpc-grouped-product.php:582
+#: wpc-grouped-product.php:598
+msgid "Yes"
+msgstr ""
+
+#: wpc-grouped-product.php:337
+#: wpc-grouped-product.php:352
+#: wpc-grouped-product.php:367
+#: wpc-grouped-product.php:382
+#: wpc-grouped-product.php:406
+#: wpc-grouped-product.php:423
+#: wpc-grouped-product.php:445
+#: wpc-grouped-product.php:510
+#: wpc-grouped-product.php:539
+#: wpc-grouped-product.php:554
+#: wpc-grouped-product.php:570
+#: wpc-grouped-product.php:586
+#: wpc-grouped-product.php:602
+msgid "No"
+msgstr ""
+
+#: wpc-grouped-product.php:343
+msgid "Show short description"
+msgstr ""
+
+#: wpc-grouped-product.php:358
+msgid "Show price"
+msgstr ""
+
+#: wpc-grouped-product.php:373
+msgid "Show plus/minus button"
+msgstr ""
+
+#: wpc-grouped-product.php:385
+msgid "Show the plus/minus button to increase/decrease the quantity."
+msgstr ""
+
+#: wpc-grouped-product.php:389
+msgid "Link to individual product"
+msgstr ""
+
+#: wpc-grouped-product.php:394
+msgid "Yes, open in the same tab"
+msgstr ""
+
+#: wpc-grouped-product.php:398
+msgid "Yes, open in the new tab"
+msgstr ""
+
+#: wpc-grouped-product.php:402
+msgid "Yes, open quick view popup"
+msgstr ""
+
+#: wpc-grouped-product.php:414
+msgid "Change image"
+msgstr ""
+
+#: wpc-grouped-product.php:427
+msgid "Change the main product image when choosing the variation of grouped product."
+msgstr ""
+
+#: wpc-grouped-product.php:432
+msgid "Change price"
+msgstr ""
+
+#: wpc-grouped-product.php:441
+msgid "Yes, custom selector"
+msgstr ""
+
+#: wpc-grouped-product.php:451
+msgid "Change the main product price when choosing the variation of grouped product. It uses JavaScript to change product price so it is very dependent on theme’s HTML. If it cannot find and update the product price, please contact us and we can help you adjust the JS file."
+msgstr ""
+
+#: wpc-grouped-product.php:456
+msgid "Total text"
+msgstr ""
+
+#: wpc-grouped-product.php:459
+msgid "Total:"
+msgstr ""
+
+#: wpc-grouped-product.php:464
+msgid "\"Add to cart\" button labels"
+msgstr ""
+
+#: wpc-grouped-product.php:467
+msgid "Leave blank if you want to use the default text and can be translated."
+msgstr ""
+
+#: wpc-grouped-product.php:471
+msgid "Archive/shop page"
+msgstr ""
+
+#: wpc-grouped-product.php:477
+msgid "For purchasable grouped."
+msgstr ""
+
+#: wpc-grouped-product.php:483
+msgid "For un-purchasable grouped."
+msgstr ""
+
+#: wpc-grouped-product.php:488
+msgid "Single product page"
+msgstr ""
+
+#: wpc-grouped-product.php:497
+msgid "Cart & Checkout"
+msgstr ""
+
+#: wpc-grouped-product.php:501
+msgid "Including main product"
+msgstr ""
+
+#: wpc-grouped-product.php:513
+msgid "Including the main product on the cart with the price is zero. Helpful when you need to add some extra options for the main product or make it work with WPC Bought Together."
+msgstr ""
+
+#: wpc-grouped-product.php:518
+#: wpc-grouped-product.php:968
+msgid "Search"
+msgstr ""
+
+#: wpc-grouped-product.php:522
+msgid "Search limit"
+msgstr ""
+
+#: wpc-grouped-product.php:530
+msgid "Search by SKU"
+msgstr ""
+
+#: wpc-grouped-product.php:545
+msgid "Search by ID"
+msgstr ""
+
+#: wpc-grouped-product.php:557
+msgid "Search by ID when only entered the numeric."
+msgstr ""
+
+#: wpc-grouped-product.php:561
+msgid "Search exact"
+msgstr ""
+
+#: wpc-grouped-product.php:573
+msgid "Match whole product title or content?"
+msgstr ""
+
+#: wpc-grouped-product.php:577
+msgid "Search sentence"
+msgstr ""
+
+#: wpc-grouped-product.php:589
+msgid "Do a phrase search?"
+msgstr ""
+
+#: wpc-grouped-product.php:593
+msgid "Accept same products"
+msgstr ""
+
+#: wpc-grouped-product.php:605
+msgid "If yes, a product can be added many times."
+msgstr ""
+
+#: wpc-grouped-product.php:611
+msgid "Update Options"
+msgstr ""
+
+#: wpc-grouped-product.php:642
+msgid "Please select some product options before adding this grouped to the cart."
+msgstr ""
+
+#: wpc-grouped-product.php:643
+msgid "Please choose at least one product before adding this grouped to the cart."
+msgstr ""
+
+#: wpc-grouped-product.php:699
+msgid "Support"
+msgstr ""
+
+#: wpc-grouped-product.php:877
+msgid "No results found for:"
+msgstr ""
+
+#: wpc-grouped-product.php:922
+#: wpc-grouped-product.php:956
+msgid "Smart grouped"
+msgstr ""
+
+#: wpc-grouped-product.php:929
+msgid "Grouped Products"
+msgstr ""
+
+#: wpc-grouped-product.php:970
+msgid "settings"
+msgstr ""
+
+#: wpc-grouped-product.php:976
+msgid "searching..."
+msgstr ""
+
+#: wpc-grouped-product.php:978
+msgid "Type any keyword to search"
+msgstr ""
+
+#: wpc-grouped-product.php:984
+msgid "Selected"
+msgstr ""
+
+#: wpc-grouped-product.php:1013
+msgid "Note"
+msgstr ""
+
+#: wpc-grouped-product.php:1015
+msgid "Always put a price in the General tab to display the Add to Cart button."
+msgstr ""
+
+#: wpc-grouped-product.php:1019
+msgid "Custom display price"
+msgstr ""
+
+#: wpc-grouped-product.php:1027
+msgid "Above text"
+msgstr ""
+
+#: wpc-grouped-product.php:1036
+msgid "Under text"
+msgstr ""
+
+#: wpc-grouped-product.php:1061
+msgid "Add"
+msgstr ""
+
+#: wpc-grouped-product.php:1063
+msgid "Remove"
+msgstr ""
+
+#: wpc-grouped-product.php:1066
+msgid "Default quantity"
+msgstr ""
+
+#: wpc-grouped-product.php:1293
+msgid "Choose"
+msgstr ""
+
+#: wpc-grouped-product.php:1300
+msgid "Clear"
+msgstr ""
+
+#: wpc-grouped-product.php:1403
+msgid "From"
+msgstr ""
+
+#: wpc-grouped-product.php:1422
+msgid "Grouped (%s)"
+msgstr ""

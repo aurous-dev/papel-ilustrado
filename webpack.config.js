@@ -14,11 +14,11 @@ module.exports = {
   mode: "development",
   // lintOnSave: process.env.NODE_ENV !== 'production',
   entry: [
-    "./wp-content/themes/base-theme/js/app.js",
-    "./wp-content/themes/base-theme/scss/index.scss"
+    "./wp-content/themes/papel-ilustrado/js/app.js",
+    "./wp-content/themes/papel-ilustrado/scss/index.scss"
   ],
   output: {
-    filename: "./wp-content/themes/base-theme/js/app.min.js",
+    filename: "./wp-content/themes/papel-ilustrado/js/app.min.js",
     path: path.resolve(__dirname)
   },
   module: {
@@ -68,7 +68,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "./wp-content/themes/base-theme/css/index.min.css"
+      filename: "./wp-content/themes/papel-ilustrado/css/index.min.css"
     }),
     new VueLoaderPlugin(),
     new WebpackMessages({
