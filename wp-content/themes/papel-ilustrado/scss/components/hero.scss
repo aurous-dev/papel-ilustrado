@@ -1,0 +1,22 @@
+.hero {
+   padding: 20px 0;
+   &__principal {
+      height: 500px;
+      display: flex;
+      align-items: flex-end;
+      @include bg-center;
+      &--desc {
+         background-color: rgba($color: $color-dark_gray, $alpha: .5);
+         display: flex;
+         width: 100%;
+         padding: 20px 50px;
+         @include f-center;
+         h2 {
+            max-width: 60%;
+            text-transform: uppercase;
+            font-size: $f-big;
+            color: $color-white;
+         }
+      }
+   }
+}

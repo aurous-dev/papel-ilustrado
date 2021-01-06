@@ -7184,6 +7184,7 @@ a.text-dark:hover, a.text-dark:focus {
   display: flex;
   margin: 0;
   list-style: none;
+  margin-bottom: 20px;
   align-items: center;
   justify-content: center; }
   #menu-principal li {
@@ -7196,6 +7197,28 @@ a.text-dark:hover, a.text-dark:focus {
     #menu-principal li a {
       text-transform: uppercase;
       font-size: 14px; }
+
+.hero {
+  padding: 20px 0; }
+  .hero__principal {
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+    .hero__principal--desc {
+      background-color: rgba(61, 63, 64, 0.5);
+      display: flex;
+      width: 100%;
+      padding: 20px 50px;
+      align-items: center;
+      justify-content: center; }
+      .hero__principal--desc h2 {
+        max-width: 60%;
+        text-transform: uppercase;
+        font-size: 40px;
+        color: #FFFFFF; }
 
 * {
   margin: 0;
