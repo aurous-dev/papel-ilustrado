@@ -42,6 +42,4 @@
 </head>
 <body <?php body_class(); ?>>
 
-<!-- USE THIS TO GET THE WP MENU -->
-<!-- <?php wp_nav_menu(); ?> -->
-<!-- USE THIS TO GET THE WP MENU -->
+<?php get_template_part('components/nav');?>

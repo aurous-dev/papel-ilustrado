@@ -1,0 +1,66 @@
+.header {
+   &__banner {
+      text-align: center;
+      color: $color-white;
+      background-color: $color-indigo;
+      width: 100vw;
+      padding: 12px 20px;
+      margin: 0 -15px;
+   }
+   &__menu{
+      display: flex;
+      padding-top: 25px;
+      @include f-center;
+      &--search{
+         margin-right: auto;
+      }
+      &--icons {
+         padding-right: 20px;
+         margin-right: 10px;
+         border-right: 1px solid $color-light_green;
+         i {
+            font-size: 20px;
+            color: $color-salmon;
+            margin: 0 5px;
+         }
+      }
+   }
+   &__logo {
+      display: flex;
+      position: relative;
+      height: 35px;
+      @include f-center;
+      &::before {
+         content: '';
+         position: absolute;
+         width: 100vw;
+         height: 1px;
+         background-color: $color-light_green;
+      }
+      img {
+         position: absolute;
+         background-color: $color-white;
+         padding: 0 25px;
+      }
+   }
+}
+#menu-principal {
+   display: flex;
+   margin: 0;
+   list-style: none;
+   @include f-center;
+   li {
+      margin-right: 60px;
+      &:nth-child(3) {
+         margin-right: auto;
+      }
+      &:nth-child(n+4) {
+         margin-right: 0;
+         margin-left: 60px;
+      }
+      a {
+         text-transform: uppercase;
+         font-size: $f-normal;
+      }
+   }
+}
