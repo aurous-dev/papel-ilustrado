@@ -13,6 +13,12 @@
       @include f-center;
       &--search{
          margin-right: auto;
+         width: 40%;
+         input {
+            padding: 8px 15px;
+            width: 60%;
+            font-size: $f-normal;
+         }
       }
       &--icons {
          padding-right: 20px;
@@ -22,6 +28,19 @@
             font-size: 20px;
             color: $color-salmon;
             margin: 0 5px;
+         }
+         .icon__cart {
+            color: $color-indigo;
+         }
+      }
+      &--sesions {
+         a {
+            color: $color-indigo;
+            text-decoration: none;
+            font-size: $f-normal;
+            &:hover {
+               color: $color-indigo;
+            }
          }
       }
    }
@@ -61,7 +80,12 @@
       }
       a {
          text-transform: uppercase;
+         text-decoration: none;
          font-size: $f-normal;
+         color: $color-indigo;
+         &:hover {
+            color: $color-indigo;
+         }
       }
    }
 }
