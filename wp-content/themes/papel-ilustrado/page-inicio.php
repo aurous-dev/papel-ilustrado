@@ -31,5 +31,15 @@ get_header();
    </div>
 </section>
 <!-- FIRST SECTION  -->
+<!-- SECOND SECTION  -->
+<section class="container-fluid paiting">
+   <?php get_template_part('components/single/title');?>
+   <div class="container">
+      <div class="paiting__slider">
+      <?php get_template_part('components/group/card-paiting');?>
+      </div>
+   </div>
+</section>
+<!-- SECOND SECTION  -->
 
 <?php get_footer();?>

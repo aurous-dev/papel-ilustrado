@@ -1,0 +1,81 @@
+@mixin slider__marginB {
+   &.slick-slider {
+       margin-bottom: 0 !important;
+   }
+}
+@mixin slider__arrowLeft {
+   z-index: 60;
+   transition: $tr3;
+   width: fit-content;
+   height: fit-content;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+    &:before {
+        transition: $tr3;
+        content: "<";
+        font-family: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: fit-content;
+        font-size: 50px;
+        font-weight: 600;
+        @include mq($from: mobile, $until: tablet) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+@mixin slider__arrowRight {
+   z-index: 60;
+   transition: $tr3;
+   width: fit-content;
+   height: fit-content;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+    &:before {
+        transition: $tr3;
+        font-family: unset;
+        content: ">";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: fit-content;
+        font-size: 50px;
+        font-weight: 600;
+        @include mq($from: mobile, $until: tablet) {
+            width: 30px;
+            height: 30px;
+        
+        }
+    }
+}
+@mixin slider__dots {
+   background-repeat: no-repeat;
+   background-position: bottom center;
+   background-size: cover;
+    li {
+        @include mq($from: mobile, $until: tablet) {
+            width: 15px;
+        }
+
+        // Desactivado
+        button {
+            &:before {
+                border-radius: 50%;
+                // Elimina un punto
+                color: transparent;
+                @include mq($from: mobile, $until: tablet) {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+}

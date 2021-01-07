@@ -8,11 +8,12 @@
 @import './mq';
 
 // Sass Slider
-// @import './slick-theme';
-// @import './slick';
+@import './slick-theme';
+@import './slick';
 
 // Add all the components styles
 @import './components/index';
 
 // Add all the custom styles here
 @import './custom/global';
+@import './custom/section-paiting';

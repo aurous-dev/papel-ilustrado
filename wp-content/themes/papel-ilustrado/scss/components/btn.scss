@@ -22,3 +22,24 @@
    padding: 15px 25px;
    text-transform: uppercase;
 }
+.btn-title {
+   position: absolute;
+   a {
+      text-transform: uppercase;
+      text-decoration: none ;
+      font-size: $f-small;
+      color: $color-indigo;
+      margin-right: 10px;
+      &:hover,
+      &:active {
+         color: $color-indigo;
+         text-decoration: none;
+      }
+   }
+}
+
+.btn-card {
+   @extend .btn-principal;
+   position: absolute;
+   opacity: 0;
+}
