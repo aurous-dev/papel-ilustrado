@@ -16,3 +16,9 @@
       background-color: rgba($color: $color-indigo, $alpha: .5);
    }
 }
+.btn-send {
+   background-color: $color-light_green;
+   color: $color-dark_gray;
+   padding: 15px 25px;
+   text-transform: uppercase;
+}

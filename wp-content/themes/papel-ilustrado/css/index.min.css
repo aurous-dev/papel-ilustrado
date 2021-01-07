@@ -7249,6 +7249,91 @@ a.text-dark:hover, a.text-dark:focus {
   .btn-principal:disabled {
     background-color: rgba(42, 61, 66, 0.5); }
 
+.btn-send {
+  background-color: #C1CDCA;
+  color: #3D3F40;
+  padding: 15px 25px;
+  text-transform: uppercase; }
+
+#footer {
+  background-color: #2A3D42; }
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "logo info" "logo dir";
+  padding: 80px 0 50px; }
+  .footer__logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    font-size: 13px;
+    position: relative;
+    top: -15px; }
+    .footer__logo a {
+      width: 100%; }
+    .footer__logo img {
+      width: 70%; }
+  .footer__info {
+    grid-area: info;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #355957; }
+    .footer__info--nav {
+      max-width: 47%; }
+      .footer__info--nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0; }
+        .footer__info--nav ul li {
+          text-transform: uppercase;
+          width: 50%;
+          margin-bottom: 10px; }
+          .footer__info--nav ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 13px; }
+            .footer__info--nav ul li a:hover {
+              color: #FFFFFF; }
+    .footer__info--subs {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+      width: 47%; }
+      .footer__info--subs h3 {
+        color: #FFFFFF;
+        font-size: 16px; }
+      .footer__info--subs input {
+        padding: 10px 15px;
+        width: 70%; }
+  .footer__direction {
+    grid-area: dir;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45px;
+    font-size: 13px;
+    color: #FFFFFF; }
+    .footer__direction i {
+      color: #FFFFFF;
+      font-size: 18px;
+      margin-right: 15px;
+      margin-bottom: 10px; }
+    .footer__direction--address {
+      display: flex; }
+    .footer__direction--time {
+      display: flex; }
+    .footer__direction--contact-email, .footer__direction--contact-phone {
+      display: flex; }
+    .footer__direction--rrss i {
+      font-size: 25px; }
+
 * {
   margin: 0;
   padding: 0;
