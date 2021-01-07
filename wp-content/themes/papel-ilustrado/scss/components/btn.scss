@@ -1,0 +1,18 @@
+.btn-principal {
+   padding: 20px 24px;
+   background-color: $color-indigo;
+   color: $color-white;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: $f-btn__medium;
+   letter-spacing: 1.2px;
+   &:hover,
+   &:active {
+      color: $color-white;
+      text-decoration: none;
+      background-color: #182224;
+   }
+   &:disabled {
+      background-color: rgba($color: $color-indigo, $alpha: .5);
+   }
+}
