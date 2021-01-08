@@ -53,3 +53,26 @@
       text-decoration: none;
    }
 }
+
+.big-card {
+   padding: 0 10px;
+   &:hover {
+      text-decoration: none;
+      .btn-card {
+         opacity: 1;
+         background-color: #182224;
+      }
+      .big-card__container {
+         background-color: rgba($color: $color-light_green, $alpha: .5);
+      }
+   }
+   &__container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background-blend-mode: soft-light;
+      height: 500px;
+      padding-bottom: 20%;
+      @include bg-center;
+   }
+}
