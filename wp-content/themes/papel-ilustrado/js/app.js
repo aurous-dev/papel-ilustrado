@@ -58,3 +58,10 @@ $(".composition__slider").slick({
     dots: true,
     arrows: true,
 });
+$(".picture__slider").slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+});

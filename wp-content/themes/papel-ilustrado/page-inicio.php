@@ -32,6 +32,14 @@ get_header();
 </section>
 <!-- FIRST SECTION  -->
 <!-- SECOND SECTION  -->
+<section class="container-fluid paiting">
+   <?php get_template_part('components/single/title');?>
+   <div class="container">
+      <div class="paiting__slider">
+      <?php get_template_part('components/group/card-paiting');?>
+      </div>
+   </div>
+</section>
 <!-- SECOND SECTION  -->
 <!-- THIRD SECTION  -->
 <section class="container-fluid composition">
@@ -63,11 +71,11 @@ get_header();
 </section>
 <!-- THIRD SECTION  -->
 <!-- FOURTH SECTION  -->
-<section class="container-fluid paiting">
+<section class="container-fluid picture">
    <?php get_template_part('components/single/title');?>
    <div class="container">
-      <div class="paiting__slider">
-      <?php get_template_part('components/group/card-paiting');?>
+      <div class="picture__slider">
+      <?php get_template_part('components/group/card-picture');?>
       </div>
    </div>
 </section>

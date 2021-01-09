@@ -7524,6 +7524,21 @@ a.text-dark:hover, a.text-dark:focus {
       max-height: 100%;
       max-width: 100%;
       z-index: -1; }
+    .card__container--img-full {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      width: -moz-fit-content;
+      height: fit-content;
+      height: -moz-fit-content; }
+      .card__container--img-full:hover {
+        background-color: rgba(193, 205, 202, 0.5); }
+        .card__container--img-full:hover .btn-card {
+          opacity: 1;
+          background-color: #182224; }
+      .card__container--img-full img {
+        z-index: -1; }
   .card__container--desc {
     text-align: center;
     padding: 10px; }
@@ -7744,8 +7759,7 @@ i {
     background-size: cover;
     bottom: -30px;
     width: 100%;
-    padding: 0 20px;
-    right: 4%; }
+    padding: 0 20px; }
     @media (min-width: 20em) and (max-width: 46.24em) {
       .paiting__slider .slick-dots li {
         width: 15px; } }
@@ -7840,8 +7854,7 @@ i {
     background-size: cover;
     bottom: -30px;
     width: 100%;
-    padding: 0 20px;
-    right: 4%; }
+    padding: 0 20px; }
     @media (min-width: 20em) and (max-width: 46.24em) {
       .composition__slider .slick-dots li {
         width: 15px; } }
@@ -7862,6 +7875,101 @@ i {
         height: fit-content;
         width: fit-content; }
         .composition__slider .slick-dots li button::before {
+          color: rgba(53, 89, 87, 0.5);
+          width: 15px;
+          height: 15px;
+          opacity: 1;
+          font-size: 12px; }
+
+.picture {
+  margin-bottom: 100px; }
+  .picture__slider.slick-slider {
+    margin-bottom: 0 !important; }
+  .picture__slider .slick-prev {
+    z-index: 60;
+    transition: all ease-in-out 0.3s;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    left: -80px; }
+    .picture__slider .slick-prev:before {
+      transition: all ease-in-out 0.3s;
+      content: "<";
+      font-family: unset;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      width: fit-content;
+      font-size: 50px;
+      font-weight: 600; }
+      @media (min-width: 20em) and (max-width: 46.24em) {
+        .picture__slider .slick-prev:before {
+          width: 30px;
+          height: 30px; } }
+    .picture__slider .slick-prev::before {
+      color: #F4997E; }
+    .picture__slider .slick-prev:hover::before {
+      color: #A7A7A7; }
+  .picture__slider .slick-next {
+    z-index: 60;
+    transition: all ease-in-out 0.3s;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    right: -80px; }
+    .picture__slider .slick-next:before {
+      transition: all ease-in-out 0.3s;
+      font-family: unset;
+      content: ">";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      width: fit-content;
+      font-size: 50px;
+      font-weight: 600; }
+      @media (min-width: 20em) and (max-width: 46.24em) {
+        .picture__slider .slick-next:before {
+          width: 30px;
+          height: 30px; } }
+    .picture__slider .slick-next::before {
+      color: #F4997E; }
+    .picture__slider .slick-next:hover::before {
+      color: #A7A7A7; }
+  .picture__slider .slick-dots {
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    bottom: -30px;
+    width: 100%;
+    padding: 0 20px; }
+    @media (min-width: 20em) and (max-width: 46.24em) {
+      .picture__slider .slick-dots li {
+        width: 15px; } }
+    .picture__slider .slick-dots li button:before {
+      border-radius: 50%;
+      color: transparent; }
+      @media (min-width: 20em) and (max-width: 46.24em) {
+        .picture__slider .slick-dots li button:before {
+          width: 15px;
+          height: 15px; } }
+    .picture__slider .slick-dots li {
+      height: fit-content;
+      width: fit-content;
+      margin: 0 4px; }
+      .picture__slider .slick-dots li.slick-active button:before {
+        color: #F4997E; }
+      .picture__slider .slick-dots li button {
+        height: fit-content;
+        width: fit-content; }
+        .picture__slider .slick-dots li button::before {
           color: rgba(53, 89, 87, 0.5);
           width: 15px;
           height: 15px;
