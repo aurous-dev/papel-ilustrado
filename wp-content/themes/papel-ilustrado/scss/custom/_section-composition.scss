@@ -1,5 +1,6 @@
-.paiting {
-   margin-bottom: 100px;
+.composition {
+   padding: 50px 0 100px;
+   background-color: rgba($color: #D2D2D2, $alpha: .2);
    &__slider {
      @include slider__marginB;
       .slick-prev {
@@ -32,7 +33,6 @@
          // Posicion
          width: 100%;
          padding: 0 20px;
-         right: 4%;
          li {
             height: fit-content;
             width: fit-content;
