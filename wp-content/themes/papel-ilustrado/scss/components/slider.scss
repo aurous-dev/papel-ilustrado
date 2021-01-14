@@ -14,7 +14,7 @@
    flex-direction: column;
     &:before {
         transition: $tr3;
-        content: "<";
+        content: url("../img/svg/slider-arrow.svg");
         font-family: unset;
         display: flex;
         justify-content: center;
@@ -23,6 +23,8 @@
         width: fit-content;
         font-size: 50px;
         font-weight: 600;
+        filter: grayscale(1);
+        transform: rotate(180deg);
         @include mq($from: mobile, $until: tablet) {
             width: 30px;
             height: 30px;
@@ -40,8 +42,8 @@
    flex-direction: column;
     &:before {
         transition: $tr3;
-        font-family: unset;
-        content: ">";
+        // font-family: unset;
+        content: url("../img/svg/slider-arrow.svg");
         display: flex;
         justify-content: center;
         align-items: center;
@@ -49,6 +51,7 @@
         width: fit-content;
         font-size: 50px;
         font-weight: 600;
+        filter: grayscale(1);
         @include mq($from: mobile, $until: tablet) {
             width: 30px;
             height: 30px;

@@ -14,6 +14,10 @@
         ?>
     </title>
 
+    <!-- Font-family -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font-family -->
     <!-- Stylesheet -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
     <!-- Stylesheet -->
