@@ -8,18 +8,36 @@
       width: 100vw;
       padding: 12px 20px;
       margin: 0 -15px;
+      @include fonts-display(400);
    }
    &__menu{
       display: flex;
       padding-top: 25px;
       @include f-center;
+      @include fonts-display(400);
       &--search{
+         display: flex;
+         align-items: center;
+         position: relative;
          margin-right: auto;
          width: 40%;
          input {
             padding: 8px 15px;
             width: 60%;
             font-size: $f-normal;
+            border: 1px solid #D2D2D2;
+            border-radius: $r-input;
+            &::placeholder {
+               color: $color-silver;
+               cursor: pointer;
+            }
+         }
+         i {
+            position: absolute;
+            font-size: 20px;
+            color: $color-dark_green;
+            margin: 0;
+            left: 50%;
          }
       }
       &--icons {
@@ -70,7 +88,9 @@
    margin: 0;
    list-style: none;
    margin-bottom: 20px;
+   letter-spacing: 0.05em;
    @include f-center;
+   @include fonts-display(700);
    li {
       margin-right: 60px;
       &:nth-child(3) {

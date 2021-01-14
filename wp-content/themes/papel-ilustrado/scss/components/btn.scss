@@ -5,7 +5,8 @@
    text-decoration: none;
    text-transform: uppercase;
    font-size: $f-btn__medium;
-   letter-spacing: 1.2px;
+   letter-spacing: 0.02em;
+   @include fonts-display(600);
    &:hover,
    &:active {
       color: $color-white;
@@ -42,4 +43,10 @@
    @extend .btn-principal;
    position: absolute;
    opacity: 0;
+   background-color: $color-light_orange;
+   &:hover,
+   &:active {
+      color: $color-white;
+      background-color: $color-light_orange;
+   }
 }

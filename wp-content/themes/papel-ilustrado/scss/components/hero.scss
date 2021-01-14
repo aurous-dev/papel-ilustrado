@@ -16,6 +16,7 @@
             text-transform: uppercase;
             font-size: $f-big;
             color: $color-white;
+            @include fonts-display(600);
          }
       }
    }

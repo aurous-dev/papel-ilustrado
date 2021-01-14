@@ -19,7 +19,7 @@
             </div>  -->
             <div class="header__menu--search">
                <input type="text" placeholder="Buscar producto">
-               <img src="#" alt="">
+               <i class="fas fa-search"></i>
             </div>
             <div class="header__menu--icons">
                <a href="#">
