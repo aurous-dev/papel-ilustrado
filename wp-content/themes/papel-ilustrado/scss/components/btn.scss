@@ -11,7 +11,7 @@
    &:active {
       color: $color-white;
       text-decoration: none;
-      background-color: #182224;
+      background-color: $color-light_orange;
    }
    &:disabled {
       background-color: rgba($color: $color-indigo, $alpha: .5);

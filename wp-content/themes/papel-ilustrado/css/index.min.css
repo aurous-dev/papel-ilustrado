@@ -7395,6 +7395,13 @@ a.text-dark:hover, a.text-dark:focus {
         color: #355957;
         margin: 0;
         left: 50%; }
+    .header__menu--whatsapp {
+      padding-right: 15px;
+      margin-right: 10px;
+      border-right: 1px solid #C1CDCA; }
+      .header__menu--whatsapp img {
+        height: 24px;
+        padding-bottom: 5px; }
     .header__menu--icons {
       padding-right: 20px;
       margin-right: 10px;
@@ -7504,7 +7511,7 @@ a.text-dark:hover, a.text-dark:focus {
   .btn-principal:hover, .btn-card:hover, .btn-principal:active, .btn-card:active {
     color: #FFFFFF;
     text-decoration: none;
-    background-color: #182224; }
+    background-color: #F5AF9A; }
   .btn-principal:disabled, .btn-card:disabled {
     background-color: rgba(42, 61, 66, 0.5); }
 
@@ -7546,7 +7553,7 @@ a.text-dark:hover, a.text-dark:focus {
     align-items: center;
     justify-content: center; }
     .card__container--img:hover {
-      background-color: rgba(193, 205, 202, 0.5); }
+      background-color: rgba(42, 61, 66, 0.4); }
       .card__container--img:hover .btn-card {
         opacity: 1; }
     .card__container--img img {
@@ -7562,7 +7569,7 @@ a.text-dark:hover, a.text-dark:focus {
       height: fit-content;
       height: -moz-fit-content; }
       .card__container--img-full:hover {
-        background-color: rgba(193, 205, 202, 0.5); }
+        background-color: rgba(42, 61, 66, 0.4); }
         .card__container--img-full:hover .btn-card {
           opacity: 1; }
       .card__container--img-full img {
@@ -7603,7 +7610,7 @@ a.text-dark:hover, a.text-dark:focus {
     .big-card:hover .btn-card {
       opacity: 1; }
     .big-card:hover .big-card__container {
-      background-color: rgba(193, 205, 202, 0.5); }
+      background-color: rgba(42, 61, 66, 0.4); }
   .big-card__container {
     display: flex;
     align-items: flex-end;

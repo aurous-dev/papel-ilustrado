@@ -40,6 +40,15 @@
             left: 50%;
          }
       }
+      &--whatsapp {
+         padding-right: 15px;
+         margin-right: 10px;
+         border-right: 1px solid $color-light_green;
+         img {
+            height: 24px;
+            padding-bottom: 5px;
+         } 
+      }
       &--icons {
          padding-right: 20px;
          margin-right: 10px;

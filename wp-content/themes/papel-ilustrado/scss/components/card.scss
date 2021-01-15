@@ -9,10 +9,9 @@
       padding: 20px;
       @include f-center;
       &:hover {
-         background-color: rgba($color: $color-light_green, $alpha: .5);
+         background-color: rgba($color: $color-indigo, $alpha: .4);
          .btn-card {
             opacity: 1;
-            // background-color: $color-light_orange;
          }
       }
       img {
@@ -28,10 +27,9 @@
          height: fit-content;
          height: -moz-fit-content;
          &:hover {
-            background-color: rgba($color: $color-light_green, $alpha: .5);
+            background-color: rgba($color: $color-indigo, $alpha: .4);
             .btn-card {
                opacity: 1;
-               // background-color: $color-light_orange;
             }
          }
          img {
@@ -79,11 +77,10 @@
    &:hover {
       text-decoration: none;
       .btn-card {
-         opacity: 1;
-         // background-color: $color-light_orange;
+         opacity: 1
       }
       .big-card__container {
-         background-color: rgba($color: $color-light_green, $alpha: .5);
+         background-color: rgba($color: $color-indigo, $alpha: .4);
       }
    }
    &__container {

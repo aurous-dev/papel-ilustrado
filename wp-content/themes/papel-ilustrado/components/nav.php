@@ -21,6 +21,11 @@
                <input type="text" placeholder="Buscar producto">
                <i class="fas fa-search"></i>
             </div>
+            <div class="header__menu--whatsapp">
+               <a href="#">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/svg/whatsapp.svg" alt="">
+               </a>
+            </div>
             <div class="header__menu--icons">
                <a href="#">
                   <i class="far fa-heart icon__heart"></i>
