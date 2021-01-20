@@ -48,22 +48,17 @@ get_header();
       <div class="composition__slider">
          <a href="#" class="big-card">
             <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
-               <?php get_template_part('components/single/card-btn');?>
+               <?php get_template_part('components/single/card-special');?>
             </div>
          </a>
          <a href="#" class="big-card">
             <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
-               <?php get_template_part('components/single/card-btn');?>
+               <?php get_template_part('components/single/card-special');?>
             </div>
          </a>
          <a href="#" class="big-card">
             <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
-               <?php get_template_part('components/single/card-btn');?>
-            </div>
-         </a>
-         <a href="#" class="big-card">
-            <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
-               <?php get_template_part('components/single/card-btn');?>
+               <?php get_template_part('components/single/card-special');?>
             </div>
          </a>
       </div>

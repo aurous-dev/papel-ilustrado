@@ -76,11 +76,8 @@
    padding: 0 10px;
    &:hover {
       text-decoration: none;
-      .btn-card {
-         opacity: 1
-      }
-      .big-card__container {
-         background-color: rgba($color: $color-indigo, $alpha: .4);
+      .btn-special {
+         bottom: 0;
       }
    }
    &__container {
@@ -89,7 +86,9 @@
       justify-content: center;
       background-blend-mode: soft-light;
       height: 500px;
-      padding-bottom: 20%;
+      padding-bottom: 0;
+      position: relative;
+      top: 6px;
       @include bg-center;
    }
 }

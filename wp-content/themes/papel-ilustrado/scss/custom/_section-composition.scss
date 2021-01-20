@@ -6,24 +6,18 @@
       .slick-prev {
          @include slider__arrowLeft;
          left: -80px;
-         &::before {
-            color: $color-salmon;
-         }
          &:hover {
             &::before {
-               color: $color-silver;
+               filter: grayscale(0);
             }
          }
       }
       .slick-next {
          @include slider__arrowRight;
          right: -80px;
-         &::before {
-            color: $color-salmon;
-         }
          &:hover {
             &::before {
-               color: $color-silver;
+               filter: grayscale(0);
             }
          }
       }

@@ -53,7 +53,7 @@ $(".paiting__slider").slick({
 });
 $(".composition__slider").slick({
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     dots: true,
     arrows: true,
