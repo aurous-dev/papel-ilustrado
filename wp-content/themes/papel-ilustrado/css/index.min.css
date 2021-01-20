@@ -7768,6 +7768,8 @@ a.text-dark:hover, a.text-dark:focus {
     list-style: none; }
   * a {
     text-decoration: none; }
+    * a:hover {
+      text-decoration: none; }
 
 body, html {
   background-color: rgba(229, 229, 229, 0.15);
