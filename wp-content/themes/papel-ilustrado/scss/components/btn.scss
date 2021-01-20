@@ -5,8 +5,9 @@
    text-decoration: none;
    text-transform: uppercase;
    font-size: $f-btn__medium;
-   letter-spacing: 0.02em;
-   @include fonts-display(600);
+   letter-spacing: 0.05em;
+   line-height: 1.2;
+   @include fonts-display(200);
    &:hover,
    &:active {
       color: $color-white;

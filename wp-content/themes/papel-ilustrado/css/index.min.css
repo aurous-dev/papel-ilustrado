@@ -7532,14 +7532,15 @@ a.text-dark:hover, a.text-dark:focus {
       width: 100%;
       padding: 20px 50px;
       align-items: center;
-      justify-content: center; }
+      justify-content: space-around; }
       .hero__principal--desc h2 {
-        max-width: 60%;
+        max-width: 50%;
         text-transform: uppercase;
-        font-size: 40px;
+        font-size: 32px;
         color: #FFFFFF;
+        line-height: 1.4;
         font-family: 'Raleway', sans-serif;
-        font-weight: 600; }
+        font-weight: 500; }
   .hero__card {
     justify-content: space-between;
     margin: 20px 0; }
@@ -7562,9 +7563,10 @@ a.text-dark:hover, a.text-dark:focus {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
   font-family: 'Raleway', sans-serif;
-  font-weight: 600; }
+  font-weight: 200; }
   .btn-principal:hover, .btn-card:hover, .btn-principal:active, .btn-card:active {
     color: #FFFFFF;
     text-decoration: none;
