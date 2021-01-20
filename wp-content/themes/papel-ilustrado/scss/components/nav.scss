@@ -114,9 +114,9 @@
          text-decoration: none;
          font-size: $f-normal;
          color: $color-indigo;
-         &:hover {
-            color: $color-indigo;
-         }
+      }
+      & > a:hover {
+         color: $color-salmon;
       }
    }
    // Sub menu
@@ -140,9 +140,6 @@
          &::before {
             transform: rotate(-90deg);
             color: red;
-         }
-         a {
-            color: $color-salmon;
          }
          & > .sub-menu {
             opacity: 1;

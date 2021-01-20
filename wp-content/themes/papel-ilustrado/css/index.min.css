@@ -7457,8 +7457,8 @@ a.text-dark:hover, a.text-dark:focus {
       text-decoration: none;
       font-size: 14px;
       color: #2A3D42; }
-      #menu-principal > li a:hover {
-        color: #2A3D42; }
+    #menu-principal > li > a:hover {
+      color: #F4997E; }
   #menu-principal > li.menu-item-has-children {
     position: relative; }
     #menu-principal > li.menu-item-has-children::before {
@@ -7477,8 +7477,6 @@ a.text-dark:hover, a.text-dark:focus {
     #menu-principal > li.menu-item-has-children.active::before {
       transform: rotate(-90deg);
       color: red; }
-    #menu-principal > li.menu-item-has-children.active a {
-      color: #F4997E; }
     #menu-principal > li.menu-item-has-children.active > .sub-menu {
       opacity: 1;
       visibility: visible; }
