@@ -53,7 +53,7 @@ $(".paiting__slider").slick({
 });
 $(".composition__slider").slick({
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     dots: true,
     arrows: true,
@@ -86,32 +86,9 @@ function clickMenu (a) {
     });
 }
 
-
-
+// Prevenir que se comporte como un enlace
 tr_preventDefault.forEach( a => {
     a.addEventListener('click', e => {
         e.preventDefault()
-        // e.target.parentNode.classList.add('active')
     })
 })
-
-
-// function test (m) {
-//     let hola = test2(m)
-//     // console.log(hola)
-//     // console.log(m);
-// }
-
-// function deleteClass (m) {
-//     // const dropdown = m.children[1]
-//     m.classList.remove('active');
-//     // if (dropdown.classList.contains('down')) {
-//     //     dropdown.classList.remove('down');
-//     // }
-
-//     // if( m.classList.contains('active')) {
-//     // } else {
-//     //     m.classList.add('active')
-//     //     dropdown.classList.add('down');
-//     // }
-// }

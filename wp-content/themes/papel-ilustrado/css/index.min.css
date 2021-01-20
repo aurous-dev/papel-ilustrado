@@ -7775,7 +7775,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 body, html {
   background-color: rgba(229, 229, 229, 0.15);
-  overscroll-behavior-x: none; }
+  overflow-x: hidden; }
 
 i {
   color: #2ecc71;
