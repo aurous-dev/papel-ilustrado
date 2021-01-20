@@ -67,16 +67,51 @@ $(".picture__slider").slick({
 });
 
 // Menu dropdown Desktop
-const tr_menu = document.querySelectorAll('#menu-principal li');
+const tr_menu = document.querySelectorAll('#menu-principal .lista');
+const tr_nav = document.querySelector('#menu-principal');
+const tr_preventDefault = document.querySelectorAll('#menu-principal .lista > a');
+tr_nav.addEventListener('click', clickMenu);
 
-tr_menu.forEach( menu => {
-    if( menu.classList.contains('menu-item-has-children') ) {
-        const btn = menu.children[0]
-        const dropdown = menu.children[1] 
-        btn.addEventListener('click', (e) =>{
-            e.preventDefault();
-            menu.classList.toggle('active')
-            dropdown.classList.toggle('down');
-        })
-    }
-});
+function clickMenu (a) {
+    const menu = a.path[2].children;
+    Array.from(menu).forEach(m => {
+        const item = a.target.parentNode;
+        if(m.classList.contains('menu-item-has-children')) {
+            if( (item.classList === m.classList) && !item.classList.contains('active')) {
+                m.classList.add('active');
+            } else {
+                m.classList.remove('active');
+            }
+        }
+    });
+}
+
+
+
+tr_preventDefault.forEach( a => {
+    a.addEventListener('click', e => {
+        e.preventDefault()
+        // e.target.parentNode.classList.add('active')
+    })
+})
+
+
+// function test (m) {
+//     let hola = test2(m)
+//     // console.log(hola)
+//     // console.log(m);
+// }
+
+// function deleteClass (m) {
+//     // const dropdown = m.children[1]
+//     m.classList.remove('active');
+//     // if (dropdown.classList.contains('down')) {
+//     //     dropdown.classList.remove('down');
+//     // }
+
+//     // if( m.classList.contains('active')) {
+//     // } else {
+//     //     m.classList.add('active')
+//     //     dropdown.classList.add('down');
+//     // }
+// }

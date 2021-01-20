@@ -144,6 +144,10 @@
          a {
             color: $color-salmon;
          }
+         & > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+         }
       }
       &> .sub-menu {
          position: absolute;
@@ -154,10 +158,6 @@
          padding: 20px 0;
          opacity: 0;
          visibility: hidden;
-         &.down {
-            opacity: 1;
-            visibility: visible;
-         }
          a{
             color: $color-indigo;
          }

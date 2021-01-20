@@ -7479,6 +7479,9 @@ a.text-dark:hover, a.text-dark:focus {
       color: red; }
     #menu-principal > li.menu-item-has-children.active a {
       color: #F4997E; }
+    #menu-principal > li.menu-item-has-children.active > .sub-menu {
+      opacity: 1;
+      visibility: visible; }
     #menu-principal > li.menu-item-has-children > .sub-menu {
       position: absolute;
       display: flex;
@@ -7488,9 +7491,6 @@ a.text-dark:hover, a.text-dark:focus {
       padding: 20px 0;
       opacity: 0;
       visibility: hidden; }
-      #menu-principal > li.menu-item-has-children > .sub-menu.down {
-        opacity: 1;
-        visibility: visible; }
       #menu-principal > li.menu-item-has-children > .sub-menu a {
         color: #2A3D42; }
       #menu-principal > li.menu-item-has-children > .sub-menu::before {
