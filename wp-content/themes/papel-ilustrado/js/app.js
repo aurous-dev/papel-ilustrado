@@ -65,3 +65,18 @@ $(".picture__slider").slick({
     dots: true,
     arrows: true,
 });
+
+// Menu dropdown Desktop
+const tr_menu = document.querySelectorAll('#menu-principal li');
+
+tr_menu.forEach( menu => {
+    if( menu.classList.contains('menu-item-has-children') ) {
+        const btn = menu.children[0]
+        const dropdown = menu.children[1] 
+        btn.addEventListener('click', (e) =>{
+            e.preventDefault();
+            menu.classList.toggle('active')
+            dropdown.classList.toggle('down');
+        })
+    }
+});
