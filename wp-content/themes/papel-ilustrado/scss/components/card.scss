@@ -1,94 +1,131 @@
 .card__container {
-   display: grid;
-   grid-template-rows: 300px 1fr;
-   grid-template-columns: 100%;
-   padding: 0 5px;
-   &--img {
-      display: flex;
-      border: 1px solid #D2D2D2;
-      padding: 20px;
-      @include f-center;
-      &:hover {
-         background-color: rgba($color: $color-indigo, $alpha: .4);
-         .btn-card {
-            opacity: 1;
-         }
-      }
-      img {
-         max-height: 100%;
-         max-width: 100%;
-         z-index: -1;
-      }
-      &-full {
-         display: flex;
-         @include f-center;
-         width: fit-content;
-         width: -moz-fit-content;
-         height: fit-content;
-         height: -moz-fit-content;
-         &:hover {
-            background-color: rgba($color: $color-indigo, $alpha: .4);
+    display: grid;
+    grid-template-rows: 300px 1fr;
+    grid-template-columns: 100%;
+    padding: 0 5px;
+    &--img {
+        display: flex;
+        border: 1px solid #d2d2d2;
+        padding: 20px;
+        @include f-center;
+        &:hover {
+            background-color: rgba($color: $color-indigo, $alpha: 0.4);
             .btn-card {
-               opacity: 1;
+                opacity: 1;
             }
-         }
-         img {
+        }
+        img {
+            max-height: 100%;
+            max-width: 100%;
             z-index: -1;
-         }
-      }
-   }
-   &--desc {
-      text-align: center;
-      padding: 10px;
-      &-title {
-         color: $color-indigo;
-         font-size: $f-small;
-         margin-bottom: 5px;
-         @include fonts-display(700);
-      }
-      &-for {
-         color: $color-gray;
-         font-size: 12px;
-         margin-bottom: 5px;
-         @include fonts-display(400);
-      }
-      &-price {
-         color: $color-indigo;
-         font-size: $f-normal;
-         @include fonts-display(600);
-         .price-off {
-            color: $color-salmon;
-         }
-         .price-normal {
-            font-size: 11px;
-            text-decoration: line-through;
-         }
-      }
-   }
+        }
+        &-full {
+            display: flex;
+            @include f-center;
+            width: fit-content;
+            width: -moz-fit-content;
+            height: fit-content;
+            height: -moz-fit-content;
+            &:hover {
+                background-color: rgba($color: $color-indigo, $alpha: 0.4);
+                .btn-card {
+                    opacity: 1;
+                }
+            }
+            img {
+                z-index: -1;
+            }
+        }
+    }
+    &--desc {
+        text-align: center;
+        padding: 10px;
+        &-title {
+            color: $color-indigo;
+            font-size: $f-small;
+            margin-bottom: 5px;
+            @include fonts-display(700);
+        }
+        &-for {
+            color: $color-gray;
+            font-size: 12px;
+            margin-bottom: 5px;
+            @include fonts-display(400);
+        }
+        &-price {
+            color: $color-indigo;
+            font-size: $f-normal;
+            @include fonts-display(600);
+            .price-off {
+                color: $color-salmon;
+            }
+            .price-normal {
+                font-size: 11px;
+                text-decoration: line-through;
+            }
+        }
+    }
 }
 .cards {
-   &:hover {
-      text-decoration: none;
-   }
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .big-card {
-   padding: 0 10px;
-   &:hover {
-      text-decoration: none;
-      .btn-special {
-         bottom: 0;
-      }
-   }
-   &__container {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      background-blend-mode: soft-light;
-      height: 500px;
-      padding-bottom: 0;
-      position: relative;
-      top: 6px;
-      @include bg-center;
-   }
+    padding: 0 10px;
+    overflow: hidden;
+    &:hover {
+        text-decoration: none;
+        .big-card__container {
+            -webkit-animation: zoomin 0.3s linear;
+            animation: zoomin 0.3s linear;
+            animation-fill-mode: forwards;
+        }
+        .btn-special {
+            bottom: 0;
+        }
+    }
+    &__container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-blend-mode: soft-light;
+        height: 500px;
+        padding-bottom: 0;
+        position: relative;
+      //   top: 6px; This remove a vertical spacing of each box
+        @include bg-center;
+        //   test animation Erasmo
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-position-x: 50%;
+        background-position-y: 0%;
+        -webkit-animation: zoomout 0.3s linear;
+        animation: zoomout 0.3s linear;
+        animation-fill-mode: forwards;
+        //   test animation Erasmo
+    }
+}
+@-webkit-keyframes zoomin {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(1.10);
+        transform: scale(1.10);
+    }
+}
+
+@-webkit-keyframes zoomout {
+    0% {
+        -webkit-transform: scale(1.10);
+        transform: scale(1.10);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
 }

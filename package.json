@@ -40,6 +40,7 @@
     "webpack-notifier": "^1.8.0"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "jquery": "^3.5.1",

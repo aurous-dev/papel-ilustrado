@@ -16,6 +16,14 @@ import example from './components/Example.vue';
 import selectcompo from './components/SelectCompo.vue';
 // Import Vue FILES
 
+// Start AOS library
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+    disable:'mobile',
+    once: true
+});
+// Start AOS library
 // Import Slick Slider & bootstrap
 require('./app/slick.js');
 require('./bootstrap.js');
