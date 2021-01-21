@@ -8116,10 +8116,9 @@ a.text-dark:hover, a.text-dark:focus {
       margin-right: 10px;
       border-right: 1px solid #C1CDCA; }
       .header__menu--whatsapp img {
-        height: 24px;
-        padding-bottom: 5px; }
+        height: 19px; }
     .header__menu--icons {
-      padding-right: 20px;
+      padding-right: 10px;
       margin-right: 10px;
       border-right: 1px solid #C1CDCA;
       align-items: center;
@@ -8127,14 +8126,13 @@ a.text-dark:hover, a.text-dark:focus {
       .header__menu--icons a {
         position: relative;
         color: #FFFFFF; }
-        .header__menu--icons a i {
-          font-size: 20px;
-          color: #F4997E;
-          margin: 0 5px; }
+        .header__menu--icons a img {
+          height: 19px;
+          margin-right: 10px; }
         .header__menu--icons a .icon__heart-circle {
           position: absolute;
-          top: 6px;
-          right: 0px;
+          top: 8px;
+          right: 8px;
           background: #F4997E;
           border-radius: 50%;
           padding: 0 5px;
@@ -8143,8 +8141,8 @@ a.text-dark:hover, a.text-dark:focus {
           color: #2A3D42; }
           .header__menu--icons a .icon__cart-circle {
             position: absolute;
-            top: 6px;
-            right: -6px;
+            top: 7px;
+            right: -3px;
             background: #2A3D42;
             border-radius: 50%;
             padding: 0 5px;

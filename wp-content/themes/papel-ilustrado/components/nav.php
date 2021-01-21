@@ -28,11 +28,11 @@
             </div>
             <div class="header__menu--icons">
                <a href="#">
-                  <i class="far fa-heart icon__heart"></i>
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/svg/heart.svg" alt="">
                   <div class="icon__heart-circle">1</div>
                </a>
                <a href="#">
-                  <i class="fas fa-shopping-cart icon__cart"></i>
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/svg/cart.svg" alt="">
                   <div class="icon__cart-circle">0</div>
                </a>
             </div>

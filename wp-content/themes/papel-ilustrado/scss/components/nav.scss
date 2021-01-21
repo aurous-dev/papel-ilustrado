@@ -45,28 +45,26 @@
          margin-right: 10px;
          border-right: 1px solid $color-light_green;
          img {
-            height: 24px;
-            padding-bottom: 5px;
+            height: 19px;
          } 
       }
       &--icons {
-         padding-right: 20px;
+         padding-right: 10px;
          margin-right: 10px;
          border-right: 1px solid $color-light_green;
          @include f-center;
          a {
             position: relative;
             color: $color-white;
-            i {
-               font-size: 20px;
-               color: $color-salmon;
-               margin: 0 5px;
+            img {
+               height: 19px;
+               margin-right: 10px;
             }
             .icon__heart {
                &-circle {
                   position: absolute;
-                  top: 6px;
-                  right: 0px;
+                  top: 8px;
+                  right: 8px;
                   background: $color-salmon;
                   border-radius: 50%;
                   padding: 0 5px;
@@ -77,8 +75,8 @@
                color: $color-indigo;
                &-circle {
                   position: absolute;
-                  top: 6px;
-                  right: -6px;
+                  top: 7px;
+                  right: -3px;
                   background: $color-indigo;
                   border-radius: 50%;
                   padding: 0 5px;
