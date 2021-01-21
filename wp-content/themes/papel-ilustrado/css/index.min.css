@@ -8337,7 +8337,9 @@ a.text-dark:hover, a.text-dark:focus {
   .btn-title:hover a, .btn-title:active a {
     color: #2A3D42;
     text-decoration: none; }
-  .btn-title img {
+  .btn-title:hover svg path, .btn-title:active svg path {
+    fill: #F4997E; }
+  .btn-title svg {
     position: absolute;
     right: 0;
     z-index: 1; }
