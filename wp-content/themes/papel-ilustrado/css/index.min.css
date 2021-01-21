@@ -7513,8 +7513,11 @@ a.text-dark:hover, a.text-dark:focus {
             text-decoration-color: #FFFFFF; }
             #menu-principal > li.menu-item-has-children > .sub-menu > li > .sub-menu a:hover {
               text-decoration-color: #2A3D42; }
-      #menu-principal > li.menu-item-has-children > .sub-menu .column-list > .sub-menu {
+      #menu-principal > li.menu-item-has-children > .sub-menu .column3 {
         column-count: 3;
+        column-gap: 40px; }
+      #menu-principal > li.menu-item-has-children > .sub-menu .column2 {
+        column-count: 2;
         column-gap: 40px; }
 
 .hero {

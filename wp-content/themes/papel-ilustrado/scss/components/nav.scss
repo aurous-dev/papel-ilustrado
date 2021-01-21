@@ -187,11 +187,13 @@
             }
          }
          /// Clase para poder hacer el efecto de lista en el menu
-         .column-list {
-            & > .sub-menu {
-               column-count: 3;
-               column-gap: 40px;
-            }
+         .column3 {
+            column-count: 3;
+            column-gap: 40px;
+         }
+         .column2 {
+            column-count: 2;
+            column-gap: 40px;
          }
       }
    }
