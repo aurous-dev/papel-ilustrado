@@ -25,7 +25,8 @@
    padding: 15px 25px;
    text-transform: uppercase;
    &:hover {
-      color: $color-dark_gray;
+      color: $color-white;
+      background-color: $color-salmon;
    }
 }
 

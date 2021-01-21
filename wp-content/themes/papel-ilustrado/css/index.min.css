@@ -7604,7 +7604,8 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 15px 25px;
   text-transform: uppercase; }
   .btn-send:hover {
-    color: #3D3F40; }
+    color: #FFFFFF;
+    background-color: #F4997E; }
 
 .btn-title {
   position: absolute;
