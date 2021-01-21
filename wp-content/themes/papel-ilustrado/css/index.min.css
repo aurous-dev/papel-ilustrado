@@ -8165,10 +8165,15 @@ a.text-dark:hover, a.text-dark:focus {
       width: 100vw;
       height: 1px;
       background-color: #C1CDCA; }
+    .header__logo a {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
     .header__logo img {
       position: absolute;
       background-color: #FFFFFF;
-      padding: 0 25px; }
+      padding: 0 25px;
+      height: 130px; }
 
 #menu-principal {
   display: flex;
@@ -8223,7 +8228,8 @@ a.text-dark:hover, a.text-dark:focus {
       top: 53px;
       padding: 20px 0;
       opacity: 0;
-      visibility: hidden; }
+      visibility: hidden;
+      z-index: 1; }
       #menu-principal > li.menu-item-has-children > .sub-menu a {
         color: #2A3D42; }
       #menu-principal > li.menu-item-has-children > .sub-menu::before {
@@ -8410,13 +8416,33 @@ a.text-dark:hover, a.text-dark:focus {
         z-index: -1; }
   .card__container--desc {
     text-align: center;
-    padding: 10px; }
+    padding: 10px;
+    position: relative; }
     .card__container--desc-title {
-      color: #2A3D42;
-      font-size: 13px;
-      margin-bottom: 5px;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 700; }
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; }
+      .card__container--desc-title .tag-disc {
+        position: absolute;
+        height: 21px;
+        width: 14%;
+        left: -10px;
+        font-size: 12px;
+        display: flex;
+        color: #FFFFFF;
+        background-color: #F4997E;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        align-items: center;
+        justify-content: center; }
+      .card__container--desc-title h3 {
+        color: #2A3D42;
+        font-size: 13px;
+        margin-bottom: 5px;
+        max-width: 80%;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700; }
     .card__container--desc-for {
       color: #535B5B;
       font-size: 12px;
@@ -8433,6 +8459,19 @@ a.text-dark:hover, a.text-dark:focus {
       .card__container--desc-price .price-normal {
         font-size: 11px;
         text-decoration: line-through; }
+  .card__container .heart-icon {
+    display: flex;
+    width: fit-content;
+    position: absolute;
+    bottom: 10px;
+    right: 10px; }
+    .card__container .heart-icon:hover svg path {
+      fill: #F4997E; }
+    .card__container .heart-icon svg path {
+      fill-rule: evenodd !important;
+      fill: #FFFFFF;
+      stroke: #F4997E;
+      stroke-width: 2px; }
 
 .cards:hover {
   text-decoration: none; }

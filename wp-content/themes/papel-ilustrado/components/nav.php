@@ -41,7 +41,9 @@
             </div>
          </div>
          <div class="header__logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/logo.png" alt="">
+            <a href="#">
+               <img src="<?php echo get_template_directory_uri(); ?>/img/svg/logo.svg" alt="">
+            </a>
          </div>
          <nav class="header__nav">
             <?php wp_nav_menu(); ?>

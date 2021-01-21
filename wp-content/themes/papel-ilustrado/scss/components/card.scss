@@ -40,11 +40,31 @@
     &--desc {
         text-align: center;
         padding: 10px;
+        position: relative;
         &-title {
-            color: $color-indigo;
-            font-size: $f-small;
-            margin-bottom: 5px;
-            @include fonts-display(700);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            .tag-disc {
+                position: absolute;
+                height: 21px;
+                width: 14%;
+                left: -10px;
+                font-size: 12px;
+                display: flex;
+                color: $color-white;
+                background-color: $color-salmon;
+                @include fonts-display(700);
+                @include f-center;
+            }
+            h3 {
+                color: $color-indigo;
+                font-size: $f-small;
+                margin-bottom: 5px;
+                max-width: 80%;
+                @include fonts-display(700);
+            }
         }
         &-for {
             color: $color-gray;
@@ -62,6 +82,28 @@
             .price-normal {
                 font-size: 11px;
                 text-decoration: line-through;
+            }
+        }
+    }
+    .heart-icon {
+        display: flex;
+        width: fit-content;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        &:hover {
+            svg {
+                path {
+                    fill: $color-salmon;
+                }
+            }
+        }
+        svg {
+            path {
+                fill-rule: evenodd !important;
+                fill: $color-white;
+                stroke: $color-salmon;
+                stroke-width: 2px;
             }
         }
     }

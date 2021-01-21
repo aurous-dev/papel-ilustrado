@@ -108,10 +108,15 @@
          height: 1px;
          background-color: $color-light_green;
       }
+      a {
+         display: flex;
+         @include f-center;
+      }
       img {
          position: absolute;
          background-color: $color-white;
          padding: 0 25px;
+         height: 130px;
       }
    }
 }
@@ -180,6 +185,7 @@
          padding: 20px 0;
          opacity: 0;
          visibility: hidden;
+         z-index: 1;
          a{
             color: $color-indigo;
          }
