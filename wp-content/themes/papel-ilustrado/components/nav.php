@@ -1,7 +1,9 @@
 <header class="container-fluid header">
+   <?php if(get_field('global_bar_cta', 'option')) :?>
    <div class="header__banner">
-      <div>Seguimos despachando a todo Chile - Plazo de envio 15 dias habiles </div>
+      <div><?php the_field('global_bar_cta', 'option');?></div>
    </div>
+   <?php endif;?>
    <div class="container">
       <div class="header__container">
          <div class="header__menu">
@@ -41,8 +43,9 @@
             </div>
          </div>
          <div class="header__logo">
-            <a href="<?php echo get_home_url();;?>">
-               <img src="<?php echo get_template_directory_uri(); ?>/img/svg/logo.svg" alt="">
+            <a href="<?php echo get_home_url();?>">
+               <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/svg/logo.svg" alt=""> -->
+               <img src="<?php the_field('logo', 'option');?>" alt="<?php echo get_bloginfo('name');?>">
             </a>
          </div>
          <nav class="header__nav">
