@@ -18,8 +18,12 @@
                </div>
             </div>  -->
             <div class="header__menu--search">
-               <input type="text" placeholder="Buscar producto">
-               <i class="fas fa-search"></i>
+               <form action="">
+                  <input type="text" placeholder="Buscar producto">
+                  <a href="#">
+                     <i class="fas fa-search"></i>
+                  </a>
+               </form>
             </div>
             <div class="header__menu--whatsapp">
                <a href="#">

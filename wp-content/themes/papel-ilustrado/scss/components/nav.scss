@@ -21,9 +21,15 @@
          position: relative;
          margin-right: auto;
          width: 40%;
+         form {
+            width: 60%;
+            position: relative;
+            display: flex;
+            @include f-center;
+         }
          input {
             padding: 8px 15px;
-            width: 60%;
+            width: 260px;
             font-size: $f-normal;
             border: 1px solid #D2D2D2;
             border-radius: $r-input;
@@ -32,12 +38,18 @@
                cursor: pointer;
             }
          }
-         i {
+         a {
             position: absolute;
-            font-size: 20px;
-            color: $color-dark_green;
-            margin: 0;
-            left: 50%;
+            height: 100%;
+            width: 50px;
+            display: flex;
+            right: 5px;
+            @include f-center;
+            i {
+               font-size: 20px;
+               color: $color-dark_green;
+               margin: 0;
+            }
          }
       }
       &--whatsapp {
