@@ -8073,7 +8073,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 .header {
   background-color: #FFFFFF;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  box-shadow: 0 15px 30px -17px rgba(0, 0, 0, 0.15); }
   .header__banner {
     color: #FFFFFF;
     text-align: center;
