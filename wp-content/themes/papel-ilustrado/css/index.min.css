@@ -8075,14 +8075,18 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #FFFFFF;
   padding-bottom: 10px; }
   .header__banner {
-    text-align: center;
     color: #FFFFFF;
+    text-align: center;
     background-color: #2A3D42;
     width: 100vw;
     padding: 12px 20px;
     margin: 0 -15px;
     font-family: 'Raleway', sans-serif;
     font-weight: 400; }
+    .header__banner a {
+      color: #FFFFFF; }
+      .header__banner a:hover {
+        color: #F4997E; }
   .header__menu {
     display: flex;
     padding-top: 25px;
@@ -8096,21 +8100,33 @@ a.text-dark:hover, a.text-dark:focus {
       position: relative;
       margin-right: auto;
       width: 40%; }
+      .header__menu--search form {
+        width: 60%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
       .header__menu--search input {
         padding: 8px 15px;
-        width: 60%;
+        width: 260px;
         font-size: 14px;
         border: 1px solid #D2D2D2;
         border-radius: 4px; }
         .header__menu--search input::placeholder {
           color: #A7A7A7;
           cursor: pointer; }
-      .header__menu--search i {
+      .header__menu--search a {
         position: absolute;
-        font-size: 20px;
-        color: #355957;
-        margin: 0;
-        left: 50%; }
+        height: 100%;
+        width: 50px;
+        display: flex;
+        right: 5px;
+        align-items: center;
+        justify-content: center; }
+        .header__menu--search a i {
+          font-size: 20px;
+          color: #355957;
+          margin: 0; }
     .header__menu--whatsapp {
       padding-right: 15px;
       margin-right: 10px;
@@ -8131,21 +8147,17 @@ a.text-dark:hover, a.text-dark:focus {
         justify-content: center;
         align-items: flex-end;
         margin-right: 15px; }
-        .header__menu--icons a img {
-          height: 20px;
+        .header__menu--icons a svg {
           margin-right: -3px; }
-      .header__menu--icons .icon__heart-circle {
-        background: #F4997E;
-        border-radius: 50%;
-        padding: 0 5px;
-        font-size: 10px; }
-      .header__menu--icons .icon__cart img {
-        height: 23px; }
-      .header__menu--icons .icon__cart-circle {
-        background: #2A3D42;
-        border-radius: 50%;
-        padding: 0 5px;
-        font-size: 10px; }
+        .header__menu--icons a .icon-circle {
+          background: #2A3D42;
+          border-radius: 50%;
+          padding: 0 5px;
+          font-size: 10px; }
+        .header__menu--icons a:hover svg path {
+          fill: #F4997E; }
+        .header__menu--icons a:hover .icon-circle {
+          background: #F4997E; }
     .header__menu--sesions a {
       color: #2A3D42;
       text-decoration: none;
@@ -8388,12 +8400,14 @@ a.text-dark:hover, a.text-dark:focus {
       right: 36%; }
 
 .btn-instagram {
-  padding: 16px 24px;
+  position: absolute;
+  padding: 14px 24px;
   background-color: #355957;
   color: #fff;
   text-transform: uppercase;
+  font-size: 15px;
   font-family: 'Raleway', sans-serif;
-  font-weight: 600; }
+  font-weight: 400; }
   .btn-instagram:hover {
     background-color: #F4997E;
     color: #fff; }
@@ -8954,6 +8968,8 @@ i {
 
 .instagram {
   padding-bottom: 100px; }
+  .instagram .title {
+    padding-bottom: 20px; }
   .instagram__slider.slick-slider {
     margin-bottom: 0 !important; }
   .instagram__slider .slick-prev {

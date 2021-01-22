@@ -2,13 +2,19 @@
    background-color: $color-white;
    padding-bottom: 10px;
    &__banner {
-      text-align: center;
       color: $color-white;
+      text-align: center;
       background-color: $color-indigo;
       width: 100vw;
       padding: 12px 20px;
       margin: 0 -15px;
       @include fonts-display(400);
+      a {
+         color: $color-white;
+         &:hover {
+            color: $color-salmon;
+         }
+      }
    }
    &__menu{
       display: flex;
@@ -21,9 +27,15 @@
          position: relative;
          margin-right: auto;
          width: 40%;
+         form {
+            width: 60%;
+            position: relative;
+            display: flex;
+            @include f-center;
+         }
          input {
             padding: 8px 15px;
-            width: 60%;
+            width: 260px;
             font-size: $f-normal;
             border: 1px solid #D2D2D2;
             border-radius: $r-input;
@@ -32,12 +44,18 @@
                cursor: pointer;
             }
          }
-         i {
+         a {
             position: absolute;
-            font-size: 20px;
-            color: $color-dark_green;
-            margin: 0;
-            left: 50%;
+            height: 100%;
+            width: 50px;
+            display: flex;
+            right: 5px;
+            @include f-center;
+            i {
+               font-size: 20px;
+               color: $color-dark_green;
+               margin: 0;
+            }
          }
       }
       &--whatsapp {
@@ -62,28 +80,24 @@
             justify-content: center;
             align-items: flex-end;
             margin-right: 15px;
-            img {
-               height: 20px;
+            svg {
                margin-right: -3px;
             }
-         }
-         .icon__heart {
-            &-circle {
-               background: $color-salmon;
-               border-radius: 50%;
-               padding: 0 5px;
-               font-size: 10px;
-            }
-         }
-         .icon__cart {
-            img {
-               height: 23px;
-            }
-            &-circle {
+            .icon-circle {
                background: $color-indigo;
                border-radius: 50%;
                padding: 0 5px;
                font-size: 10px;
+            }
+            &:hover {
+               svg {
+                  path {
+                     fill: $color-salmon;
+                  }
+               }
+               .icon-circle {
+                  background: $color-salmon;
+               }
             }
          }
       }
@@ -239,3 +253,7 @@
       }
    }
 }
+// erasmo test banner images
+// #banner_cuadros {
+//    display:none;
+// }

@@ -103,11 +103,13 @@
 }
 
 .btn-instagram {
-   padding: 16px 24px;
+   position: absolute;
+   padding: 14px 24px;
    background-color: $color-dark_green;
    color: $white;
    text-transform: uppercase;
-   @include fonts-display(600);
+   font-size: 15px;
+   @include fonts-display(400);
    &:hover {
       background-color: $color-salmon;
       color: $white;

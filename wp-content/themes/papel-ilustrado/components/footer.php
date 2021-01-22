@@ -13,12 +13,13 @@
          <div class="footer__info">
             <div class="footer__info--nav">
                <ul>
-                  <li><a href="#"> Cuadros </a></li>
-                  <li><a href="#"> Nostros </a></li>
+                  <li><a href="#"> Series de Cuadros </a></li>
+                  <li><a href="#"> Nosotros </a></li>
                   <li><a href="#"> Composiciones </a></li>
-                  <li><a href="#"> Politica de Envio </a></li>
-                  <li><a href="#"> Decoracion </a></li>
+                  <li><a href="#"> Politica de Envío </a></li>
+                  <li><a href="#"> Cuadros Individuales </a></li>
                   <li><a href="#"> Cambios y devoluciones </a></li>
+                  <li><a href="#"> Decoración </a></li>
                </ul>
             </div>
             <div class="footer__info--subs">
