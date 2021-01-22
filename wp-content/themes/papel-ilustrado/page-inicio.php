@@ -47,13 +47,17 @@ get_header();
    <div class="container">
       <div class="composition__slider">
          <a href="#" class="big-card" data-aos="fade-up" data-aos-duration="1000">
-            <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
-               <?php get_template_part('components/single/card-special');?>
+            <div>
+               <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
+                  <?php get_template_part('components/single/card-special');?>
+               </div>
             </div>
          </a>
          <a href="#" class="big-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-            <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
-               <?php get_template_part('components/single/card-special');?>
+            <div>
+               <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
+                  <?php get_template_part('components/single/card-special');?>
+               </div>
             </div>
          </a>
          <a href="#" class="big-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
@@ -75,5 +79,18 @@ get_header();
    </div>
 </section>
 <!-- FOURTH SECTION  -->
+<!-- FIIFTH SECTION  -->
+<section class="instagram">
+   <?php get_template_part('components/single/title-Instagram');?>
+   <div class="container">
+      <div class="instagram__slider">
+         <?php get_template_part('components/group/card-instagram');?>
+         <?php get_template_part('components/group/card-instagram');?>
+         <?php get_template_part('components/group/card-instagram');?>
+         <?php get_template_part('components/group/card-instagram');?>
+      </div>
+   </div>
+</section>
+<!-- FIIFTH SECTION  -->
 
 <?php get_footer();?>

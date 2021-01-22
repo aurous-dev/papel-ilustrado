@@ -73,6 +73,13 @@ $(".picture__slider").slick({
     dots: true,
     arrows: true,
 });
+$(".instagram__slider").slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+});
 
 
 // Menu dropdown Desktop

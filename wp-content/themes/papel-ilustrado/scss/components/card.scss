@@ -34,6 +34,8 @@
             }
             img {
                 z-index: -1;
+                max-height: 100%;
+                max-width: 100%;
             }
         }
     }
@@ -117,6 +119,9 @@
 .big-card {
     padding: 0 10px;
     overflow: hidden;
+    & > div {
+        overflow: hidden;
+    }
     &:hover {
         text-decoration: none;
         .big-card__container {
