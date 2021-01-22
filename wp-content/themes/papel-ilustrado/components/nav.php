@@ -32,7 +32,7 @@
                   <div class="icon__heart-circle">1</div>
                </a>
                <a href="<?php echo wc_get_cart_url(); ?>">
-                  <i class="fas fa-shopping-cart icon__cart"></i>
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/svg/cart.svg" alt="">
                   <div class="icon__cart-circle"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></div>
                </a>
             </div>
@@ -41,7 +41,7 @@
             </div>
          </div>
          <div class="header__logo">
-            <a href="#">
+            <a href="<?php echo get_home_url();;?>">
                <img src="<?php echo get_template_directory_uri(); ?>/img/svg/logo.svg" alt="">
             </a>
          </div>
