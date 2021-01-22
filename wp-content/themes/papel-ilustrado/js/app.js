@@ -81,6 +81,22 @@ $(".instagram__slider").slick({
     arrows: true,
 });
 
+// PAGE SLIDER 
+$(".fiveColumn__slider").slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+});
+$(".fourColumn__slider").slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+});
+
 
 // Menu dropdown Desktop
 const tr_menu = document.querySelectorAll('#menu-principal .lista');

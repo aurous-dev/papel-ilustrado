@@ -8,17 +8,26 @@
       margin: 0 auto;
       color: $color-indigo;
       font-size: 22px;
+      @include fonts-display(600);
    }
 }
 .page-title {
    text-align: center;
    &__tag {
-      margin: 50px 0 25px;
-      display: block;
-      color: $color-indigo;
-      @include fonts-display(400);
+      text-align: center;
+      margin: 50px auto 25px;
+      letter-spacing: 0.05em;
+      a {
+         color: $color-indigo;
+         @include fonts-display(500);
+         &:hover {
+            color: $color-salmon;
+         }
+      }
       .page-active {
+         color: $color-indigo;
          font-weight: 700;
+         cursor: default;
       }
    }
 }
