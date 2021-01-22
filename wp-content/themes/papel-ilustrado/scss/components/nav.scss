@@ -2,13 +2,19 @@
    background-color: $color-white;
    padding-bottom: 10px;
    &__banner {
-      text-align: center;
       color: $color-white;
+      text-align: center;
       background-color: $color-indigo;
       width: 100vw;
       padding: 12px 20px;
       margin: 0 -15px;
       @include fonts-display(400);
+      a {
+         color: $color-white;
+         &:hover {
+            color: $color-salmon;
+         }
+      }
    }
    &__menu{
       display: flex;

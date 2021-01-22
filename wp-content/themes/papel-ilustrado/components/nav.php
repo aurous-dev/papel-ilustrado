@@ -1,6 +1,6 @@
 <header class="container-fluid header">
    <div class="header__banner">
-      <div>Seguimos despachando a todo Chile - Plazo de envio 15 dias habiles </div>
+      <a href="#"> Seguimos despachando a todo Chile - Plazo de envio 15 dias habiles </a>
    </div>
    <div class="container">
       <div class="header__container">
