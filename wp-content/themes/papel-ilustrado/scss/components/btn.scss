@@ -25,7 +25,8 @@
    padding: 15px 25px;
    text-transform: uppercase;
    &:hover {
-      color: $color-dark_gray;
+      color: $color-white;
+      background-color: $color-salmon;
    }
 }
 
@@ -40,12 +41,13 @@
          color: $color-indigo;
          text-decoration: none;
       }
-      // img {
-      //    filter: grayscale(0);
-      // }
+      svg {
+         path {
+            fill: $color-salmon;
+         }
+      }
    }
-   img {
-      // filter: grayscale(1);
+   svg {
       position: absolute;
       right: 0;
       z-index: 1;

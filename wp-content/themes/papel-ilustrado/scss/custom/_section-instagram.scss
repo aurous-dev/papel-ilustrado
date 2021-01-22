@@ -1,0 +1,54 @@
+.instagram {
+   &__slider {
+   @include slider__marginB;
+      .slick-prev {
+         @include slider__arrowLeft;
+         left: -80px;
+         &:hover {
+            &::before {
+               filter: grayscale(0);
+            }
+         }
+      }
+      .slick-next {
+         @include slider__arrowRight;
+         right: -80px;
+         &:hover {
+            &::before {
+               filter: grayscale(0);
+            }
+         }
+      }
+      .slick-dots {
+         @include slider__dots;
+         bottom: -30px;
+         // Posicion
+         width: 100%;
+         padding: 0 20px;
+         li {
+            height: fit-content;
+            width: fit-content;
+            margin: 0 4px;
+            // Activado
+            &.slick-active {
+               button {
+                  &:before {
+                     color: $color-salmon;
+                  }
+               }
+            }
+            button {
+            height: fit-content;
+            width: fit-content;
+               &::before {
+                  color: rgba($color: $color-dark_green, $alpha: .5);
+                  width: 15px;
+                  height: 15px;
+                  opacity: 1;
+                  font-size: 12px;
+               }
+            }
+         }
+      }
+   }
+}

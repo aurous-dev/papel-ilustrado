@@ -28,7 +28,7 @@
             </div>
             <div class="header__menu--icons">
                <a href="#">
-                  <i class="far fa-heart icon__heart"></i>
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/svg/heart.svg" alt="">
                   <div class="icon__heart-circle">1</div>
                </a>
                <a href="<?php echo wc_get_cart_url(); ?>">
@@ -41,7 +41,9 @@
             </div>
          </div>
          <div class="header__logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/logo.png" alt="">
+            <a href="#">
+               <img src="<?php echo get_template_directory_uri(); ?>/img/svg/logo.svg" alt="">
+            </a>
          </div>
          <nav class="header__nav">
             <?php wp_nav_menu(); ?>

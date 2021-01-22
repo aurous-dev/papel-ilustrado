@@ -16,6 +16,14 @@ import example from './components/Example.vue';
 import selectcompo from './components/SelectCompo.vue';
 // Import Vue FILES
 
+// Start AOS library
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+    disable:'mobile',
+    once: true
+});
+// Start AOS library
 // Import Slick Slider & bootstrap
 require('./app/slick.js');
 require('./bootstrap.js');
@@ -61,6 +69,13 @@ $(".composition__slider").slick({
 $(".picture__slider").slick({
     infinite: true,
     slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+});
+$(".instagram__slider").slick({
+    infinite: true,
+    slidesToShow: 3,
     slidesToScroll: 1,
     dots: true,
     arrows: true,
