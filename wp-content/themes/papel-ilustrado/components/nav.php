@@ -31,9 +31,9 @@
                   <i class="far fa-heart icon__heart"></i>
                   <div class="icon__heart-circle">1</div>
                </a>
-               <a href="#">
+               <a href="<?php echo wc_get_cart_url(); ?>">
                   <i class="fas fa-shopping-cart icon__cart"></i>
-                  <div class="icon__cart-circle">0</div>
+                  <div class="icon__cart-circle"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></div>
                </a>
             </div>
             <div class="header__menu--sesions">
