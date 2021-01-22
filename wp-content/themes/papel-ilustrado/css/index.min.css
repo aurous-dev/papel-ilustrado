@@ -8396,12 +8396,14 @@ a.text-dark:hover, a.text-dark:focus {
       right: 36%; }
 
 .btn-instagram {
-  padding: 16px 24px;
+  position: absolute;
+  padding: 14px 24px;
   background-color: #355957;
   color: #fff;
   text-transform: uppercase;
+  font-size: 15px;
   font-family: 'Raleway', sans-serif;
-  font-weight: 600; }
+  font-weight: 400; }
   .btn-instagram:hover {
     background-color: #F4997E;
     color: #fff; }
@@ -8962,6 +8964,8 @@ i {
 
 .instagram {
   padding-bottom: 100px; }
+  .instagram .title {
+    padding-bottom: 20px; }
   .instagram__slider.slick-slider {
     margin-bottom: 0 !important; }
   .instagram__slider .slick-prev {
