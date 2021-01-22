@@ -9074,3 +9074,13 @@ i {
           opacity: 1;
           font-size: 12px; }
 
+.page-cuadros__grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  margin: 0 -15px; }
+  .page-cuadros__grid .cards {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding: 20px 0; }
+

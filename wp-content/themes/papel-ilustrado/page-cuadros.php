@@ -11,8 +11,24 @@ get_header();
          inicio / <span class="page-active"> Cuadros </span>
       </a>
       <h2>
-         Composiciones/Series
+         Cuadros
       </h2>
+   </div>
+</section>
+<section class="page-cuadros">
+   <div class="container">
+      <div class="section-filter">
+         <div class="section-filter__search">
+            <div>Filtrar</div>
+            <i></i>
+         </div>
+         <div class="section-filter__form">
+            <input type="text">
+         </div>
+      </div>
+      <div class="page-cuadros__grid">
+         <?php get_template_part('components/group/card-picture');?>
+      </div>
    </div>
 </section>
 
