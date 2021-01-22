@@ -8071,6 +8071,17 @@ a.text-dark:hover, a.text-dark:focus {
     color: #2A3D42;
     font-size: 22px; }
 
+.page-title {
+  text-align: center; }
+  .page-title__tag {
+    margin: 50px 0 25px;
+    display: block;
+    color: #2A3D42;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400; }
+    .page-title__tag .page-active {
+      font-weight: 700; }
+
 .header {
   background-color: #FFFFFF;
   padding-bottom: 10px;
@@ -8665,7 +8676,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 body, html {
   background-color: rgba(229, 229, 229, 0.15);
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif; }
 
 i {
   color: #2ecc71;

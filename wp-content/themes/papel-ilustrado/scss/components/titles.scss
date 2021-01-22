@@ -10,3 +10,15 @@
       font-size: 22px;
    }
 }
+.page-title {
+   text-align: center;
+   &__tag {
+      margin: 50px 0 25px;
+      display: block;
+      color: $color-indigo;
+      @include fonts-display(400);
+      .page-active {
+         font-weight: 700;
+      }
+   }
+}
