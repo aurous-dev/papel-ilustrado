@@ -8131,21 +8131,17 @@ a.text-dark:hover, a.text-dark:focus {
         justify-content: center;
         align-items: flex-end;
         margin-right: 15px; }
-        .header__menu--icons a img {
-          height: 20px;
+        .header__menu--icons a svg {
           margin-right: -3px; }
-      .header__menu--icons .icon__heart-circle {
-        background: #F4997E;
-        border-radius: 50%;
-        padding: 0 5px;
-        font-size: 10px; }
-      .header__menu--icons .icon__cart img {
-        height: 23px; }
-      .header__menu--icons .icon__cart-circle {
-        background: #2A3D42;
-        border-radius: 50%;
-        padding: 0 5px;
-        font-size: 10px; }
+        .header__menu--icons a .icon-circle {
+          background: #2A3D42;
+          border-radius: 50%;
+          padding: 0 5px;
+          font-size: 10px; }
+        .header__menu--icons a:hover svg path {
+          fill: #F4997E; }
+        .header__menu--icons a:hover .icon-circle {
+          background: #F4997E; }
     .header__menu--sesions a {
       color: #2A3D42;
       text-decoration: none;
