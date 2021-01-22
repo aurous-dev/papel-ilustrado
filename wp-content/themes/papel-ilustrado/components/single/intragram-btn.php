@@ -1,3 +1,3 @@
-<a class="btn-intagram" href="#">
+<a class="btn-instagram" href="#">
    Seguir
 </a>

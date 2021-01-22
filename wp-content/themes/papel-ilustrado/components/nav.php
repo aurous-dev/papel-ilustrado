@@ -27,11 +27,11 @@
                </a>
             </div>
             <div class="header__menu--icons">
-               <a href="#">
+               <a class="icon__heart" href="#">
                   <img src="<?php echo get_template_directory_uri(); ?>/img/svg/heart.svg" alt="">
                   <div class="icon__heart-circle">1</div>
                </a>
-               <a href="<?php echo wc_get_cart_url(); ?>">
+               <a class="icon__cart" href="<?php echo wc_get_cart_url(); ?>">
                   <img src="<?php echo get_template_directory_uri(); ?>/img/svg/cart.svg" alt="">
                   <div class="icon__cart-circle"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></div>
                </a>

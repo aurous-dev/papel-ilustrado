@@ -101,3 +101,15 @@
       }
    }
 }
+
+.btn-instagram {
+   padding: 16px 24px;
+   background-color: $color-dark_green;
+   color: $white;
+   text-transform: uppercase;
+   @include fonts-display(600);
+   &:hover {
+      background-color: $color-salmon;
+      color: $white;
+   }
+}
