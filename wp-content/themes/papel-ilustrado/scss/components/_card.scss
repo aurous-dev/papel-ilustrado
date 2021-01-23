@@ -116,6 +116,8 @@
         text-align: center;
         color: $color-white;
         display: flex;
+        width: fit-content;
+        height: fit-content;
         @include f-center;
         @include fonts-display(400);
         &:hover {
@@ -131,7 +133,7 @@
         }
         .search__class {
             position: absolute;
-            top: 25px;
+            top: 20px;
             width: fit-content;
             padding: 6px 15px;
             background-color: $color-indigo;
@@ -139,9 +141,9 @@
         }
         .search__buy {
             position: absolute;
-            width: 97%;
-            bottom: 5px;
-            right: 1%;
+            width: 100%;
+            bottom: 0;
+            right: 0;
             padding: 6px 15px;
             background-color: $color-indigo;
         }

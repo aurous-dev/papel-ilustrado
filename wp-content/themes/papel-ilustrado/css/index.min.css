@@ -8105,6 +8105,11 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 22px;
     font-family: 'Raleway', sans-serif;
     font-weight: 600; }
+  .search-title__results {
+    padding-top: 12px;
+    letter-spacing: 0.02em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400; }
 
 .header {
   background-color: #FFFFFF;
@@ -8561,6 +8566,8 @@ a.text-dark:hover, a.text-dark:focus {
     text-align: center;
     color: #FFFFFF;
     display: flex;
+    width: fit-content;
+    height: fit-content;
     align-items: center;
     justify-content: center;
     font-family: 'Raleway', sans-serif;
@@ -8575,16 +8582,16 @@ a.text-dark:hover, a.text-dark:focus {
       z-index: -1; }
     .card__container--search .search__class {
       position: absolute;
-      top: 25px;
+      top: 20px;
       width: fit-content;
       padding: 6px 15px;
       background-color: #2A3D42;
       text-transform: uppercase; }
     .card__container--search .search__buy {
       position: absolute;
-      width: 97%;
-      bottom: 5px;
-      right: 1%;
+      width: 100%;
+      bottom: 0;
+      right: 0;
       padding: 6px 15px;
       background-color: #2A3D42; }
 

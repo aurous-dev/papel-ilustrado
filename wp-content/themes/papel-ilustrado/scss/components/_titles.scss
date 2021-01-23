@@ -46,4 +46,9 @@
       font-size: 22px;
       @include fonts-display(600);
    }
+   &__results {
+      padding-top: 12px;
+      letter-spacing: 0.02em;
+      @include fonts-display(400);
+   }
 }
