@@ -8230,6 +8230,8 @@ a.text-dark:hover, a.text-dark:focus {
       padding-right: 20px;
       position: relative;
       z-index: 2; }
+    #menu-principal > li.menu-item-has-children.active a {
+      color: #F4997E; }
     #menu-principal > li.menu-item-has-children.active::before {
       transform: rotate(-90deg);
       color: red; }

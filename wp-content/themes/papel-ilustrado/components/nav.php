@@ -57,15 +57,51 @@
             </a>
          </div>
          <nav class="header__nav">
-            <?php wp_nav_menu(); ?>
-         </nav>
-         <?php if (get_field('banner_cuadros', 'option')) : ?>
-            <div id="banner_cuadros">
-               <a href="<?php the_field('url_banner_cuadros', 'option'); ?>">
-                  <img src="<?php the_field('banner_cuadros', 'option'); ?>">
-               </a>
+            <!-- <?php wp_nav_menu(); ?> -->
+            <div class="menu-principal-container">
+               <?php if (have_rows('menu_items', 'option')) : ?>
+                  <ul id="menu-principal" class="menu">
+                     <?php while (have_rows('menu_items', 'option')) : the_row(); ?>
+                        <?php if (get_sub_field('tipo_de_item') == 'sub') {
+                           $child = 'menu-item-has-children';
+                        } else {
+                           $child = '';
+                        }; ?>
+                        <li id="menu-item-22<?php echo get_row_index(); ?>" class="menu-item menu-item-type-custom menu-item-object-custom <?php echo $child; ?> menu-item-22<?php echo get_row_index(); ?>">
+                           <a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('titulo'); ?></a>
+                           <?php if (get_sub_field('tipo_de_item') == 'sub') : ?>
+                              <ul class="sub-menu">
+                                 <?php if (have_rows('banner')) : ?>
+                                    <?php while (have_rows('banner')) : the_row(); ?>
+                                       <?php if (get_sub_field('mostrar_banner') == 'active') : ?>
+                                          <div id="banner_cuadros">
+                                             <a href="<?php the_sub_field('url_banner'); ?>">
+                                                <img src="<?php the_sub_field('imagen_banner'); ?>">
+                                             </a>
+                                          </div>
+                                       <?php endif; ?>
+                                    <?php endwhile; ?>
+                                 <?php endif; ?>
+                                 <?php while (have_rows('sub-items')) : the_row(); ?>
+                                    <li id="menu-item-22<?php echo get_row_index(); ?>" class="menu-item menu-item-type-custom menu-item-object-custom <?php echo $child; ?> menu-item-22<?php echo get_row_index(); ?>">
+                                       <a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('titulo'); ?></a>
+                                       <?php if (have_rows('sub-items-sub')) : ?>
+                                          <ul class="sub-menu">
+                                             <?php while (have_rows('sub-items-sub')) : the_row(); ?>
+                                                <li id="menu-item-24<?php echo get_row_index(); ?>" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24<?php echo get_row_index(); ?>"><a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('titulo'); ?></a></li>
+                                             <?php endwhile; ?>
+                                          </ul>
+                                       <?php endif; ?>
+                                    </li>
+                                 <?php endwhile; ?>
+                              </ul>
+                           <?php endif; ?>
+                        </li>
+                     <?php endwhile; ?>
+                  </ul>
+               <?php endif; ?>
             </div>
-         <?php endif; ?>
+         </nav>
       </div>
    </div>
 </header>

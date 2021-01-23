@@ -135,9 +135,4 @@ function columnas() {
 }
 
 // test Erasmo
-function copyDiv() {
-    var banner_cuadros = document.getElementById("banner_cuadros");
-    var submenu = document.querySelectorAll('#menu-principal > .menu-item-has-children > .sub-menu');
-    submenu.innerHTML = banner_cuadros.innerHTML;
-}
-copyDiv();
+
