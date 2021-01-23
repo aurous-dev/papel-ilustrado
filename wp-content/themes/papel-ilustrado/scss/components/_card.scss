@@ -135,6 +135,7 @@
     }
     &:hover {
         text-decoration: none;
+        
         .big-card__container {
             -webkit-animation: zoomin 0.3s linear;
             animation: zoomin 0.3s linear;
@@ -142,6 +143,8 @@
         }
         .btn-special {
             bottom: 0;
+            -webkit-transform: scale(.92);
+            transform: scale(0.92);
         }
     }
     &__container {
