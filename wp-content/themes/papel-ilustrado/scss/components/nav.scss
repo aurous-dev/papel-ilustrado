@@ -8,9 +8,13 @@
       width: 100vw;
       padding: 12px 20px;
       margin: 0 -15px;
+      p {
+         margin-bottom: 0px;
+      }
       @include fonts-display(400);
       a {
          color: $color-white;
+         text-decoration: underline;
          &:hover {
             color: $color-salmon;
          }

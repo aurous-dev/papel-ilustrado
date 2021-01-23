@@ -1,8 +1,8 @@
 <header class="container-fluid header">
    <?php if (get_field('global_bar_cta', 'option')) : ?>
       <div class="header__banner">
-         <div>Seguimos despachando a todo Chile – Plazo de envío 15 dias hábiles</div>
-         <!-- <div><?php the_field('global_bar_cta', 'option'); ?></div> -->
+         <!-- <div>Seguimos despachando a todo Chile – Plazo de envío 15 dias hábiles</div> -->
+         <div><?php the_field('global_bar_cta', 'option'); ?></div>
       </div>
    <?php endif; ?>
    <div class="container">
