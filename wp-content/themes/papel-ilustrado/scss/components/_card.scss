@@ -109,6 +109,43 @@
             }
         }
     }
+
+    &--search {
+        position: relative;
+        font-size: 11px;
+        text-align: center;
+        color: $color-white;
+        display: flex;
+        @include f-center;
+        @include fonts-display(400);
+        &:hover {
+            background-color: rgba($color: $color-indigo, $alpha: 0.4);
+            .btn-card {
+                opacity: 1;
+            }
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            z-index: -1;
+        }
+        .search__class {
+            position: absolute;
+            top: 25px;
+            width: fit-content;
+            padding: 6px 15px;
+            background-color: $color-indigo;
+            text-transform: uppercase;
+        }
+        .search__buy {
+            position: absolute;
+            width: 97%;
+            bottom: 5px;
+            right: 1%;
+            padding: 6px 15px;
+            background-color: $color-indigo;
+        }
+    }
 }
 
 .card__instagram {

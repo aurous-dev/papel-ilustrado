@@ -13,6 +13,12 @@
 }
 .page-title {
    text-align: center;
+   h2 {
+      margin: 0 auto;
+      color: $color-indigo;
+      font-size: 22px;
+      @include fonts-display(600);
+   }
    &__tag {
       text-align: center;
       margin: 50px auto 25px;
@@ -29,5 +35,15 @@
          font-weight: 700;
          cursor: default;
       }
+   }
+}
+.search-title {
+   text-align: center;
+   padding: 100px 0 60px;
+   h2 {
+      margin: 0 auto;
+      color: $color-indigo;
+      font-size: 22px;
+      @include fonts-display(600);
    }
 }

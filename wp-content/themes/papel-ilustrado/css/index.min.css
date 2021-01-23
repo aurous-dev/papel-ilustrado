@@ -8075,6 +8075,12 @@ a.text-dark:hover, a.text-dark:focus {
 
 .page-title {
   text-align: center; }
+  .page-title h2 {
+    margin: 0 auto;
+    color: #2A3D42;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; }
   .page-title__tag {
     text-align: center;
     margin: 50px auto 25px;
@@ -8089,6 +8095,16 @@ a.text-dark:hover, a.text-dark:focus {
       color: #2A3D42;
       font-weight: 700;
       cursor: default; }
+
+.search-title {
+  text-align: center;
+  padding: 100px 0 60px; }
+  .search-title h2 {
+    margin: 0 auto;
+    color: #2A3D42;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; }
 
 .header {
   background-color: #FFFFFF;
@@ -8539,6 +8555,38 @@ a.text-dark:hover, a.text-dark:focus {
       fill: #FFFFFF;
       stroke: #F4997E;
       stroke-width: 2px; }
+  .card__container--search {
+    position: relative;
+    font-size: 11px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400; }
+    .card__container--search:hover {
+      background-color: rgba(42, 61, 66, 0.4); }
+      .card__container--search:hover .btn-card {
+        opacity: 1; }
+    .card__container--search img {
+      max-width: 100%;
+      max-height: 100%;
+      z-index: -1; }
+    .card__container--search .search__class {
+      position: absolute;
+      top: 25px;
+      width: fit-content;
+      padding: 6px 15px;
+      background-color: #2A3D42;
+      text-transform: uppercase; }
+    .card__container--search .search__buy {
+      position: absolute;
+      width: 97%;
+      bottom: 5px;
+      right: 1%;
+      padding: 6px 15px;
+      background-color: #2A3D42; }
 
 .card__instagram {
   padding: 0 10px;
@@ -9111,6 +9159,12 @@ body, html {
 .section__news {
   background-color: rgba(210, 210, 210, 0.2);
   padding: 20px 0 120px; }
+  .section__news:nth-child(odd) {
+    background-color: inherit; }
+    .section__news:nth-child(odd) .heart-icon:hover svg path {
+      fill: #F4997E; }
+    .section__news:nth-child(odd) .heart-icon svg path {
+      fill: rgba(229, 229, 229, 0.2); }
   .section__news--title h2 {
     font-size: 22px;
     padding: 50px 0;
@@ -9224,6 +9278,12 @@ body, html {
           height: 15px;
           opacity: 1;
           font-size: 12px; }
+  .section__news .fiveColumn__slider .heart-icon:hover svg path,
+  .section__news .fourColumn__slider .heart-icon:hover svg path {
+    fill: #F4997E; }
+  .section__news .fiveColumn__slider .heart-icon svg path,
+  .section__news .fourColumn__slider .heart-icon svg path {
+    fill: rgba(210, 210, 210, 0.2); }
 
 .page-cuadros {
   padding-bottom: 100px; }
@@ -9247,5 +9307,15 @@ body, html {
     .page-composiciones__grid .cards {
       flex: 0 0 25%;
       max-width: 25%;
+      padding: 20px 0; }
+
+.search-results {
+  padding-bottom: 100px; }
+  .search-results__grid {
+    display: flex;
+    flex-wrap: wrap; }
+    .search-results__grid .cards {
+      flex: 0 0 20%;
+      max-width: 20%;
       padding: 20px 0; }
 
