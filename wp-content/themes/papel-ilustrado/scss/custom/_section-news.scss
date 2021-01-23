@@ -9,7 +9,11 @@
          @include fonts-display(600);
       }
    }
-   .fiveColumn__slider {
+
+   
+   .fiveColumn__slider,
+   .fourColumn__slider {
+
       @include slider__marginB;
       .slick-prev {
          @include slider__arrowLeft;
