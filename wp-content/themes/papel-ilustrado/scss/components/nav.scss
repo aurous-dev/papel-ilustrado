@@ -43,9 +43,13 @@
             font-size: $f-normal;
             border: 1px solid #D2D2D2;
             border-radius: $r-input;
+            transition: $tr3;
             &::placeholder {
                color: $color-silver;
                cursor: pointer;
+            }
+            &:focus {
+               border: 1px solid $color-indigo;
             }
          }
          a {

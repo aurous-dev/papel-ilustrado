@@ -1,7 +1,6 @@
 <header class="container-fluid header">
    <?php if (get_field('global_bar_cta', 'option')) : ?>
       <div class="header__banner">
-         <!-- <div>Seguimos despachando a todo Chile – Plazo de envío 15 dias hábiles</div> -->
          <div><?php the_field('global_bar_cta', 'option'); ?></div>
       </div>
    <?php endif; ?>
@@ -28,11 +27,13 @@
                   </a>
                </form>
             </div>
-            <div class="header__menu--whatsapp">
-               <a href="#">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/svg/whatsapp.svg" alt="">
-               </a>
-            </div>
+            <?php if (get_field('contacto_whatsapp', 'option')) : ?>
+               <div class="header__menu--whatsapp">
+                  <a href="https://wa.me/56<?php the_field('contacto_whatsapp', 'option'); ?>">
+                     <img src="<?php echo get_template_directory_uri(); ?>/img/svg/whatsapp.svg" alt="">
+                  </a>
+               </div>
+            <?php endif; ?>
             <div class="header__menu--icons">
                <a class="icon__heart" href="#">
                   <svg width="21" height="24" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,9 +48,27 @@
                   <div class="icon-circle"><?php echo sprintf(_n('%d', '%d', WC()->cart->get_cart_contents_count()), WC()->cart->get_cart_contents_count()); ?></div>
                </a>
             </div>
-            <div class="header__menu--sesions">
-               <a href="#">Iniciar sesión / Registrarse</a>
-            </div>
+            <?php
+            global $current_user;
+            $login = $current_user->user_login; //get current user id 
+            $firstname = $current_user->user_firstname; //get current user id 
+            if (is_user_logged_in()) : ?>
+               <div class="header__menu--sesions">
+                  <a href="#">Hola, <b>
+                     <?php
+                        if($firstname) {
+                           echo $firstname;
+                        } else {
+                           echo $login;
+                        }
+                     ;?></b>
+                  </a>
+               </div>
+            <?php else : ?>
+               <div class="header__menu--sesions">
+                  <a href="#">Iniciar sesión / Registrarse</a>
+               </div>
+            <?php endif; ?>
          </div>
          <div class="header__logo">
             <a href="<?php echo get_home_url(); ?>">
