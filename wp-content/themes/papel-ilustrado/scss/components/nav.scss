@@ -1,6 +1,8 @@
 .header {
    background-color: $color-white;
    padding-bottom: 10px;
+   box-shadow: 0 15px 30px -17px rgba(0, 0, 0, 0.15);
+   position: relative;
    &__banner {
       color: $color-white;
       text-align: center;
@@ -175,21 +177,23 @@
    }
    // Sub menu
    &> li.menu-item-has-children {
-      position: relative;
-      &::before {
-         content: '';
-         background: url("../img/svg/slider-arrow.svg");
-         position: absolute;
-         top: 6px;
-         right: 0;
-         height: 12px;
-         width: 9px;
-         transform: rotate(90deg);
-         background-repeat: no-repeat;
-         background-size: contain;
-         background-position: center;
-         transition: all ease-in-out 0.3s;
-         z-index: 1;
+      & > a {
+         position: relative;
+         &::before {
+            content: '';
+            background: url("../img/svg/slider-arrow.svg");
+            position: absolute;
+            top: 6px;
+            right: 0;
+            height: 12px;
+            width: 9px;
+            transform: rotate(90deg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            transition: all ease-in-out 0.3s;
+            z-index: 1;
+         }
       }
       a {
          padding-right: 20px;
@@ -215,19 +219,25 @@
          position: absolute;
          display: flex;
          width: 1200px;
-         transform: translateX(-9%);
-         top: 53px;
-         padding: 20px 0;
+         transform: translateX(-50%);
+         top: 200px;
+         padding: 20px 0 40px;
          opacity: 0;
          visibility: hidden;
          z-index: 1;
+         left: 50%;
+         #banner_cuadros {
+            img {
+               max-width: 400px;
+            }
+         }
          a{
             color: $color-indigo;
          }
          &::before {
             content: '';
             position: absolute;
-            background-color: $color-white;
+            background-color: #F7F7F7;
             top: 0;
             left: -50vw;
             width: 200vw;
