@@ -20,7 +20,7 @@ get_header();
          </div>
       </div>
       <div class="page-cuadros__grid">
-         <?php get_template_part('components/group/card-picture');?>
+         <?php get_template_part('components/group/card-cuadros');?>
       </div>
    </div>
    <div class="container">
