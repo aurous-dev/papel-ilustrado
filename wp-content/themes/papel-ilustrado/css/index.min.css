@@ -8392,7 +8392,7 @@ a.text-dark:hover, a.text-dark:focus {
 .btn-send {
   background-color: #C1CDCA;
   color: #3D3F40;
-  padding: 15px 25px;
+  padding: 13px 25px;
   text-transform: uppercase; }
   .btn-send:hover {
     color: #FFFFFF;
@@ -8606,6 +8606,29 @@ a.text-dark:hover, a.text-dark:focus {
       right: 0;
       padding: 6px 15px;
       background-color: #2A3D42; }
+  .card__container--twice {
+    display: flex;
+    padding: 10px;
+    position: relative;
+    align-items: center;
+    justify-content: center; }
+    .card__container--twice img {
+      max-width: 100%;
+      max-height: 100%; }
+      .card__container--twice img.principal {
+        visibility: visible;
+        opacity: 1; }
+      .card__container--twice img.secundary {
+        position: absolute;
+        padding: 10px;
+        visibility: hidden;
+        opacity: 0; }
+    .card__container--twice:hover img.principal {
+      visibility: hidden;
+      opacity: 0; }
+    .card__container--twice:hover img.secundary {
+      visibility: visible;
+      opacity: 1; }
 
 .card__instagram {
   padding: 0 10px;
