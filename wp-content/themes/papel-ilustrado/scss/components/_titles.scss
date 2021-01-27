@@ -1,0 +1,54 @@
+.title {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   margin: 40px 0;
+   h2 {
+      margin: 0 auto;
+      color: $color-indigo;
+      font-size: 22px;
+      @include fonts-display(600);
+   }
+}
+.page-title {
+   text-align: center;
+   h2 {
+      margin: 0 auto;
+      color: $color-indigo;
+      font-size: 22px;
+      @include fonts-display(600);
+   }
+   &__tag {
+      text-align: center;
+      margin: 50px auto 25px;
+      letter-spacing: 0.05em;
+      a {
+         color: $color-indigo;
+         @include fonts-display(500);
+         &:hover {
+            color: $color-salmon;
+         }
+      }
+      .page-active {
+         color: $color-indigo;
+         font-weight: 700;
+         cursor: default;
+      }
+   }
+}
+.search-title {
+   text-align: center;
+   padding: 100px 0 60px;
+   h2 {
+      margin: 0 auto;
+      color: $color-indigo;
+      font-size: 22px;
+      @include fonts-display(600);
+   }
+   &__results {
+      padding-top: 12px;
+      letter-spacing: 0.02em;
+      @include fonts-display(400);
+   }
+}

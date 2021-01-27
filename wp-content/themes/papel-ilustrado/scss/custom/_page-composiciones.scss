@@ -1,0 +1,14 @@
+.page-composiciones {
+   padding-bottom: 100px;
+   &__grid {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      margin: 0 -15px;
+      .cards {
+         flex: 0 0 25%;
+         max-width: 25%;
+         padding: 20px 0;
+      }
+   }
+}
