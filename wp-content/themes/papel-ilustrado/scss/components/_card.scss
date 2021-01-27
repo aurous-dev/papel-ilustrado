@@ -39,6 +39,7 @@
             }
         }
     }
+    
     &--desc {
         text-align: center;
         padding: 10px;
@@ -87,6 +88,7 @@
             }
         }
     }
+    
     .heart-icon {
         display: flex;
         width: fit-content;
@@ -146,6 +148,39 @@
             right: 0;
             padding: 6px 15px;
             background-color: $color-indigo;
+        }
+    }
+
+    &--twice {
+        display: flex;
+        padding: 10px;
+        position: relative;
+        @include f-center;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            &.principal {
+                visibility: visible;
+                opacity: 1;
+            }
+            &.secundary {
+                position: absolute;
+                padding: 10px;
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+        &:hover {
+            img {
+                &.principal {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                &.secundary {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
         }
     }
 }

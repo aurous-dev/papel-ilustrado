@@ -8264,7 +8264,7 @@ a.text-dark:hover, a.text-dark:focus {
       content: '';
       background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAxNiAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuNTQ5Mjk4IDI3LjQ1MTZDMS4yNzkxOSAyOC4xODI4IDIuNDU1OTYgMjguMTgyOCAzLjE4NTg2IDI3LjQ1MTZMMTUuNTY0MyAxNS4wNTJDMTYuMTQ1MiAxNC40NyAxNi4xNDUyIDEzLjUzIDE1LjU2NDMgMTIuOTQ4TDMuMTg1ODYgMC41NDgzNjFDMi40NTU5NiAtMC4xODI3ODcgMS4yNzkxOSAtMC4xODI3ODcgMC41NDkyOTggMC41NDgzNjFDLTAuMTgwNTk4IDEuMjc5NTEgLTAuMTgwNTk4IDIuNDU4MyAwLjU0OTI5OCAzLjE4OTQ1TDExLjMzMzkgMTQuMDA3NUwwLjUzNDQwMiAyNC44MjU1Qy0wLjE4MDU5OCAyNS41NDE3IC0wLjE4MDU5OCAyNi43MzU0IDAuNTQ5Mjk4IDI3LjQ1MTZaIiBmaWxsPSIjRjQ5QTdFIi8+Cjwvc3ZnPgo=);
       position: absolute;
-      top: 6px;
+      top: 3px;
       right: 0;
       height: 12px;
       width: 9px;
@@ -8392,7 +8392,7 @@ a.text-dark:hover, a.text-dark:focus {
 .btn-send {
   background-color: #C1CDCA;
   color: #3D3F40;
-  padding: 15px 25px;
+  padding: 13px 25px;
   text-transform: uppercase; }
   .btn-send:hover {
     color: #FFFFFF;
@@ -8606,6 +8606,29 @@ a.text-dark:hover, a.text-dark:focus {
       right: 0;
       padding: 6px 15px;
       background-color: #2A3D42; }
+  .card__container--twice {
+    display: flex;
+    padding: 10px;
+    position: relative;
+    align-items: center;
+    justify-content: center; }
+    .card__container--twice img {
+      max-width: 100%;
+      max-height: 100%; }
+      .card__container--twice img.principal {
+        visibility: visible;
+        opacity: 1; }
+      .card__container--twice img.secundary {
+        position: absolute;
+        padding: 10px;
+        visibility: hidden;
+        opacity: 0; }
+    .card__container--twice:hover img.principal {
+      visibility: hidden;
+      opacity: 0; }
+    .card__container--twice:hover img.secundary {
+      visibility: visible;
+      opacity: 1; }
 
 .card__instagram {
   padding: 0 10px;
