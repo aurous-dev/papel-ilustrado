@@ -101,6 +101,13 @@ Visit [plugin documentation website](https://wpclever.net?utm_source=doc&utm_med
 
 == Changelog ==
 
+= 2.3.1 =
+* Fixed: Strip HTML tags for the product name in searching
+* Fixed: Some minor CSS issues
+
+= 2.3.0 =
+* Fixed: The update checker URL
+
 = 2.2.5 =
 * Updated: Compatible with WordPress 5.6.0 & WooCommerce 4.8.0
 

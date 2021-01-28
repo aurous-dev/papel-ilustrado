@@ -134,7 +134,8 @@ function columnas() {
     const prueba2 = document.querySelectorAll('#menu-principal > .menu-item-has-children > .sub-menu');
     prueba2.forEach( m => {
         const prueba = m.children.length
-        for (let i = 0; i < prueba; i++) {
+        console.log(m.children)
+        for (let i = 1; i < prueba; i++) {
             const numero = m.children[i].children[1].children.length;
             const clase = m.children[i].children[1];
             
@@ -149,3 +150,6 @@ function columnas() {
         }
     })
 }
+
+// test Erasmo
+

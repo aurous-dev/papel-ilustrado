@@ -3,7 +3,7 @@
 Plugin Name: WPC Grouped Product for WooCommerce
 Plugin URI: https://wpclever.net/
 Description: WPC Grouped Product helps you made up standalone products that are presented as a group.
-Version: 2.2.5
+Version: 2.3.1
 Author: WPClever.net
 Author URI: https://wpclever.net
 Text Domain: wpc-grouped-product
@@ -11,12 +11,12 @@ Domain Path: /languages/
 Requires at least: 4.0
 Tested up to: 5.6.0
 WC requires at least: 3.0
-WC tested up to: 4.8.0
+WC tested up to: 4.9.0
 */
 
 defined( 'ABSPATH' ) || exit;
 
-! defined( 'WOOSG_VERSION' ) && define( 'WOOSG_VERSION', '2.2.5' );
+! defined( 'WOOSG_VERSION' ) && define( 'WOOSG_VERSION', '2.3.1' );
 ! defined( 'WOOSG_URI' ) && define( 'WOOSG_URI', plugin_dir_url( __FILE__ ) );
 ! defined( 'WOOSG_SUPPORT' ) && define( 'WOOSG_SUPPORT', 'https://wpclever.net/support?utm_source=support&utm_medium=woosg&utm_campaign=wporg' );
 ! defined( 'WOOSG_REVIEWS' ) && define( 'WOOSG_REVIEWS', 'https://wordpress.org/support/plugin/wpc-grouped-product/reviews/?filter=5' );
@@ -1063,7 +1063,7 @@ if ( ! function_exists( 'woosg_init' ) ) {
 						$remove_btn = '<span class="remove hint--left" aria-label="' . esc_html__( 'Remove', 'wpc-grouped-product' ) . '">×</span>';
 					}
 
-					echo '<li ' . ( ! $product->is_in_stock() ? 'class="out-of-stock"' : '' ) . ' data-id="' . esc_attr( $product_id ) . '"><span class="move"></span><span class="qty hint--right" aria-label="' . esc_html__( 'Default quantity', 'wpc-grouped-product' ) . '">' . $qty_input . '</span> <span class="name">' . $product->get_name() . '</span> <span class="info">' . $product->get_price_html() . '</span> ' . ( $product->is_sold_individually() ? '<span class="info">sold individually</span> ' : '' ) . '<span class="type"><a href="' . get_edit_post_link( $product_id ) . '" target="_blank">' . esc_attr( $product->get_type() ) . ' #' . esc_attr( $product_id ) . '</a></span> ' . $remove_btn . '</li>';
+					echo '<li ' . ( ! $product->is_in_stock() ? 'class="out-of-stock"' : '' ) . ' data-id="' . esc_attr( $product_id ) . '"><span class="move"></span><span class="qty hint--right" aria-label="' . esc_html__( 'Default quantity', 'wpc-grouped-product' ) . '">' . $qty_input . '</span> <span class="data"><span class="name">' . strip_tags( $product->get_name() ) . '</span> <span class="info">' . $product->get_price_html() . '</span> ' . ( $product->is_sold_individually() ? '<span class="info">sold individually</span> ' : '' ) . '</span> <span class="type"><a href="' . get_edit_post_link( $product_id ) . '" target="_blank">' . esc_attr( $product->get_type() ) . ' #' . esc_attr( $product_id ) . '</a></span> ' . $remove_btn . '</li>';
 				}
 
 				function woosg_save_option_field( $post_id ) {
