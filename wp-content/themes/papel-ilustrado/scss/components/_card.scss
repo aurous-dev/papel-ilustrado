@@ -3,13 +3,28 @@
     grid-template-rows: 300px 1fr;
     grid-template-columns: 100%;
     padding: 0 5px;
+    max-width: 95%;
+    margin: 0 auto;
     &--img {
+        position: relative;
         display: flex;
         border: 1px solid #d2d2d2;
         padding: 20px;
+        background-color: $color-white;
+        z-index: 1;
         @include f-center;
-        &:hover {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
             background-color: rgba($color: $color-indigo, $alpha: 0.4);
+            opacity: 0;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
             .btn-card {
                 opacity: 1;
             }

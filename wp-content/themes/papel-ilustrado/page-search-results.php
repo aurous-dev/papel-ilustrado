@@ -18,8 +18,8 @@ get_header();
       <div class="section__news--title">
          <h2>Novedades</h2>
       </div>
-      <div class="fiveColumn__slider">
-         <?php get_template_part('components/group/card-picture');?>
+      <div class="fourColumn__slider">
+         <?php get_template_part('components/group/card-paiting');?>
       </div>
    </div>
 </section>
@@ -29,9 +29,10 @@ get_header();
          <h2>Novedades</h2>
       </div>
       <div class="fiveColumn__slider">
-         <?php get_template_part('components/group/card-paiting');?>
+         <?php get_template_part('components/group/card-picture');?>
       </div>
    </div>
 </section>
+
 
 <?php get_footer();?>
