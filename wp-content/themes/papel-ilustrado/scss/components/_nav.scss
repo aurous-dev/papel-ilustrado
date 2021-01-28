@@ -1,0 +1,280 @@
+.header {
+   background-color: $color-white;
+   padding-bottom: 10px;
+   box-shadow: 0 15px 30px -17px rgba(0, 0, 0, 0.15);
+   position: relative;
+   &__banner {
+      color: $color-white;
+      text-align: center;
+      background-color: $color-indigo;
+      width: 100vw;
+      padding: 12px 20px;
+      margin: 0 -15px;
+      p {
+         margin-bottom: 0px;
+      }
+      @include fonts-display(400);
+      a {
+         color: $color-white;
+         text-decoration: underline;
+         &:hover {
+            color: $color-salmon;
+         }
+      }
+   }
+   &__menu{
+      display: flex;
+      padding-top: 25px;
+      @include f-center;
+      @include fonts-display(400);
+      &--search{
+         display: flex;
+         align-items: center;
+         position: relative;
+         margin-right: auto;
+         width: 40%;
+         form {
+            width: 60%;
+            position: relative;
+            display: flex;
+            @include f-center;
+         }
+         input {
+            padding: 8px 15px;
+            width: 260px;
+            font-size: $f-normal;
+            border: 1px solid #D2D2D2;
+            border-radius: $r-input;
+            transition: $tr3;
+            &::placeholder {
+               color: $color-silver;
+               cursor: pointer;
+            }
+            &:focus {
+               border: 1px solid $color-indigo;
+            }
+         }
+         a {
+            position: absolute;
+            height: 100%;
+            width: 50px;
+            display: flex;
+            right: 5px;
+            @include f-center;
+            i {
+               font-size: 20px;
+               color: $color-dark_green;
+               margin: 0;
+            }
+         }
+      }
+      &--whatsapp {
+         padding-right: 15px;
+         margin-right: 10px;
+         border-right: 1px solid $color-light_green;
+         img {
+            height: 20px;
+         } 
+      }
+      &--icons {
+         padding-right: 10px;
+         margin-right: 15px;
+         border-right: 1px solid $color-light_green;
+         display: flex;
+         align-items: flex-end;
+         justify-content: center;
+         a {
+            position: relative;
+            color: $color-white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-right: 15px;
+            svg {
+               margin-right: -3px;
+            }
+            .icon-circle {
+               background: $color-indigo;
+               border-radius: 10px;
+               padding: 0 5px;
+               font-size: 10px;
+            }
+            &:hover {
+               svg {
+                  path {
+                     fill: $color-salmon;
+                  }
+               }
+               .icon-circle {
+                  background: $color-salmon;
+               }
+            }
+         }
+      }
+      &--sesions {
+         a {
+            color: $color-indigo;
+            text-decoration: none;
+            font-size: $f-normal;
+            &:hover {
+               color: $color-indigo;
+            }
+         }
+      }
+   }
+   &__logo {
+      display: flex;
+      position: relative;
+      height: 35px;
+      @include f-center;
+      &::before {
+         content: '';
+         position: absolute;
+         width: 100vw;
+         height: 1px;
+         background-color: $color-light_green;
+      }
+      a {
+         display: flex;
+         @include f-center;
+      }
+      img {
+         position: absolute;
+         background-color: $color-white;
+         padding: 0 25px;
+         height: 130px;
+      }
+   }
+}
+
+// Menu
+#menu-principal {
+   display: flex;
+   margin: 0;
+   list-style: none;
+   margin-bottom: 20px;
+   letter-spacing: 0.05em;
+   @include f-center;
+   @include fonts-display(700);
+   & > li {
+      margin-right: 60px;
+      &:nth-child(3) {
+         margin-right: auto;
+      }
+      &:nth-child(n+4) {
+         margin-right: 0;
+         margin-left: 60px;
+      }
+      a {
+         text-transform: uppercase;
+         text-decoration: none;
+         font-size: $f-normal;
+         color: $color-indigo;
+      }
+      & > a:hover {
+         color: $color-salmon;
+      }
+   }
+   // Sub menu
+   &> li.menu-item-has-children {
+      & > a {
+         position: relative;
+         &::before {
+            content: '';
+            background: url("../img/svg/slider-arrow.svg");
+            position: absolute;
+            top: 3px;
+            right: 0;
+            height: 12px;
+            width: 9px;
+            transform: rotate(90deg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            transition: all ease-in-out 0.3s;
+            z-index: 1;
+         }
+      }
+      a {
+         padding-right: 20px;
+         position: relative;
+         z-index: 2;
+      }
+      &.active {
+         a {
+            color: $color-salmon;
+         }
+         &::before {
+            transform: rotate(-90deg);
+            color: red;
+         }
+         & > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+
+      // Segundo Sub menu
+      &> .sub-menu {
+         position: absolute;
+         display: flex;
+         width: 1200px;
+         transform: translateX(-50%);
+         top: 200px;
+         padding: 20px 0 40px;
+         opacity: 0;
+         visibility: hidden;
+         z-index: 1;
+         left: 50%;
+         #banner_cuadros {
+            img {
+               max-width: 400px;
+            }
+         }
+         a{
+            color: $color-indigo;
+         }
+         &::before {
+            content: '';
+            position: absolute;
+            background-color: #F7F7F7;
+            top: 0;
+            left: -50vw;
+            width: 200vw;
+            height: 100%;
+            z-index: -1;
+            box-shadow: 0 15px 30px -17px rgba(0, 0, 0, 0.25);
+         }
+         & > li {
+            padding: 10px 25px;
+            & > .sub-menu {
+               padding-top: 20px;
+               li {
+                  padding-bottom: 5px;
+               }
+               a {
+                  font-weight: 500;
+                  text-decoration: underline;
+                  text-decoration-color: $color-white;
+                  &:hover {
+                     text-decoration-color: $color-indigo;
+                  }
+               }
+            }
+         }
+         /// Clase para poder hacer el efecto de lista en el menu
+         .column3 {
+            column-count: 3;
+            column-gap: 40px;
+         }
+         .column2 {
+            column-count: 2;
+            column-gap: 40px;
+         }
+      }
+   }
+}
+// erasmo test banner images
+// #banner_cuadros {
+//    display:none;
+// }

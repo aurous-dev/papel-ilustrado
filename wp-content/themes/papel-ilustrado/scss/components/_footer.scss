@@ -51,7 +51,7 @@
                   color: $color-white;
                   font-size: $f-small;
                   &:hover {
-                     color: $color-white;
+                     color: $color-salmon;
                   }
                }
             }
@@ -101,8 +101,14 @@
          }
       }
       &--rrss {
+         a {
+            &:hover {
+               i {
+                  color: $color-salmon;
+               }
+            }
+         }
          i{
-
             font-size: 25px;
          }
       }

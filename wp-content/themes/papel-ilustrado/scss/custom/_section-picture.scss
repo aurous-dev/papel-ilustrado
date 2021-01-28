@@ -39,15 +39,15 @@
                }
             }
             button {
-            height: fit-content;
-            width: fit-content;
-               &::before {
-                  color: rgba($color: $color-dark_green, $alpha: .5);
-                  width: 15px;
-                  height: 15px;
-                  opacity: 1;
-                  font-size: 12px;
-               }
+               height: fit-content;
+               width: fit-content;
+                  &::before {
+                     color: rgba($color: $color-dark_green, $alpha: .5);
+                     width: 15px;
+                     height: 15px;
+                     opacity: 1;
+                     font-size: 12px;
+                  }
             }
          }
       }

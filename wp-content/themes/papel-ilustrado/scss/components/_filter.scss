@@ -1,0 +1,20 @@
+.section-filter {
+   justify-content: space-between;
+   align-items: center;
+   &__search {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      i {
+         font-size: 16px;
+         color: $color-indigo;
+         margin-right: 10px;
+      }
+   }
+   &__form {
+      select {
+         padding: 13px 15px;
+         font-size: 13px;
+      }
+   }
+}

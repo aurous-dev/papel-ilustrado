@@ -1,8 +1,10 @@
-.composition {
-   padding: 50px 0 100px;
-   background-color: rgba($color: #D2D2D2, $alpha: .2);
+.instagram {
+   padding-bottom: 100px;
+   .title {
+      padding-bottom: 20px
+   }
    &__slider {
-     @include slider__marginB;
+      @include slider__marginB;
       .slick-prev {
          @include slider__arrowLeft;
          left: -80px;

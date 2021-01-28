@@ -1,0 +1,132 @@
+.btn-principal {
+   padding: 20px 24px;
+   background-color: $color-indigo;
+   color: $color-white;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: $f-btn__medium;
+   letter-spacing: 0.05em;
+   line-height: 1.2;
+   @include fonts-display(200);
+   &:hover,
+   &:active {
+      color: $color-white;
+      text-decoration: none;
+      background-color: $color-light_orange;
+   }
+   &:disabled {
+      background-color: rgba($color: $color-indigo, $alpha: .5);
+   }
+}
+
+.btn-send {
+   background-color: $color-light_green;
+   color: $color-dark_gray;
+   padding: 13px 25px;
+   text-transform: uppercase;
+   &:hover {
+      color: $color-white;
+      background-color: $color-salmon;
+   }
+}
+
+.btn-title {
+   position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   &:hover,
+   &:active {
+      a{
+         color: $color-indigo;
+         text-decoration: none;
+      }
+      svg {
+         path {
+            fill: $color-salmon;
+         }
+      }
+   }
+   svg {
+      position: absolute;
+      right: 0;
+      z-index: 1;
+   }
+   a {
+      position: relative;
+      text-transform: uppercase;
+      text-decoration: none ;
+      font-size: $f-small;
+      color: $color-indigo;
+      width: 100%;
+      padding-right: 30px;
+      margin: 0;
+      z-index: 2;
+   }
+}
+
+.btn-card {
+   @extend .btn-principal;
+   position: absolute;
+   opacity: 0;
+   background-color: $color-light_orange;
+   &:hover,
+   &:active {
+      color: $color-white;
+      background-color: $color-light_orange;
+   }
+}
+
+.btn-special {
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   bottom: -70px;
+   width: 100%;
+   padding: 40px 15px;
+   color: $color-white;
+   text-align: center;
+   background: linear-gradient(180deg, rgba(42, 61, 66, 0.7) 14.42%, rgba(42, 61, 66, 0.5) 109.2%);
+   h3 {
+      padding-bottom: 30px;
+   }
+   &__arrow  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      img {
+         position: absolute;
+         right: 36%;
+      }
+   }
+}
+
+.btn-instagram {
+   position: absolute;
+   padding: 14px 24px;
+   background-color: $color-dark_green;
+   color: $white;
+   text-transform: uppercase;
+   font-size: 15px;
+   @include fonts-display(400);
+   &:hover {
+      background-color: $color-salmon;
+      color: $white;
+   }
+}
+
+.btn-more {
+   display: block;
+   background-color: $color-indigo;
+   width: fit-content;
+   margin: 0 auto;
+   padding: 20px 24px;
+   color: $color-white;
+   text-transform: uppercase;
+   @include fonts-display(600);
+   &:hover {
+      color: $color-white;
+      background-color: $color-salmon;
+   }
+}
