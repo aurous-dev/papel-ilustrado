@@ -24,6 +24,7 @@
    color: $color-dark_gray;
    padding: 13px 25px;
    text-transform: uppercase;
+   @include fonts-display(600);
    &:hover {
       color: $color-white;
       background-color: $color-salmon;
