@@ -8370,6 +8370,25 @@ a.text-dark:hover, a.text-dark:focus {
       background-size: cover;
       background-position: center;
       transition: all .5s ease-in-out; }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .hero__container {
+      margin: 0 -15px; }
+    .hero__principal--desc {
+      padding: 25px 15px;
+      flex-direction: column; }
+      .hero__principal--desc h2 {
+        font-size: 22px;
+        text-align: center;
+        max-width: 100%; }
+    .hero__card {
+      margin: 20px 15px; }
+      .hero__card--container {
+        max-width: 48%;
+        margin: 15px auto;
+        height: 200px; }
+        .hero__card--container:last-child {
+          max-width: initial;
+          height: 320px; } }
 
 .btn-principal, .btn-card {
   padding: 20px 24px;
@@ -8388,6 +8407,10 @@ a.text-dark:hover, a.text-dark:focus {
     background-color: #F5AF9A; }
   .btn-principal:disabled, .btn-card:disabled {
     background-color: rgba(42, 61, 66, 0.5); }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .btn-principal, .btn-card {
+      padding: 18px 20px;
+      font-size: 14px; } }
 
 .btn-send {
   background-color: #C1CDCA;

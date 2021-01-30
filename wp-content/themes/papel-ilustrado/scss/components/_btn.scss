@@ -17,6 +17,10 @@
    &:disabled {
       background-color: rgba($color: $color-indigo, $alpha: .5);
    }
+   @include mq($from: mobile, $until: tablet) {
+      padding: 18px 20px;
+      font-size: 14px;
+   }
 }
 
 .btn-send {
