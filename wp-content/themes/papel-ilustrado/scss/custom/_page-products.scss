@@ -1,0 +1,32 @@
+.slider-for {
+   border: 1px solid #D2D2D2;
+   padding: 40px 0;
+   .slick-slide {
+      img {
+         max-height: 300px;
+         max-width: 300px;
+         margin: 0 auto;
+      }
+   }
+}
+.slider-nav {
+   padding: 20px 0;
+   .slick-track {
+      display: flex;
+      @include f-center;
+   }
+   .slick-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: fit-content;
+      margin: 0 5px;
+   }
+   .small-img {
+      img {
+         max-width: 80px;
+         max-height: 80px;
+         border: 1px solid #D2D2D2;
+      }
+   }
+}
