@@ -136,7 +136,23 @@ $(".fourColumn__slider").slick({
     dots: true,
     arrows: true,
 });
+// Slider syncing
 
+$('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true
+});
 
 // Menu dropdown Desktop
 const tr_menu = document.querySelectorAll('#menu-principal .lista');

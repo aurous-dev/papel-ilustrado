@@ -68,3 +68,15 @@
       @include fonts-display(400);
    }
 }
+
+.page-index {
+   padding: 20px 0;
+   color: $color-indigo;
+   font-size: 14px;
+   @include fonts-display(400);
+   a {
+      font-size: 14px;
+      color: $color-indigo ;
+      @include fonts-display(600);
+   }
+}

@@ -8124,6 +8124,18 @@ a.text-dark:hover, a.text-dark:focus {
     font-family: 'Raleway', sans-serif;
     font-weight: 400; }
 
+.page-index {
+  padding: 20px 0;
+  color: #2A3D42;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; }
+  .page-index a {
+    font-size: 14px;
+    color: #2A3D42;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; }
+
 .header {
   background-color: #FFFFFF;
   padding-bottom: 10px;
@@ -9535,4 +9547,29 @@ body, html {
       flex: 0 0 20%;
       max-width: 20%;
       padding: 20px 0; }
+
+.slider-for {
+  border: 1px solid #D2D2D2;
+  padding: 40px 0; }
+  .slider-for .slick-slide img {
+    max-height: 300px;
+    max-width: 300px;
+    margin: 0 auto; }
+
+.slider-nav {
+  padding: 20px 0; }
+  .slider-nav .slick-track {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .slider-nav .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    margin: 0 5px; }
+  .slider-nav .small-img img {
+    max-width: 80px;
+    max-height: 80px;
+    border: 1px solid #D2D2D2; }
 
