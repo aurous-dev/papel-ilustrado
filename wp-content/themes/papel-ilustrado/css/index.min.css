@@ -8072,6 +8072,19 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 22px;
     font-family: 'Raleway', sans-serif;
     font-weight: 600; }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .title {
+      flex-direction: column;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 30px; }
+      .title h2 {
+        font-weight: 700; }
+      .title .btn-title {
+        position: relative;
+        margin-top: 30px; }
+        .title .btn-title a {
+          font-size: 16px; } }
 
 .page-title {
   text-align: center; }
@@ -8446,7 +8459,9 @@ a.text-dark:hover, a.text-dark:focus {
     width: 100%;
     padding-right: 30px;
     margin: 0;
-    z-index: 2; }
+    z-index: 2;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; }
 
 .btn-card {
   position: absolute;

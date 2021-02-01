@@ -67,6 +67,7 @@
       padding-right: 30px;
       margin: 0;
       z-index: 2;
+      @include fonts-display(600);
    }
 }
 
