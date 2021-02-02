@@ -1,0 +1,168 @@
+.slider-for {
+   border: 1px solid #D2D2D2;
+   padding: 40px 0;
+   .slick-slide {
+      img {
+         max-height: 300px;
+         max-width: 300px;
+         margin: 0 auto;
+      }
+   }
+}
+.slider-nav {
+   padding: 20px 0;
+   .slick-track {
+      display: flex;
+      @include f-center;
+   }
+   .slick-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: fit-content;
+      margin: 0 5px;
+   }
+   .small-img {
+      img {
+         max-width: 80px;
+         max-height: 80px;
+         border: 1px solid #D2D2D2;
+      }
+   }
+}
+.simple-product {
+   &__title {
+      font-size: 14px;
+      color: $color-indigo;
+      h2 {
+         font-size: 22px;
+         color: $color-indigo;
+         margin-bottom: 10px;
+         @include fonts-display(600);
+      }
+   }
+   &__price {
+      padding: 20px 0;
+      font-size: 24px;
+      color: $color-indigo;
+      @include fonts-display(700);
+   }
+   &__size {
+      &--form {
+         display: flex;
+         @include f-center;
+         .form__size {
+            width: 100%;
+         }
+         .form__title {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: $color-indigo;
+            padding-bottom: 8px;
+            @include fonts-display(700);
+         }
+         .form__select {
+            select {
+               height: 40px;
+               width: 90%;
+               border: 1px solid #D2D2D2;
+               font-weight: 600;
+               font-size: 14px;
+               color: #182224;
+               padding: 0 10px;
+            }
+         }
+      }
+      &--btn {
+         display: flex;
+         padding: 10px 0 20px;
+         @include f-center;
+         .available {
+            display: flex;
+            width: 50%;
+            font-size: 14px;
+            align-items: center;
+            font-weight: 400;
+            .check {
+               display: flex;
+               width: 15px;
+               height: 15px;
+               border-radius: 50%;
+               background: $color-salmon;
+               margin-right: 10px;
+               @include f-center;
+            }
+         }
+         .special {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            .heart-icon {
+               display: flex;
+               width: fit-content;
+               &:hover {
+                   svg {
+                       path {
+                           fill: $color-salmon;
+                       }
+                   }
+               }
+               svg {
+                   path {
+                       fill-rule: evenodd !important;
+                       fill: rgba(229, 229, 229, 0.15);
+                       stroke: $color-salmon;
+                       stroke-width: 2px;
+                   }
+               }
+            }
+            .size-icon {
+               margin-left: 30px;
+               a {
+                  display: flex;
+                  justify-content: center;
+                  align-items: flex-start;
+                  text-decoration: underline;
+                  svg {
+                     margin-right: 5px;
+                  }
+               }
+            }
+            a {
+               color: $color-indigo;
+               font-size: 14px;
+               font-weight: 500;
+            }
+         }
+      }
+   }
+   &__btn {
+      display: flex;
+      flex-direction: column;
+      a {
+         width: 95%;
+         text-align: center;
+         text-transform: uppercase;
+         letter-spacing: 0.05em;
+         @include fonts-display(500);
+         &:hover {
+            background-color: $color-salmon;
+            border: 1px solid $color-salmon;
+            color: $color-white;
+         }
+      }
+      .add {
+         margin: 10px 0;
+         background-color: $color-indigo;
+         border: 1px solid $color-indigo;
+         padding: 20px;
+         color: $color-white;
+      }
+      .buy {
+         border: 1px solid $color-indigo;
+         padding: 15px;
+         font-size: 14px;
+         color: $color-indigo;
+      }
+   }
+}

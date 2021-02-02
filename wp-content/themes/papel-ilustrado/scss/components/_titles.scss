@@ -10,6 +10,22 @@
       font-size: 22px;
       @include fonts-display(600);
    }
+   @include mq($from: mobile, $until: tablet) {
+      flex-direction: column;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 30px;
+      h2 {
+         font-weight: 700;
+      }
+      .btn-title {
+         position: relative;
+         margin-top: 30px;
+         a {
+            font-size: 16px;
+         }
+      }
+   }
 }
 .page-title {
    text-align: center;
@@ -50,5 +66,17 @@
       padding-top: 12px;
       letter-spacing: 0.02em;
       @include fonts-display(400);
+   }
+}
+
+.page-index {
+   padding: 20px 0;
+   color: $color-indigo;
+   font-size: 14px;
+   @include fonts-display(400);
+   a {
+      font-size: 14px;
+      color: $color-indigo ;
+      @include fonts-display(600);
    }
 }

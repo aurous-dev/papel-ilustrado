@@ -3,13 +3,28 @@
     grid-template-rows: 300px 1fr;
     grid-template-columns: 100%;
     padding: 0 5px;
+    max-width: 95%;
+    margin: 0 auto;
     &--img {
+        position: relative;
         display: flex;
         border: 1px solid #d2d2d2;
         padding: 20px;
+        background-color: $color-white;
+        z-index: 1;
         @include f-center;
-        &:hover {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
             background-color: rgba($color: $color-indigo, $alpha: 0.4);
+            opacity: 0;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
             .btn-card {
                 opacity: 1;
             }
@@ -37,6 +52,34 @@
                 max-height: 100%;
                 max-width: 100%;
             }
+        }
+    }
+    &--imgOut {
+        position: relative;
+        display: flex;
+        padding: 20px;
+        z-index: 1;
+        @include f-center;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: $color-indigo, $alpha: 0.4);
+            opacity: 0;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+            .btn-card {
+                opacity: 1;
+            }
+        }
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            z-index: -1;
         }
     }
     
@@ -156,6 +199,55 @@
         padding: 10px;
         position: relative;
         background-color: $color-white;
+        @include f-center;
+        &:hover {
+            .twice-btn {
+                opacity: 1;
+                bottom: 0;
+            }
+            img {
+                &.principal {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                &.secundary {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            &.principal {
+                visibility: visible;
+                opacity: 1;
+            }
+            &.secundary {
+                position: absolute;
+                padding: 10px;
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+        .twice-btn {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            bottom: -10px;
+            padding: 6px 15px;
+            background-color: #2A3D42;
+            color: white;
+            text-align: center;
+            font-size: 11px;
+        }
+    }
+
+    &--twiceOut {
+        display: flex;
+        padding: 10px;
+        position: relative;
+        // background-color: $color-white;
         @include f-center;
         &:hover {
             .twice-btn {

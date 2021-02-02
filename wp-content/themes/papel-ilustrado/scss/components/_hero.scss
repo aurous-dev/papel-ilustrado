@@ -36,4 +36,32 @@
          @include bg-center;
       }
    }
+   @include mq($from: mobile, $until: tablet) {
+      &__container {
+         margin: 0 -15px;
+      }
+      &__principal {
+         &--desc {
+            padding: 25px 15px;
+            flex-direction: column;
+            h2 {
+               font-size: 22px;
+               text-align: center;
+               max-width: 100%;
+            }
+         }
+      }
+      &__card {
+         margin: 20px 15px;
+         &--container {
+            max-width: 48%;
+            margin: 15px auto;
+            height: 200px;
+            &:last-child {
+               max-width: initial;
+               height: 320px;
+            }
+         }
+      }
+   }
 }
