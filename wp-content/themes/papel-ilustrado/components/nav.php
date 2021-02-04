@@ -5,7 +5,7 @@
    <div class="container">
       <div class="header__container">
          <div class="header__menu">
-            <!-- <div class="burger-button" id="burger-menu">
+            <div class="burger-button" id="burger-menu">
                <div class="menu-li">
                   <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                      <g fill="none" fill-rule="evenodd">
@@ -16,7 +16,7 @@
                      </g>
                   </svg>  
                </div>
-            </div>  -->
+            </div> 
             <div class="header__menu--search">
                <form action="">
                   <input type="text" placeholder="Buscar producto">

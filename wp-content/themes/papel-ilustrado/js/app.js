@@ -248,3 +248,12 @@ function columnas() {
         }
     })
 }
+
+// Menu dropdown
+const menu = document.querySelector(".menu-icon");
+
+menu.addEventListener("click", showHidden);
+
+function showHidden() {
+    menu.classList.toggle("active");
+}

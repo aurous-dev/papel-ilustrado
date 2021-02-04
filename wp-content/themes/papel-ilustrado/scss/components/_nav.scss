@@ -145,136 +145,104 @@
          height: 130px;
       }
    }
-}
-
-// Menu
-#menu-principal {
-   display: flex;
-   margin: 0;
-   list-style: none;
-   margin-bottom: 20px;
-   letter-spacing: 0.05em;
-   @include f-center;
-   @include fonts-display(700);
-   & > li {
-      margin-right: 60px;
-      &:nth-child(3) {
-         margin-right: auto;
-      }
-      &:nth-child(n+4) {
-         margin-right: 0;
-         margin-left: 60px;
-      }
-      a {
-         text-transform: uppercase;
-         text-decoration: none;
-         font-size: $f-normal;
-         color: $color-indigo;
-      }
-      & > a:hover {
-         color: $color-salmon;
-      }
-   }
-   // Sub menu
-   &> li.menu-item-has-children {
-      & > a {
-         position: relative;
-         &::before {
-            content: '';
-            background: url("../img/svg/slider-arrow.svg");
-            position: absolute;
-            top: 6px;
-            right: 0;
-            height: 12px;
-            width: 9px;
-            transform: rotate(90deg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            transition: all ease-in-out 0.3s;
-            z-index: 1;
-         }
-      }
-      a {
-         padding-right: 20px;
-         position: relative;
-         z-index: 2;
-      }
-      &.active {
-         a {
-            color: $color-salmon;
-         }
-         &::before {
-            transform: rotate(-90deg);
-            color: red;
-         }
-         & > .sub-menu {
-            opacity: 1;
-            visibility: visible;
-         }
-      }
-
-      // Segundo Sub menu
-      &> .sub-menu {
+   @include mq($from: mobile, $until: desktop) {
+      padding-top: 70px;
+      &__container {
+         z-index: 100;
          position: absolute;
-         display: flex;
-         width: 1200px;
-         transform: translateX(-50%);
-         top: 200px;
-         padding: 20px 0 40px;
-         opacity: 0;
-         visibility: hidden;
-         z-index: 1;
-         left: 50%;
-         #banner_cuadros {
-            img {
-               max-width: 400px;
+         top: 0;
+         left: 0;
+         width: 100%;
+         background-color: $color-white;
+      }
+      &__logo {
+         height: 20px;
+         &::before{
+            content: none;
+         }
+         img {
+            height: 60px;
+            background-color: unset;
+            top: -45px;
+         }
+      }
+      &__menu {
+         &--whatsapp {
+            display: none;
+         }
+         &--search {
+            input {
+               display: none;
             }
-         }
-         a{
-            color: $color-indigo;
-         }
-         &::before {
-            content: '';
-            position: absolute;
-            background-color: #F7F7F7;
-            top: 0;
-            left: -50vw;
-            width: 200vw;
-            height: 100%;
-            z-index: -1;
-            box-shadow: 0 15px 30px -17px rgba(0, 0, 0, 0.25);
-         }
-         & > li {
-            padding: 10px 25px;
-            & > .sub-menu {
-               padding-top: 20px;
-               li {
-                  padding-bottom: 5px;
-               }
-               a {
-                  font-weight: 500;
-                  text-decoration: underline;
-                  text-decoration-color: $color-white;
-                  &:hover {
-                     text-decoration-color: $color-indigo;
-                  }
+            a {
+               i {
+                  position: relative;
+                  left: 10px;
                }
             }
          }
-         /// Clase para poder hacer el efecto de lista en el menu
-         .column3 {
-            column-count: 3;
-            column-gap: 40px;
+         &--sesions {
+            display: none;
          }
-         .column2 {
-            column-count: 2;
-            column-gap: 40px;
+         &--icons {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            a {
+               margin-right: 10px;
+            }
          }
       }
    }
 }
-// erasmo test banner images
-// #banner_cuadros {
-//    display:none;
-// }
+
+#burger-menu{
+   @include mq($from: desktop) {
+      display: none;
+   }
+   position: absolute;
+   display: block;
+   text-align: center;
+   width: 35px;
+   height: 35px;
+   margin-right: 10px;
+   left: 0;
+   z-index: 1001;
+   .menu-icon {
+       display: inline-block;
+       width: 35px;
+       height: 35px;
+       padding: 4px;
+   }
+   .menu-icon path {
+       stroke: $color-black;
+       stroke-width: 10;
+       stroke-linecap: round;
+       transition: all 0.5s;
+       transform: rotate(0deg);
+       will-change: transform, opacity;
+       transform-origin: center;
+   }
+   .menu-li {
+       cursor: pointer;
+       width: 35px;
+       height: 35px;
+   }
+   .menu-li:hover path,
+   .menu-li:focus path,
+   .menu-li:active path {
+       stroke: $color-dark_gray;
+   }
+   .menu-icon.active path:nth-child(1) {
+       opacity: 0;
+   }
+   .menu-icon.active path:nth-child(4) {
+       opacity: 0;
+   }
+   .menu-icon.active path:nth-child(2) {
+       transform: rotate(45deg);
+   }
+   .menu-icon.active path:nth-child(3) {
+       transform: rotate(-45deg);
+   }
+}

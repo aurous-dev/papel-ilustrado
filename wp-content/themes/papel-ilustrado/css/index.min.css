@@ -8060,82 +8060,6 @@ a.text-dark:hover, a.text-dark:focus {
 .slick-arrow.slick-hidden {
   display: none; }
 
-.title {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin: 40px 0; }
-  .title h2 {
-    margin: 0 auto;
-    color: #2A3D42;
-    font-size: 22px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600; }
-  @media (min-width: 20em) and (max-width: 46.24em) {
-    .title {
-      flex-direction: column;
-      text-align: center;
-      margin: 0;
-      margin-bottom: 30px; }
-      .title h2 {
-        font-weight: 700; }
-      .title .btn-title {
-        position: relative;
-        margin-top: 30px; }
-        .title .btn-title a {
-          font-size: 16px; } }
-
-.page-title {
-  text-align: center; }
-  .page-title h2 {
-    margin: 0 auto;
-    color: #2A3D42;
-    font-size: 22px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600; }
-  .page-title__tag {
-    text-align: center;
-    margin: 50px auto 25px;
-    letter-spacing: 0.05em; }
-    .page-title__tag a {
-      color: #2A3D42;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 500; }
-      .page-title__tag a:hover {
-        color: #F4997E; }
-    .page-title__tag .page-active {
-      color: #2A3D42;
-      font-weight: 700;
-      cursor: default; }
-
-.search-title {
-  text-align: center;
-  padding: 100px 0 60px; }
-  .search-title h2 {
-    margin: 0 auto;
-    color: #2A3D42;
-    font-size: 22px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600; }
-  .search-title__results {
-    padding-top: 12px;
-    letter-spacing: 0.02em;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400; }
-
-.page-index {
-  padding: 20px 0;
-  color: #2A3D42;
-  font-size: 14px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400; }
-  .page-index a {
-    font-size: 14px;
-    color: #2A3D42;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600; }
-
 .header {
   background-color: #FFFFFF;
   padding-bottom: 10px;
@@ -8258,6 +8182,81 @@ a.text-dark:hover, a.text-dark:focus {
       background-color: #FFFFFF;
       padding: 0 25px;
       height: 130px; }
+  @media (min-width: 20em) and (max-width: 61.24em) {
+    .header {
+      padding-top: 70px; }
+      .header__container {
+        z-index: 100;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #FFFFFF; }
+      .header__logo {
+        height: 20px; }
+        .header__logo::before {
+          content: none; }
+        .header__logo img {
+          height: 60px;
+          background-color: unset;
+          top: -45px; }
+      .header__menu--whatsapp {
+        display: none; }
+      .header__menu--search input {
+        display: none; }
+      .header__menu--search a i {
+        position: relative;
+        left: 10px; }
+      .header__menu--sesions {
+        display: none; }
+      .header__menu--icons {
+        margin: 0;
+        border: 0;
+        padding: 0; }
+        .header__menu--icons a {
+          margin-right: 10px; } }
+
+#burger-menu {
+  position: absolute;
+  display: block;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  left: 0;
+  z-index: 1001; }
+  @media (min-width: 61.25em) {
+    #burger-menu {
+      display: none; } }
+  #burger-menu .menu-icon {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    padding: 4px; }
+  #burger-menu .menu-icon path {
+    stroke: #000000;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: all 0.5s;
+    transform: rotate(0deg);
+    will-change: transform, opacity;
+    transform-origin: center; }
+  #burger-menu .menu-li {
+    cursor: pointer;
+    width: 35px;
+    height: 35px; }
+  #burger-menu .menu-li:hover path,
+  #burger-menu .menu-li:focus path,
+  #burger-menu .menu-li:active path {
+    stroke: #3D3F40; }
+  #burger-menu .menu-icon.active path:nth-child(1) {
+    opacity: 0; }
+  #burger-menu .menu-icon.active path:nth-child(4) {
+    opacity: 0; }
+  #burger-menu .menu-icon.active path:nth-child(2) {
+    transform: rotate(45deg); }
+  #burger-menu .menu-icon.active path:nth-child(3) {
+    transform: rotate(-45deg); }
 
 #menu-principal {
   display: flex;
@@ -8354,6 +8353,85 @@ a.text-dark:hover, a.text-dark:focus {
     #menu-principal > li.menu-item-has-children > .sub-menu .column2 {
       column-count: 2;
       column-gap: 40px; }
+  @media (min-width: 20em) and (max-width: 61.24em) {
+    #menu-principal {
+      display: none; } }
+
+.title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 40px 0; }
+  .title h2 {
+    margin: 0 auto;
+    color: #2A3D42;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .title {
+      flex-direction: column;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 30px; }
+      .title h2 {
+        font-weight: 700; }
+      .title .btn-title {
+        position: relative;
+        margin-top: 30px; }
+        .title .btn-title a {
+          font-size: 16px; } }
+
+.page-title {
+  text-align: center; }
+  .page-title h2 {
+    margin: 0 auto;
+    color: #2A3D42;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; }
+  .page-title__tag {
+    text-align: center;
+    margin: 50px auto 25px;
+    letter-spacing: 0.05em; }
+    .page-title__tag a {
+      color: #2A3D42;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500; }
+      .page-title__tag a:hover {
+        color: #F4997E; }
+    .page-title__tag .page-active {
+      color: #2A3D42;
+      font-weight: 700;
+      cursor: default; }
+
+.search-title {
+  text-align: center;
+  padding: 100px 0 60px; }
+  .search-title h2 {
+    margin: 0 auto;
+    color: #2A3D42;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; }
+  .search-title__results {
+    padding-top: 12px;
+    letter-spacing: 0.02em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400; }
+
+.page-index {
+  padding: 20px 0;
+  color: #2A3D42;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; }
+  .page-index a {
+    font-size: 14px;
+    color: #2A3D42;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; }
 
 .hero {
   padding: 20px 0; }
