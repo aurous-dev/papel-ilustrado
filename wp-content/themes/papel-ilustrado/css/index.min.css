@@ -8568,10 +8568,11 @@ a.text-dark:hover, a.text-dark:focus {
       height: 100%;
       background-color: rgba(42, 61, 66, 0.4);
       opacity: 0; }
-    .card__container--img:hover::before {
-      opacity: 1; }
-    .card__container--img:hover .btn-card {
-      opacity: 1; }
+    @media (min-width: 61.25em) {
+      .card__container--img:hover::before {
+        opacity: 1; }
+      .card__container--img:hover .btn-card {
+        opacity: 1; } }
     .card__container--img img {
       max-height: 100%;
       max-width: 100%;
@@ -8606,10 +8607,11 @@ a.text-dark:hover, a.text-dark:focus {
       height: 100%;
       background-color: rgba(42, 61, 66, 0.4);
       opacity: 0; }
-    .card__container--imgOut:hover::before {
-      opacity: 1; }
-    .card__container--imgOut:hover .btn-card {
-      opacity: 1; }
+    @media (min-width: 61.25em) {
+      .card__container--imgOut:hover::before {
+        opacity: 1; }
+      .card__container--imgOut:hover .btn-card {
+        opacity: 1; } }
     .card__container--imgOut img {
       max-height: 100%;
       max-width: 100%;
@@ -8665,8 +8667,9 @@ a.text-dark:hover, a.text-dark:focus {
     position: absolute;
     bottom: 10px;
     right: 10px; }
-    .card__container .heart-icon:hover svg path {
-      fill: #F4997E; }
+    @media (min-width: 61.25em) {
+      .card__container .heart-icon:hover svg path {
+        fill: #F4997E; } }
     .card__container .heart-icon svg path {
       fill-rule: evenodd !important;
       fill: #FFFFFF;
@@ -8684,10 +8687,11 @@ a.text-dark:hover, a.text-dark:focus {
     justify-content: center;
     font-family: 'Raleway', sans-serif;
     font-weight: 400; }
-    .card__container--search:hover {
-      background-color: rgba(42, 61, 66, 0.4); }
-      .card__container--search:hover .btn-card {
-        opacity: 1; }
+    @media (min-width: 61.25em) {
+      .card__container--search:hover {
+        background-color: rgba(42, 61, 66, 0.4); }
+        .card__container--search:hover .btn-card {
+          opacity: 1; } }
     .card__container--search img {
       max-width: 100%;
       max-height: 100%;
@@ -8713,15 +8717,16 @@ a.text-dark:hover, a.text-dark:focus {
     background-color: #FFFFFF;
     align-items: center;
     justify-content: center; }
-    .card__container--twice:hover .twice-btn {
-      opacity: 1;
-      bottom: 0; }
-    .card__container--twice:hover img.principal {
-      visibility: hidden;
-      opacity: 0; }
-    .card__container--twice:hover img.secundary {
-      visibility: visible;
-      opacity: 1; }
+    @media (min-width: 61.25em) {
+      .card__container--twice:hover .twice-btn {
+        opacity: 1;
+        bottom: 0; }
+      .card__container--twice:hover img.principal {
+        visibility: hidden;
+        opacity: 0; }
+      .card__container--twice:hover img.secundary {
+        visibility: visible;
+        opacity: 1; } }
     .card__container--twice img {
       max-width: 100%;
       max-height: 100%; }
@@ -8749,15 +8754,16 @@ a.text-dark:hover, a.text-dark:focus {
     position: relative;
     align-items: center;
     justify-content: center; }
-    .card__container--twiceOut:hover .twice-btn {
-      opacity: 1;
-      bottom: 0; }
-    .card__container--twiceOut:hover img.principal {
-      visibility: hidden;
-      opacity: 0; }
-    .card__container--twiceOut:hover img.secundary {
-      visibility: visible;
-      opacity: 1; }
+    @media (min-width: 61.25em) {
+      .card__container--twiceOut:hover .twice-btn {
+        opacity: 1;
+        bottom: 0; }
+      .card__container--twiceOut:hover img.principal {
+        visibility: hidden;
+        opacity: 0; }
+      .card__container--twiceOut:hover img.secundary {
+        visibility: visible;
+        opacity: 1; } }
     .card__container--twiceOut img {
       max-width: 100%;
       max-height: 100%; }
@@ -9635,6 +9641,12 @@ body, html {
       .page-composiciones__grid .cards.test {
         flex: 0 0 33% !important;
         max-width: 33% !important; }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .page-composiciones {
+      padding-bottom: 80px; }
+      .page-composiciones__grid .cards {
+        flex: 0 0 50%;
+        max-width: 50%; } }
 
 .search-results {
   padding-bottom: 100px; }

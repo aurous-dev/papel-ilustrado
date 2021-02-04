@@ -16,4 +16,13 @@
          }
       }
    }
+   @include mq($from: mobile, $until: tablet) {
+      padding-bottom: 80px;
+      &__grid {
+         .cards {
+            flex: 0 0 50%;
+            max-width: 50%;
+         }
+      }
+   }
 }
