@@ -134,6 +134,10 @@
       background-color: $color-salmon;
       color: $white;
    }
+   @include mq($from: mobile, $until: tablet) {
+      position: relative;
+      margin-top: 20px;
+   }
 }
 
 .btn-more {

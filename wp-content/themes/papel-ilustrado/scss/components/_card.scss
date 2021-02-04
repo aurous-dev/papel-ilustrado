@@ -291,6 +291,12 @@
             font-size: 11px;
         }
     }
+
+    @include mq($from: mobile, $until: tablet) {
+        &--img-full {
+            margin: 0 auto;
+        }
+    }
 }
 
 .card__instagram {
