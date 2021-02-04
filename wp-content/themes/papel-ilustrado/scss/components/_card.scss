@@ -309,6 +309,20 @@
         &--img-full {
             margin: 0 auto;
         }
+        &--desc {
+            &-title {
+                .tag-disc {
+                    width: 15%;
+                    font-size: 10px;
+                }
+            }
+        }
+        .heart-icon {
+            position: relative;
+            margin: 10px auto 0;
+            bottom: unset;
+            right: unset;
+        }
     }
 }
 

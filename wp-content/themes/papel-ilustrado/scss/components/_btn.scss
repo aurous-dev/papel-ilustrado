@@ -153,4 +153,8 @@
       color: $color-white;
       background-color: $color-salmon;
    }
+   @include mq($from: mobile, $until: tablet) {
+      padding: 16px 22px;
+      font-size: 15px;
+   }
 }

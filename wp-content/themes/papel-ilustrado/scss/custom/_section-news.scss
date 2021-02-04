@@ -93,5 +93,13 @@
             }
          }
       }
+      @include mq($from: mobile, $until: tablet) {
+         .card__container--desc-title {
+            .tag-disc {
+               width: 14%;
+               font-size: 12px;
+            }
+         }
+      }
    }
 }

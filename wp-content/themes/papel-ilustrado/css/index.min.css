@@ -8544,6 +8544,10 @@ a.text-dark:hover, a.text-dark:focus {
   .btn-more:hover {
     color: #FFFFFF;
     background-color: #F4997E; }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .btn-more {
+      padding: 16px 22px;
+      font-size: 15px; } }
 
 .card__container {
   display: grid;
@@ -8787,7 +8791,15 @@ a.text-dark:hover, a.text-dark:focus {
       font-size: 11px; }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .card__container--img-full {
-      margin: 0 auto; } }
+      margin: 0 auto; }
+    .card__container--desc-title .tag-disc {
+      width: 15%;
+      font-size: 10px; }
+    .card__container .heart-icon {
+      position: relative;
+      margin: 10px auto 0;
+      bottom: unset;
+      right: unset; } }
 
 .card__instagram {
   padding: 0 10px;
@@ -9614,6 +9626,11 @@ body, html {
   .section__news .fiveColumn__slider .heart-icon svg path,
   .section__news .fourColumn__slider .heart-icon svg path {
     fill: rgba(210, 210, 210, 0.2); }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .section__news .fiveColumn__slider .card__container--desc-title .tag-disc,
+    .section__news .fourColumn__slider .card__container--desc-title .tag-disc {
+      width: 14%;
+      font-size: 12px; } }
 
 .page-cuadros {
   padding-bottom: 100px; }
@@ -9643,7 +9660,7 @@ body, html {
         max-width: 33% !important; }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .page-composiciones {
-      padding-bottom: 80px; }
+      padding-bottom: 60px; }
       .page-composiciones__grid .cards {
         flex: 0 0 50%;
         max-width: 50%; } }
