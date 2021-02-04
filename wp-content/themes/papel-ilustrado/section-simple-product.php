@@ -94,6 +94,11 @@ get_header();
                            Guía de tamaños
                         </a>
                      </div>
+                     <div class="marco-icon">
+                        <a href="#">
+                           Probar Marco
+                        </a>
+                     </div>
                   </div>
                </div>
             </div>

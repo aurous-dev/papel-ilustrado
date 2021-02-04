@@ -76,7 +76,8 @@
       &--btn {
          display: flex;
          padding: 10px 0 20px;
-         @include f-center;
+         align-items: flex-start;
+         justify-content: center;
          .available {
             display: flex;
             width: 50%;
@@ -95,6 +96,7 @@
          }
          .special {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             width: 50%;
             .heart-icon {
@@ -128,6 +130,14 @@
                   }
                }
             }
+            .marco-icon {
+               margin-top: 10px;
+               width: 91%;
+               text-align: right;
+               a {
+                  text-decoration: underline;
+               }
+            }
             a {
                color: $color-indigo;
                font-size: 14px;
@@ -155,12 +165,12 @@
          margin: 10px 0;
          background-color: $color-indigo;
          border: 1px solid $color-indigo;
-         padding: 20px;
+         padding: 15px 20px;
          color: $color-white;
       }
       .buy {
          border: 1px solid $color-indigo;
-         padding: 15px;
+         padding: 10px 15px;
          font-size: 14px;
          color: $color-indigo;
       }
