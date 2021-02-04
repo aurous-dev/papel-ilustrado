@@ -106,6 +106,20 @@
          right: 36%;
       }
    }
+   @include mq($from: mobile, $until: tablet) {
+      bottom: 0;
+      h3 {
+         font-size: 26px;
+         padding-bottom: 20px;
+      }
+      &__arrow {
+         img {
+            position: relative;
+            right: auto;
+            margin-left: 20px;
+         }
+      }
+   }
 }
 
 .btn-instagram {

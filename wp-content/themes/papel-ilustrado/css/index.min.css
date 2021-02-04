@@ -8503,6 +8503,16 @@ a.text-dark:hover, a.text-dark:focus {
     .btn-special__arrow img {
       position: absolute;
       right: 36%; }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .btn-special {
+      bottom: 0; }
+      .btn-special h3 {
+        font-size: 26px;
+        padding-bottom: 20px; }
+      .btn-special__arrow img {
+        position: relative;
+        right: auto;
+        margin-left: 20px; } }
 
 .btn-instagram {
   position: absolute;
@@ -8783,16 +8793,17 @@ a.text-dark:hover, a.text-dark:focus {
   overflow: hidden; }
   .big-card > div {
     overflow: hidden; }
-  .big-card:hover {
-    text-decoration: none; }
-    .big-card:hover .big-card__container {
-      -webkit-animation: zoomin 0.3s linear;
-      animation: zoomin 0.3s linear;
-      animation-fill-mode: forwards; }
-    .big-card:hover .btn-special {
-      bottom: 0;
-      -webkit-transform: scale(0.92);
-      transform: scale(0.92); }
+  @media (min-width: 61.25em) {
+    .big-card:hover {
+      text-decoration: none; }
+      .big-card:hover .big-card__container {
+        -webkit-animation: zoomin 0.3s linear;
+        animation: zoomin 0.3s linear;
+        animation-fill-mode: forwards; }
+      .big-card:hover .btn-special {
+        bottom: 0;
+        -webkit-transform: scale(0.92);
+        transform: scale(0.92); } }
   .big-card__container {
     display: flex;
     align-items: flex-end;
@@ -9225,6 +9236,11 @@ body, html {
           height: 15px;
           opacity: 1;
           font-size: 12px; }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .composition__slider .slick-prev {
+      left: -10px; }
+    .composition__slider .slick-next {
+      right: -10px; } }
 
 .picture {
   margin-bottom: 100px; }
@@ -9596,6 +9612,9 @@ body, html {
       flex: 0 0 25%;
       max-width: 25%;
       padding: 20px 0; }
+      .page-composiciones__grid .cards.test {
+        flex: 0 0 33% !important;
+        max-width: 33% !important; }
 
 .search-results {
   padding-bottom: 100px; }
@@ -9674,7 +9693,7 @@ body, html {
 .simple-product__size--btn {
   display: flex;
   padding: 10px 0 20px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center; }
   .simple-product__size--btn .available {
     display: flex;
@@ -9693,6 +9712,7 @@ body, html {
       justify-content: center; }
   .simple-product__size--btn .special {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     width: 50%; }
     .simple-product__size--btn .special .heart-icon {
@@ -9714,6 +9734,12 @@ body, html {
         text-decoration: underline; }
         .simple-product__size--btn .special .size-icon a svg {
           margin-right: 5px; }
+    .simple-product__size--btn .special .marco-icon {
+      margin-top: 10px;
+      width: 91%;
+      text-align: right; }
+      .simple-product__size--btn .special .marco-icon a {
+        text-decoration: underline; }
     .simple-product__size--btn .special a {
       color: #2A3D42;
       font-size: 14px;
@@ -9737,11 +9763,11 @@ body, html {
     margin: 10px 0;
     background-color: #2A3D42;
     border: 1px solid #2A3D42;
-    padding: 20px;
+    padding: 15px 20px;
     color: #FFFFFF; }
   .simple-product__btn .buy {
     border: 1px solid #2A3D42;
-    padding: 15px;
+    padding: 10px 15px;
     font-size: 14px;
     color: #2A3D42; }
 

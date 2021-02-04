@@ -53,4 +53,16 @@
          }
       }
    }
+   @include mq($from: mobile, $until: tablet) {
+      &__slider {
+         .slick-prev {
+            left: -10px;
+            // top: 35%;
+         }
+         .slick-next {
+            right: -10px;
+            // top: 35%;
+         }
+      }
+   }
 }
