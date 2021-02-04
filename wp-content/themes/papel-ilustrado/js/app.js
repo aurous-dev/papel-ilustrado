@@ -58,6 +58,16 @@ $(".paiting__slider").slick({
     slidesToScroll: 1,
     dots: true,
     arrows: true,
+    responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        }
+    ]
 });
 $(".composition__slider").slick({
     infinite: true,
@@ -65,6 +75,16 @@ $(".composition__slider").slick({
     slidesToScroll: 1,
     dots: true,
     arrows: true,
+    responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        }
+    ]
 });
 $(".picture__slider").slick({
     infinite: true,
@@ -72,6 +92,16 @@ $(".picture__slider").slick({
     slidesToScroll: 1,
     dots: true,
     arrows: true,
+    responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        }
+    ]
 });
 $(".instagram__slider").slick({
     infinite: true,
@@ -79,6 +109,16 @@ $(".instagram__slider").slick({
     slidesToScroll: 1,
     dots: true,
     arrows: true,
+    responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        }
+    ]
 });
 
 // PAGE SLIDER 
@@ -96,7 +136,23 @@ $(".fourColumn__slider").slick({
     dots: true,
     arrows: true,
 });
+// Slider syncing
 
+$('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true
+});
 
 // Menu dropdown Desktop
 const tr_menu = document.querySelectorAll('#menu-principal .lista');
