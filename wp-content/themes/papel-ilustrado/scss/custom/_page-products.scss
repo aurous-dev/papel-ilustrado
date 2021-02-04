@@ -42,8 +42,8 @@
       }
    }
    &__price {
-      padding: 20px 0;
-      font-size: 24px;
+      padding: 13px 0;
+      font-size: 22px;
       color: $color-indigo;
       @include fonts-display(700);
    }
@@ -58,12 +58,12 @@
             font-size: 12px;
             text-transform: uppercase;
             color: $color-indigo;
-            padding-bottom: 8px;
+            padding-bottom: 6px;
             @include fonts-display(700);
          }
          .form__select {
             select {
-               height: 40px;
+               height: 38px;
                width: 90%;
                border: 1px solid #D2D2D2;
                font-weight: 600;
@@ -75,7 +75,7 @@
       }
       &--btn {
          display: flex;
-         padding: 10px 0 20px;
+         padding: 10px 0 15px;
          align-items: flex-start;
          justify-content: center;
          .available {
@@ -165,8 +165,9 @@
          margin: 10px 0;
          background-color: $color-indigo;
          border: 1px solid $color-indigo;
-         padding: 15px 20px;
+         padding: 13px 20px;
          color: $color-white;
+         font-size: 14px;
       }
       .buy {
          border: 1px solid $color-indigo;

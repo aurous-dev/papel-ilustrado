@@ -9643,6 +9643,12 @@ body, html {
       flex: 0 0 20%;
       max-width: 20%;
       padding: 20px 0; }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .page-cuadros {
+      padding-bottom: 60px; }
+      .page-cuadros__grid .cards {
+        flex: 0 0 50%;
+        max-width: 50%; } }
 
 .page-composiciones {
   padding-bottom: 100px; }
@@ -9711,8 +9717,8 @@ body, html {
     font-weight: 600; }
 
 .simple-product__price {
-  padding: 20px 0;
-  font-size: 24px;
+  padding: 13px 0;
+  font-size: 22px;
   color: #2A3D42;
   font-family: 'Raleway', sans-serif;
   font-weight: 700; }
@@ -9727,11 +9733,11 @@ body, html {
     font-size: 12px;
     text-transform: uppercase;
     color: #2A3D42;
-    padding-bottom: 8px;
+    padding-bottom: 6px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700; }
   .simple-product__size--form .form__select select {
-    height: 40px;
+    height: 38px;
     width: 90%;
     border: 1px solid #D2D2D2;
     font-weight: 600;
@@ -9741,7 +9747,7 @@ body, html {
 
 .simple-product__size--btn {
   display: flex;
-  padding: 10px 0 20px;
+  padding: 10px 0 15px;
   align-items: flex-start;
   justify-content: center; }
   .simple-product__size--btn .available {
@@ -9812,8 +9818,9 @@ body, html {
     margin: 10px 0;
     background-color: #2A3D42;
     border: 1px solid #2A3D42;
-    padding: 15px 20px;
-    color: #FFFFFF; }
+    padding: 13px 20px;
+    color: #FFFFFF;
+    font-size: 14px; }
   .simple-product__btn .buy {
     border: 1px solid #2A3D42;
     padding: 10px 15px;

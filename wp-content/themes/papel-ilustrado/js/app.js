@@ -173,7 +173,7 @@ $('.slider-for').slick({
             dots: true,
           }
         }
-    ]
+    ],
 });
 $('.slider-nav').slick({
     slidesToShow: 3,
@@ -192,6 +192,9 @@ $('.slider-nav').slick({
           }
         }
     ]
+});
+$('.slider-for').on('setPosition', function(event, slick){
+    console.log(event);
 });
 
 // Menu dropdown Desktop
