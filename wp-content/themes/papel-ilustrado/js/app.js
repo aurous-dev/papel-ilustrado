@@ -115,22 +115,24 @@ tr_preventDefault.forEach( a => {
 
 // Columnas para el menu
 function columnas() {
-    const prueba2 = document.querySelectorAll('#menu-principal > .menu-item-has-children > .sub-menu');
-    prueba2.forEach( m => {
-        const prueba = m.children.length
-        console.log(m.children)
-        for (let i = 1; i < prueba; i++) {
-            const numero = m.children[i].children[1].children.length;
-            const clase = m.children[i].children[1];
-            
+    const items = document.querySelectorAll('#menu-principal > .menu-item-has-children > .sub-menu');
+    items.forEach( m => {
+        const item = m.children.length
+        for (let i = 0; i < item; i++) {
+            if( m.children[i].children.length > 1 ) {
 
-            if ( numero >= 9) {
-                clase.classList.add('column3')
-            }else  if(numero > 3 && numero < 9) {
-                clase.classList.add('column2')
-            } else {
-                clase.classList.add('column')
+                const numero = m.children[i].children[1].children.length;
+                const clase = m.children[i].children[1];
+                
+                if ( numero >= 9) {
+                    clase.classList.add('column3')
+                }else  if(numero > 3 && numero < 9) {
+                    clase.classList.add('column2')
+                } else {
+                    clase.classList.add('column')
+                }
             }
+
         }
     })
 }
