@@ -8298,7 +8298,8 @@ a.text-dark:hover, a.text-dark:focus {
     z-index: 1;
     left: 50%; }
     #menu-principal > li.menu-item-has-children > .sub-menu #banner_cuadros img {
-      max-width: 400px; }
+      max-width: 400px;
+      max-height: 350px; }
     #menu-principal > li.menu-item-has-children > .sub-menu a {
       color: #2A3D42; }
     #menu-principal > li.menu-item-has-children > .sub-menu::before {
