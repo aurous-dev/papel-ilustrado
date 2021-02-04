@@ -128,6 +128,16 @@ $(".fiveColumn__slider").slick({
     slidesToScroll: 1,
     dots: true,
     arrows: true,
+    responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        }
+    ]
 });
 $(".fourColumn__slider").slick({
     infinite: true,
@@ -135,6 +145,16 @@ $(".fourColumn__slider").slick({
     slidesToScroll: 1,
     dots: true,
     arrows: true,
+    responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        }
+    ]
 });
 // Slider syncing
 
@@ -143,7 +163,17 @@ $('.slider-for').slick({
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: '.slider-nav'
+    asNavFor: '.slider-nav',
+    responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        }
+    ],
 });
 $('.slider-nav').slick({
     slidesToShow: 3,
@@ -151,7 +181,20 @@ $('.slider-nav').slick({
     asNavFor: '.slider-for',
     dots: true,
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        }
+    ]
+});
+$('.slider-for').on('setPosition', function(event, slick){
+    console.log(event);
 });
 
 // Menu dropdown Desktop

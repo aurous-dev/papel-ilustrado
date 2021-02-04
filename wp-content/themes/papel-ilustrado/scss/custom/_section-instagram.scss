@@ -55,4 +55,9 @@
          }
       }
    }
+   @include mq($from: mobile, $until: tablet) {
+      .title {
+         padding: 0;
+      }
+   }
 }
