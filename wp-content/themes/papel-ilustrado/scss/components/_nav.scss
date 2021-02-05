@@ -157,6 +157,7 @@
       }
       &__logo {
          height: 20px;
+         background-color: $color-white;
          &::before{
             content: none;
          }
@@ -167,6 +168,7 @@
          }
       }
       &__menu {
+         background-color: $color-white;
          &--whatsapp {
             display: none;
          }
@@ -182,7 +184,13 @@
             }
          }
          &--sesions {
-            display: none;
+            display: flex;
+            position: absolute;
+            width: 100%;
+            background-color: #C1CDCA;
+            background-color: #C1CDCA;
+            top: 70px;
+            padding: 20px;
          }
          &--icons {
             margin: 0;

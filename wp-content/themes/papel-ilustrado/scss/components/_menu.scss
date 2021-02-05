@@ -22,8 +22,10 @@
          font-size: $f-normal;
          color: $color-indigo;
       }
-      & > a:hover {
-         color: $color-salmon;
+      @include mq($from: desktop) {
+         & > a:hover {
+            color: $color-salmon;
+         }
       }
    }
    // Sub menu
@@ -52,12 +54,11 @@
          z-index: 2;
       }
       &.active {
-         a {
+         &> a {
             color: $color-salmon;
-         }
-         &::before {
-            transform: rotate(-90deg);
-            color: red;
+            &::before {
+               transform: rotate(-90deg);
+            }
          }
          & > .sub-menu {
             opacity: 1;
@@ -107,6 +108,8 @@
                   font-weight: 500;
                   text-decoration: underline;
                   text-decoration-color: $color-white;
+                  text-transform: capitalize;
+                  letter-spacing: 0.2px;
                   &:hover {
                      text-decoration-color: $color-indigo;
                   }
@@ -125,7 +128,77 @@
       }
    }
    @include mq($from: mobile, $until: desktop) {
-      display: none;
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      background-color: $color-white;
+      top: 130px;
+      & > li {
+         margin: 0;
+         width: 100%;
+         text-align: center;
+         padding: 20px;
+         border-bottom: 1px solid rgba($color: #C1CDCA, $alpha: .25);
+         &:nth-child(3) {
+            margin: 0;
+         }
+         &:nth-child(n+4) {
+            margin: 0;
+         }
+         & > a {
+            display: flex;
+            width: 100%;
+            @include f-center;
+         }
+      }
+      &> li.menu-item-has-children {
+         & > a {
+            &::before {
+               top: 0;
+               width: 20px;
+               height: 20px;
+               filter: grayscale(1);
+            }
+         }
+         &> .sub-menu {
+            display: none;
+            opacity: 1;
+            visibility: visible;
+            top: 0;
+            width: 100%;
+            flex-direction: column;
+            position: relative;
+            padding-top: 40px;
+            padding-bottom: 0;
+            &::before {
+               top: 18px;
+               height: 1px;
+               background-color: rgba($color: #C1CDCA, $alpha: .25);
+            }
+            & > li {
+               padding: 0 0 20px;
+               a {
+                  width: 100%;
+                  display: flex;
+               }
+
+            }
+            .column3 {
+               column-count: 2;
+               column-gap: 40px;
+            }
+         }
+         &.active {
+            & > a {
+               &::before {
+                  filter: grayscale(0);
+               }
+            }
+            & > .sub-menu {
+               display: flex;
+            }
+         }
+      }
    }
 }
 // erasmo test banner images
