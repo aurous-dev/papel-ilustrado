@@ -129,10 +129,11 @@
    }
    @include mq($from: mobile, $until: desktop) {
       flex-direction: column;
-      position: absolute;
+      // position: absolute;
       width: 100%;
       background-color: $color-white;
-      top: 130px;
+      // top: 130px;
+      margin: 0;
       & > li {
          margin: 0;
          width: 100%;
@@ -147,12 +148,14 @@
          }
          & > a {
             display: flex;
+            align-items: center;
+            justify-content: flex-start;
             width: 100%;
-            @include f-center;
          }
       }
       &> li.menu-item-has-children {
          & > a {
+            padding: 0;
             &::before {
                top: 0;
                width: 20px;

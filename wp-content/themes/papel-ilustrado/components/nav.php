@@ -55,6 +55,17 @@
          </div>
          <nav class="header__nav">
             <?php wp_nav_menu(); ?>
+            <div class="header__nav--rrss">
+               <a href="#">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/svg/facebook.svg" alt="">
+               </a>
+               <a href="#">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/svg/instagram.svg" alt="">
+               </a>
+               <a href="#">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/svg/whatsapp.svg" alt="">
+               </a>
+            </div>
          </nav>
       </div>
    </div>
