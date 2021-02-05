@@ -8188,7 +8188,8 @@ a.text-dark:hover, a.text-dark:focus {
     display: none; }
   @media (min-width: 20em) and (max-width: 61.24em) {
     .header {
-      padding-top: 70px; }
+      padding-top: 70px;
+      padding-bottom: 0; }
       .header.active .header__menu--sesions {
         top: 70px;
         opacity: 1;
@@ -8199,11 +8200,12 @@ a.text-dark:hover, a.text-dark:focus {
         visibility: visible; }
       .header__container {
         z-index: 100;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        background-color: #FFFFFF; }
+        background-color: #FFFFFF;
+        border-bottom: 1px solid #2A3D42; }
       .header__logo {
         height: 20px;
         background-color: #FFFFFF; }

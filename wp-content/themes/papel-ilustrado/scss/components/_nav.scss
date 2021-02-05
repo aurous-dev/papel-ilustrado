@@ -155,6 +155,7 @@
    }
    @include mq($from: mobile, $until: desktop) {
       padding-top: 70px;
+      padding-bottom: 0;
       &.active {
          .header__menu--sesions {
             top: 70px;
@@ -169,11 +170,12 @@
       }
       &__container {
          z-index: 100;
-         position: absolute;
+         position: fixed;
          top: 0;
          left: 0;
          width: 100%;
          background-color: $color-white;
+         border-bottom: 1px solid $color-indigo;
       }
       &__logo {
          height: 20px;
