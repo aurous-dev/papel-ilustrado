@@ -17,11 +17,12 @@
 
 defined( 'ABSPATH' ) || exit;
 
-wc_print_notice( esc_html__( 'Recuperador de contraseña enviado.', 'woocommerce' ) );
+wc_print_notice( esc_html__( 'Recuperador de contraseña enviado', 'woocommerce' ) );
 ?>
 
 <?php do_action( 'woocommerce_before_lost_password_confirmation_message' ); ?>
 
-<p><?php echo esc_html( apply_filters( 'woocommerce_lost_password_confirmation_message', esc_html__( 'Se envió un mensaje a tu correo electrónico con un link para crear una nueva contraseña vía email. Puede tardar entre 2 y 5 minutos en llegar. ', 'woocommerce' ) ) ); ?></p>
+
+<p><?php echo esc_html( apply_filters( 'woocommerce_lost_password_confirmation_message', esc_html__( 'Se envió un mensaje a tu correo electrónico con un link para crear una nueva contraseña vía email. Puede tardar entre 2 y 5 minutos en llegar.', 'woocommerce' ) ) ); ?></p>
 
 <?php do_action( 'woocommerce_after_lost_password_confirmation_message' ); ?>
