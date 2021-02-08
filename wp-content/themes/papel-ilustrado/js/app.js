@@ -128,6 +128,16 @@ $(".fiveColumn__slider").slick({
     slidesToScroll: 1,
     dots: true,
     arrows: true,
+    responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        }
+    ]
 });
 $(".fourColumn__slider").slick({
     infinite: true,
@@ -135,6 +145,16 @@ $(".fourColumn__slider").slick({
     slidesToScroll: 1,
     dots: true,
     arrows: true,
+    responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        }
+    ]
 });
 // Slider syncing
 
@@ -143,7 +163,17 @@ $('.slider-for').slick({
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: '.slider-nav'
+    asNavFor: '.slider-nav',
+    responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        }
+    ],
 });
 $('.slider-nav').slick({
     slidesToShow: 3,
@@ -151,19 +181,53 @@ $('.slider-nav').slick({
     asNavFor: '.slider-for',
     dots: true,
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        }
+    ]
+});
+$('.slider-for').on('setPosition', function(event, slick){
+    console.log(event);
 });
 
+// --------------------VARIABLES--------------------
+
+
 // Menu dropdown Desktop
-const tr_menu = document.querySelectorAll('#menu-principal .lista');
 const tr_nav = document.querySelector('#menu-principal');
 const tr_preventDefault = document.querySelectorAll('#menu-principal .menu-item-has-children > a');
 
-// EventLinstener
-tr_nav.addEventListener('click', clickMenu);
-document.addEventListener('DOMContentLoaded', columnas)
+// btns burguer and search
+const menu = document.querySelector(".menu-icon");
+const tr_header = document.querySelector('.header');
+const tr_search = document.querySelector('.search-mobile');
+const menu_container = document.querySelector('.header__container');
 
-// Funciones
+// Height menu fixed
+let responsives = window.matchMedia("(max-width: 979px)");
+
+// ------------------EVENTLISTENERS------------------
+
+// Menu dropdown Deskto
+tr_nav.addEventListener('click', clickMenu);
+
+// Columnas
+document.addEventListener('DOMContentLoaded', columnas);
+
+// btns burguer and search
+menu.addEventListener("click", showHidden);
+tr_search.addEventListener("click", showSearch);
+
+// -------------------FUNCTIONS-------------------
+
+// Menu dropdown Desktop
 function clickMenu (a) {
     const menu = a.path[2].children;
     Array.from(menu).forEach(m => {
@@ -187,25 +251,81 @@ tr_preventDefault.forEach( a => {
 
 // Columnas para el menu
 function columnas() {
-    const prueba2 = document.querySelectorAll('#menu-principal > .menu-item-has-children > .sub-menu');
-    prueba2.forEach( m => {
-        const prueba = m.children.length
-        console.log(m.children)
-        for (let i = 1; i < prueba; i++) {
-            const numero = m.children[i].children[1].children.length;
-            const clase = m.children[i].children[1];
-            
+    const items = document.querySelectorAll('#menu-principal > .menu-item-has-children > .sub-menu');
+    items.forEach( m => {
+        const item = m.children.length
+        for (let i = 0; i < item; i++) {
+            if( m.children[i].children.length > 1 ) {
 
-            if ( numero >= 9) {
-                clase.classList.add('column3')
-            }else  if(numero > 3 && numero < 9) {
-                clase.classList.add('column2')
-            } else {
-                clase.classList.add('column')
+                const numero = m.children[i].children[1].children.length;
+                const clase = m.children[i].children[1];
+                
+                if ( numero >= 9) {
+                    clase.classList.add('column3')
+                }else  if(numero > 3 && numero < 9) {
+                    clase.classList.add('column2')
+                } else {
+                    clase.classList.add('column')
+                }
             }
+
         }
     })
 }
 
-// test Erasmo
+// btns burguer and search
+menu_container.addEventListener("click", (e) => {
+    const test = e.path
+    // const menuHeader_burguer = document.querySelector('.menu-icon');
+    const menuHeader_search = document.querySelector('.header__menu--search');
+    // console.log(menuHeader_search.children[1])
+    // console.log(menuHeader_burguer.children[0])
+    test.forEach( m => {
+        if(m.classList && m.classList[0]) {
+            if( m.classList[0] === 'search-mobile') {
+                if(menu.classList.contains('active')) {
+                    menu.classList.remove('active')
+                    tr_header.classList.remove('active')
+                }
+            }
+            
+            if(m.classList[0] === 'menu-icon') {
+                if(menuHeader_search.classList.contains('srch')) {
+                    menuHeader_search.classList.remove('srch')
+                }
+            }
+        }
+    })
+})
+function showHidden() {
+    menu.classList.toggle("active");
+    tr_header.classList.toggle("active");
+}
+function showSearch(e) {
+    e.preventDefault()
+    const menu_search = document.querySelector('.header__menu--search')
+    menu_search.classList.toggle('srch');
+}
 
+// Height menu fixed
+// navResponsive(responsives);
+// responsives.addListener(navResponsive);
+
+// function navResponsive(x) {
+//     console.log(x)
+//     if (x.matches) {
+//         tr_menu.forEach((mes) => {
+//             if (mes.classList.contains("menu-item-has-children")) {
+//                 const btn = mes.children[0];
+//                 const dropdown = mes.children[1];
+//                 btn.addEventListener("click", (e) => {
+//                     e.preventDefault();
+//                     dropdown.classList.toggle("down");
+//                     btn.classList.toggle("active");
+//                     tr_rrss.style.top = `calc(${tr_menuHeight.clientHeight}px + 5px)`;
+//                 });
+//             }
+//         });
+//         tr_rrss.style.top = `-600px`;
+//     }
+// }

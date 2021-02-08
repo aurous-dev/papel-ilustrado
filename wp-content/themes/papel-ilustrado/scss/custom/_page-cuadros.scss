@@ -11,4 +11,13 @@
          padding: 20px 0;
       }
    }
+   @include mq($from: mobile, $until: tablet) {
+      padding-bottom: 60px;
+      &__grid {
+         .cards {
+            flex: 0 0 50%;
+            max-width: 50%;
+         }
+      }
+   }
 }

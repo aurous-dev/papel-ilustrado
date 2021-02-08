@@ -9,7 +9,7 @@ get_header();
    <div class="container">
       <div class="page-index">
          <div>
-            inicio/ cuadros / Minimalista/ <a href="#"> Xilografia minimal</a>
+            Inicio/ Cuadros / Minimalista/ <a href="#"> Xilografia minimal</a>
          </div>
       </div>
       <div class="row simple-product__container">
