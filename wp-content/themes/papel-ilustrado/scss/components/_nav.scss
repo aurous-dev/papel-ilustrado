@@ -145,7 +145,8 @@
          position: absolute;
          background-color: $color-white;
          padding: 0 25px;
-         height: 130px;
+         width: 180px;
+         height: auto;
       }
    }
    &__nav {
@@ -184,7 +185,7 @@
             content: none;
          }
          img {
-            height: 60px;
+            width: 110px;
             background-color: unset;
             top: -45px;
          }
