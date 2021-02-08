@@ -127,7 +127,7 @@
          }
       }
    }
-   @include mq($from: mobile, $until: desktop) {
+   @include mq($from: mobile, $until: tablet) {
       flex-direction: column;
       // position: absolute;
       width: 100%;
