@@ -17,6 +17,10 @@
    &:disabled {
       background-color: rgba($color: $color-indigo, $alpha: .5);
    }
+   @include mq($from: mobile, $until: tablet) {
+      padding: 18px 20px;
+      font-size: 14px;
+   }
 }
 
 .btn-send {
@@ -24,6 +28,7 @@
    color: $color-dark_gray;
    padding: 13px 25px;
    text-transform: uppercase;
+   @include fonts-display(600);
    &:hover {
       color: $color-white;
       background-color: $color-salmon;
@@ -62,6 +67,7 @@
       padding-right: 30px;
       margin: 0;
       z-index: 2;
+      @include fonts-display(600);
    }
 }
 
@@ -100,6 +106,20 @@
          right: 36%;
       }
    }
+   @include mq($from: mobile, $until: tablet) {
+      bottom: 0;
+      h3 {
+         font-size: 26px;
+         padding-bottom: 20px;
+      }
+      &__arrow {
+         img {
+            position: relative;
+            right: auto;
+            margin-left: 20px;
+         }
+      }
+   }
 }
 
 .btn-instagram {
@@ -113,6 +133,10 @@
    &:hover {
       background-color: $color-salmon;
       color: $white;
+   }
+   @include mq($from: mobile, $until: tablet) {
+      position: relative;
+      margin-top: 20px;
    }
 }
 
@@ -128,5 +152,9 @@
    &:hover {
       color: $color-white;
       background-color: $color-salmon;
+   }
+   @include mq($from: mobile, $until: tablet) {
+      padding: 16px 22px;
+      font-size: 15px;
    }
 }

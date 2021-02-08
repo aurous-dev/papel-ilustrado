@@ -1,12 +1,12 @@
 <?php 
 
-/* Template Name: Cuadros */
+/* Template Name: Composiciones-test */
 
 get_header();
 
 ?>
 <?php get_template_part('components/single/page-title');?>
-<section class="page-cuadros">
+<section class="page-composiciones">
    <div class="container">
       <div class="section-filter row">
          <div class="section-filter__search">
@@ -19,8 +19,8 @@ get_header();
             </select>
          </div>
       </div>
-      <div class="page-cuadros__grid">
-         <?php get_template_part('components/group/card-cuadros');?>
+      <div class="page-composiciones__grid">
+         <?php get_template_part('components/group/card-composiciones-test');?>
       </div>
    </div>
    <div class="container">
@@ -32,8 +32,8 @@ get_header();
       <div class="section__news--title">
          <h2>Novedades</h2>
       </div>
-      <div class="fiveColumn__slider">
-         <?php get_template_part('components/group/card-picture');?>
+      <div class="fourColumn__slider">
+         <?php get_template_part('components/group/card-paiting');?>
       </div>
    </div>
 </section>

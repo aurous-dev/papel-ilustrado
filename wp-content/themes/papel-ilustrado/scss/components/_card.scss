@@ -3,15 +3,32 @@
     grid-template-rows: 300px 1fr;
     grid-template-columns: 100%;
     padding: 0 5px;
+    max-width: 95%;
+    margin: 0 auto;
     &--img {
+        position: relative;
         display: flex;
         border: 1px solid #d2d2d2;
         padding: 20px;
+        background-color: $color-white;
+        z-index: 1;
         @include f-center;
-        &:hover {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
             background-color: rgba($color: $color-indigo, $alpha: 0.4);
-            .btn-card {
-                opacity: 1;
+            opacity: 0;
+        }
+        @include mq($from: desktop) {
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+                .btn-card {
+                    opacity: 1;
+                }
             }
         }
         img {
@@ -37,6 +54,37 @@
                 max-height: 100%;
                 max-width: 100%;
             }
+        }
+    }
+    
+    &--imgOut {
+        position: relative;
+        display: flex;
+        padding: 20px;
+        z-index: 1;
+        @include f-center;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: $color-indigo, $alpha: 0.4);
+            opacity: 0;
+        }
+        @include mq($from: desktop) {
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+                .btn-card {
+                    opacity: 1;
+                }
+            }
+        }
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            z-index: -1;
         }
     }
     
@@ -95,10 +143,12 @@
         position: absolute;
         bottom: 10px;
         right: 10px;
-        &:hover {
-            svg {
-                path {
-                    fill: $color-salmon;
+        @include mq($from: desktop) {
+            &:hover {
+                svg {
+                    path {
+                        fill: $color-salmon;
+                    }
                 }
             }
         }
@@ -122,10 +172,12 @@
         height: fit-content;
         @include f-center;
         @include fonts-display(400);
-        &:hover {
-            background-color: rgba($color: $color-indigo, $alpha: 0.4);
-            .btn-card {
-                opacity: 1;
+        @include mq($from: desktop) {
+            &:hover {
+                background-color: rgba($color: $color-indigo, $alpha: 0.4);
+                .btn-card {
+                    opacity: 1;
+                }
             }
         }
         img {
@@ -155,7 +207,26 @@
         display: flex;
         padding: 10px;
         position: relative;
+        background-color: $color-white;
         @include f-center;
+        @include mq($from: desktop) {
+            &:hover {
+                .twice-btn {
+                    opacity: 1;
+                    bottom: 0;
+                }
+                img {
+                    &.principal {
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                    &.secundary {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
         img {
             max-width: 100%;
             max-height: 100%;
@@ -170,17 +241,98 @@
                 opacity: 0;
             }
         }
-        &:hover {
-            img {
-                &.principal {
-                    visibility: hidden;
-                    opacity: 0;
-                }
-                &.secundary {
-                    visibility: visible;
+        .twice-btn {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            bottom: -10px;
+            padding: 6px 15px;
+            background-color: #2A3D42;
+            color: white;
+            text-align: center;
+            font-size: 11px;
+        }
+    }
+
+    &--twiceOut {
+        display: flex;
+        padding: 10px;
+        position: relative;
+        // background-color: $color-white;
+        @include f-center;
+        @include mq($from: desktop) {
+            &:hover {
+                .twice-btn {
                     opacity: 1;
+                    bottom: 0;
+                }
+                img {
+                    &.principal {
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                    &.secundary {
+                        visibility: visible;
+                        opacity: 1;
+                    }
                 }
             }
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            &.principal {
+                visibility: visible;
+                opacity: 1;
+            }
+            &.secundary {
+                position: absolute;
+                padding: 10px;
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+        .twice-btn {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            bottom: -10px;
+            padding: 6px 15px;
+            background-color: #2A3D42;
+            color: white;
+            text-align: center;
+            font-size: 11px;
+        }
+    }
+
+    @include mq($from: mobile, $until: tablet) {
+        grid-template-rows: auto 1fr;
+        &--img-full {
+            margin: 0 auto;
+        }
+        &--desc {
+            &-title {
+                h3 {
+                    max-width: 84%;
+                }
+                .tag-disc {
+                    width: 15%;
+                    font-size: 10px;
+                }
+            }
+        }
+        .heart-icon {
+            position: relative;
+            margin: 10px auto 0;
+            bottom: unset;
+            right: unset;
+        }
+        &--search {
+            .search__buy,
+            .search__class {
+                padding: 6px 10px;
+            }
+
         }
     }
 }
@@ -207,18 +359,19 @@
     & > div {
         overflow: hidden;
     }
-    &:hover {
-        text-decoration: none;
-        
-        .big-card__container {
-            -webkit-animation: zoomin 0.3s linear;
-            animation: zoomin 0.3s linear;
-            animation-fill-mode: forwards;
-        }
-        .btn-special {
-            bottom: 0;
-            -webkit-transform: scale(.92);
-            transform: scale(0.92);
+    @include mq($from: desktop) {
+        &:hover {
+            text-decoration: none;
+            .big-card__container {
+                -webkit-animation: zoomin 0.3s linear;
+                animation: zoomin 0.3s linear;
+                animation-fill-mode: forwards;
+            }
+            .btn-special {
+                bottom: 0;
+                -webkit-transform: scale(.92);
+                transform: scale(0.92);
+            }
         }
     }
     &__container {

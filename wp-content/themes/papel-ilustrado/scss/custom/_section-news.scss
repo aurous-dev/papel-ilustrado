@@ -93,5 +93,16 @@
             }
          }
       }
+      @include mq($from: mobile, $until: tablet) {
+         .card__container--desc-title {
+            h3 {
+               max-width: 80%;
+            }
+            .tag-disc {
+               width: 14%;
+               font-size: 12px;
+            }
+         }
+      }
    }
 }
