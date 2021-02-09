@@ -4,6 +4,7 @@
       padding: 120px 15px;
       margin: 0 auto;
       width: 35%;
+      font-size: 13px;
       h2 {
          color: $color-indigo;
          font-size: 22px;
@@ -42,6 +43,28 @@
             &:hover {
                background-color: $color-salmon;
             }
+         }
+      }
+      // Message
+      .woocommerce-message {
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         margin-bottom: 20px;
+         border-bottom: 3px solid #C1CDCA;
+         border-top: none;
+         padding: 10px 0;
+         color: $color-indigo;
+         font-size: 22px;
+         width: fit-content;
+         @include fonts-display(700);
+         &::before {
+            display: block;
+            position: relative;
+            top: unset;
+            left: unset;
+            color: #6FCF97;
+            margin-right: 15px;
          }
       }
 

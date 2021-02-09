@@ -9315,7 +9315,8 @@ a.text-dark:hover, a.text-dark:focus {
   max-width: 1140px;
   padding: 120px 15px;
   margin: 0 auto;
-  width: 35%; }
+  width: 35%;
+  font-size: 13px; }
   .woocommerce-lost-password .woocommerce h2 {
     color: #2A3D42;
     font-size: 22px;
@@ -9352,6 +9353,59 @@ a.text-dark:hover, a.text-dark:focus {
       font-weight: 400; }
       .woocommerce-lost-password .woocommerce form.woocommerce-ResetPassword button:hover {
         background-color: #F4997E; }
+  .woocommerce-lost-password .woocommerce .woocommerce-message {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #C1CDCA;
+    border-top: none;
+    padding: 10px 0;
+    color: #2A3D42;
+    font-size: 22px;
+    width: fit-content;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700; }
+    .woocommerce-lost-password .woocommerce .woocommerce-message::before {
+      display: block;
+      position: relative;
+      top: unset;
+      left: unset;
+      color: #6FCF97;
+      margin-right: 15px; }
+
+.woocommerce-cart .woocommerce {
+  max-width: 1140px;
+  padding: 120px 15px;
+  margin: 0 auto;
+  font-size: 13px; }
+  .woocommerce-cart .woocommerce h2 {
+    color: #2A3D42;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700; }
+  .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table thead .product-name,
+  .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table thead .product-price,
+  .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table thead .product-quantity,
+  .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table thead .product-subtotal {
+    color: #3D3F40;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700; }
+  .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table tbody .cart_item .product-remove a {
+    margin: 0 auto;
+    background: #EB5757;
+    color: #FFFFFF !important;
+    font-size: 17px; }
+  .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table tbody .product-thumbnail {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table tbody .product-thumbnail img {
+      width: 40px; }
 
 * {
   margin: 0;

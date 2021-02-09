@@ -331,12 +331,26 @@ function showSearch(e) {
 // }
 
 // Zoom img
-$(document).ready(function(){
-    $('.image-zoom')
-        .wrap('<span style="display:inline-block"></span>')
-        .css('display', 'block')
-        .parent()
-        .zoom({
-            url: $(this).find('img').attr('data-zoom')
-        });
-});
+// $(document).ready(function(){
+//     $('.image-zoom')
+//         .wrap('<span style="display:inline-block"></span>')
+//         .css('display', 'block')
+//         .parent()
+//         .zoom({
+//             url: $(this).find('img').attr('data-zoom')
+//         });
+// });
+
+const prueba = document.querySelectorAll('.product-name a');
+
+prueba.forEach( m => {
+    const number = m.textContent.indexOf(' - ');
+    const final = m.textContent.length;
+    m.innerHTML = `${m.textContent.substring(0,number)} <br>
+                    <span> ${m.textContent.substring((number + 3), final)} </span>
+                    `
+    
+    // function split_operate (value, index) {
+    //     // return ``
+    // }
+})
