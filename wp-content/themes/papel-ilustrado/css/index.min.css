@@ -9297,6 +9297,50 @@ a.text-dark:hover, a.text-dark:focus {
         font-size: 14px;
         text-decoration: underline; }
 
+.w-lost__container {
+  max-width: 1140px;
+  padding: 80px 15px;
+  margin: 0 auto;
+  width: 510px;
+  font-size: 13px; }
+  .w-lost__container .w-lost__title {
+    color: #2A3D42;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700; }
+  .w-lost__container .w-lost__form {
+    font-size: 13px;
+    color: #2A3D42; }
+    .w-lost__container .w-lost__form .w-lost__row {
+      width: 100%; }
+      .w-lost__container .w-lost__form .w-lost__row label {
+        width: 100%;
+        font-size: 12px;
+        color: #3D3F40;
+        text-transform: uppercase;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700; }
+      .w-lost__container .w-lost__form .w-lost__row input {
+        height: 45px;
+        border: 1px solid #D2D2D2;
+        width: 100%;
+        padding: 10px 15px; }
+    .w-lost__container .w-lost__form button {
+      width: 100%;
+      background-color: #2A3D42 !important;
+      color: #FFFFFF !important;
+      height: 50px;
+      border-radius: 0 !important;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      text-align: center;
+      font-weight: 440 !important;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400; }
+      .w-lost__container .w-lost__form button:hover {
+        background-color: #F4997E !important; }
+
 .w-reset__form {
   font-size: 13px;
   max-width: 1140px;

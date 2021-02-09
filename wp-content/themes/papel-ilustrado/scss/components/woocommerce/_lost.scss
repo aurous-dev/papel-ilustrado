@@ -71,6 +71,56 @@
 //    }
 // }
 
+// Lost password
+.w-lost__container {
+   max-width: 1140px; 
+   padding: 80px 15px;
+   margin: 0 auto;
+   width: 510px;
+   font-size: 13px;
+   .w-lost__title {
+      color: $color-indigo;
+      font-size: 22px;
+      margin-bottom: 20px;
+      @include fonts-display(700);
+   }
+   .w-lost__form {
+      font-size: 13px;
+      color: $color-indigo;
+      .w-lost__row{
+         width: 100%;
+         label {
+            width: 100%;
+            font-size: 12px;
+            color: $color-dark_gray;
+            text-transform: uppercase;
+            @include fonts-display(700);
+         }
+         input {
+            height: 45px;
+            border: 1px solid #D2D2D2;
+            width: 100%;
+            padding: 10px 15px;
+         }
+      }
+      button {
+         width: 100%;
+         background-color: $color-indigo !important;
+         color: $color-white !important;
+         height: 50px;
+         border-radius: 0 !important;
+         text-transform: uppercase;
+         letter-spacing: .02em;
+         text-align: center;
+         font-weight: 440 !important;
+         @include fonts-display(400);
+         &:hover {
+            background-color: $color-salmon !important;
+         }
+      }
+   }
+}
+
 // Reset password
 .w-reset__form {
    font-size: 13px;
