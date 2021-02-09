@@ -9259,7 +9259,8 @@ a.text-dark:hover, a.text-dark:focus {
       .woocommerce #customer_login .u-column2 .woocommerce-form input {
         height: 45px;
         border: 1px solid #D2D2D2;
-        width: 100%; }
+        width: 100%;
+        padding: 10px 15px; }
       .woocommerce #customer_login .u-column1 .woocommerce-form .password-input,
       .woocommerce #customer_login .u-column2 .woocommerce-form .password-input {
         width: 100%; }
@@ -9278,7 +9279,8 @@ a.text-dark:hover, a.text-dark:focus {
           width: 16px;
           border: 1px solid #d2d2d2 !important;
           margin-right: 15px;
-          -webkit-appearance: none; }
+          -webkit-appearance: none;
+          padding: 0; }
       .woocommerce #customer_login .u-column1 .woocommerce-form button,
       .woocommerce #customer_login .u-column2 .woocommerce-form button {
         width: 100%;
@@ -9308,6 +9310,48 @@ a.text-dark:hover, a.text-dark:focus {
         color: #2A3D42;
         font-size: 14px;
         text-decoration: underline; }
+
+.woocommerce-lost-password .woocommerce {
+  max-width: 1140px;
+  padding: 120px 15px;
+  margin: 0 auto;
+  width: 35%; }
+  .woocommerce-lost-password .woocommerce h2 {
+    color: #2A3D42;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700; }
+  .woocommerce-lost-password .woocommerce form.woocommerce-ResetPassword {
+    font-size: 13px;
+    color: #2A3D42; }
+    .woocommerce-lost-password .woocommerce form.woocommerce-ResetPassword .woocommerce-form-row {
+      width: 100%; }
+      .woocommerce-lost-password .woocommerce form.woocommerce-ResetPassword .woocommerce-form-row label {
+        width: 100%;
+        font-size: 12px;
+        color: #3D3F40;
+        text-transform: uppercase;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700; }
+      .woocommerce-lost-password .woocommerce form.woocommerce-ResetPassword .woocommerce-form-row input {
+        height: 45px;
+        border: 1px solid #D2D2D2;
+        width: 100%;
+        padding: 10px 15px; }
+    .woocommerce-lost-password .woocommerce form.woocommerce-ResetPassword button {
+      width: 100%;
+      background-color: #2A3D42;
+      color: #FFFFFF;
+      height: 50px;
+      border-radius: 0;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      text-align: center;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400; }
+      .woocommerce-lost-password .woocommerce form.woocommerce-ResetPassword button:hover {
+        background-color: #F4997E; }
 
 * {
   margin: 0;
