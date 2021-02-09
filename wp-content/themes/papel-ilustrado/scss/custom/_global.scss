@@ -32,6 +32,16 @@ body, html {
     align-items: center;
     flex-direction: column;
 }
+
+//woocommerce
+#sidebar {
+    display: none;
+}
+.woocommerce {
+    @include mq($from: wide) {
+        min-height: 650px;
+    }
+}
 /*-------------------------------------------*\
 
 🚫 ¡ Don't DELETE THIS .grecaptcha-badge ! 🚫

@@ -1,0 +1,85 @@
+.woocommerce {
+   #customer_login {
+      max-width: 1140px; 
+      padding: 100px 15px;
+      margin: 0 auto;
+      .u-column1,
+      .u-column2 {
+         flex: 0;
+         max-width: 45%;
+         h2 {
+            color: $color-indigo;
+            font-size: 22px;
+            @include fonts-display(700);
+         }
+         .woocommerce-form {
+            border: none;
+            padding: 0;
+            .woocommerce-form-row {
+               margin-bottom: 20px;
+            }
+            label {
+               width: 100%;
+               font-size: 12px;
+               color: $color-dark_gray;
+               text-transform: uppercase;
+               @include fonts-display(700);
+            }
+            input {
+               height: 45px;
+               border: 1px solid #D2D2D2;
+               width: 100%;
+            }
+            .password-input {
+               width: 100%;
+            }
+            .woocommerce-form-login__rememberme {
+               display: flex;
+               align-items: center;
+               margin-bottom: 30px;
+               font-family: 'Open Sans', sans-serif;
+               font-weight: 400;
+               text-transform: capitalize;
+               font-size: 14px;
+               input {
+                  height: 16px;
+                  width: 16px;
+                  border: 1px solid #d2d2d2 !important;
+                  margin-right: 15px;
+                  -webkit-appearance: none;
+               }
+            }
+            button {
+               width: 100%;
+               background-color: $color-indigo;
+               color: $color-white;
+               height: 50px;
+               border-radius: 0;
+               text-transform: uppercase;
+               letter-spacing: .02em;
+               @include fonts-display(400);
+               &:hover {
+                  background-color: $color-salmon;
+               }
+            }
+            .woocommerce-privacy-policy-text {
+               font-size: 12px;
+               margin-top: -12px;
+               color: $color-indigo;
+               a {
+                  color: $color-indigo;
+                  font-weight: 700;
+                  text-decoration: underline;
+               }
+            }
+            .lost_password {
+               a {
+                  color: $color-indigo;
+                  font-size: 14px;
+                  text-decoration: underline;
+               }
+            }
+         }
+      }
+   }
+}
