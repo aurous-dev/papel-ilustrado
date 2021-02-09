@@ -9226,46 +9226,38 @@ a.text-dark:hover, a.text-dark:focus {
     padding: 13px 15px;
     font-size: 13px; }
 
-.woocommerce #customer_login {
+.w__login {
   max-width: 1140px;
   padding: 80px 15px;
   margin: 0 auto; }
-  .woocommerce #customer_login .u-column1,
-  .woocommerce #customer_login .u-column2 {
+  .w__login .w__login--column {
     flex: 0;
     max-width: 45%; }
-    .woocommerce #customer_login .u-column1 h2,
-    .woocommerce #customer_login .u-column2 h2 {
+    .w__login .w__login--column h2 {
       color: #2A3D42;
       font-size: 22px;
       font-family: 'Raleway', sans-serif;
       font-weight: 700; }
-    .woocommerce #customer_login .u-column1 .woocommerce-form,
-    .woocommerce #customer_login .u-column2 .woocommerce-form {
+    .w__login .w__login--column .w__login--form {
       border: none;
       padding: 0; }
-      .woocommerce #customer_login .u-column1 .woocommerce-form .woocommerce-form-row,
-      .woocommerce #customer_login .u-column2 .woocommerce-form .woocommerce-form-row {
+      .w__login .w__login--column .w__login--form .w__login--row {
         margin-bottom: 20px; }
-      .woocommerce #customer_login .u-column1 .woocommerce-form label,
-      .woocommerce #customer_login .u-column2 .woocommerce-form label {
+        .w__login .w__login--column .w__login--form .w__login--row-pass > span {
+          width: 100%; }
+      .w__login .w__login--column .w__login--form label {
         width: 100%;
         font-size: 12px;
         color: #3D3F40;
         text-transform: uppercase;
         font-family: 'Raleway', sans-serif;
         font-weight: 700; }
-      .woocommerce #customer_login .u-column1 .woocommerce-form input,
-      .woocommerce #customer_login .u-column2 .woocommerce-form input {
+      .w__login .w__login--column .w__login--form input {
         height: 45px;
         border: 1px solid #D2D2D2;
         width: 100%;
         padding: 10px 15px; }
-      .woocommerce #customer_login .u-column1 .woocommerce-form .password-input,
-      .woocommerce #customer_login .u-column2 .woocommerce-form .password-input {
-        width: 100%; }
-      .woocommerce #customer_login .u-column1 .woocommerce-form .woocommerce-form-login__rememberme,
-      .woocommerce #customer_login .u-column2 .woocommerce-form .woocommerce-form-login__rememberme {
+      .w__login .w__login--column .w__login--form .w__login--rememberme {
         display: flex;
         align-items: center;
         margin-bottom: 30px;
@@ -9273,16 +9265,14 @@ a.text-dark:hover, a.text-dark:focus {
         font-weight: 400;
         text-transform: capitalize;
         font-size: 14px; }
-        .woocommerce #customer_login .u-column1 .woocommerce-form .woocommerce-form-login__rememberme input,
-        .woocommerce #customer_login .u-column2 .woocommerce-form .woocommerce-form-login__rememberme input {
+        .w__login .w__login--column .w__login--form .w__login--rememberme input {
           height: 16px;
           width: 16px;
           border: 1px solid #d2d2d2 !important;
           margin-right: 15px;
           -webkit-appearance: none;
           padding: 0; }
-      .woocommerce #customer_login .u-column1 .woocommerce-form button,
-      .woocommerce #customer_login .u-column2 .woocommerce-form button {
+      .w__login .w__login--column .w__login--form button {
         width: 100%;
         background-color: #2A3D42;
         color: #FFFFFF;
@@ -9292,21 +9282,17 @@ a.text-dark:hover, a.text-dark:focus {
         letter-spacing: .02em;
         font-family: 'Raleway', sans-serif;
         font-weight: 400; }
-        .woocommerce #customer_login .u-column1 .woocommerce-form button:hover,
-        .woocommerce #customer_login .u-column2 .woocommerce-form button:hover {
+        .w__login .w__login--column .w__login--form button:hover {
           background-color: #F4997E; }
-      .woocommerce #customer_login .u-column1 .woocommerce-form .woocommerce-privacy-policy-text,
-      .woocommerce #customer_login .u-column2 .woocommerce-form .woocommerce-privacy-policy-text {
+      .w__login .w__login--column .w__login--form .woocommerce-privacy-policy-text {
         font-size: 12px;
         margin-top: -12px;
         color: #2A3D42; }
-        .woocommerce #customer_login .u-column1 .woocommerce-form .woocommerce-privacy-policy-text a,
-        .woocommerce #customer_login .u-column2 .woocommerce-form .woocommerce-privacy-policy-text a {
+        .w__login .w__login--column .w__login--form .woocommerce-privacy-policy-text a {
           color: #2A3D42;
           font-weight: 700;
           text-decoration: underline; }
-      .woocommerce #customer_login .u-column1 .woocommerce-form .lost_password a,
-      .woocommerce #customer_login .u-column2 .woocommerce-form .lost_password a {
+      .w__login .w__login--column .w__login--form .w__login--lostPass a {
         color: #2A3D42;
         font-size: 14px;
         text-decoration: underline; }
