@@ -220,6 +220,7 @@ tr_nav.addEventListener('click', clickMenu);
 
 // Columnas
 document.addEventListener('DOMContentLoaded', columnas);
+document.addEventListener('DOMContentLoaded', carts);
 
 // btns burguer and search
 menu.addEventListener("click", showHidden);
@@ -340,17 +341,16 @@ function showSearch(e) {
 //             url: $(this).find('img').attr('data-zoom')
 //         });
 // });
-
-const prueba = document.querySelectorAll('.product-name a');
-
-prueba.forEach( m => {
-    const number = m.textContent.indexOf(' - ');
-    const final = m.textContent.length;
-    m.innerHTML = `${m.textContent.substring(0,number)} <br>
-                    <span> ${m.textContent.substring((number + 3), final)} </span>
-                    `
-    
-    // function split_operate (value, index) {
-    //     // return ``
-    // }
-})
+function carts() {
+    const prueba = document.querySelectorAll('.w-cart__table--name a');
+    if(prueba) {
+        prueba.forEach( m => {
+            const number = m.textContent.indexOf(' - ');
+            const final = m.textContent.length;
+            m.innerHTML = `${m.textContent.substring(0,number)} <br>
+                            <span> ${m.textContent.substring((number + 3), final)} </span>
+                            `
+            
+        })
+    }
+}

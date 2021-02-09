@@ -1,49 +1,186 @@
 .woocommerce-cart {
    .woocommerce {
       max-width: 1140px; 
-      padding: 120px 15px;
+      padding: 80px 15px;
       margin: 0 auto;
       font-size: 13px;
-      h2 {
-         color: $color-indigo;
-         font-size: 22px;
-         margin-bottom: 20px;
-         text-align: center;
-         @include fonts-display(700);
+   }
+}
+h2.w-cart__title {
+   color: $color-indigo;
+   font-size: 22px;
+   margin-bottom: 20px;
+   text-align: center;
+   @include fonts-display(700);
+}
+.w-cart__form {
+   .w-cart__table {
+      border-radius: 0 !important;
+      // Titles
+      thead {
+         .w-cart__table--name,
+         .w-cart__table--price,
+         .w-cart__table--quantity,
+         .w-cart__table--subtotal {
+            color: $color-dark_gray;
+            font-size: 14px;
+            text-transform: uppercase;
+            @include fonts-display(700);
+         }
+         .w-cart__table--price,
+         .w-cart__table--quantity,
+         .w-cart__table--subtotal {
+            text-align: center;
+         }
       }
-      .woocommerce-cart-form {
-         .shop_table {
-            thead {
-               .product-name,
-               .product-price,
-               .product-quantity,
-               .product-subtotal {
-                  color: $color-dark_gray;
-                  font-size: 14px;
-                  text-transform: uppercase;
+      // Descriptions
+      tbody {
+         .w-cart__table--remove {
+            a {
+               margin: 0 auto;
+               background: #EB5757;
+               color: $color-white !important;
+               font-size: 17px;
+            }
+         }
+         .w-cart__table--thumbnail {
+            display: flex;
+            @include f-center;
+            img {
+               width: 40px;
+            }
+         }
+         .w-cart__table--name {
+            a {
+               color: $color-indigo;
+               letter-spacing: 0.03em;
+               @include fonts-display(700);
+               span {
+                  color: #A7A7A7;
+                  font-weight: 500;
+               }
+            }
+         }
+         .w-cart__table--price,
+         .w-cart__table--subtotal {
+            span {
+               color: $color-indigo;
+               text-align: center;
+               @include fonts-display(700);
+               span {
+                  color: #D2D2D2;
+                  margin-right: 5px;
+               }
+            }
+         }
+         .w-cart__table--quantity {
+            text-align: center;
+            .quantity {
+               input {
+                  color: $color-indigo;
+                  text-align: center;
+                  border: 1px solid #d2d2d2 !important;
+                  -webkit-appearance: none;
                   @include fonts-display(700);
                }
             }
-            tbody {
-               .cart_item {
-                  .product-remove {
-                     a {
-                        margin: 0 auto;
-                        background: #EB5757;
-                        color: $color-white !important;
-                        font-size: 17px;
-                     }
-                  }
+         }
+      }
+      // Coupons
+      .w-cart__actions {
+         button {
+            background-color: rgba(229, 229, 229, 0.15);
+            border: 1px solid $color-dark_green;
+            color: $color-indigo;
+            width: 205px;
+            border-radius: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            @include fonts-display(600); 
+            &:hover {
+               background-color: $color-salmon;
+               border: 1px solid $color-salmon;
+               color: $color-white;
+            }
+            &:disabled {
+               &:hover {
+                  background-color: rgba(229, 229, 229, 0.15);
+                  border: 1px solid $color-dark_green;
+                  color: $color-indigo;
                }
-               .product-thumbnail {
-                  display: flex;
-                  @include f-center;
-                  img {
-                     width: 40px;
+            }
+         }
+         .w-cart__coupon {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            &--input {
+               width: 205px !important;
+               margin: 0 10px !important;
+               border: 1px solid #D2D2D2 !important;
+               &::placeholder {
+                  color: $color-indigo;
+                  text-align: center;
+                  color: $color-silver;
+                  text-transform: uppercase;
+                  letter-spacing: 0.03em;
+                  background-color: rgba(229, 229, 229, 0.15);
+                  @include fonts-display(700);
+               }
+            }
+            button {
+               width: 170px;
+            }
+         }
+      }
+   }
+}
+
+.w-cart__total {
+   h2 {
+      color: $color-indigo;
+      font-size: 22px;
+      margin-bottom: 20px;
+      text-align: center;
+      @include fonts-display(700);
+   }
+   table{
+      border-radius: 0 !important;
+      tbody {
+         tr {
+            th {
+               color: $color-indigo;
+               font-size: 12px;
+               text-align: center;
+               text-transform: uppercase;
+               @include fonts-display(700);
+            }
+            td {
+               span {
+                  color: $color-indigo;
+                  text-align: center;
+                  @include fonts-display(700);
+                  span {
+                     color: #D2D2D2;
+                     margin-right: 5px;
                   }
                }
             }
          }
+      }
+   }
+   a {
+      width: 100%;
+      background-color: $color-indigo !important;
+      color: $color-white !important;
+      height: 50px;
+      border-radius: 0 !important;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      @include fonts-display(600);
+      &:hover {
+         background-color: $color-salmon;
       }
    }
 }
