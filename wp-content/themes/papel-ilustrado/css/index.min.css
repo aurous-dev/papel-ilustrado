@@ -9557,6 +9557,141 @@ h2.w-cart__title {
   .w-cart__total a:hover {
     background-color: #F4997E; }
 
+.woocommerce-checkout form.woocommerce-checkout {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px; }
+  .woocommerce-checkout form.woocommerce-checkout .col2-set {
+    width: 45%;
+    display: flex;
+    flex-direction: column; }
+    .woocommerce-checkout form.woocommerce-checkout .col2-set .col-1,
+    .woocommerce-checkout form.woocommerce-checkout .col2-set .col-2 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100%; }
+      .woocommerce-checkout form.woocommerce-checkout .col2-set .col-1 h3,
+      .woocommerce-checkout form.woocommerce-checkout .col2-set .col-2 h3 {
+        color: #2A3D42;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700; }
+    .woocommerce-checkout form.woocommerce-checkout .col2-set .col-1 .woocommerce-billing-fields .form-row label {
+      width: 100%;
+      font-size: 12px;
+      color: #3D3F40;
+      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700; }
+    .woocommerce-checkout form.woocommerce-checkout .col2-set .col-1 .woocommerce-billing-fields .form-row > span {
+      width: 100%; }
+      .woocommerce-checkout form.woocommerce-checkout .col2-set .col-1 .woocommerce-billing-fields .form-row > span input {
+        height: 48px;
+        border: 1px solid #D2D2D2;
+        width: 100%;
+        padding: 10px 15px;
+        margin-bottom: 15px; }
+      .woocommerce-checkout form.woocommerce-checkout .col2-set .col-1 .woocommerce-billing-fields .form-row > span .select2-selection {
+        height: 48px;
+        border: 1px solid #D2D2D2; }
+        .woocommerce-checkout form.woocommerce-checkout .col2-set .col-1 .woocommerce-billing-fields .form-row > span .select2-selection .select2-selection__rendered {
+          height: 100%;
+          display: flex;
+          align-items: center; }
+        .woocommerce-checkout form.woocommerce-checkout .col2-set .col-1 .woocommerce-billing-fields .form-row > span .select2-selection .select2-selection__arrow {
+          height: 100%; }
+    .woocommerce-checkout form.woocommerce-checkout .col2-set .col-2 .woocommerce-additional-fields h3 {
+      margin-bottom: 15px; }
+    .woocommerce-checkout form.woocommerce-checkout .col2-set .col-2 .woocommerce-additional-fields .form-row label {
+      width: 100%;
+      font-size: 12px;
+      color: #3D3F40;
+      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700; }
+    .woocommerce-checkout form.woocommerce-checkout .col2-set .col-2 .woocommerce-additional-fields .form-row > span {
+      width: 100%; }
+      .woocommerce-checkout form.woocommerce-checkout .col2-set .col-2 .woocommerce-additional-fields .form-row > span textarea {
+        min-height: 108px;
+        border: 1px solid #D2D2D2;
+        width: 100%;
+        padding: 10px 15px;
+        margin-bottom: 100px; }
+  .woocommerce-checkout form.woocommerce-checkout #order_review_heading {
+    position: relative;
+    left: 90px;
+    display: block;
+    white-space: nowrap;
+    color: #2A3D42;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    z-index: 1;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700; }
+  .woocommerce-checkout form.woocommerce-checkout .woocommerce-checkout-review-order {
+    width: 50%;
+    margin-top: 50px;
+    position: relative;
+    z-index: 2; }
+    .woocommerce-checkout form.woocommerce-checkout .woocommerce-checkout-review-order table.shop_table {
+      border-radius: 0;
+      border: 1px solid #D2D2D2; }
+      .woocommerce-checkout form.woocommerce-checkout .woocommerce-checkout-review-order table.shop_table thead th {
+        font-size: 12px;
+        text-transform: uppercase;
+        z-index: 1;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700; }
+      .woocommerce-checkout form.woocommerce-checkout .woocommerce-checkout-review-order table.shop_table tbody td.product-name {
+        font-size: 12px;
+        text-transform: uppercase;
+        z-index: 1;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700; }
+      .woocommerce-checkout form.woocommerce-checkout .woocommerce-checkout-review-order table.shop_table tbody td.product-total span {
+        color: #2A3D42;
+        text-align: center;
+        font-size: 12px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700; }
+        .woocommerce-checkout form.woocommerce-checkout .woocommerce-checkout-review-order table.shop_table tbody td.product-total span span {
+          color: #D2D2D2;
+          margin-right: 5px; }
+      .woocommerce-checkout form.woocommerce-checkout .woocommerce-checkout-review-order table.shop_table tfoot th {
+        font-size: 12px;
+        text-transform: uppercase;
+        z-index: 1;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700; }
+      .woocommerce-checkout form.woocommerce-checkout .woocommerce-checkout-review-order table.shop_table tfoot td span {
+        color: #2A3D42;
+        text-align: center;
+        font-size: 12px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700; }
+        .woocommerce-checkout form.woocommerce-checkout .woocommerce-checkout-review-order table.shop_table tfoot td span span {
+          color: #D2D2D2;
+          margin-right: 5px; }
+    .woocommerce-checkout form.woocommerce-checkout .woocommerce-checkout-review-order .woocommerce-checkout-payment {
+      font-size: 13px;
+      color: #3D3F40; }
+      .woocommerce-checkout form.woocommerce-checkout .woocommerce-checkout-review-order .woocommerce-checkout-payment button {
+        width: 100%;
+        height: 50px;
+        background-color: #2A3D42;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700; }
+        .woocommerce-checkout form.woocommerce-checkout .woocommerce-checkout-review-order .woocommerce-checkout-payment button:hover {
+          background-color: #F4997E; }
+
 * {
   margin: 0;
   padding: 0;
