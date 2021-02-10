@@ -120,6 +120,12 @@
       }
    }
 }
+.w-lost__message {
+   margin: 20px auto;
+   width: 510px;
+   font-size: 13px;
+   color: $color-indigo;
+}
 
 // Reset password
 .w-reset__form {
@@ -175,8 +181,7 @@
 //message
 .woocommerce-message {
    display: flex;
-   justify-content: flex-start;
-   align-items: center;
+   @include f-center;
    margin: 10px auto 20px !important;
    background-color: rgba(229, 229, 229, 0.15) !important;
    border-bottom: 3px solid #C1CDCA;
@@ -184,7 +189,7 @@
    padding: 10px 0 !important;
    color: $color-indigo !important;
    font-size: 22px;
-   width: fit-content !important;
+   width: 510px !important;
    @include fonts-display(700);
    &::before {
       display: block !important;

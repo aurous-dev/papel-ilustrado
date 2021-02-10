@@ -9341,6 +9341,12 @@ a.text-dark:hover, a.text-dark:focus {
       .w-lost__container .w-lost__form button:hover {
         background-color: #F4997E !important; }
 
+.w-lost__message {
+  margin: 20px auto;
+  width: 510px;
+  font-size: 13px;
+  color: #2A3D42; }
+
 .w-reset__form {
   font-size: 13px;
   max-width: 1140px;
@@ -9386,8 +9392,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 .woocommerce-message {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: center;
   margin: 10px auto 20px !important;
   background-color: rgba(229, 229, 229, 0.15) !important;
   border-bottom: 3px solid #C1CDCA;
@@ -9395,7 +9401,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 10px 0 !important;
   color: #2A3D42 !important;
   font-size: 22px;
-  width: fit-content !important;
+  width: 510px !important;
   font-family: 'Raleway', sans-serif;
   font-weight: 700; }
   .woocommerce-message::before {
