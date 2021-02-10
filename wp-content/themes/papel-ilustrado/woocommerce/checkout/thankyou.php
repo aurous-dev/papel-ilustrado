@@ -18,11 +18,10 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="woocommerce-order w-received__container">
+<div class="woocommerce-order w-received__container container">
 
 	<?php
 	if ( $order ) :
-
 		do_action( 'woocommerce_before_thankyou', $order->get_id() );
 		?>
 
@@ -41,7 +40,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received w-received__message"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 
-			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
+			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details w-received__list">
 
 				<li class="woocommerce-order-overview__order order">
 					<?php esc_html_e( 'Order number:', 'woocommerce' ); ?>

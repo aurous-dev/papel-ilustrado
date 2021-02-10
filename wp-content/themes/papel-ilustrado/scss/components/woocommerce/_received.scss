@@ -1,0 +1,156 @@
+.w-received__container {
+   padding-top: 60px;
+   display: flex;
+   flex-wrap: wrap;
+
+   // Message
+   .w-received__message {
+      display: flex;
+      margin: 10px auto 20px;
+      border-bottom: 3px solid #C1CDCA;
+      border-top: none;
+      padding: 10px 0;
+      color: $color-indigo;
+      font-size: 22px;
+      width: fit-content;
+      @include f-center;
+      @include fonts-display(700);
+      &::before {
+         content: "\e015";
+         font-family: WooCommerce;
+         display: block;
+         color: #6FCF97;
+         margin-right: 15px;
+      }
+   }
+
+   // Order Review
+   .w-received__list {
+      margin: 50px 0;
+      border: 1px solid #D2D2D2;
+      display: table;
+      width: 100%;
+      padding: 0 15px;
+      &::before,
+      &::after {
+         display: none !important;
+      }
+      li {
+         float: none !important;
+         display: table-cell;
+         border-right: 1px solid #D2D2D2 !important;
+         margin: 0 !important;
+         padding: 10px !important;
+         color: $color-silver;
+         strong {
+            color: $color-dark_gray;
+         }
+         &:last-child {
+            border: none;
+         }
+      }
+   }
+
+   // Details
+   .w-received__details {
+      max-width: 50%;
+      flex: 0 0 50%;
+      padding: 0 15px;
+
+      h2 {
+         color: $color-indigo;
+         font-size: 16px;
+         text-transform: uppercase;
+         margin-bottom: 20px;
+         @include fonts-display(700);
+      }
+      table {
+         border-radius: 0 !important;
+         thead {
+            th {
+               font-size: 14px;
+               text-transform: uppercase;
+               z-index: 1;
+               @include fonts-display(700);
+            }
+         }
+         tbody {
+            td {
+               font-size: 14px;
+               text-transform: uppercase;
+               z-index: 1;
+               @include fonts-display(700);
+               a {
+                  color: $color-indigo;
+                  letter-spacing: 0.03em;
+                  @include fonts-display(700);
+                  span {
+                     color: #A7A7A7;
+                     font-weight: 500;
+                  }
+               }
+               span {
+                  color: $color-indigo;
+                  text-align: center;
+                  font-size: 14px;
+                  @include fonts-display(700);
+                  span {
+                     color: #D2D2D2;
+                     margin-right: 5px;
+                  }
+               }
+            }
+         }
+         tfoot {
+            th {
+               font-size: 14px;
+               text-transform: uppercase;
+               z-index: 1;
+               @include fonts-display(700);
+            }
+            td {
+               font-size: 14px;
+               text-transform: uppercase;
+               z-index: 1;
+               @include fonts-display(700);
+               span {
+                  color: $color-indigo;
+                  text-align: center;
+                  font-size: 14px;
+                  @include fonts-display(700);
+                  span {
+                     color: #D2D2D2;
+                     margin-right: 5px;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   // Address
+   .w-received__address {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 0 15px;
+      h2 {
+         color: $color-indigo;
+         font-size: 16px;
+         text-transform: uppercase;
+         margin-bottom: 20px;
+         @include fonts-display(700);
+      }
+      address {
+         padding: 20px 50px !important;
+         border-radius: 0 !important;
+         border: 1px solid #D2D2D2 !important;
+         p {
+            padding: 0;
+            &::before {
+               position: relative !important;
+            }
+         }
+      }
+   }
+
+}
