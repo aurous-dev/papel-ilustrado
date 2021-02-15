@@ -9254,7 +9254,7 @@ a.text-dark:hover, a.text-dark:focus {
       color: #F4997E; }
     .footer__direction--rrss i {
       font-size: 25px; }
-  @media (min-width: 61.25em) and (max-width: 81.24em) {
+  @media (min-width: 46.25em) and (max-width: 81.24em) {
     .footer__logo {
       font-size: 12px; }
     .footer__info--nav ul li a {
@@ -9271,17 +9271,17 @@ a.text-dark:hover, a.text-dark:focus {
       font-size: 12px; }
       .footer__direction i {
         margin-right: 10px; } }
-  @media (min-width: 20em) and (max-width: 46.24em) {
+  @media (min-width: 20em) and (max-width: 61.24em) {
     .footer {
-      grid-template-columns: 100%;
-      grid-template-areas: "dir" "info" "logo";
-      padding: 20px 0; }
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column; }
       .footer__direction {
-        flex-direction: column;
         padding-top: 0;
-        margin: 0 -15px;
         padding-bottom: 20px;
-        border-bottom: 1px solid #355957; }
+        border-bottom: 1px solid #355957;
+        align-items: center;
+        order: 1; }
         .footer__direction--address {
           padding: 20px 0; }
         .footer__direction--time {
@@ -9292,9 +9292,9 @@ a.text-dark:hover, a.text-dark:focus {
           display: none; }
       .footer__info {
         flex-direction: column;
-        margin: 0 -15px;
         padding: 20px 0;
-        border: none; }
+        border: none;
+        order: 2; }
         .footer__info--nav {
           max-width: 100%;
           width: 100%;
@@ -9309,7 +9309,7 @@ a.text-dark:hover, a.text-dark:focus {
             align-items: center;
             justify-content: space-between; }
           .footer__info--subs input {
-            width: 71%;
+            width: 85%;
             height: 100%;
             font-size: 12px; }
           .footer__info--subs h3 {
@@ -9318,9 +9318,20 @@ a.text-dark:hover, a.text-dark:focus {
             font-size: 12px;
             padding: 10px 18px; }
       .footer__logo {
-        line-height: 2; }
+        line-height: 2;
+        order: 3; }
         .footer__logo img {
-          width: 60%; } }
+          width: 200px; } }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .footer__direction {
+      flex-direction: column;
+      margin: 0 -15px; }
+    .footer__info {
+      margin: 0 -15px; }
+      .footer__info--subs input {
+        width: 71%; }
+    .footer__logo img {
+      width: 60%; } }
 
 .section-filter {
   justify-content: space-between;
