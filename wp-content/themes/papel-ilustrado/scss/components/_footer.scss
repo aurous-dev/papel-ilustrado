@@ -142,6 +142,12 @@
             }
          }
       }
+      &__direction {
+         font-size: 12px;
+         i {
+            margin-right: 10px;
+         }
+      }
    }
    @include mq($from: mobile, $until: tablet) {
       grid-template-columns: 100%;
