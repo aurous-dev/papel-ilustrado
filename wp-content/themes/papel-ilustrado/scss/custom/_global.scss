@@ -18,7 +18,11 @@ body, html {
     // scroll-behavior-x: none !important;
     overflow-x: hidden;
     font-family: 'Open Sans', sans-serif;
-    height: 100%;
+    @include mq($from: wide) {
+        .woocommerce {
+            min-height: 55vh;
+        }
+    }
 
 }
 // i {
