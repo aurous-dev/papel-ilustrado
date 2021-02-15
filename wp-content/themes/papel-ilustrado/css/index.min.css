@@ -9325,7 +9325,8 @@ a.text-dark:hover, a.text-dark:focus {
   @media (min-width: 20em) and (max-width: 46.24em) {
     .footer__direction {
       flex-direction: column;
-      margin: 0 -15px; }
+      margin: 0 -15px;
+      align-items: flex-start; }
     .footer__info {
       margin: 0 -15px; }
       .footer__info--subs input {
@@ -9353,7 +9354,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 80px 0px;
   margin: 0 auto; }
   .w__login .w__login--column {
-    flex: 0;
+    flex: 0 0 50%;
     max-width: 45%; }
     .w__login .w__login--column h2 {
       color: #2A3D42;
@@ -9418,6 +9419,23 @@ a.text-dark:hover, a.text-dark:focus {
         color: #2A3D42;
         font-size: 14px;
         text-decoration: underline; }
+  @media (min-width: 46.25em) and (max-width: 61.24em) {
+    .w__login {
+      max-width: 720px;
+      display: flex;
+      padding: 20px 0; }
+      .w__login .w__login--column {
+        max-width: 50%; } }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .w__login {
+      max-width: initial;
+      width: 100%;
+      padding: 0; }
+      .w__login .w__login--column {
+        max-width: initial;
+        width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 50px; } }
 
 .w-lost__container {
   max-width: 1140px;
