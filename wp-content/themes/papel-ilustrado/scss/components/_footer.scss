@@ -114,6 +114,35 @@
          }
       }
    }
+   @include mq($from: desktop, $until: wide) {
+      &__logo {
+         font-size: 12px;
+      }
+      &__info {
+         &--nav {
+            ul {
+               li {
+                  a {
+                     font-size: 12px;
+                  }
+               }
+            }
+         }
+         &--subs {
+            h3 {
+               font-size: 15px;
+            }
+            input {
+               font-size: 13px;
+               padding: 8px 15px;
+            }
+            .btn-send {
+               font-size: 13px;
+               padding: 10px 18px;
+            }
+         }
+      }
+   }
    @include mq($from: mobile, $until: tablet) {
       grid-template-columns: 100%;
       // grid-template-rows: repeat(3,1fr);

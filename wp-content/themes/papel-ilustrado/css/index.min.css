@@ -9254,6 +9254,19 @@ a.text-dark:hover, a.text-dark:focus {
       color: #F4997E; }
     .footer__direction--rrss i {
       font-size: 25px; }
+  @media (min-width: 61.25em) and (max-width: 81.24em) {
+    .footer__logo {
+      font-size: 12px; }
+    .footer__info--nav ul li a {
+      font-size: 12px; }
+    .footer__info--subs h3 {
+      font-size: 15px; }
+    .footer__info--subs input {
+      font-size: 13px;
+      padding: 8px 15px; }
+    .footer__info--subs .btn-send {
+      font-size: 13px;
+      padding: 10px 18px; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .footer {
       grid-template-columns: 100%;

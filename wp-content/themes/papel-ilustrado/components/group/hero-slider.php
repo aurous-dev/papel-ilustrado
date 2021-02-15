@@ -1,4 +1,4 @@
-<div class="hero__slider">
+
    <!-- btn to left -->
    <div class="hero__slider--container btn-left">
       <div class="hero__principal" data-aos="fade" data-aos-duration="1000" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/hero1.png');">
@@ -35,4 +35,3 @@
          </div>
       </div>
    </div>
-</div>
