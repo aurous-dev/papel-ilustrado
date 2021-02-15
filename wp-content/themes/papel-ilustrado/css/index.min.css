@@ -9480,6 +9480,14 @@ a.text-dark:hover, a.text-dark:focus {
       font-weight: 400; }
       .w-lost__container .w-lost__form button:hover {
         background-color: #F4997E !important; }
+  @media (min-width: 46.25em) and (max-width: 61.24em) {
+    .w-lost__container {
+      padding: 20px 15px; } }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .w-lost__container {
+      max-width: initial;
+      width: 100%;
+      padding: 0 15px; } }
 
 .w-lost__message {
   margin: 20px auto;
