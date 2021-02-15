@@ -52,6 +52,13 @@ const app = new Vue({
 });
 
 // HOME SLIDER
+$(".hero__slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+});
 $(".paiting__slider").slick({
     infinite: true,
     slidesToShow: 4,
