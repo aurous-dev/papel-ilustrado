@@ -7,6 +7,7 @@
    .woocommerce-message {
       background-color: unset !important;
    }
+   // Nav
    nav.woocommerce-MyAccount-navigation {
       width: 22% !important;
       ul {
@@ -36,14 +37,16 @@
                background-color: $color-indigo;
                a {
                   color: $color-white;
-                  &:hover {
-                     background-color: $color-salmon;
-                  }
+                  // &:hover {
+                  //    background-color: $color-salmon;
+                  // }
                }
             }
          }
       }
    }
+
+   // Content
    .woocommerce-MyAccount-content {
       border: 1px solid #D2D2D2;
       min-height: 400px;
@@ -87,6 +90,16 @@
             &:hover {
                background-color: $color-salmon;
             }
+         }
+      }
+      .w-orders__table {
+         border-radius: 0;
+         .btn-view {
+            background-color: $color-indigo;
+            color: $color-white;
+            text-transform: uppercase;
+            font-size: 10px;
+            @include fonts-display(600);
          }
       }
 
@@ -218,6 +231,69 @@
                @include fonts-display(700);
                &:hover {
                   background-color: $color-salmon;
+               }
+            }
+         }
+      }
+   }
+   @include mq($from: tablet, $until: desktop) {
+      .woocommerce {
+         display: flex;
+      }
+   }
+   @include mq($from: mobile, $until: desktop) {
+      .woocommerce-MyAccount-content {
+         .woocommerce-EditAccountForm {
+            .form-row {
+               input {
+                  height: 40px;
+               }
+            }
+         }
+         form {
+            .form-row-first,
+            .form-row-last {
+               float: none;
+               width: 100%;
+            }
+            .woocommerce-address-fields {
+               .form-row {
+                  & > span {
+                     input {
+                        height: 40px;
+                     }
+                     .select2-selection {
+                        height: 40px;
+                     }
+                  }
+                  &.validate-phone,
+                  &.validate-email{
+                     width: 100%;
+                     margin-right: 0;
+                  }
+               }
+            }
+         }
+      }
+   }
+   @include mq($from: mobile, $until: tablet) {
+      nav.woocommerce-MyAccount-navigation {
+         width: 100% !important;
+         ul {
+            li {
+               border-right: 1px solid #D2D2D2;
+            }
+         }
+      }
+      .woocommerce-MyAccount-content {
+         width: 100% !important;
+         padding: 20px;
+         .w-orders__table {
+            border: none;
+            tbody {
+               tr {
+                  margin-bottom: 20px;
+                  border: 1px solid rgba($color: #000000, $alpha: .1);
                }
             }
          }
