@@ -9541,6 +9541,10 @@ a.text-dark:hover, a.text-dark:focus {
     font-weight: 400; }
     .w-reset__form .w-reset__form--btn button:hover {
       background-color: #F4997E !important; }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .w-reset__form {
+      width: 100%;
+      padding: 0 15px; } }
 
 .woocommerce-message {
   display: flex;

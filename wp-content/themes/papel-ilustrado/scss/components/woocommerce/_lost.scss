@@ -115,6 +115,10 @@
          }
       }
    }
+   @include mq($from: mobile, $until: tablet) {
+      width: 100%;
+      padding: 0 15px;
+   }
 }
 
 //message
