@@ -60,6 +60,10 @@
    width: 510px;
    font-size: 13px;
    color: $color-indigo;
+   @include mq($from: mobile, $until: tablet) {
+      width: 100%;
+      padding: 0;
+   }
 }
 
 // Reset password
@@ -133,5 +137,13 @@
       left: unset !important;
       color: #6FCF97 !important;
       margin-right: 15px;
+   }
+   @include mq($from: mobile, $until: tablet) {
+      width: 100% !important;
+      padding: 0 !important;
+      font-size: 18px;
+      &::before {
+         margin-right: 10px;
+      }
    }
 }
