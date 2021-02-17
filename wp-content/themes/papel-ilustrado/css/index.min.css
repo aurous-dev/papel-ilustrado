@@ -9683,7 +9683,7 @@ h2.w-cart__title {
     .w-cart__form .w-cart__table .w-cart__actions .w-cart__coupon button {
       width: 170px; }
 
-@media (min-width: 20em) and (max-width: 46.24em) {
+@media (min-width: 20em) and (max-width: 61.24em) {
   .w-cart__form .w-cart__table {
     border: 0 !important; }
     .w-cart__form .w-cart__table tbody tr {

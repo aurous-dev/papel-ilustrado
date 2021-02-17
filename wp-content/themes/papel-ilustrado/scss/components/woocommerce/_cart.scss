@@ -135,7 +135,7 @@ h2.w-cart__title {
          }
       }
    }
-   @include mq($from: mobile, $until: tablet) {
+   @include mq($from: mobile, $until: desktop) {
       .w-cart__table {
          border: 0 !important;
          tbody {
