@@ -9879,6 +9879,55 @@ form.w-checkout__container {
         font-weight: 700; }
         form.w-checkout__container .woocommerce-checkout-review-order .woocommerce-checkout-payment button:hover {
           background-color: #F4997E; }
+  @media (min-width: 20em) and (max-width: 61.24em) {
+    form.w-checkout__container {
+      flex-direction: column; }
+      form.w-checkout__container .col2-set {
+        width: 100%; }
+        form.w-checkout__container .col2-set .col-1 h3 {
+          font-size: 16px;
+          margin-bottom: 30px; }
+        form.w-checkout__container .col2-set .col-1 .woocommerce-billing-fields .form-row.form-row-first, form.w-checkout__container .col2-set .col-1 .woocommerce-billing-fields .form-row.form-row-last {
+          float: none;
+          width: 100%; }
+        form.w-checkout__container .col2-set .col-1 .woocommerce-billing-fields .form-row > span input {
+          height: 40px;
+          font-size: 14px; }
+        form.w-checkout__container .col2-set .col-1 .woocommerce-billing-fields .form-row > span .select2-selection {
+          height: 40px;
+          border: 1px solid #D2D2D2;
+          font-size: 14px; }
+        form.w-checkout__container .col2-set .col-2 .woocommerce-additional-fields h3 {
+          font-size: 16px;
+          margin-bottom: 15px; }
+        form.w-checkout__container .col2-set .col-2 .woocommerce-additional-fields .form-row label {
+          width: 100%;
+          font-size: 12px;
+          color: #3D3F40;
+          text-transform: uppercase;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700; }
+        form.w-checkout__container .col2-set .col-2 .woocommerce-additional-fields .form-row > span {
+          width: 100%; }
+          form.w-checkout__container .col2-set .col-2 .woocommerce-additional-fields .form-row > span textarea {
+            min-height: 108px;
+            border: 1px solid #D2D2D2;
+            width: 100%;
+            padding: 10px 15px;
+            margin-bottom: 50px;
+            font-size: 14px; }
+      form.w-checkout__container #order_review_heading {
+        left: auto;
+        margin: 0 15px;
+        font-size: 16px; }
+      form.w-checkout__container .woocommerce-checkout-review-order {
+        width: 100%;
+        padding: 0 15px;
+        margin-bottom: 50px; }
+        form.w-checkout__container .woocommerce-checkout-review-order .woocommerce-checkout-payment button {
+          height: auto;
+          font-size: 16px;
+          padding: 15px; } }
 
 .woocommerce-account .woocommerce {
   max-width: 1140px;
