@@ -135,6 +135,35 @@ h2.w-cart__title {
          }
       }
    }
+   @include mq($from: mobile, $until: tablet) {
+      .w-cart__table {
+         border: 0 !important;
+         tbody {
+            tr {
+               margin-bottom: 20px;
+               border: 1px solid rgba($color: #000000, $alpha: .1);  
+               td {
+                  &:first-child {
+                     border-top: 0 !important;
+                  }
+               }
+            }
+         }
+         .w-cart__actions {
+            .w-cart__coupon {
+               width: 100%;
+               &--input {
+                  width: 99% !important;
+                  margin-left: 0 !important;
+                  font-size: 14px;
+               }
+               button {
+                  width: 100% !important;
+               }
+            }
+         }
+      }
+   }
 }
 
 .w-cart__total {
@@ -181,6 +210,13 @@ h2.w-cart__title {
       @include fonts-display(600);
       &:hover {
          background-color: $color-salmon;
+      }
+   }
+   @include mq($from: mobile, $until: tablet) {
+      a {
+         font-size: 16px;
+         height: auto;
+         padding: 15px !important;
       }
    }
 }

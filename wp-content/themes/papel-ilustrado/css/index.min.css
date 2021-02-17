@@ -9683,6 +9683,23 @@ h2.w-cart__title {
     .w-cart__form .w-cart__table .w-cart__actions .w-cart__coupon button {
       width: 170px; }
 
+@media (min-width: 20em) and (max-width: 46.24em) {
+  .w-cart__form .w-cart__table {
+    border: 0 !important; }
+    .w-cart__form .w-cart__table tbody tr {
+      margin-bottom: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.1); }
+      .w-cart__form .w-cart__table tbody tr td:first-child {
+        border-top: 0 !important; }
+    .w-cart__form .w-cart__table .w-cart__actions .w-cart__coupon {
+      width: 100%; }
+      .w-cart__form .w-cart__table .w-cart__actions .w-cart__coupon--input {
+        width: 99% !important;
+        margin-left: 0 !important;
+        font-size: 14px; }
+      .w-cart__form .w-cart__table .w-cart__actions .w-cart__coupon button {
+        width: 100% !important; } }
+
 .w-cart__total h2 {
   color: #2A3D42;
   font-size: 22px;
@@ -9721,6 +9738,12 @@ h2.w-cart__title {
   font-weight: 600; }
   .w-cart__total a:hover {
     background-color: #F4997E; }
+
+@media (min-width: 20em) and (max-width: 46.24em) {
+  .w-cart__total a {
+    font-size: 16px;
+    height: auto;
+    padding: 15px !important; } }
 
 form.w-checkout__container {
   display: flex;
