@@ -153,4 +153,37 @@
       }
    }
 
+   @include mq($from: mobile, $until: desktop) {
+      .w-received__message {
+         align-items: flex-start;
+         font-size: 18px;
+      }
+      .w-received__list {
+         display: initial;
+         padding: 0 15px;
+         border: 0 !important;
+         li {
+            display: inherit;
+            border: 1px solid #D2D2D2 !important;
+         }
+      }
+      .w-received__details {
+         max-width: 100%;
+         flex: 0 0 100%;
+         h2 {
+            font-size: 18px;
+         }
+      }
+      .w-received__address {
+         max-width: 100%;
+         flex: 0 0 100%;
+         h2 {
+            font-size: 18px;
+         }
+         address {
+            padding: 20px !important;
+            overflow-wrap: break-word;
+         }
+      }
+   }
 }

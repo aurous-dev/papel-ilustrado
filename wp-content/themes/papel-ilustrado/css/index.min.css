@@ -10275,6 +10275,30 @@ form.w-checkout__container {
         padding: 0; }
         .w-received__container .w-received__address address p::before {
           position: relative !important; }
+  @media (min-width: 20em) and (max-width: 61.24em) {
+    .w-received__container .w-received__message {
+      align-items: flex-start;
+      font-size: 18px; }
+    .w-received__container .w-received__list {
+      display: initial;
+      padding: 0 15px;
+      border: 0 !important; }
+      .w-received__container .w-received__list li {
+        display: inherit;
+        border: 1px solid #D2D2D2 !important; }
+    .w-received__container .w-received__details {
+      max-width: 100%;
+      flex: 0 0 100%; }
+      .w-received__container .w-received__details h2 {
+        font-size: 18px; }
+    .w-received__container .w-received__address {
+      max-width: 100%;
+      flex: 0 0 100%; }
+      .w-received__container .w-received__address h2 {
+        font-size: 18px; }
+      .w-received__container .w-received__address address {
+        padding: 20px !important;
+        overflow-wrap: break-word; } }
 
 * {
   margin: 0;
