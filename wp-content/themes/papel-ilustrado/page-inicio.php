@@ -35,7 +35,11 @@ get_header();
 <!-- FIRST SECTION  -->
 <!-- SECOND SECTION  -->
 <section class="container-fluid paiting">
-   <?php get_template_part('components/single/title'); ?>
+   <?php if (have_rows('titulo_de_seccion_series')) : ?>
+      <?php while (have_rows('titulo_de_seccion_series')) : the_row(); ?>
+         <?php get_template_part('components/single/title'); ?>
+      <?php endwhile; ?>
+   <?php endif; ?>
    <div class="container">
       <div class="paiting__slider">
          <?php get_template_part('components/group/card-paiting'); ?>
@@ -45,7 +49,11 @@ get_header();
 <!-- SECOND SECTION  -->
 <!-- THIRD SECTION  -->
 <section class="container-fluid composition">
-   <?php get_template_part('components/single/title'); ?>
+   <?php if (have_rows('titulo_de_seccion_composiciones')) : ?>
+      <?php while (have_rows('titulo_de_seccion_composiciones')) : the_row(); ?>
+         <?php get_template_part('components/single/title'); ?>
+      <?php endwhile; ?>
+   <?php endif; ?>
    <div class="container">
       <div class="composition__slider">
          <a href="#" class="big-card" data-aos="fade-up" data-aos-duration="1000">
@@ -73,7 +81,11 @@ get_header();
 <!-- THIRD SECTION  -->
 <!-- FOURTH SECTION  -->
 <section class="container-fluid picture">
-   <?php get_template_part('components/single/title'); ?>
+   <?php if (have_rows('titulo_de_seccion_individuales')) : ?>
+      <?php while (have_rows('titulo_de_seccion_individuales')) : the_row(); ?>
+         <?php get_template_part('components/single/title'); ?>
+      <?php endwhile; ?>
+   <?php endif; ?>
    <div class="container">
       <div class="picture__slider">
          <?php get_template_part('components/group/card-picture'); ?>
@@ -83,7 +95,11 @@ get_header();
 <!-- FOURTH SECTION  -->
 <!-- FIIFTH SECTION  -->
 <section class="instagram">
-   <?php get_template_part('components/single/title-Instagram'); ?>
+   <?php if (have_rows('titulo_de_seccion_ig')) : ?>
+      <?php while (have_rows('titulo_de_seccion_ig')) : the_row(); ?>
+         <?php get_template_part('components/single/title-Instagram'); ?>
+      <?php endwhile; ?>
+   <?php endif; ?>
    <div class="container">
       <div class="instagram__slider">
          <?php get_template_part('components/group/card-instagram'); ?>
