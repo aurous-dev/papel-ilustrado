@@ -16,15 +16,18 @@ get_header();
             <?php endif; ?>
          </div>
          <div class="row hero__card">
-            <div class="col-md-4 col-12 hero__card--container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/hero2.png');">
-               <?php get_template_part('components/single/principal-btn'); ?>
-            </div>
-            <div class="col-md-4 col-12 hero__card--container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/hero3.png');">
-               <?php get_template_part('components/single/principal-btn'); ?>
-            </div>
-            <div class="col-md-4 col-12 hero__card--container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/hero4.png');">
-               <?php get_template_part('components/single/principal-btn'); ?>
-            </div>
+            <?php if (have_rows('3_cta')) : ?>
+               <?php while (have_rows('3_cta')) : the_row();
+                  $rowNumber = get_row_index() * 3; ?>
+                  <div class="col-md-4 col-12 hero__card--container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $rowNumber; ?>00" style="background-image: url('<?php the_sub_field('imagen_de_fondo'); ?>');">
+                     <?php if (have_rows('boton')) : ?>
+                        <?php while (have_rows('boton')) : the_row(); ?>
+                           <?php get_template_part('components/single/principal-btn'); ?>
+                        <?php endwhile; ?>
+                     <?php endif; ?>
+                  </div>
+               <?php endwhile; ?>
+            <?php endif; ?>
          </div>
       </div>
    </div>
