@@ -56,25 +56,19 @@ get_header();
    <?php endif; ?>
    <div class="container">
       <div class="composition__slider">
-         <a href="#" class="big-card" data-aos="fade-up" data-aos-duration="1000">
-            <div>
-               <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
-                  <?php get_template_part('components/single/card-special'); ?>
-               </div>
-            </div>
-         </a>
-         <a href="#" class="big-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-            <div>
-               <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
-                  <?php get_template_part('components/single/card-special'); ?>
-               </div>
-            </div>
-         </a>
-         <a href="#" class="big-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-            <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
-               <?php get_template_part('components/single/card-special'); ?>
-            </div>
-         </a>
+         <?php if (have_rows('composiciones_recomendadas')) : ?>
+
+            <?php while (have_rows('composiciones_recomendadas')) : the_row(); 
+            $rowNumber = get_row_index() * 3; ?>
+               <a href="<?php the_sub_field('url_destino'); ?>" class="big-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $rowNumber; ?>00">
+                  <div>
+                     <div class="big-card__container" style="background-image: url('<?php the_sub_field('imagen_de_fondo'); ?>');">
+                        <?php get_template_part('components/single/card-special'); ?>
+                     </div>
+                  </div>
+               </a>
+            <?php endwhile; ?>
+         <?php endif; ?>
       </div>
    </div>
 </section>
@@ -102,10 +96,11 @@ get_header();
    <?php endif; ?>
    <div class="container">
       <div class="instagram__slider">
-         <?php get_template_part('components/group/card-instagram'); ?>
-         <?php get_template_part('components/group/card-instagram'); ?>
-         <?php get_template_part('components/group/card-instagram'); ?>
-         <?php get_template_part('components/group/card-instagram'); ?>
+         <?php if (have_rows('instagram_shop')) : ?>
+            <?php while (have_rows('instagram_shop')) : the_row(); ?>
+               <?php get_template_part('components/group/card-instagram'); ?>
+            <?php endwhile; ?>
+         <?php endif; ?>
       </div>
    </div>
 </section>
