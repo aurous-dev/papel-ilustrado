@@ -20,16 +20,16 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_before_reset_password_form' );
 ?>
 
-<form method="post" class="woocommerce-ResetPassword lost_reset_password">
+<form method="post" class="woocommerce-ResetPassword lost_reset_password w-reset__form">
 <h2>Resetear contraseña</h2>
 
 	<p><?php echo apply_filters( 'woocommerce_reset_password_message', esc_html__( 'Llegaste acá porque solicitaste resetear tu contraseña, en este formulario podrás crear una nueva contraseña.', 'woocommerce' ) ); ?></p><?php // @codingStandardsIgnoreLine ?>
 
-	<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+	<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first w-reset__form--row">
 		<label for="password_1"><?php esc_html_e( 'Nueva contraseña', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password_1" id="password_1" autocomplete="new-password" />
 	</p>
-	<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+	<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last w-reset__form--row">
 		<label for="password_2"><?php esc_html_e( 'Confirmar contraseña', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password_2" id="password_2" autocomplete="new-password" />
 	</p>
@@ -41,7 +41,7 @@ do_action( 'woocommerce_before_reset_password_form' );
 
 	<?php do_action( 'woocommerce_resetpassword_form' ); ?>
 
-	<p class="woocommerce-form-row form-row">
+	<p class="woocommerce-form-row form-row w-reset__form--btn">
 		<input type="hidden" name="wc_reset_password" value="true" />
 		<button type="submit" class="woocommerce-Button button" value="<?php esc_attr_e( 'Save', 'woocommerce' ); ?>"><?php esc_html_e( 'Guardar', 'woocommerce' ); ?></button>
 	</p>

@@ -14,6 +14,6 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ftp://trono.host/aurouslabs/papelilustrado
+        ftp-server: ftp://trono.host/aurouslabs.cl/papelilustrado
         ftp-username: git@trono.host
         ftp-password: ${{ secrets.FTP_PASS }}

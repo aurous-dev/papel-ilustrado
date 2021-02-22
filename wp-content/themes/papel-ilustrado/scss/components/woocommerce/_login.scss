@@ -1,0 +1,106 @@
+.w__login {
+   max-width: 1140px; 
+   padding: 80px 0px;
+   margin: 0 auto;
+   .w__login--column {
+      flex: 0 0 50%;
+      max-width: 45%;
+      h2 {
+         color: $color-indigo;
+         font-size: 22px;
+         @include fonts-display(700);
+      }
+      .w__login--form {
+         border: none;
+         padding: 0;
+         .w__login--row {
+            margin-bottom: 20px;
+            // password row
+            &-pass {
+               & > span {
+                  width: 100%;
+               }
+            }
+         }
+         label {
+            width: 100%;
+            font-size: 12px;
+            color: $color-dark_gray;
+            text-transform: uppercase;
+            @include fonts-display(700);
+         }
+         input {
+            height: 45px;
+            border: 1px solid #D2D2D2;
+            width: 100%;
+            padding: 10px 15px;
+         }
+         .w__login--rememberme {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            text-transform: capitalize;
+            font-size: 14px;
+            input {
+               height: 16px;
+               width: 16px;
+               border: 1px solid #d2d2d2 !important;
+               margin-right: 15px;
+               -webkit-appearance: none;
+               padding: 0;
+            }
+         }
+         button {
+            width: 100%;
+            background-color: $color-indigo;
+            color: $color-white;
+            height: 50px;
+            border-radius: 0;
+            text-transform: uppercase;
+            letter-spacing: .02em;
+            @include fonts-display(400);
+            &:hover {
+               background-color: $color-salmon;
+            }
+         }
+         .woocommerce-privacy-policy-text {
+            font-size: 12px;
+            margin-top: -12px;
+            color: $color-indigo;
+            a {
+               color: $color-indigo;
+               font-weight: 700;
+               text-decoration: underline;
+            }
+         }
+         .w__login--lostPass {
+            a {
+               color: $color-indigo;
+               font-size: 14px;
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+   @include mq($from: tablet, $until: desktop) {
+      max-width: 720px;
+      display: flex;
+      padding: 20px 0;
+      .w__login--column {
+         max-width: 50%;
+      }
+   }
+   @include mq($from: mobile, $until: tablet) {
+      max-width: initial;
+      width: 100%;
+      padding: 0;
+      .w__login--column {
+         max-width: initial;
+         width: 100%;
+         flex: 0 0 100%;
+         margin-bottom: 50px;
+      }
+   }
+}

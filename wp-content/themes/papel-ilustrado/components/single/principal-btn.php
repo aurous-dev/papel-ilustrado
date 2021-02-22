@@ -1,1 +1,1 @@
-<a class="btn-principal" href="#">Ver Composiciones</a>
+<a class="btn-principal" href="<?php the_sub_field('url_destino'); ?>"><?php the_sub_field('texto_boton'); ?></a>

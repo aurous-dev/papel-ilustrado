@@ -52,6 +52,13 @@ const app = new Vue({
 });
 
 // HOME SLIDER
+$(".hero__slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+});
 $(".paiting__slider").slick({
     infinite: true,
     slidesToShow: 4,
@@ -220,6 +227,7 @@ tr_nav.addEventListener('click', clickMenu);
 
 // Columnas
 document.addEventListener('DOMContentLoaded', columnas);
+document.addEventListener('DOMContentLoaded', carts);
 
 // btns burguer and search
 menu.addEventListener("click", showHidden);
@@ -329,3 +337,27 @@ function showSearch(e) {
 //         tr_rrss.style.top = `-600px`;
 //     }
 // }
+
+// Zoom img
+// $(document).ready(function(){
+//     $('.image-zoom')
+//         .wrap('<span style="display:inline-block"></span>')
+//         .css('display', 'block')
+//         .parent()
+//         .zoom({
+//             url: $(this).find('img').attr('data-zoom')
+//         });
+// });
+function carts() {
+    const prueba = document.querySelectorAll('.w-cart__table--name a');
+    if(prueba) {
+        prueba.forEach( m => {
+            const number = m.textContent.indexOf(' - ');
+            const final = m.textContent.length;
+            m.innerHTML = `${m.textContent.substring(0,number)} <br>
+                            <span> ${m.textContent.substring((number + 3), final)} </span>
+                            `
+            
+        })
+    }
+}
