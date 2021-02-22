@@ -1,26 +1,39 @@
 <template>
-  <div class="col-12">
-    <form @submit.prevent="handleSubmit" action="contact" method="POST">
-      <div class="form-group">
+  <div class="col-md-10 col-12">
+    <form @submit.prevent="handleSubmit" action="contact" method="POST" class="row">
+      <div class="form-group col-md-6 col-12">
         <label for="nombre">Nombre</label>
         <input
           type="text"
           v-model="user.name"
           v-validate="'required|min:2'"
           name="nombre"
-          placeholder="Nombre"
+          
           class="form-control"
           :class="{ 'is-invalid': errors.has('nombre') }"
         />
         <div v-if="errors.has('nombre')" class="invalid-feedback">{{ errors.first("nombre") }}</div>
       </div>
-      <div class="form-group">
-        <label for="email">Mail</label>
+      <div class="form-group col-md-6 col-12">
+        <label for="apellido">Apellido</label>
+        <input
+          type="text"
+          v-model="user.lastname"
+          v-validate="'required|min:2'"
+          name="apellido"
+          
+          class="form-control"
+          :class="{ 'is-invalid': errors.has('apellido') }"
+        />
+        <div v-if="errors.has('nombre')" class="invalid-feedback">{{ errors.first("nombre") }}</div>
+      </div>
+      <div class="form-group col-12">
+        <label for="email">Correo Electrónico</label>
         <input
           type="email"
           v-model="user.email"
           v-validate="'required|email'"
-          placeholder="Email"
+          
           id="email"
           name="email"
           class="form-control"
@@ -28,24 +41,24 @@
         />
         <div v-if="errors.has('email')" class="invalid-feedback">{{ errors.first("email") }}</div>
       </div>
-      <div class="form-group">
+      <div class="form-group col-12">
         <label for="subject">Asunto</label>
         <input
           type="text"
           v-model="user.subject"
           v-validate="'required|min:10'"
           name="asunto"
-          placeholder="Asunto"
+          
           class="form-control"
           :class="{ 'is-invalid': errors.has('asunto') }"
         />
         <div v-if="errors.has('asunto')" class="invalid-feedback">{{ errors.first("asunto") }}</div>
       </div>
-      <div class="form-group">
+      <div class="form-group col-12">
         <label for="message">Mensaje</label>
         <textarea
           name="mensaje"
-          placeholder="Mensaje"
+          rows="6"
           v-validate="'required|min:20'"
           v-model="user.message"
           class="form-control"
@@ -53,7 +66,7 @@
         ></textarea>
         <div v-if="errors.has('mensaje')" class="invalid-feedback">{{ errors.first("mensaje") }}</div>
       </div>
-      <button class="btn btn-primary mt-3" type="submit">Enviar</button>
+      <button class="btn btn-primary mt-2" type="submit">Enviar</button>
       <!-- <button-spinner
         class="btn btn-primary mt-3"
         :is-loading="isLoading"
@@ -83,6 +96,7 @@ export default {
     return {
       user: {
         name: "",
+        lastname: "",
         email: "",
         subject: "",
         message: "",
@@ -113,6 +127,7 @@ export default {
       this.submitted = true;
       var bodyFormData = new FormData();
       bodyFormData.set("your-name", this.user.name);
+      bodyFormData.set("your-lastname", this.user.lastname);
       bodyFormData.set("your-email", this.user.email);
       bodyFormData.set("your-subject", this.user.subject);
       bodyFormData.set("your-message", this.user.message);

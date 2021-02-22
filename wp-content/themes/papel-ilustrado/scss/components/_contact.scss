@@ -1,0 +1,41 @@
+.contacto {
+   padding: 60px 15px 100px;
+   // Formulario
+   #app {
+      form {
+         border: 1px solid #D2D2D2;
+         padding: 50px 80px;
+         .form-group {
+            label {
+               font-size: 12px;
+               text-transform: uppercase;
+               @include fonts-display(700);
+            }
+            input {
+               border: 1px solid #D2D2D2;
+               height: 45px;
+               border-radius: 0;
+            }
+            textarea {
+               border: 1px solid #D2D2D2;
+               border-radius: 0;
+               resize: none;
+            }
+         }
+         button {
+            display: block;
+            background-color: $color-indigo;
+            margin: 0;
+            margin-left: 15px;
+            padding: 8px 60px;
+            color: $color-white;
+            text-transform: uppercase;
+            outline: none;
+            border: none;
+            border-radius: 0;
+            letter-spacing: 0.05em;
+            @include fonts-display(500);
+         }
+      }
+   }
+}
