@@ -36,6 +36,79 @@
          @include bg-center;
       }
    }
+   &__slider {
+      @include slider__marginB;
+      .slick-prev {
+         @include slider__arrowLeft;
+         left: -80px;
+         @include mq($from: desktop) {
+            &:hover {
+               &::before {
+                  filter: grayscale(0);
+               }
+            }
+         }
+      }
+      .slick-next {
+         @include slider__arrowRight;
+         right: -80px;
+         @include mq($from: desktop) {
+            &:hover {
+               &::before {
+                  filter: grayscale(0);
+               }
+            }
+         }
+      }
+      &--container {
+         &.btn-left {
+            .hero__principal--desc {
+               h2 {
+                  order: 2;
+               }
+               a.btn-principal {
+                  order: 1;
+               }
+            }
+         }
+         &.btn-right {
+            .hero__principal--desc {
+               h2 {
+                  order: 1;
+               }
+               a.btn-principal {
+                  order: 2;
+               }
+            }
+         }
+         &.btn-down {
+            position: relative;
+            overflow: hidden;
+            .hero__principal--desc {
+               position: absolute;
+               flex-direction: column;
+               text-align: center;
+               bottom: -85px;
+               h2 {
+                  order: 1;
+               }
+               a.btn-principal {
+                  order: 2;
+               }
+            }
+            &:hover {
+               .hero__principal--desc {
+                  bottom: 0;
+               }
+            }
+         }
+         &.btn-none {
+            .hero__principal--desc {
+               display: none;
+            }
+         }
+      }
+   }
    @include mq($from: mobile, $until: tablet) {
       &__container {
          margin: 0 -15px;
