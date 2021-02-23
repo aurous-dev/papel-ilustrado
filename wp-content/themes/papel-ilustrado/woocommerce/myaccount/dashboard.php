@@ -49,7 +49,7 @@ $allowed_html = array(
 	}
 	printf(
 		wp_kses( $dashboard_desc, $allowed_html ),
-		/* esc_url( wc_get_endpoint_url( 'orders' ) ), */
+		esc_url( wc_get_endpoint_url( 'orders' ) ),
 		esc_url( wc_get_endpoint_url( 'edit-address' ) ),
 		esc_url( wc_get_endpoint_url( 'edit-account' ) )
 	);

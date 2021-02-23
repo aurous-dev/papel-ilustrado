@@ -64,7 +64,7 @@
             $firstname = $current_user->user_firstname; //get current user id 
             if (is_user_logged_in()) : ?>
                <div class="header__menu--sesions">
-                  <a href="#">Hola, <b>
+                  <a href="/my-account">Hola, <b>
                      <?php
                         if($firstname) {
                            echo $firstname;
@@ -76,7 +76,7 @@
                </div>
             <?php else : ?>
                <div class="header__menu--sesions">
-                  <a href="#">Iniciar sesión / Registrarse</a>
+                  <a href="/my-account">Iniciar sesión / Registrarse</a>
                </div>
             <?php endif; ?>
          </div>

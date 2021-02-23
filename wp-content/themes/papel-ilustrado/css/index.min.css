@@ -10970,6 +10970,9 @@ body, html {
       width: 14%;
       font-size: 12px; } }
 
+li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads {
+  display: none !important; }
+
 .page-cuadros {
   padding-bottom: 100px; }
   .page-cuadros__grid {

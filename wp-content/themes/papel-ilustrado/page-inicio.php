@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /* Template Name: Home Page */
 
@@ -11,18 +11,23 @@ get_header();
    <div class="container">
       <div class="hero__container">
          <div class="hero__slider">
-            <?php get_template_part('components/group/hero-slider');?>
+            <?php if (have_rows('slider')) : ?>
+               <?php get_template_part('components/group/hero-slider'); ?>
+            <?php endif; ?>
          </div>
-         <div class="row hero__card" >
-            <div class="col-md-4 col-12 hero__card--container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/hero2.png');">
-               <?php get_template_part('components/single/principal-btn');?>
-            </div>
-            <div class="col-md-4 col-12 hero__card--container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/hero3.png');">
-               <?php get_template_part('components/single/principal-btn');?>
-            </div>
-            <div class="col-md-4 col-12 hero__card--container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/hero4.png');">
-               <?php get_template_part('components/single/principal-btn');?>
-            </div>   
+         <div class="row hero__card">
+            <?php if (have_rows('3_cta')) : ?>
+               <?php while (have_rows('3_cta')) : the_row();
+                  $rowNumber = get_row_index() * 3; ?>
+                  <div class="col-md-4 col-12 hero__card--container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $rowNumber; ?>00" style="background-image: url('<?php the_sub_field('imagen_de_fondo'); ?>');">
+                     <?php if (have_rows('boton')) : ?>
+                        <?php while (have_rows('boton')) : the_row(); ?>
+                           <?php get_template_part('components/single/principal-btn'); ?>
+                        <?php endwhile; ?>
+                     <?php endif; ?>
+                  </div>
+               <?php endwhile; ?>
+            <?php endif; ?>
          </div>
       </div>
    </div>
@@ -30,67 +35,76 @@ get_header();
 <!-- FIRST SECTION  -->
 <!-- SECOND SECTION  -->
 <section class="container-fluid paiting">
-   <?php get_template_part('components/single/title');?>
+   <?php if (have_rows('titulo_de_seccion_series')) : ?>
+      <?php while (have_rows('titulo_de_seccion_series')) : the_row(); ?>
+         <?php get_template_part('components/single/title'); ?>
+      <?php endwhile; ?>
+   <?php endif; ?>
    <div class="container">
       <div class="paiting__slider">
-      <?php get_template_part('components/group/card-paiting');?>
+         <?php get_template_part('components/group/card-paiting'); ?>
       </div>
    </div>
 </section>
 <!-- SECOND SECTION  -->
 <!-- THIRD SECTION  -->
 <section class="container-fluid composition">
-   <?php get_template_part('components/single/title');?>
+   <?php if (have_rows('titulo_de_seccion_composiciones')) : ?>
+      <?php while (have_rows('titulo_de_seccion_composiciones')) : the_row(); ?>
+         <?php get_template_part('components/single/title'); ?>
+      <?php endwhile; ?>
+   <?php endif; ?>
    <div class="container">
       <div class="composition__slider">
-         <a href="#" class="big-card" data-aos="fade-up" data-aos-duration="1000">
-            <div>
-               <div class="big-card__container">
-                  <div class="big-card__container--img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');"></div>
-                  <?php get_template_part('components/single/card-special');?>
-               </div>
-            </div>
-         </a>
-         <a href="#" class="big-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-            <div>
-               <div class="big-card__container">
-                  <div class="big-card__container--img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');"></div>
-                  <?php get_template_part('components/single/card-special');?>
-               </div>
-            </div>
-         </a>
-         <a href="#" class="big-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-            <div class="big-card__container">
-               <div class="big-card__container--img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');"></div>
-               <?php get_template_part('components/single/card-special');?>
-            </div>
-         </a>
+         <?php if (have_rows('composiciones_recomendadas')) : ?>
+
+            <?php while (have_rows('composiciones_recomendadas')) : the_row(); 
+            $rowNumber = get_row_index() * 3; ?>
+               <a href="<?php the_sub_field('url_destino'); ?>" class="big-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $rowNumber; ?>00">
+                  <div>
+                     <div class="big-card__container">
+                        <div class="big-card__container--img" style="background-image: url('<?php the_sub_field('imagen_de_fondo'); ?>');"></div>
+                        <?php get_template_part('components/single/card-special'); ?>
+                     </div>
+                  </div>
+               </a>
+            <?php endwhile; ?>
+         <?php endif; ?>
       </div>
    </div>
 </section>
 <!-- THIRD SECTION  -->
 <!-- FOURTH SECTION  -->
 <section class="container-fluid picture">
-   <?php get_template_part('components/single/title');?>
+   <?php if (have_rows('titulo_de_seccion_individuales')) : ?>
+      <?php while (have_rows('titulo_de_seccion_individuales')) : the_row(); ?>
+         <?php get_template_part('components/single/title'); ?>
+      <?php endwhile; ?>
+   <?php endif; ?>
    <div class="container">
       <div class="picture__slider">
-      <?php get_template_part('components/group/card-picture');?>
+         <?php get_template_part('components/group/card-picture'); ?>
       </div>
    </div>
 </section>
 <!-- FOURTH SECTION  -->
 <!-- FIIFTH SECTION  -->
 <section class="instagram">
-   <?php get_template_part('components/single/title-Instagram');?>
+   <?php if (have_rows('titulo_de_seccion_ig')) : ?>
+      <?php while (have_rows('titulo_de_seccion_ig')) : the_row(); ?>
+         <?php get_template_part('components/single/title-Instagram'); ?>
+      <?php endwhile; ?>
+   <?php endif; ?>
    <div class="container">
       <div class="instagram__slider">
-         <?php get_template_part('components/group/card-instagram');?>
-         <?php get_template_part('components/group/card-instagram');?>
-         <?php get_template_part('components/group/card-instagram');?>
-         <?php get_template_part('components/group/card-instagram');?>
+         <?php if (have_rows('instagram_shop')) : ?>
+            <?php while (have_rows('instagram_shop')) : the_row(); ?>
+               <?php get_template_part('components/group/card-instagram'); ?>
+            <?php endwhile; ?>
+         <?php endif; ?>
       </div>
    </div>
 </section>
 <!-- FIIFTH SECTION  -->
 
-<?php get_footer();?>
+<?php get_footer(); ?>

@@ -1,37 +1,19 @@
+<?php while (have_rows('slider')) : the_row(); ?>
+   <div class="hero__slider--container btn-<?php the_sub_field('alineacion'); ?>">
+      <div class="hero__principal" data-aos="fade" data-aos-duration="1000" style="background-image: url('<?php the_sub_field('imagen_de_fondo'); ?>');">
+         <div class="hero__principal--desc">
+            <?php if (get_sub_field('titulo')) : ?>
+               <h2>
+                  <?php the_sub_field('titulo'); ?>
+               </h2>
+            <?php endif; ?>
 
-   <!-- btn to left -->
-   <div class="hero__slider--container btn-left">
-      <div class="hero__principal" data-aos="fade" data-aos-duration="1000" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/hero1.png');">
-         <div class="hero__principal--desc" >
-            <h2>Tenemos la composicion que estas buscando</h2>
-            <?php get_template_part('components/single/principal-btn');?>
+            <?php if (get_sub_field('boton')) : ?>
+               <?php while (have_rows('boton')) : the_row(); ?>
+                  <?php get_template_part('components/single/principal-btn'); ?>
+               <?php endwhile; ?>
+            <?php endif; ?>
          </div>
       </div>
    </div>
-   <!-- btn to right -->
-   <div class="hero__slider--container btn-right">
-      <div class="hero__principal" data-aos="fade" data-aos-duration="1000" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/hero1.png');">
-         <div class="hero__principal--desc" >
-            <h2>Tenemos la composicion que estas buscando</h2>
-            <?php get_template_part('components/single/principal-btn');?>
-         </div>
-      </div>
-   </div>
-   <!-- btn to down -->
-   <div class="hero__slider--container btn-down">
-      <div class="hero__principal" data-aos="fade" data-aos-duration="1000" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/hero1.png');">
-         <div class="hero__principal--desc" >
-            <h2>Tenemos la composicion que estas buscando</h2>
-            <?php get_template_part('components/single/principal-btn');?>
-         </div>
-      </div>
-   </div>
-   <!-- btn none -->
-   <div class="hero__slider--container btn-none">
-      <div class="hero__principal" data-aos="fade" data-aos-duration="1000" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/hero1.png');">
-         <div class="hero__principal--desc" >
-            <h2>Tenemos la composicion que estas buscando</h2>
-            <?php get_template_part('components/single/principal-btn');?>
-         </div>
-      </div>
-   </div>
+<?php endwhile; ?>
