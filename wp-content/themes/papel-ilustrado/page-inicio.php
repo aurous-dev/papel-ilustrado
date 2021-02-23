@@ -45,20 +45,23 @@ get_header();
       <div class="composition__slider">
          <a href="#" class="big-card" data-aos="fade-up" data-aos-duration="1000">
             <div>
-               <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
+               <div class="big-card__container">
+                  <div class="big-card__container--img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');"></div>
                   <?php get_template_part('components/single/card-special');?>
                </div>
             </div>
          </a>
          <a href="#" class="big-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
             <div>
-               <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
+               <div class="big-card__container">
+                  <div class="big-card__container--img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');"></div>
                   <?php get_template_part('components/single/card-special');?>
                </div>
             </div>
          </a>
          <a href="#" class="big-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-            <div class="big-card__container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');">
+            <div class="big-card__container">
+               <div class="big-card__container--img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/picture3.png');"></div>
                <?php get_template_part('components/single/card-special');?>
             </div>
          </a>

@@ -9130,34 +9130,34 @@ a.text-dark:hover, a.text-dark:focus {
   @media (min-width: 61.25em) {
     .big-card:hover {
       text-decoration: none; }
-      .big-card:hover .big-card__container {
+      .big-card:hover .big-card__container--img {
         -webkit-animation: zoomin 0.3s linear;
         animation: zoomin 0.3s linear;
         animation-fill-mode: forwards; }
       .big-card:hover .btn-special {
-        bottom: 0;
-        -webkit-transform: scale(0.92);
-        transform: scale(0.92); } }
+        bottom: 0; } }
   .big-card__container {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    background-blend-mode: soft-light;
-    height: 500px;
-    padding-bottom: 0;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: all .5s ease-in-out;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-position-x: 50%;
-    background-position-y: 0%;
-    -webkit-animation: zoomout 0.3s linear;
-    animation: zoomout 0.3s linear;
-    animation-fill-mode: forwards; }
+    position: relative; }
+    .big-card__container--img {
+      background-blend-mode: soft-light;
+      height: 500px;
+      width: 100%;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: all .5s ease-in-out;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-position-x: 50%;
+      background-position-y: 0%;
+      -webkit-animation: zoomout 0.3s linear;
+      animation: zoomout 0.3s linear;
+      animation-fill-mode: forwards; }
 
 @-webkit-keyframes zoomin {
   0% {
