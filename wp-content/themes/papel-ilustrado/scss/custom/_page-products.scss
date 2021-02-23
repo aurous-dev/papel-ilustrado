@@ -31,6 +31,9 @@
    }
 }
 .simple-product {
+   &__container {
+      margin-bottom: 50px;
+   }
    &__title {
       font-size: 22px;
       color: $color-indigo;
@@ -132,10 +135,30 @@
                   margin-right: 5px;
                }
             }
+            
          }
          .marco-icon {
             a {
                text-decoration: underline;
+            }
+            .modal-dialog {
+               max-width: 1140px;
+            }
+            .modal-header {
+               border-bottom: 0;
+               .close {
+                  span {
+                     color: $color-white;
+                     background-color: $color-salmon;
+                     border-radius: 50%;
+                     display: flex;
+                     font-weight: 100;
+                     width: 30px;
+                     height: 30px;
+                     display: flex;
+                     @include f-center;
+                  }
+               }
             }
          }
          a {
@@ -154,7 +177,8 @@
    &__btn {
       display: flex;
       flex-direction: column;
-      a {
+      a,
+      button {
          width: 95%;
          text-align: center;
          text-transform: uppercase;
@@ -167,12 +191,14 @@
          }
       }
       .add {
-         margin: 10px 0;
-         background-color: $color-indigo;
-         border: 1px solid $color-indigo;
-         padding: 13px 20px;
-         color: $color-white;
-         font-size: 14px;
+         margin: 10px 0 !important;
+         background-color: $color-indigo !important;
+         border: 1px solid $color-indigo !important;
+         padding: 13px 20px !important;
+         color: $color-white !important;
+         font-size: 14px !important;
+         border-radius: 0 !important;
+         width: 95%;
       }
       .buy {
          border: 1px solid $color-indigo;
@@ -180,5 +206,44 @@
          font-size: 14px;
          color: $color-indigo;
       }
+   }
+   &__modal {
+      padding: 20px 20px 50px;
+      &--img {
+         max-height: 400px;
+         max-width: 100%;
+         display: flex;
+         @include f-center;
+      }
+      &--info {
+         padding-right: 150px;
+         .simple-product__size--form {
+            margin-top: 45px;
+         }
+         .form__select {
+            select {
+               width: 80%;
+            }
+         }
+         .simple-product__btn {
+            .add {
+               width: 80%;
+               text-decoration: none;
+            }
+         }
+      }
+   }
+}
+nav.woocommerce-breadcrumb {
+   max-width: 1140px;
+   padding: 20px 0 !important;
+   color: $color-indigo !important;
+   font-size: 14px !important;
+   margin: 0 auto !important;
+   @include fonts-display(600);
+   a {
+      font-size: 14px !important;
+      color: $color-indigo !important;
+      @include fonts-display(400);
    }
 }

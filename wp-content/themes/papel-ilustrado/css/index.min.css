@@ -8548,18 +8548,6 @@ a.text-dark:hover, a.text-dark:focus {
     font-family: 'Raleway', sans-serif;
     font-weight: 400; }
 
-.page-index {
-  padding: 20px 0;
-  color: #2A3D42;
-  font-size: 14px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400; }
-  .page-index a {
-    font-size: 14px;
-    color: #2A3D42;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600; }
-
 .hero {
   padding: 20px 0; }
   .hero__principal {
@@ -11052,6 +11040,9 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
     max-height: 80px;
     border: 1px solid #D2D2D2; }
 
+.simple-product__container {
+  margin-bottom: 50px; }
+
 .simple-product__title {
   font-size: 22px;
   color: #2A3D42;
@@ -11139,6 +11130,21 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
       margin-right: 5px; }
   .simple-product__size--btn .marco-icon a {
     text-decoration: underline; }
+  .simple-product__size--btn .marco-icon .modal-dialog {
+    max-width: 1140px; }
+  .simple-product__size--btn .marco-icon .modal-header {
+    border-bottom: 0; }
+    .simple-product__size--btn .marco-icon .modal-header .close span {
+      color: #FFFFFF;
+      background-color: #F4997E;
+      border-radius: 50%;
+      display: flex;
+      font-weight: 100;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
   .simple-product__size--btn a {
     color: #2A3D42;
     font-size: 14px;
@@ -11147,27 +11153,63 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
 .simple-product__btn {
   display: flex;
   flex-direction: column; }
-  .simple-product__btn a {
+  .simple-product__btn a,
+  .simple-product__btn button {
     width: 95%;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-family: 'Raleway', sans-serif;
     font-weight: 500; }
-    .simple-product__btn a:hover {
+    .simple-product__btn a:hover,
+    .simple-product__btn button:hover {
       background-color: #F4997E;
       border: 1px solid #F4997E;
       color: #FFFFFF; }
   .simple-product__btn .add {
-    margin: 10px 0;
-    background-color: #2A3D42;
-    border: 1px solid #2A3D42;
-    padding: 13px 20px;
-    color: #FFFFFF;
-    font-size: 14px; }
+    margin: 10px 0 !important;
+    background-color: #2A3D42 !important;
+    border: 1px solid #2A3D42 !important;
+    padding: 13px 20px !important;
+    color: #FFFFFF !important;
+    font-size: 14px !important;
+    border-radius: 0 !important;
+    width: 95%; }
   .simple-product__btn .buy {
     border: 1px solid #2A3D42;
     padding: 10px 15px;
     font-size: 14px;
     color: #2A3D42; }
+
+.simple-product__modal {
+  padding: 20px 20px 50px; }
+  .simple-product__modal--img {
+    max-height: 400px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .simple-product__modal--info {
+    padding-right: 150px; }
+    .simple-product__modal--info .simple-product__size--form {
+      margin-top: 45px; }
+    .simple-product__modal--info .form__select select {
+      width: 80%; }
+    .simple-product__modal--info .simple-product__btn .add {
+      width: 80%;
+      text-decoration: none; }
+
+nav.woocommerce-breadcrumb {
+  max-width: 1140px;
+  padding: 20px 0 !important;
+  color: #2A3D42 !important;
+  font-size: 14px !important;
+  margin: 0 auto !important;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600; }
+  nav.woocommerce-breadcrumb a {
+    font-size: 14px !important;
+    color: #2A3D42 !important;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400; }
 

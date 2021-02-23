@@ -52,6 +52,8 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				<?php endforeach; ?>
 			</tbody>
 		</table>
+
+		<!-- Buttons -->
 		<div class="simple-product__size--btn">
 			<div class="available">
 				<div class="check">
@@ -70,7 +72,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				</a>
 			</div>
 			<div class="size-icon">
-				<a href="#" data-toggle="modal" data-target="#exampleModal">
+				<a href="#" data-toggle="modal" data-target="#sizeModal">
 					<svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M14 0H12V2H14V0ZM22 8H20V10H22V8ZM22 12H20V14H22V12ZM22 16H20V18C21 18 22 17 22 16ZM20 4H22V6H20V4ZM20 2V0C21 0 22 1 22 2H20ZM0 4H2V6H0V4ZM18 0H16V2H18V0ZM16 16H18V18H16V16ZM0 2C0 1 1 0 2 0V2H0ZM8 0H10V2H8V0ZM6 0H4V2H6V0ZM0 8V16C0 17.1 0.9 18 2 18H14V10C14 8.9 13.1 8 12 8H0ZM4.12 13.28L2.63 15.19C2.37 15.52 2.61 16 3.02 16.01H11C11.41 16.01 11.65 15.54 11.4 15.21L9.18 12.25C8.99 11.98 8.59 11.98 8.39 12.24L6.29 14.94L4.9 13.27C4.69 13.02 4.32 13.03 4.12 13.28Z" fill="#2A3D42"/>
 					</svg>
@@ -78,35 +80,78 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				</a>
 
 				<!-- Modal -->
-				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-							</div>
-							<div class="modal-body">
-							...
-							</div>
-							<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Save changes</button>
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="row simple-producto__modal">
+										<img src="https://via.placeholder.com/250" alt="">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- Modal -->
-				
+
 			</div>
 			<div class="marco-icon">
-				<a href="#">
+				<a href="#" data-toggle="modal" data-target="#marcoModal">
 					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0001 1.66699C5.40008 1.66699 1.66675 5.40033 1.66675 10.0003C1.66675 14.6003 5.40008 18.3337 10.0001 18.3337C14.6001 18.3337 18.3334 14.6003 18.3334 10.0003C18.3334 5.40033 14.6001 1.66699 10.0001 1.66699ZM10.0001 14.167C9.54175 14.167 9.16675 13.792 9.16675 13.3337V10.0003C9.16675 9.54199 9.54175 9.16699 10.0001 9.16699C10.4584 9.16699 10.8334 9.54199 10.8334 10.0003V13.3337C10.8334 13.792 10.4584 14.167 10.0001 14.167ZM9.16675 7.50033H10.8334V5.83366H9.16675V7.50033Z" fill="#355957"/>
 					</svg>
 					Probar Marco
 				</a>
+
+				<!-- Modal -->
+				<div class="modal fade" id="marcoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="row simple-product__modal">
+										<div class="col-md-5 col-12 simple-product__modal--img">
+											<img src="https://via.placeholder.com/250" alt="">
+										</div>
+										<div class="col-md-7 col-12 simple-product__modal--info">
+											<h2 class="simple-product__title">Probador de marcos</h2>
+											<div class="simple-product__desc">
+												<div>Previsualiza tu marco y selecciona el que más te guste para tu cuadro.</div>
+												<div class="simple-product__size--form">
+													<div class="form__size">
+														<div class="form__title">
+															Selecciona tu marco
+														</div>
+														<div class="form__select">
+															<select name="#" id="#">
+																<option value="desfualt"> Negro </option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="simple-product__btn">
+													<a href="#" class="add"> Seleccionar Marco</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal -->
 			</div>
 		</div>
 		<div class="single_variation_wrap">

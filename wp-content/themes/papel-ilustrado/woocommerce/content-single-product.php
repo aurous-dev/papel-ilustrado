@@ -106,6 +106,20 @@ if ( post_password_required() ) {
 	</div>
 </section>
 <!-- THIRD SECTION  -->
+<!-- FOURTH SECTION  -->
+<section class="container-fluid picture">
+   <?php if (have_rows('titulo_de_seccion_individuales')) : ?>
+      <?php while (have_rows('titulo_de_seccion_individuales')) : the_row(); ?>
+         <?php get_template_part('components/single/title'); ?>
+      <?php endwhile; ?>
+   <?php endif; ?>
+   <div class="container">
+      <div class="picture__slider">
+         <?php get_template_part('components/group/card-picture'); ?>
+      </div>
+   </div>
+</section>
+<!-- FOURTH SECTION  -->
 
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
