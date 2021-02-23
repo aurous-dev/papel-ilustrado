@@ -62,7 +62,8 @@ get_header();
             $rowNumber = get_row_index() * 3; ?>
                <a href="<?php the_sub_field('url_destino'); ?>" class="big-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $rowNumber; ?>00">
                   <div>
-                     <div class="big-card__container" style="background-image: url('<?php the_sub_field('imagen_de_fondo'); ?>');">
+                     <div class="big-card__container">
+                        <div class="big-card__container--img" style="background-image: url('<?php the_sub_field('imagen_de_fondo'); ?>');"></div>
                         <?php get_template_part('components/single/card-special'); ?>
                      </div>
                   </div>

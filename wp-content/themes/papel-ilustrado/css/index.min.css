@@ -8393,7 +8393,7 @@ a.text-dark:hover, a.text-dark:focus {
     padding: 20px 0 40px;
     opacity: 0;
     visibility: hidden;
-    z-index: 1;
+    z-index: 1000;
     left: 50%; }
     #menu-principal > li.menu-item-has-children > .sub-menu #banner_cuadros img {
       max-width: 400px; }
@@ -8685,7 +8685,7 @@ a.text-dark:hover, a.text-dark:focus {
       position: absolute;
       flex-direction: column;
       text-align: center;
-      bottom: -85px; }
+      bottom: -80px; }
       .hero__slider--container.btn-down .hero__principal--desc h2 {
         order: 1; }
       .hero__slider--container.btn-down .hero__principal--desc a.btn-principal, .hero__slider--container.btn-down .hero__principal--desc a.btn-card {
@@ -8870,7 +8870,10 @@ a.text-dark:hover, a.text-dark:focus {
       width: 100%;
       height: 100%;
       background-color: rgba(42, 61, 66, 0.4);
-      opacity: 0; }
+      opacity: 0;
+      transition: all ease-in-out 0.3s; }
+    .card__container--img .btn-card {
+      transition: all ease-in-out 0.5s; }
     @media (min-width: 61.25em) {
       .card__container--img:hover::before {
         opacity: 1; }
@@ -9127,34 +9130,34 @@ a.text-dark:hover, a.text-dark:focus {
   @media (min-width: 61.25em) {
     .big-card:hover {
       text-decoration: none; }
-      .big-card:hover .big-card__container {
+      .big-card:hover .big-card__container--img {
         -webkit-animation: zoomin 0.3s linear;
         animation: zoomin 0.3s linear;
         animation-fill-mode: forwards; }
       .big-card:hover .btn-special {
-        bottom: 0;
-        -webkit-transform: scale(0.92);
-        transform: scale(0.92); } }
+        bottom: 0; } }
   .big-card__container {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    background-blend-mode: soft-light;
-    height: 500px;
-    padding-bottom: 0;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: all .5s ease-in-out;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-position-x: 50%;
-    background-position-y: 0%;
-    -webkit-animation: zoomout 0.3s linear;
-    animation: zoomout 0.3s linear;
-    animation-fill-mode: forwards; }
+    position: relative; }
+    .big-card__container--img {
+      background-blend-mode: soft-light;
+      height: 500px;
+      width: 100%;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: all .5s ease-in-out;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-position-x: 50%;
+      background-position-y: 0%;
+      -webkit-animation: zoomout 0.3s linear;
+      animation: zoomout 0.3s linear;
+      animation-fill-mode: forwards; }
 
 @-webkit-keyframes zoomin {
   0% {
@@ -9348,6 +9351,41 @@ a.text-dark:hover, a.text-dark:focus {
   .section-filter__form select {
     padding: 13px 15px;
     font-size: 13px; }
+
+.contacto {
+  padding: 60px 15px 100px; }
+  .contacto #app form {
+    border: 1px solid #D2D2D2;
+    padding: 50px 80px; }
+    .contacto #app form .form-group label {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700; }
+    .contacto #app form .form-group input {
+      border: 1px solid #D2D2D2;
+      height: 45px;
+      border-radius: 0;
+      background-color: rgba(229, 229, 229, 0.15); }
+    .contacto #app form .form-group textarea {
+      border: 1px solid #D2D2D2;
+      border-radius: 0;
+      resize: none;
+      background-color: rgba(229, 229, 229, 0.15); }
+    .contacto #app form button {
+      display: block;
+      background-color: #2A3D42;
+      margin: 0;
+      margin-left: 15px;
+      padding: 8px 60px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      outline: none;
+      border: none;
+      border-radius: 0;
+      letter-spacing: 0.05em;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500; }
 
 .w__login {
   max-width: 1140px;
