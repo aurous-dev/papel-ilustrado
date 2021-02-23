@@ -714,6 +714,7 @@
 [data-aos=flip-down].aos-animate {
   transform: perspective(2500px) rotateX(0); }
 
+<<<<<<< HEAD
 @charset "UTF-8";
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -11135,3 +11136,5 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
     font-size: 14px;
     color: #2A3D42; }
 
+=======
+>>>>>>> d912eac (Fix: oscar merge)
