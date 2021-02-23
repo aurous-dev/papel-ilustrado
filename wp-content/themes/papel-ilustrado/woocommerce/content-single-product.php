@@ -31,35 +31,81 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
-
-	<?php
-	/**
-	 * Hook: woocommerce_before_single_product_summary.
-	 *
-	 * @hooked woocommerce_show_product_sale_flash - 10
-	 * @hooked woocommerce_show_product_images - 20
-	 */
-	do_action( 'woocommerce_before_single_product_summary' );
-	?>
-
-	<div class="summary entry-summary">
-		<?php
-		/**
-		 * Hook: woocommerce_single_product_summary.
-		 *
-		 * @hooked woocommerce_template_single_title - 5
-		 * @hooked woocommerce_template_single_rating - 10
-		 * @hooked woocommerce_template_single_price - 10
-		 * @hooked woocommerce_template_single_excerpt - 20
-		 * @hooked woocommerce_template_single_add_to_cart - 30
-		 * @hooked woocommerce_template_single_meta - 40
-		 * @hooked woocommerce_template_single_sharing - 50
-		 * @hooked WC_Structured_Data::generate_product_data() - 60
-		 */
-		do_action( 'woocommerce_single_product_summary' );
-		?>
+<div class="container">
+	<div class="row simple-product__container">
+		<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+	
+			<?php
+			/**
+			 * Hook: woocommerce_before_single_product_summary.
+			 *
+			 * @hooked woocommerce_show_product_sale_flash - 10
+			 * @hooked woocommerce_show_product_images - 20
+			 */
+			do_action( 'woocommerce_before_single_product_summary' );
+			?>
+	
+			<div class="summary entry-summary">
+				<?php
+				/**
+				 * Hook: woocommerce_single_product_summary.
+				 *
+				 * @hooked woocommerce_template_single_title - 5
+				 * @hooked woocommerce_template_single_rating - 10
+				 * @hooked woocommerce_template_single_price - 10
+				 * @hooked woocommerce_template_single_excerpt - 20
+				 * @hooked woocommerce_template_single_add_to_cart - 30
+				 * @hooked woocommerce_template_single_meta - 40
+				 * @hooked woocommerce_template_single_sharing - 50
+				 * @hooked WC_Structured_Data::generate_product_data() - 60
+				 */
+				do_action( 'woocommerce_single_product_summary' );
+				?>
+			</div>
+		</div>
 	</div>
 </div>
+<!-- SECOND SECTION  -->
+<section class="container-fluid paiting">
+	<?php if (have_rows('titulo_de_seccion_series')) : ?>
+		<?php while (have_rows('titulo_de_seccion_series')) : the_row(); ?>
+			<?php get_template_part('components/single/title'); ?>
+		<?php endwhile; ?>
+	<?php endif; ?>
+	<div class="container">
+		<div class="paiting__slider">
+			<?php get_template_part('components/group/card-paiting'); ?>
+		</div>
+	</div>
+</section>
+<!-- SECOND SECTION  -->
+<!-- THIRD SECTION  -->
+<section class="container-fluid composition">
+	<?php if (have_rows('titulo_de_seccion_composiciones')) : ?>
+		<?php while (have_rows('titulo_de_seccion_composiciones')) : the_row(); ?>
+			<?php get_template_part('components/single/title'); ?>
+		<?php endwhile; ?>
+	<?php endif; ?>
+	<div class="container">
+		<div class="composition__slider">
+			<?php if (have_rows('composiciones_recomendadas')) : ?>
+
+				<?php while (have_rows('composiciones_recomendadas')) : the_row(); 
+				$rowNumber = get_row_index() * 3; ?>
+					<a href="<?php the_sub_field('url_destino'); ?>" class="big-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $rowNumber; ?>00">
+						<div>
+							<div class="big-card__container">
+								<div class="big-card__container--img" style="background-image: url('<?php the_sub_field('imagen_de_fondo'); ?>');"></div>
+								<?php get_template_part('components/single/card-special'); ?>
+							</div>
+						</div>
+					</a>
+				<?php endwhile; ?>
+			<?php endif; ?>
+		</div>
+	</div>
+</section>
+<!-- THIRD SECTION  -->
+
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

@@ -11053,19 +11053,20 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
     border: 1px solid #D2D2D2; }
 
 .simple-product__title {
-  font-size: 14px;
-  color: #2A3D42; }
-  .simple-product__title h2 {
-    font-size: 22px;
-    color: #2A3D42;
-    margin-bottom: 10px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600; }
-
-.simple-product__price {
-  padding: 13px 0;
   font-size: 22px;
   color: #2A3D42;
+  margin-bottom: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600; }
+
+.simple-product__desc {
+  font-size: 14px;
+  color: #2A3D42; }
+
+.simple-product__price {
+  padding: 0 0 13px;
+  font-size: 22px !important;
+  color: #2A3D42 !important;
   font-family: 'Raleway', sans-serif;
   font-weight: 700; }
 
@@ -11074,33 +11075,41 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
   align-items: center;
   justify-content: center; }
   .simple-product__size--form .form__size {
-    width: 100%; }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
   .simple-product__size--form .form__title {
+    display: block !important;
     font-size: 12px;
     text-transform: uppercase;
     color: #2A3D42;
     padding-bottom: 6px;
+    margin-bottom: 0;
     font-family: 'Raleway', sans-serif;
     font-weight: 700; }
   .simple-product__size--form .form__select select {
-    height: 38px;
+    height: 45px;
     width: 90%;
     border: 1px solid #D2D2D2;
     font-weight: 600;
     font-size: 14px;
     color: #182224;
     padding: 0 10px; }
+  .simple-product__size--form .form__select a {
+    position: absolute;
+    color: #2A3D42; }
 
 .simple-product__size--btn {
   display: flex;
   padding: 10px 0 15px;
-  align-items: flex-start;
-  justify-content: center; }
+  align-items: center;
+  justify-content: space-between;
+  width: 95%; }
   .simple-product__size--btn .available {
     display: flex;
-    width: 50%;
-    font-size: 14px;
     align-items: center;
+    font-size: 14px;
     font-weight: 400; }
     .simple-product__size--btn .available .check {
       display: flex;
@@ -11111,40 +11120,29 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
       margin-right: 10px;
       align-items: center;
       justify-content: center; }
-  .simple-product__size--btn .special {
+  .simple-product__size--btn .heart-icon {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 50%; }
-    .simple-product__size--btn .special .heart-icon {
-      display: flex;
-      width: fit-content; }
-      .simple-product__size--btn .special .heart-icon:hover svg path {
-        fill: #F4997E; }
-      .simple-product__size--btn .special .heart-icon svg path {
-        fill-rule: evenodd !important;
-        fill: rgba(229, 229, 229, 0.15);
-        stroke: #F4997E;
-        stroke-width: 2px; }
-    .simple-product__size--btn .special .size-icon {
-      margin-left: 30px; }
-      .simple-product__size--btn .special .size-icon a {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        text-decoration: underline; }
-        .simple-product__size--btn .special .size-icon a svg {
-          margin-right: 5px; }
-    .simple-product__size--btn .special .marco-icon {
-      margin-top: 10px;
-      width: 91%;
-      text-align: right; }
-      .simple-product__size--btn .special .marco-icon a {
-        text-decoration: underline; }
-    .simple-product__size--btn .special a {
-      color: #2A3D42;
-      font-size: 14px;
-      font-weight: 500; }
+    width: fit-content; }
+    .simple-product__size--btn .heart-icon:hover svg path {
+      fill: #F4997E; }
+    .simple-product__size--btn .heart-icon svg path {
+      fill-rule: evenodd !important;
+      fill: rgba(229, 229, 229, 0.15);
+      stroke: #F4997E;
+      stroke-width: 2px; }
+  .simple-product__size--btn .size-icon a {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-decoration: underline; }
+    .simple-product__size--btn .size-icon a svg {
+      margin-right: 5px; }
+  .simple-product__size--btn .marco-icon a {
+    text-decoration: underline; }
+  .simple-product__size--btn a {
+    color: #2A3D42;
+    font-size: 14px;
+    font-weight: 500; }
 
 .simple-product__btn {
   display: flex;
