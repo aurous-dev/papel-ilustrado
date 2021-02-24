@@ -11,10 +11,10 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 ?>
-<div class="woocommerce-variation-add-to-cart variations_button">
+<div class="woocommerce-variation-add-to-cart variations_button simple-product__btn">
 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
-	<?php
+	<!-- <?php
 	do_action( 'woocommerce_before_add_to_cart_quantity' );
 
 	woocommerce_quantity_input(
@@ -26,10 +26,10 @@ global $product;
 	);
 
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
-	?>
+	?> -->
 
-	<button type="submit" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
-
+	<button type="submit" class="single_add_to_cart_button button alt add"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+	<a href="#" class="buy"> Comprar la serie</a>
 	<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
 	<input type="hidden" name="add-to-cart" value="<?php echo absint( $product->get_id() ); ?>" />
