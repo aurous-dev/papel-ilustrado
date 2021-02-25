@@ -2,58 +2,84 @@
    <div class="container">
       <div class="footer">
          <div class="footer__logo">
-            <a href="#">
-               <img src="<?php echo get_template_directory_uri(); ?>/img/svg/logo.svg" alt="">
+            <a href="<?php echo get_home_url(); ?>">
+               <img src="<?php the_field('logo_footer', 'option'); ?>" alt="">
             </a>
             <div>
-               © 2020 Papel ilustrado <br>
-               Todos los derechos reservados
+               <?php the_field('logo_copyright', 'option'); ?>
             </div>
          </div>
          <div class="footer__info">
             <div class="footer__info--nav">
-               <ul>
-                  <li><a href="#"> Series de Cuadros </a></li>
-                  <li><a href="#"> Nosotros </a></li>
-                  <li><a href="#"> Composiciones </a></li>
-                  <li><a href="#"> Politica de Envío </a></li>
-                  <li><a href="#"> Cuadros Individuales </a></li>
-                  <li><a href="#"> Cambios y devoluciones </a></li>
-                  <li><a href="#"> Decoración </a></li>
-               </ul>
+               <?php if (have_rows('footer_menu', 'option')) : ?>
+                  <ul>
+                     <?php while (have_rows('footer_menu', 'option')) : the_row(); ?>
+                        <li>
+                           <a href="<?php the_sub_field('url_item'); ?>">
+                              <?php the_sub_field('texto_item'); ?>
+                           </a>
+                        </li>
+                     <?php endwhile; ?>
+                  </ul>
+               <?php endif; ?>
             </div>
             <div class="footer__info--subs">
                <h3>Suscribete a nuesto newsletter</h3>
                <form action="">
-                  <input type="text" placeholder="Escibre tu correo">
+                  <input type="text" placeholder="Escribre tu correo">
                   <a href="#" class="btn-send"> Enviar </a>
                </form>
             </div>
          </div>
-         <div class="footer__direction">
-            <div class="footer__direction--address">
-               <i class="fas fa-map-marker-alt"></i>
-               <div>Luis pasteur 6199, local D, Vitacura <br> (Tienda Mundano) Santiago, Chile.</div>
-            </div>
-            <div class="footer__direction--time">
-               <i class="far fa-clock"></i>
-               <div>Lunes a Viernes: 11 a 20 hrs. <br> Sabados: 11 a 14:30 hrs.</div>
-            </div>
-            <div class="footer__direction--contact">
-               <div class="footer__direction--contact-email">
-                  <i class="far fa-envelope"></i>
-                  <div>contacto@papelilustrado.cl</div>
+         <?php if (have_rows('footer_widgets', 'option')) : ?>
+            <?php while (have_rows('footer_widgets', 'option')) : the_row(); ?>
+               <div class="footer__direction">
+                  <?php if (have_rows('widget_direccion')) : ?>
+                     <?php while (have_rows('widget_direccion')) : the_row(); ?>
+                        <div class="footer__direction--address">
+                           <?php the_sub_field('icon'); ?>
+                           <div>
+                              <?php the_sub_field('texto'); ?>
+                           </div>
+                        </div>
+                     <?php endwhile; ?>
+                  <?php endif; ?>
+                  <?php if (have_rows('widget_horarios')) : ?>
+                     <?php while (have_rows('widget_horarios')) : the_row(); ?>
+                        <div class="footer__direction--time">
+                           <?php the_sub_field('icon'); ?>
+                           <div>
+                              <?php the_sub_field('texto'); ?>
+                           </div>
+                        </div>
+                     <?php endwhile; ?>
+                  <?php endif; ?>
+                  <div class="footer__direction--contact">
+                     <?php if (have_rows('widget_contactos')) : ?>
+                        <?php while (have_rows('widget_contactos')) : the_row(); ?>
+                           <div class="footer__direction--contact-email">
+                              <?php the_sub_field('icon'); ?>
+                              <div>
+                                 <a href="<?php the_sub_field('url_destino'); ?>">
+                                    <?php the_sub_field('texto'); ?>
+                                 </a>
+                              </div>
+                           </div>
+                        <?php endwhile; ?>
+                     <?php endif; ?>
+                  </div>
+                  <?php if (have_rows('rrss', 'option')) : ?>
+                     <div class="footer__direction--rrss">
+                        <?php while (have_rows('rrss', 'option')) : the_row(); ?>
+                           <a href="<?php the_sub_field('url_red_social'); ?>">
+                              <?php the_sub_field('icono'); ?>
+                           </a>
+                        <?php endwhile; ?>
+                     </div>
+                  <?php endif; ?>
                </div>
-               <div class="footer__direction--contact-phone">
-                  <i class="fas fa-phone-alt"></i>
-                  <div>+56 9 6225 0940</div>
-               </div>
-            </div>
-            <div class="footer__direction--rrss">
-               <a href="#"><i class="fab fa-facebook-f"></i></a>
-               <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-         </div>
+            <?php endwhile; ?>
+         <?php endif; ?>
       </div>
    </div>
 </footer>

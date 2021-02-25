@@ -9197,12 +9197,10 @@ a.text-dark:hover, a.text-dark:focus {
       max-width: 47%; }
       .footer__info--nav ul {
         list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0; }
+        margin: 0;
+        column-count: 2; }
         .footer__info--nav ul li {
           text-transform: uppercase;
-          width: 50%;
           margin-bottom: 10px; }
           .footer__info--nav ul li a {
             text-decoration: none;
@@ -9241,6 +9239,11 @@ a.text-dark:hover, a.text-dark:focus {
       display: flex; }
     .footer__direction--contact-email, .footer__direction--contact-phone {
       display: flex; }
+      .footer__direction--contact-email a, .footer__direction--contact-phone a {
+        color: #FFFFFF;
+        transition: all ease-in-out 0.3s; }
+        .footer__direction--contact-email a:hover, .footer__direction--contact-phone a:hover {
+          color: #F4997E; }
     .footer__direction--rrss a:hover i {
       color: #F4997E; }
     .footer__direction--rrss i {

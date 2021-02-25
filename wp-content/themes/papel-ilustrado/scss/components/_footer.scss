@@ -39,12 +39,13 @@
          max-width: 47%;
          ul {
             list-style: none;
-            display: flex;
-            flex-wrap: wrap;
+            // display: flex;
+            // flex-wrap: wrap;
             margin: 0;
+            column-count: 2;
             li {
                text-transform: uppercase;
-               width: 50%;
+               // width: 50%;
                margin-bottom: 10px;
                a {
                   text-decoration: none;
@@ -99,6 +100,13 @@
          &-email,
          &-phone{
             display: flex;
+            a {
+               color: $color-white;
+               transition: $tr3;
+               &:hover {
+                  color: $color-salmon;
+               }
+            }
          }
       }
       &--rrss {
