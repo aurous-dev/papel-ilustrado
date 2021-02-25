@@ -71,7 +71,7 @@
                   <?php if (have_rows('rrss', 'option')) : ?>
                      <div class="footer__direction--rrss">
                         <?php while (have_rows('rrss', 'option')) : the_row(); ?>
-                           <a href="<?php the_sub_field('url_red_social'); ?>">
+                           <a href="<?php the_sub_field('url_red_social'); ?>" target="_blank">
                               <?php the_sub_field('icono'); ?>
                            </a>
                         <?php endwhile; ?>
