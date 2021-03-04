@@ -68,6 +68,14 @@ $(".paiting__slider").slick({
     arrows: true,
     responsive: [
         {
+            breakpoint: 770,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+            },
+        },
+        {
             breakpoint: 480,
             settings: {
                 slidesToShow: 1,
@@ -84,6 +92,14 @@ $(".composition__slider").slick({
     dots: true,
     arrows: true,
     responsive: [
+        // {
+        //     breakpoint: 770,
+        //     settings: {
+        //         slidesToShow: 1,
+        //         slidesToScroll: 1,
+        //         dots: true,
+        //     },
+        // },
         {
             breakpoint: 480,
             settings: {
@@ -101,6 +117,14 @@ $(".picture__slider").slick({
     dots: true,
     arrows: true,
     responsive: [
+        {
+            breakpoint: 770,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+            },
+        },
         {
             breakpoint: 480,
             settings: {

@@ -60,11 +60,11 @@
    @include mq($from: mobile, $until: tablet) {
       &__slider {
          .slick-prev {
-            left: -20px;
+            left: -32px;
             top: 35%;
          }
          .slick-next {
-            right: -20px;
+            right: -33px;
             top: 35%;
          }
       }

@@ -8187,6 +8187,9 @@ a.text-dark:hover, a.text-dark:focus {
       height: auto; }
   .header__nav--rrss {
     display: none; }
+  @media (min-width: 61.25em) and (max-width: 81.24em) {
+    .header__logo img {
+      width: 150px; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .header {
       padding-top: 70px;
@@ -8429,6 +8432,13 @@ a.text-dark:hover, a.text-dark:focus {
     #menu-principal > li.menu-item-has-children > .sub-menu .column2 {
       column-count: 2;
       column-gap: 40px; }
+  @media (min-width: 61.25em) and (max-width: 81.24em) {
+    #menu-principal > li {
+      margin-right: 50px; }
+      #menu-principal > li:nth-child(n+4) {
+        margin-left: 50px; }
+    #menu-principal > li.menu-item-has-children > .sub-menu {
+      width: 100%; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
     #menu-principal {
       flex-direction: column;
@@ -8621,7 +8631,8 @@ a.text-dark:hover, a.text-dark:focus {
           padding: 10px 15px 10px 18px;
           border-radius: 50%;
           font-size: initial;
-          filter: grayscale(0); } }
+          filter: grayscale(0);
+          transform: scale(0.8) rotate(180deg); } }
     @media (min-width: 61.25em) {
       .hero__slider .slick-prev:hover::before {
         filter: grayscale(0); } }
@@ -8654,7 +8665,8 @@ a.text-dark:hover, a.text-dark:focus {
           padding: 10px 15px 10px 18px;
           border-radius: 50%;
           font-size: initial;
-          filter: grayscale(0); } }
+          filter: grayscale(0);
+          transform: scale(0.8); } }
     @media (min-width: 61.25em) {
       .hero__slider .slick-next:hover::before {
         filter: grayscale(0); } }
@@ -8790,9 +8802,10 @@ a.text-dark:hover, a.text-dark:focus {
     .btn-special__arrow img {
       position: absolute;
       right: 36%; }
-  @media (min-width: 20em) and (max-width: 46.24em) {
+  @media (min-width: 20em) and (max-width: 61.24em) {
     .btn-special {
-      bottom: 0; }
+      bottom: 0;
+      padding: 30px 15px; }
       .btn-special h3 {
         font-size: 26px;
         padding-bottom: 20px; }
@@ -10407,7 +10420,8 @@ body, html {
           padding: 10px 15px 10px 18px;
           border-radius: 50%;
           font-size: initial;
-          filter: grayscale(0); } }
+          filter: grayscale(0);
+          transform: scale(0.8) rotate(180deg); } }
     @media (min-width: 61.25em) {
       .paiting__slider .slick-prev:hover::before {
         filter: grayscale(0); } }
@@ -10440,7 +10454,8 @@ body, html {
           padding: 10px 15px 10px 18px;
           border-radius: 50%;
           font-size: initial;
-          filter: grayscale(0); } }
+          filter: grayscale(0);
+          transform: scale(0.8); } }
     @media (min-width: 61.25em) {
       .paiting__slider .slick-next:hover::before {
         filter: grayscale(0); } }
@@ -10478,10 +10493,10 @@ body, html {
           font-size: 12px; }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .paiting__slider .slick-prev {
-      left: -20px;
+      left: -32px;
       top: 35%; }
     .paiting__slider .slick-next {
-      right: -20px;
+      right: -33px;
       top: 35%; } }
 
 .composition {
@@ -10520,7 +10535,8 @@ body, html {
           padding: 10px 15px 10px 18px;
           border-radius: 50%;
           font-size: initial;
-          filter: grayscale(0); } }
+          filter: grayscale(0);
+          transform: scale(0.8) rotate(180deg); } }
     .composition__slider .slick-prev:hover::before {
       filter: grayscale(0); }
   .composition__slider .slick-next {
@@ -10552,7 +10568,8 @@ body, html {
           padding: 10px 15px 10px 18px;
           border-radius: 50%;
           font-size: initial;
-          filter: grayscale(0); } }
+          filter: grayscale(0);
+          transform: scale(0.8); } }
     .composition__slider .slick-next:hover::before {
       filter: grayscale(0); }
   .composition__slider .slick-dots {
@@ -10628,7 +10645,8 @@ body, html {
           padding: 10px 15px 10px 18px;
           border-radius: 50%;
           font-size: initial;
-          filter: grayscale(0); } }
+          filter: grayscale(0);
+          transform: scale(0.8) rotate(180deg); } }
     .picture__slider .slick-prev:hover::before {
       filter: grayscale(0); }
   .picture__slider .slick-next {
@@ -10660,7 +10678,8 @@ body, html {
           padding: 10px 15px 10px 18px;
           border-radius: 50%;
           font-size: initial;
-          filter: grayscale(0); } }
+          filter: grayscale(0);
+          transform: scale(0.8); } }
     .picture__slider .slick-next:hover::before {
       filter: grayscale(0); }
   .picture__slider .slick-dots {
@@ -10743,7 +10762,8 @@ body, html {
           padding: 10px 15px 10px 18px;
           border-radius: 50%;
           font-size: initial;
-          filter: grayscale(0); } }
+          filter: grayscale(0);
+          transform: scale(0.8) rotate(180deg); } }
     .instagram__slider .slick-prev:hover::before {
       filter: grayscale(0); }
   .instagram__slider .slick-next {
@@ -10775,7 +10795,8 @@ body, html {
           padding: 10px 15px 10px 18px;
           border-radius: 50%;
           font-size: initial;
-          filter: grayscale(0); } }
+          filter: grayscale(0);
+          transform: scale(0.8); } }
     .instagram__slider .slick-next:hover::before {
       filter: grayscale(0); }
   .instagram__slider .slick-dots {
@@ -10866,7 +10887,8 @@ body, html {
           padding: 10px 15px 10px 18px;
           border-radius: 50%;
           font-size: initial;
-          filter: grayscale(0); } }
+          filter: grayscale(0);
+          transform: scale(0.8) rotate(180deg); } }
     .section__news .fiveColumn__slider .slick-prev:hover::before,
     .section__news .fourColumn__slider .slick-prev:hover::before {
       filter: grayscale(0); }
@@ -10902,7 +10924,8 @@ body, html {
           padding: 10px 15px 10px 18px;
           border-radius: 50%;
           font-size: initial;
-          filter: grayscale(0); } }
+          filter: grayscale(0);
+          transform: scale(0.8); } }
     .section__news .fiveColumn__slider .slick-next:hover::before,
     .section__news .fourColumn__slider .slick-next:hover::before {
       filter: grayscale(0); }

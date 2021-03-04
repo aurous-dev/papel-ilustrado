@@ -154,6 +154,13 @@
          display: none;
       }
    }
+   @include mq($from: desktop, $until: wide) {
+      &__logo {
+         img {
+            width: 150px;
+         }
+      }
+   }
    @include mq($from: mobile, $until: tablet) {
       padding-top: 70px;
       padding-bottom: 0;

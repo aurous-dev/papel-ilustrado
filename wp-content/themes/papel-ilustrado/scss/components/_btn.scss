@@ -106,8 +106,9 @@
          right: 36%;
       }
    }
-   @include mq($from: mobile, $until: tablet) {
+   @include mq($from: mobile, $until: desktop) {
       bottom: 0;
+      padding: 30px 15px;
       h3 {
          font-size: 26px;
          padding-bottom: 20px;

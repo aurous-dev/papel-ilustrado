@@ -127,6 +127,20 @@
          }
       }
    }
+   // RESPONSIVE
+   @include mq($from: desktop, $until: wide) {
+      & > li {
+         margin-right: 50px;
+         &:nth-child(n+4) {
+            margin-left: 50px;
+         }  
+      }
+      &> li.menu-item-has-children {
+         &> .sub-menu {
+            width: 100%;
+         }
+      }
+   }
    @include mq($from: mobile, $until: tablet) {
       flex-direction: column;
       // position: absolute;
