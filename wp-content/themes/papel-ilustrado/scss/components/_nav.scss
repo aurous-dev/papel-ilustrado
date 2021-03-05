@@ -360,6 +360,16 @@
             max-height: calc(100vh - 131px);
             overflow-y: scroll;
             overflow-x: hidden;
+            &::before {
+               content: '';
+               position: absolute;
+               width: 100vw;
+               height: 100vh;
+               top: 0;
+               left: 0;
+               background-color: rgba($color: $color-indigo, $alpha: .4);
+               z-index: -1;
+            }
          }
       }
    }

@@ -8330,7 +8330,16 @@ a.text-dark:hover, a.text-dark:focus {
           height: 100%;
           max-height: calc(100vh - 131px);
           overflow-y: scroll;
-          overflow-x: hidden; } }
+          overflow-x: hidden; }
+          .header__nav .menu-principal-container::before {
+            content: '';
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: rgba(42, 61, 66, 0.4);
+            z-index: -1; } }
 
 #burger-menu {
   position: absolute;
