@@ -96,15 +96,36 @@
                   order: 2;
                }
             }
-            &:hover {
-               .hero__principal--desc {
-                  bottom: 0;
+            @include mq($from: desktop) {
+               &:hover {
+                  .hero__principal--desc {
+                     bottom: 0;
+                  }
                }
             }
          }
          &.btn-none {
             .hero__principal--desc {
                display: none;
+            }
+         }
+      }
+   }
+   @include mq($from: tablet, $until: desktop) {
+      &__slider {
+         &--container {
+            &.btn-down {
+               .hero__principal--desc {
+                  bottom: 0;
+               }
+            }
+         }
+      }
+      &__principal {
+         &--desc {
+            padding: 20px 30px;
+            h2 {
+               font-size: 22px;
             }
          }
       }
