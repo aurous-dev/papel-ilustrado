@@ -9488,6 +9488,27 @@ a.text-dark:hover, a.text-dark:focus {
       letter-spacing: 0.05em;
       font-family: 'Raleway', sans-serif;
       font-weight: 500; }
+  @media (min-width: 46.25em) and (max-width: 61.24em) {
+    .contacto #app {
+      height: auto; }
+      .contacto #app form {
+        padding: 50px 35px;
+        margin: 0 auto; }
+        .contacto #app form .form-group input {
+          height: 38px; } }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .contacto {
+      padding: 40px 15px 60px; }
+      .contacto #app {
+        height: auto; }
+        .contacto #app form {
+          padding: 25px 10px 30px; }
+          .contacto #app form .form-group input {
+            height: 38px; }
+          .contacto #app form button {
+            font-size: 14px;
+            width: 100%;
+            margin: 20px 15px 10px; } }
 
 .w__login {
   max-width: 1140px;
