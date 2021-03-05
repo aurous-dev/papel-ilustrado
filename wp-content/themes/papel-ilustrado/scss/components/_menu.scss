@@ -7,6 +7,7 @@
    letter-spacing: 0.05em;
    @include f-center;
    @include fonts-display(700);
+   // Lista principal
    & > li {
       margin-right: 60px;
       &:nth-child(3) {
@@ -141,6 +142,50 @@
          }
       }
    }
+   @include mq($from: tablet, $until: desktop) {
+      justify-content: space-between;
+      & > li {
+         margin-right: 25px;
+         &:nth-child(n+4) {
+            margin-left: 25px;
+         }
+         a {
+            font-size: 12px;
+         }
+      }
+      &> li.menu-item-has-children {
+         &> .sub-menu {
+            top: 189px;
+            padding: 20px 15px 30px;
+            width: 100%;
+            #banner_cuadros {
+               a {
+                  padding: 0;
+               }
+               img {
+                  max-width: 300px;
+               }
+            }
+            & > li {
+               padding: 10px 15px;
+               & > .sub-menu {
+                  padding-top: 10px;
+                  li {
+                     padding: 0;
+                  }
+               }
+            }
+            .column3 {
+               column-count: 3;
+               column-gap: 20px;
+            }
+            .column2 {
+               column-count: 2;
+               column-gap: 20px;
+            }
+         }
+      }
+   }
    @include mq($from: mobile, $until: tablet) {
       flex-direction: column;
       // position: absolute;
@@ -204,6 +249,12 @@
                column-count: 2;
                column-gap: 40px;
             }
+            #banner_cuadros {
+               img {
+                  max-width: unset;
+                  width: 100%;
+               }
+            }
          }
          &.active {
             & > a {
@@ -218,7 +269,3 @@
       }
    }
 }
-// erasmo test banner images
-// #banner_cuadros {
-//    display:none;
-// }

@@ -8190,6 +8190,42 @@ a.text-dark:hover, a.text-dark:focus {
   @media (min-width: 61.25em) and (max-width: 81.24em) {
     .header__logo img {
       width: 150px; } }
+  @media (min-width: 46.25em) and (max-width: 61.24em) {
+    .header > .container {
+      padding: 0;
+      margin: 0;
+      max-width: unset; }
+    .header__banner {
+      font-size: 14px; }
+    .header__logo img {
+      width: 150px; }
+    .header__menu--search a {
+      right: 0; }
+    .header__menu--search svg {
+      width: 18px; }
+    .header__menu--search form {
+      width: 70%; }
+      .header__menu--search form input {
+        padding: 5px 12px;
+        font-size: 12px; }
+    .header__menu--whatsapp {
+      padding-right: 10px;
+      position: relative;
+      top: 1px; }
+      .header__menu--whatsapp img {
+        height: 17px; }
+    .header__menu--sesions a {
+      font-size: 12px; }
+    .header__menu--icons {
+      padding-right: 5px;
+      margin-right: 12px; }
+      .header__menu--icons a {
+        margin-right: 10px; }
+        .header__menu--icons a .icon-circle {
+          font-size: 8px;
+          padding: 0 4px; }
+      .header__menu--icons svg {
+        width: 16px; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .header {
       padding-top: 70px;
@@ -8291,7 +8327,10 @@ a.text-dark:hover, a.text-dark:focus {
             margin-right: 30px; }
         .header__nav .menu-principal-container {
           width: 100%;
-          height: 100%; } }
+          height: 100%;
+          max-height: calc(100vh - 131px);
+          overflow-y: scroll;
+          overflow-x: hidden; } }
 
 #burger-menu {
   position: absolute;
@@ -8302,7 +8341,7 @@ a.text-dark:hover, a.text-dark:focus {
   margin-right: 10px;
   left: 0;
   z-index: 1001; }
-  @media (min-width: 61.25em) {
+  @media (min-width: 46.25em) {
     #burger-menu {
       display: none; } }
   #burger-menu .menu-icon {
@@ -8439,6 +8478,35 @@ a.text-dark:hover, a.text-dark:focus {
         margin-left: 50px; }
     #menu-principal > li.menu-item-has-children > .sub-menu {
       width: 100%; } }
+  @media (min-width: 46.25em) and (max-width: 61.24em) {
+    #menu-principal {
+      justify-content: space-between; }
+      #menu-principal > li {
+        margin-right: 25px; }
+        #menu-principal > li:nth-child(n+4) {
+          margin-left: 25px; }
+        #menu-principal > li a {
+          font-size: 12px; }
+      #menu-principal > li.menu-item-has-children > .sub-menu {
+        top: 189px;
+        padding: 20px 15px 30px;
+        width: 100%; }
+        #menu-principal > li.menu-item-has-children > .sub-menu #banner_cuadros a {
+          padding: 0; }
+        #menu-principal > li.menu-item-has-children > .sub-menu #banner_cuadros img {
+          max-width: 300px; }
+        #menu-principal > li.menu-item-has-children > .sub-menu > li {
+          padding: 10px 15px; }
+          #menu-principal > li.menu-item-has-children > .sub-menu > li > .sub-menu {
+            padding-top: 10px; }
+            #menu-principal > li.menu-item-has-children > .sub-menu > li > .sub-menu li {
+              padding: 0; }
+        #menu-principal > li.menu-item-has-children > .sub-menu .column3 {
+          column-count: 3;
+          column-gap: 20px; }
+        #menu-principal > li.menu-item-has-children > .sub-menu .column2 {
+          column-count: 2;
+          column-gap: 20px; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
     #menu-principal {
       flex-direction: column;
@@ -8489,6 +8557,9 @@ a.text-dark:hover, a.text-dark:focus {
         #menu-principal > li.menu-item-has-children > .sub-menu .column3 {
           column-count: 2;
           column-gap: 40px; }
+        #menu-principal > li.menu-item-has-children > .sub-menu #banner_cuadros img {
+          max-width: unset;
+          width: 100%; }
       #menu-principal > li.menu-item-has-children.active > a::before {
         filter: grayscale(0); }
       #menu-principal > li.menu-item-has-children.active > .sub-menu {

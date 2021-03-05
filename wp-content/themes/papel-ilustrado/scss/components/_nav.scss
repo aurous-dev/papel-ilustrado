@@ -161,6 +161,65 @@
          }
       }
    }
+   @include mq($from: tablet, $until: desktop) {
+      & > .container {
+         padding: 0;
+         margin: 0;
+         max-width: unset;
+      }
+      &__banner {
+         font-size: 14px;
+      }
+      &__logo {
+         img {
+            width: 150px;
+         }
+      }
+      &__menu {
+         &--search {
+            a {
+               right: 0;
+            }
+            svg {
+               width: 18px;
+            }
+            form {
+               width: 70%;
+               input {
+                  padding: 5px 12px;
+                  font-size: 12px;
+               }
+            }
+         }
+         &--whatsapp {
+            padding-right: 10px;
+            position: relative;
+            top: 1px;
+            img {
+               height: 17px;
+            }
+         }
+         &--sesions {
+            a {
+               font-size: 12px;
+            }
+         }
+         &--icons {
+            padding-right: 5px;
+            margin-right: 12px;
+            a {
+               margin-right: 10px;
+               .icon-circle {
+                  font-size: 8px;
+                  padding: 0 4px;
+               }
+            }
+            svg {
+               width: 16px;
+            }
+         }
+      }
+   }
    @include mq($from: mobile, $until: tablet) {
       padding-top: 70px;
       padding-bottom: 0;
@@ -297,14 +356,17 @@
          }
          .menu-principal-container {
             width: 100%;
-            height: 100%
+            height: 100%;
+            max-height: calc(100vh - 131px);
+            overflow-y: scroll;
+            overflow-x: hidden;
          }
       }
    }
 }
 
 #burger-menu{
-   @include mq($from: desktop) {
+   @include mq($from: tablet) {
       display: none;
    }
    position: absolute;
