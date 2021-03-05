@@ -8796,10 +8796,11 @@ a.text-dark:hover, a.text-dark:focus {
   line-height: 1.2;
   font-family: 'Raleway', sans-serif;
   font-weight: 200; }
-  .btn-principal:hover, .btn-card:hover, .btn-principal:active, .btn-card:active {
-    color: #FFFFFF;
-    text-decoration: none;
-    background-color: #F5AF9A; }
+  @media (min-width: 61.25em) {
+    .btn-principal:hover, .btn-card:hover, .btn-principal:active, .btn-card:active {
+      color: #FFFFFF;
+      text-decoration: none;
+      background-color: #F5AF9A; } }
   .btn-principal:disabled, .btn-card:disabled {
     background-color: rgba(42, 61, 66, 0.5); }
   @media (min-width: 20em) and (max-width: 46.24em) {
@@ -8814,20 +8815,22 @@ a.text-dark:hover, a.text-dark:focus {
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
   font-weight: 600; }
-  .btn-send:hover {
-    color: #FFFFFF;
-    background-color: #F4997E; }
+  @media (min-width: 61.25em) {
+    .btn-send:hover {
+      color: #FFFFFF;
+      background-color: #F4997E; } }
 
 .btn-title {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: flex-end; }
-  .btn-title:hover a, .btn-title:active a {
-    color: #2A3D42;
-    text-decoration: none; }
-  .btn-title:hover svg path, .btn-title:active svg path {
-    fill: #F4997E; }
+  @media (min-width: 61.25em) {
+    .btn-title:hover a, .btn-title:active a {
+      color: #2A3D42;
+      text-decoration: none; }
+    .btn-title:hover svg path, .btn-title:active svg path {
+      fill: #F4997E; } }
   .btn-title svg {
     position: absolute;
     right: 0;
@@ -8849,9 +8852,10 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   opacity: 0;
   background-color: #F5AF9A; }
-  .btn-card:hover, .btn-card:active {
-    color: #FFFFFF;
-    background-color: #F5AF9A; }
+  @media (min-width: 61.25em) {
+    .btn-card:hover, .btn-card:active {
+      color: #FFFFFF;
+      background-color: #F5AF9A; } }
 
 .btn-special {
   display: flex;
@@ -8894,9 +8898,10 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 15px;
   font-family: 'Raleway', sans-serif;
   font-weight: 400; }
-  .btn-instagram:hover {
-    background-color: #F4997E;
-    color: #fff; }
+  @media (min-width: 61.25em) {
+    .btn-instagram:hover {
+      background-color: #F4997E;
+      color: #fff; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .btn-instagram {
       position: relative;
@@ -8912,9 +8917,10 @@ a.text-dark:hover, a.text-dark:focus {
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
   font-weight: 600; }
-  .btn-more:hover {
-    color: #FFFFFF;
-    background-color: #F4997E; }
+  @media (min-width: 61.25em) {
+    .btn-more:hover {
+      color: #FFFFFF;
+      background-color: #F4997E; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .btn-more {
       padding: 16px 22px;
