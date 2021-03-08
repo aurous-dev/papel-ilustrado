@@ -207,6 +207,7 @@
         }
     }
 
+    // Clase para efecto hover para ocultar la primera y mostrar la segunda imagen
     &--twice {
         display: flex;
         padding: 10px;
@@ -309,8 +310,20 @@
         }
     }
 
+    @include mq($from: tablet, $until: desktop ) {
+        grid-template-rows: unset;
+        grid-template-columns: unset;
+        display: flex;
+        flex-direction: column;
+        &--twice {
+            max-height: 280px;
+        }
+    }
     @include mq($from: mobile, $until: tablet) {
-        grid-template-rows: auto 1fr;
+        grid-template-rows: unset;
+        grid-template-columns: unset;
+        display: flex;
+        flex-direction: column;
         &--img-full {
             margin: 0 auto;
         }
@@ -337,6 +350,10 @@
                 padding: 6px 10px;
             }
 
+        }
+        &--twice {
+            padding: 0;
+            max-height: 280px;
         }
     }
 }
