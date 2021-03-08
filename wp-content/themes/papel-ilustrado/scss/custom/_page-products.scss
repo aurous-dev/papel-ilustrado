@@ -233,6 +233,87 @@
          }
       }
    }
+   @include mq($from: tablet, $until: desktop) {
+      &__container {
+         span.onsale {
+            font-size: 12px !important;
+         }
+         .product {
+            display: flex;
+         }
+         .woocommerce-product-gallery {
+            flex: 0 0 55%;
+            max-width: 55%;
+            padding-right: 15px;
+         }
+      }
+      &__title {
+         font-size: 20px;
+         margin-bottom: 8px;
+      }
+      &__desc {
+         font-size: 12px;
+         p {
+            margin-bottom: 5px;
+         }
+      }
+      &__price {
+         font-size: 18px !important;
+         padding: 0;
+         margin-bottom: 12px;
+      }
+      &__size {
+         &--form {
+            flex-wrap: wrap;
+            .form__size {
+               margin-bottom: 10px;
+            }
+            .form__title {
+               line-height: 1.4;
+               font-size: 10px;
+            }
+            .form__select {
+               select {
+                  height: 40px;
+                  width: 100%;
+               }
+            }
+         }
+         &--btn {
+            flex-wrap: wrap;
+            padding: 10px 0 0;
+            width: 100%;
+            & > div {
+               flex: 0 0 50%;
+               max-width: 50%;
+               margin-bottom: 10px;
+               a {
+                  font-size: 14px;
+                  svg {
+                     width: 18px;
+                  }
+               }
+            }
+            .size-icon {
+               a {
+                  justify-content: flex-start;
+               }
+            }
+         }
+      }
+      &__btn {
+         .add {
+            padding: 10px 20px !important;
+            font-size: 13px !important;
+            width: 100%;
+         }
+         .buy {
+            padding: 8px 20px;
+            font-size: 13px;
+            width: 100%;
+         }
+      }
+   }
    @include mq($from: mobile, $until: tablet) {
       &__container {
          padding: 0 15px;
@@ -311,6 +392,14 @@
          font-weight: 600;
          letter-spacing: 0.05em;
          border-radius: 0 !important;
+      }
+      @include mq($from: tablet, $until: desktop) {
+         margin: 10px 15px 15px !important;
+         font-size: 16px;
+         a.button.wc-forward {
+            font-size: 14px;
+            padding: 8px 20px !important;;
+         }
       }
       @include mq($from: mobile, $until: tablet) {
          font-size: 14px;

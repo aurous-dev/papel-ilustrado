@@ -11350,6 +11350,59 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
       width: 80%;
       text-decoration: none; }
 
+@media (min-width: 46.25em) and (max-width: 61.24em) {
+  .simple-product__container span.onsale {
+    font-size: 12px !important; }
+  .simple-product__container .product {
+    display: flex; }
+  .simple-product__container .woocommerce-product-gallery {
+    flex: 0 0 55%;
+    max-width: 55%;
+    padding-right: 15px; }
+  .simple-product__title {
+    font-size: 20px;
+    margin-bottom: 8px; }
+  .simple-product__desc {
+    font-size: 12px; }
+    .simple-product__desc p {
+      margin-bottom: 5px; }
+  .simple-product__price {
+    font-size: 18px !important;
+    padding: 0;
+    margin-bottom: 12px; }
+  .simple-product__size--form {
+    flex-wrap: wrap; }
+    .simple-product__size--form .form__size {
+      margin-bottom: 10px; }
+    .simple-product__size--form .form__title {
+      line-height: 1.4;
+      font-size: 10px; }
+    .simple-product__size--form .form__select select {
+      height: 40px;
+      width: 100%; }
+  .simple-product__size--btn {
+    flex-wrap: wrap;
+    padding: 10px 0 0;
+    width: 100%; }
+    .simple-product__size--btn > div {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-bottom: 10px; }
+      .simple-product__size--btn > div a {
+        font-size: 14px; }
+        .simple-product__size--btn > div a svg {
+          width: 18px; }
+    .simple-product__size--btn .size-icon a {
+      justify-content: flex-start; }
+  .simple-product__btn .add {
+    padding: 10px 20px !important;
+    font-size: 13px !important;
+    width: 100%; }
+  .simple-product__btn .buy {
+    padding: 8px 20px;
+    font-size: 13px;
+    width: 100%; } }
+
 @media (min-width: 20em) and (max-width: 46.24em) {
   .simple-product__container {
     padding: 0 15px; }
@@ -11408,6 +11461,13 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
     font-weight: 600;
     letter-spacing: 0.05em;
     border-radius: 0 !important; }
+  @media (min-width: 46.25em) and (max-width: 61.24em) {
+    .woocommerce-notices-wrapper .woocommerce-message {
+      margin: 10px 15px 15px !important;
+      font-size: 16px; }
+      .woocommerce-notices-wrapper .woocommerce-message a.button.wc-forward {
+        font-size: 14px;
+        padding: 8px 20px !important; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .woocommerce-notices-wrapper .woocommerce-message {
       font-size: 14px;
