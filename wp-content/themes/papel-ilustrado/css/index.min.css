@@ -8969,17 +8969,17 @@ a.text-dark:hover, a.text-dark:focus {
     z-index: 1;
     align-items: center;
     justify-content: center; }
-    .card__container--img::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(42, 61, 66, 0.4);
-      opacity: 0;
-      transition: all ease-in-out 0.3s; }
     .card__container--img .btn-card {
       transition: all ease-in-out 0.5s; }
     @media (min-width: 61.25em) {
+      .card__container--img::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(42, 61, 66, 0.4);
+        opacity: 0;
+        transition: all ease-in-out 0.3s; }
       .card__container--img:hover::before {
         opacity: 1; }
       .card__container--img:hover .btn-card {
@@ -8996,10 +8996,11 @@ a.text-dark:hover, a.text-dark:focus {
       width: -moz-fit-content;
       height: fit-content;
       height: -moz-fit-content; }
-      .card__container--img-full:hover {
-        background-color: rgba(42, 61, 66, 0.4); }
-        .card__container--img-full:hover .btn-card {
-          opacity: 1; }
+      @media (min-width: 61.25em) {
+        .card__container--img-full:hover {
+          background-color: rgba(42, 61, 66, 0.4); }
+          .card__container--img-full:hover .btn-card {
+            opacity: 1; } }
       .card__container--img-full img {
         z-index: -1;
         max-height: 100%;
@@ -9202,6 +9203,8 @@ a.text-dark:hover, a.text-dark:focus {
       grid-template-columns: unset;
       display: flex;
       flex-direction: column; }
+      .card__container--img {
+        padding: 5px; }
       .card__container--twice {
         max-height: 280px; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
@@ -9210,6 +9213,9 @@ a.text-dark:hover, a.text-dark:focus {
       grid-template-columns: unset;
       display: flex;
       flex-direction: column; }
+      .card__container--img {
+        padding: 5px;
+        height: 280px; }
       .card__container--img-full {
         margin: 0 auto; }
       .card__container--desc-title h3 {
@@ -11190,6 +11196,10 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
       .page-composiciones__grid .cards.test {
         flex: 0 0 33% !important;
         max-width: 33% !important; }
+  @media (min-width: 46.25em) and (max-width: 61.24em) {
+    .page-composiciones__grid .cards {
+      flex: 0 0 33.333%;
+      max-width: 33.333%; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .page-composiciones {
       padding-bottom: 60px; }

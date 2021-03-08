@@ -13,19 +13,19 @@
         background-color: $color-white;
         z-index: 1;
         @include f-center;
-        &::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: rgba($color: $color-indigo, $alpha: 0.4);
-            opacity: 0;
-            transition: $tr3;
-        }
         .btn-card {
             transition: $tr5;
         }
         @include mq($from: desktop) {
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: $color-indigo, $alpha: 0.4);
+                opacity: 0;
+                transition: $tr3;
+            }
             &:hover {
                 &::before {
                     opacity: 1;
@@ -47,10 +47,12 @@
             width: -moz-fit-content;
             height: fit-content;
             height: -moz-fit-content;
-            &:hover {
-                background-color: rgba($color: $color-indigo, $alpha: 0.4);
-                .btn-card {
-                    opacity: 1;
+            @include mq($from: desktop) {
+                &:hover {
+                    background-color: rgba($color: $color-indigo, $alpha: 0.4);
+                    .btn-card {
+                        opacity: 1;
+                    }
                 }
             }
             img {
@@ -315,6 +317,9 @@
         grid-template-columns: unset;
         display: flex;
         flex-direction: column;
+        &--img {
+            padding: 5px;
+        }
         &--twice {
             max-height: 280px;
         }
@@ -324,6 +329,10 @@
         grid-template-columns: unset;
         display: flex;
         flex-direction: column;
+        &--img {
+            padding: 5px;
+            height: 280px;
+        }
         &--img-full {
             margin: 0 auto;
         }
