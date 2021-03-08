@@ -11216,6 +11216,10 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
       flex: 0 0 20%;
       max-width: 20%;
       padding: 20px 0; }
+  @media (min-width: 46.25em) and (max-width: 61.24em) {
+    .search-results__grid .cards {
+      flex: 0 0 33.333%;
+      max-width: 33.333%; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .search-results {
       padding-bottom: 60px; }
