@@ -9,6 +9,7 @@ import { Validator } from "vee-validate";
 import es from "vee-validate/dist/locale/es";
 import { VueReCaptcha } from "vue-recaptcha-v3";
 import ButtonSpinner from "vue-button-spinner";
+// import Vue from 'vue';
 
 // Import Vue FILES
 import formu from "./components/ContactForm.vue";
@@ -24,6 +25,12 @@ AOS.init({
     once: true,
 });
 // Start AOS library
+
+// JS Modules
+import initApp from './components/constructor.js'
+// JS Modules
+
+
 // Import Slick Slider & bootstrap
 require("./app/slick.js");
 require("./bootstrap.js");
@@ -50,6 +57,9 @@ const app = new Vue({
         example,
     },
 });
+
+// Import JS
+const application = new initApp();
 
 // HOME SLIDER
 $(".hero__slider").slick({
@@ -233,170 +243,6 @@ $(".slider-nav").slick({
         },
     ],
 });
-$(".slider-for").on("setPosition", function(event, slick) {
-    console.log(event);
-});
-
-// --------------------VARIABLES--------------------
-
-// Menu dropdown Desktop
-const tr_nav = document.querySelector("#menu-principal");
-const tr_preventDefault = document.querySelectorAll(
-    "#menu-principal .menu-item-has-children > a"
-);
-
-// btns burguer and search
-const menu = document.querySelector(".menu-icon");
-const tr_header = document.querySelector(".header");
-const tr_search = document.querySelector(".search-mobile");
-const menu_container = document.querySelector(".header__container");
-
-// Height menu fixed
-let responsives = window.matchMedia("(max-width: 979px)");
-
-// ------------------EVENTLISTENERS------------------
-
-// Menu dropdown Deskto
-tr_nav.addEventListener("click", clickMenu);
-
-// Columnas
-document.addEventListener("DOMContentLoaded", columnas);
-document.addEventListener("DOMContentLoaded", carts);
-
-// btns burguer and search
-menu.addEventListener("click", showHidden);
-tr_search.addEventListener("click", showSearch);
-
-// -------------------FUNCTIONS-------------------
-
-// Menu dropdown Desktop
-function clickMenu(a) {
-    const menu = a.path[2].children;
-    Array.from(menu).forEach((m) => {
-        const item = a.target.parentNode;
-        if (m.classList.contains("menu-item-has-children")) {
-            if (
-                item.classList === m.classList &&
-                !item.classList.contains("active")
-            ) {
-                m.classList.add("active");
-            } else {
-                m.classList.remove("active");
-            }
-        }
-    });
-}
-
-// Prevenir que se comporte como un enlace
-tr_preventDefault.forEach((a) => {
-    a.addEventListener("click", (e) => {
-        e.preventDefault();
-    });
-});
-
-// Columnas para el menu
-function columnas() {
-    const items = document.querySelectorAll(
-        "#menu-principal > .menu-item-has-children > .sub-menu"
-    );
-    items.forEach((m) => {
-        const item = m.children.length;
-        for (let i = 0; i < item; i++) {
-            if (m.children[i].children.length > 1) {
-                const numero = m.children[i].children[1].children.length;
-                const clase = m.children[i].children[1];
-
-                if (numero >= 9) {
-                    clase.classList.add("column3");
-                } else if (numero > 3 && numero < 9) {
-                    clase.classList.add("column2");
-                } else {
-                    clase.classList.add("column");
-                }
-            }
-        }
-    });
-}
-
-// btns burguer and search
-menu_container.addEventListener("click", (e) => {
-    const test = e.path;
-    // const menuHeader_burguer = document.querySelector('.menu-icon');
-    const menuHeader_search = document.querySelector(".header__menu--search");
-    // console.log(menuHeader_search.children[1])
-    // console.log(menuHeader_burguer.children[0])
-    test.forEach((m) => {
-        if (m.classList && m.classList[0]) {
-            if (m.classList[0] === "search-mobile") {
-                if (menu.classList.contains("active")) {
-                    menu.classList.remove("active");
-                    tr_header.classList.remove("active");
-                }
-            }
-
-            if (m.classList[0] === "menu-icon") {
-                if (menuHeader_search.classList.contains("srch")) {
-                    menuHeader_search.classList.remove("srch");
-                }
-            }
-        }
-    });
-});
-function showHidden() {
-    menu.classList.toggle("active");
-    tr_header.classList.toggle("active");
-}
-function showSearch(e) {
-    e.preventDefault();
-    const menu_search = document.querySelector(".header__menu--search");
-    menu_search.classList.toggle("srch");
-}
-
-// Height menu fixed
-// navResponsive(responsives);
-// responsives.addListener(navResponsive);
-
-// function navResponsive(x) {
-//     console.log(x)
-//     if (x.matches) {
-//         tr_menu.forEach((mes) => {
-//             if (mes.classList.contains("menu-item-has-children")) {
-//                 const btn = mes.children[0];
-//                 const dropdown = mes.children[1];
-//                 btn.addEventListener("click", (e) => {
-//                     e.preventDefault();
-//                     dropdown.classList.toggle("down");
-//                     btn.classList.toggle("active");
-//                     tr_rrss.style.top = `calc(${tr_menuHeight.clientHeight}px + 5px)`;
-//                 });
-//             }
-//         });
-//         tr_rrss.style.top = `-600px`;
-//     }
-// }
-
-// Zoom img
-// $(document).ready(function(){
-//     $('.image-zoom')
-//         .wrap('<span style="display:inline-block"></span>')
-//         .css('display', 'block')
-//         .parent()
-//         .zoom({
-//             url: $(this).find('img').attr('data-zoom')
-//         });
+// $(".slider-for").on("setPosition", function(event, slick) {
+//     console.log(event);
 // });
-function carts() {
-    const prueba = document.querySelectorAll(".w-cart__table--name a");
-    if (prueba) {
-        prueba.forEach((m) => {
-            const number = m.textContent.indexOf(" - ");
-            const final = m.textContent.length;
-            m.innerHTML = `${m.textContent.substring(0, number)} <br>
-                            <span> ${m.textContent.substring(
-                                number + 3,
-                                final
-                            )} </span>
-                            `;
-        });
-    }
-}
