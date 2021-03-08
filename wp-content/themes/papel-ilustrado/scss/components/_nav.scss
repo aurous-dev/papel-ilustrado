@@ -223,6 +223,9 @@
    @include mq($from: mobile, $until: tablet) {
       padding-top: 70px;
       padding-bottom: 0;
+      &__banner {
+         font-size: 14px;
+      }
       &.active {
          .header__menu--sesions {
             top: 70px;
