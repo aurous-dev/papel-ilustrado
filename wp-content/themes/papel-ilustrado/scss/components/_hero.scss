@@ -157,5 +157,24 @@
             }
          }
       }
+      &__slider {
+         &--container {
+            &.btn-left {
+               .hero__principal--desc {
+                  a.btn-principal {
+                     order: 2;
+                  }
+               }
+            }
+            &.btn-down {
+               .hero__principal--desc {
+                  bottom: 0;
+                  a.btn-principal {
+                     
+                  }
+               }
+            }
+         }
+      }
    }
 }
