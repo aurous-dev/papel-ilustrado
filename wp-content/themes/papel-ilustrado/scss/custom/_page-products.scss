@@ -187,8 +187,8 @@
          transition: $tr3;
          @include fonts-display(500);
          &:hover {
-            background-color: $color-salmon;
-            border: 1px solid $color-salmon;
+            background-color: $color-salmon !important;
+            border: 1px solid $color-salmon !important;
             color: $color-white;
          }
       }

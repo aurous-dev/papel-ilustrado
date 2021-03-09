@@ -11458,8 +11458,8 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
     font-weight: 500; }
     .simple-product__btn a:hover,
     .simple-product__btn button:hover {
-      background-color: #F4997E;
-      border: 1px solid #F4997E;
+      background-color: #F4997E !important;
+      border: 1px solid #F4997E !important;
       color: #FFFFFF; }
   .simple-product__btn .add {
     margin: 10px 0 !important;
