@@ -8819,6 +8819,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 16px;
   letter-spacing: 0.05em;
   line-height: 1.2;
+  transition: all ease-in-out 0.3s;
   font-family: 'Raleway', sans-serif;
   font-weight: 200; }
   @media (min-width: 61.25em) {
@@ -8842,6 +8843,7 @@ a.text-dark:hover, a.text-dark:focus {
   color: #3D3F40;
   padding: 13px 25px;
   text-transform: uppercase;
+  transition: all ease-in-out 0.3s;
   font-family: 'Raleway', sans-serif;
   font-weight: 600; }
   @media (min-width: 61.25em) {
@@ -8853,12 +8855,14 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  transition: all ease-in-out 0.3s; }
   @media (min-width: 61.25em) {
     .btn-title:hover a, .btn-title:active a {
       color: #2A3D42;
       text-decoration: none; }
     .btn-title:hover svg path, .btn-title:active svg path {
+      transition: all ease-in-out 0.3s;
       fill: #F4997E; } }
   .btn-title svg {
     position: absolute;
@@ -8895,7 +8899,8 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 40px 15px;
   color: #FFFFFF;
   text-align: center;
-  background: linear-gradient(180deg, rgba(42, 61, 66, 0.7) 14.42%, rgba(42, 61, 66, 0.5) 109.2%); }
+  background: linear-gradient(180deg, rgba(42, 61, 66, 0.7) 14.42%, rgba(42, 61, 66, 0.5) 109.2%);
+  transition: all ease-in-out 0.3s; }
   .btn-special h3 {
     padding-bottom: 30px; }
   .btn-special__arrow {
@@ -8925,6 +8930,7 @@ a.text-dark:hover, a.text-dark:focus {
   color: #fff;
   text-transform: uppercase;
   font-size: 15px;
+  transition: all ease-in-out 0.3s;
   font-family: 'Raleway', sans-serif;
   font-weight: 400; }
   @media (min-width: 61.25em) {
@@ -8944,6 +8950,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 20px 24px;
   color: #FFFFFF;
   text-transform: uppercase;
+  transition: all ease-in-out 0.3s;
   font-family: 'Raleway', sans-serif;
   font-weight: 600; }
   @media (min-width: 61.25em) {
