@@ -8731,7 +8731,8 @@ a.text-dark:hover, a.text-dark:focus {
         position: absolute;
         flex-direction: column;
         text-align: center;
-        bottom: -80px; }
+        bottom: -80px;
+        transition: all ease-in-out 0.3s; }
         .hero__slider--container.btn-down .hero__principal--desc h2 {
           order: 1; }
         .hero__slider--container.btn-down .hero__principal--desc a.btn-principal, .hero__slider--container.btn-down .hero__principal--desc a.btn-card {
