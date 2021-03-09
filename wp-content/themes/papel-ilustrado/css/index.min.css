@@ -9907,6 +9907,7 @@ h2.w-cart__title {
     border-radius: 0;
     text-transform: uppercase;
     letter-spacing: 0.03em;
+    transition: all ease-in-out 0.3s;
     font-family: 'Raleway', sans-serif;
     font-weight: 600; }
     .w-cart__form .w-cart__table .w-cart__actions button:hover {
@@ -9989,10 +9990,11 @@ h2.w-cart__title {
   border-radius: 0 !important;
   text-transform: uppercase;
   letter-spacing: .02em;
+  transition: all ease-in-out 0.3s;
   font-family: 'Raleway', sans-serif;
   font-weight: 600; }
   .w-cart__total a:hover {
-    background-color: #F4997E; }
+    background-color: #F4997E !important; }
 
 @media (min-width: 20em) and (max-width: 46.24em) {
   .w-cart__total a {
@@ -10008,6 +10010,7 @@ h2.w-cart__title {
   letter-spacing: 0.05em;
   line-height: 1.2 !important;
   border-radius: 0;
+  transition: all ease-in-out 0.3s;
   font-family: 'Raleway', sans-serif;
   font-weight: 200; }
   @media (min-width: 61.25em) {

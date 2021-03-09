@@ -98,6 +98,7 @@ h2.w-cart__title {
             border-radius: 0;
             text-transform: uppercase;
             letter-spacing: 0.03em;
+            transition: $tr3;
             @include fonts-display(600); 
             &:hover {
                background-color: $color-salmon;
@@ -209,9 +210,10 @@ h2.w-cart__title {
       border-radius: 0 !important;
       text-transform: uppercase;
       letter-spacing: .02em;
+      transition: $tr3;
       @include fonts-display(600);
       &:hover {
-         background-color: $color-salmon;
+         background-color: $color-salmon !important;
       }
    }
    @include mq($from: mobile, $until: tablet) {
@@ -232,6 +234,7 @@ h2.w-cart__title {
       letter-spacing: 0.05em;
       line-height: 1.2 !important;
       border-radius: 0;
+      transition: $tr3;
       @include fonts-display(200);
       @include mq($from:desktop) {
          &:hover,
