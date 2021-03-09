@@ -17,8 +17,13 @@
       a {
          color: $color-white;
          text-decoration: underline;
+         text-decoration-color: $color-white;
+         transition: $tr3;
+         
          &:hover {
             color: $color-salmon;
+            text-decoration: underline;
+            text-decoration-color: $color-indigo;
          }
       }
    }
@@ -93,14 +98,19 @@
             justify-content: center;
             align-items: flex-end;
             margin-right: 15px;
+            transition: $tr3;
             svg {
                margin-right: -3px;
+               path {
+                  transition: $tr3;
+               }
             }
             .icon-circle {
                background: $color-indigo;
                border-radius: 10px;
                padding: 0 5px;
                font-size: 10px;
+               transition: $tr3;
             }
             &:hover {
                svg {
@@ -119,8 +129,14 @@
             color: $color-indigo;
             text-decoration: none;
             font-size: $f-normal;
+            transition: $tr3;
+            b {
+               transition: $tr3;
+            }
             &:hover {
-               color: $color-indigo;
+               b {
+                  color: $color-salmon;
+               }
             }
          }
       }
@@ -391,29 +407,31 @@
    left: 0;
    z-index: 1001;
    .menu-icon {
-       display: inline-block;
-       width: 35px;
-       height: 35px;
-       padding: 4px;
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      padding: 4px;
    }
    .menu-icon path {
-       stroke: $color-black;
-       stroke-width: 10;
-       stroke-linecap: round;
-       transition: all 0.5s;
-       transform: rotate(0deg);
-       will-change: transform, opacity;
-       transform-origin: center;
+      stroke: $color-black;
+      stroke-width: 10;
+      stroke-linecap: round;
+      transition: all 0.5s;
+      transform: rotate(0deg);
+      will-change: transform, opacity;
+      transform-origin: center;
    }
    .menu-li {
-       cursor: pointer;
-       width: 35px;
-       height: 35px;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      transition: $tr3;
    }
    .menu-li:hover path,
    .menu-li:focus path,
    .menu-li:active path {
-       stroke: $color-dark_gray;
+      transition: $tr3;
+      stroke: $color-dark_gray;
    }
    .menu-icon.active path:nth-child(1) {
        opacity: 0;
