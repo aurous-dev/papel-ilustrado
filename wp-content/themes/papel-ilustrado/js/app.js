@@ -68,7 +68,7 @@ $(".hero__slider").slick({
     slidesToScroll: 1,
     dots: false,
     arrows: true,
-    fade: true,
+    // fade: true,
 });
 $(".paiting__slider").slick({
     infinite: true,

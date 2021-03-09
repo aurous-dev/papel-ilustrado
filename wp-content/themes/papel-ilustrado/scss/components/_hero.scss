@@ -1,42 +1,7 @@
 .hero {
    padding: 20px 0;
-   &__principal {
-      height: 500px;
-      display: flex;
-      align-items: flex-end;
-      @include bg-center;
-      &--desc {
-         background-color: rgba($color: $color-dark_gray, $alpha: .5);
-         display: flex;
-         width: 100%;
-         padding: 20px 50px;
-         align-items: center;
-         justify-content: space-around;
-         h2 {
-            max-width: 50%;
-            text-transform: uppercase;
-            font-size: 32px;
-            color: $color-white;
-            line-height: 1.4;
-            @include fonts-display(500);
-         }
-      }
-   }
-   &__card {
-      justify-content: space-between;
-      margin: 20px 0;
-      &--container {
-         height: 380px;
-         max-width: 32.8%;
-         display: flex;
-         flex-direction: column;
-         justify-content: flex-end;
-         align-items: center;
-         padding-bottom: 25px;
-         @include bg-center;
-      }
-   }
    &__slider {
+      position: relative;
       @include slider__marginB;
       .slick-prev {
          @include slider__arrowLeft;
@@ -109,6 +74,42 @@
                display: none;
             }
          }
+      }
+   }
+   &__principal {
+      height: 500px;
+      display: flex;
+      align-items: flex-end;
+      @include bg-center;
+      &--desc {
+         background-color: rgba($color: $color-dark_gray, $alpha: .5);
+         display: flex;
+         width: 100%;
+         padding: 20px 50px;
+         align-items: center;
+         justify-content: space-around;
+         h2 {
+            max-width: 50%;
+            text-transform: uppercase;
+            font-size: 32px;
+            color: $color-white;
+            line-height: 1.4;
+            @include fonts-display(500);
+         }
+      }
+   }
+   &__card {
+      justify-content: space-between;
+      margin: 20px 0;
+      &--container {
+         height: 380px;
+         max-width: 32.8%;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+         align-items: center;
+         padding-bottom: 25px;
+         @include bg-center;
       }
    }
    @include mq($from: tablet, $until: desktop) {
