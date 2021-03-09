@@ -10529,7 +10529,8 @@ form.w-checkout__container {
 body, html {
   background-color: rgba(229, 229, 229, 0.15);
   overflow-x: hidden;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth; }
   @media (min-width: 81.25em) {
     body .woocommerce, html .woocommerce {
       min-height: 55vh; } }
