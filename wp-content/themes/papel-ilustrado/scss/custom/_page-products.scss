@@ -110,19 +110,20 @@
             display: flex;
             width: fit-content;
             &:hover {
-                svg {
-                    path {
-                        fill: $color-salmon;
-                    }
-                }
+               svg {
+                  path {
+                     fill: $color-salmon;
+                  }
+               }
             }
             svg {
-                path {
-                    fill-rule: evenodd !important;
-                    fill: rgba(229, 229, 229, 0.15);
-                    stroke: $color-salmon;
-                    stroke-width: 2px;
-                }
+               path {
+                  fill-rule: evenodd !important;
+                  fill: rgba(229, 229, 229, 0.15);
+                  stroke: $color-salmon;
+                  stroke-width: 2px;
+                  transition: $tr3;
+               }
             }
          }
          .size-icon {
@@ -183,6 +184,7 @@
          text-align: center;
          text-transform: uppercase;
          letter-spacing: 0.05em;
+         transition: $tr3;
          @include fonts-display(500);
          &:hover {
             background-color: $color-salmon;
@@ -392,6 +394,7 @@
          font-weight: 600;
          letter-spacing: 0.05em;
          border-radius: 0 !important;
+         transition: $tr3;
          @include mq($from:desktop) {
             &:hover,
             &:active {
@@ -407,6 +410,7 @@
          color: $color-white;
          padding: 6px 25px;
          font-size: 16px;
+         transition: $tr3;
          @include mq($from:desktop) {
             &:hover,
             &:active {

@@ -9011,10 +9011,13 @@ a.text-dark:hover, a.text-dark:focus {
     padding: 20px;
     background-color: #FFFFFF;
     z-index: 1;
+    transition: all ease-in-out 0.3s;
     align-items: center;
     justify-content: center; }
     .card__container--img .btn-card {
       transition: all ease-in-out 0.5s; }
+    .card__container--img::before {
+      transition: all ease-in-out 0.3s; }
     @media (min-width: 61.25em) {
       .card__container--img::before {
         content: '';
@@ -9025,7 +9028,8 @@ a.text-dark:hover, a.text-dark:focus {
         opacity: 0;
         transition: all ease-in-out 0.3s; }
       .card__container--img:hover::before {
-        opacity: 1; }
+        opacity: 1;
+        transition: all ease-in-out 0.3s; }
       .card__container--img:hover .btn-card {
         opacity: 1; } }
     .card__container--img img {
@@ -9039,7 +9043,8 @@ a.text-dark:hover, a.text-dark:focus {
       width: fit-content;
       width: -moz-fit-content;
       height: fit-content;
-      height: -moz-fit-content; }
+      height: -moz-fit-content;
+      transition: all ease-in-out 0.3s; }
       @media (min-width: 61.25em) {
         .card__container--img-full:hover {
           background-color: rgba(42, 61, 66, 0.4); }
@@ -9054,6 +9059,7 @@ a.text-dark:hover, a.text-dark:focus {
     display: flex;
     padding: 20px;
     z-index: 1;
+    transition: all ease-in-out 0.3s;
     align-items: center;
     justify-content: center; }
     .card__container--imgOut::before {
@@ -9062,7 +9068,8 @@ a.text-dark:hover, a.text-dark:focus {
       width: 100%;
       height: 100%;
       background-color: rgba(42, 61, 66, 0.4);
-      opacity: 0; }
+      opacity: 0;
+      transition: all ease-in-out 0.3s; }
     @media (min-width: 61.25em) {
       .card__container--imgOut:hover::before {
         opacity: 1; }
@@ -9130,7 +9137,8 @@ a.text-dark:hover, a.text-dark:focus {
       fill-rule: evenodd !important;
       fill: #FFFFFF;
       stroke: #F4997E;
-      stroke-width: 2px; }
+      stroke-width: 2px;
+      transition: all ease-in-out 0.3s; }
   .card__container--search {
     position: relative;
     font-size: 11px;
@@ -9139,6 +9147,7 @@ a.text-dark:hover, a.text-dark:focus {
     display: flex;
     width: fit-content;
     height: fit-content;
+    transition: all ease-in-out 0.3s;
     align-items: center;
     justify-content: center;
     font-family: 'Raleway', sans-serif;
@@ -9188,12 +9197,14 @@ a.text-dark:hover, a.text-dark:focus {
       max-height: 100%; }
       .card__container--twice img.principal {
         visibility: visible;
-        opacity: 1; }
+        opacity: 1;
+        transition: all ease-in-out 0.3s; }
       .card__container--twice img.secundary {
         position: absolute;
         padding: 10px;
         visibility: hidden;
-        opacity: 0; }
+        opacity: 0;
+        transition: all ease-in-out 0.3s; }
     .card__container--twice .twice-btn {
       opacity: 0;
       position: absolute;
@@ -9203,7 +9214,8 @@ a.text-dark:hover, a.text-dark:focus {
       background-color: #2A3D42;
       color: white;
       text-align: center;
-      font-size: 11px; }
+      font-size: 11px;
+      transition: all ease-in-out 0.3s; }
   .card__container--twiceOut {
     display: flex;
     padding: 10px;
@@ -9225,12 +9237,14 @@ a.text-dark:hover, a.text-dark:focus {
       max-height: 100%; }
       .card__container--twiceOut img.principal {
         visibility: visible;
-        opacity: 1; }
+        opacity: 1;
+        transition: all ease-in-out 0.3s; }
       .card__container--twiceOut img.secundary {
         position: absolute;
         padding: 10px;
         visibility: hidden;
-        opacity: 0; }
+        opacity: 0;
+        transition: all ease-in-out 0.3s; }
     .card__container--twiceOut .twice-btn {
       opacity: 0;
       position: absolute;
@@ -9240,7 +9254,8 @@ a.text-dark:hover, a.text-dark:focus {
       background-color: #2A3D42;
       color: white;
       text-align: center;
-      font-size: 11px; }
+      font-size: 11px;
+      transition: all ease-in-out 0.3s; }
   @media (min-width: 46.25em) and (max-width: 61.24em) {
     .card__container {
       grid-template-rows: unset;
@@ -9288,8 +9303,10 @@ a.text-dark:hover, a.text-dark:focus {
     max-width: 100%;
     max-height: 100%; }
 
-.cards:hover {
-  text-decoration: none; }
+.cards {
+  transition: all ease-in-out 0.3s; }
+  .cards:hover {
+    text-decoration: none; }
 
 .big-card {
   padding: 0 10px;
@@ -11061,6 +11078,7 @@ body, html {
     .section__news:nth-child(odd) .heart-icon:hover svg path {
       fill: #F4997E; }
     .section__news:nth-child(odd) .heart-icon svg path {
+      transition: all ease-in-out 0.3s;
       fill: rgba(229, 229, 229, 0.2); }
   .section__news--title h2 {
     font-size: 22px;
@@ -11192,6 +11210,7 @@ body, html {
     fill: #F4997E; }
   .section__news .fiveColumn__slider .heart-icon svg path,
   .section__news .fourColumn__slider .heart-icon svg path {
+    transition: all ease-in-out 0.3s;
     fill: rgba(210, 210, 210, 0.2); }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .section__news .fiveColumn__slider .card__container--desc-title h3,
@@ -11378,7 +11397,8 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
       fill-rule: evenodd !important;
       fill: rgba(229, 229, 229, 0.15);
       stroke: #F4997E;
-      stroke-width: 2px; }
+      stroke-width: 2px;
+      transition: all ease-in-out 0.3s; }
   .simple-product__size--btn .size-icon a {
     display: flex;
     justify-content: center;
@@ -11417,6 +11437,7 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    transition: all ease-in-out 0.3s;
     font-family: 'Raleway', sans-serif;
     font-weight: 500; }
     .simple-product__btn a:hover,
@@ -11567,7 +11588,8 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     letter-spacing: 0.05em;
-    border-radius: 0 !important; }
+    border-radius: 0 !important;
+    transition: all ease-in-out 0.3s; }
     @media (min-width: 61.25em) {
       .woocommerce-notices-wrapper .woocommerce-message a.button.wc-forward:hover, .woocommerce-notices-wrapper .woocommerce-message a.button.wc-forward:active {
         color: #FFFFFF !important;
@@ -11578,7 +11600,8 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
     background: #2A3D42;
     color: #FFFFFF;
     padding: 6px 25px;
-    font-size: 16px; }
+    font-size: 16px;
+    transition: all ease-in-out 0.3s; }
     @media (min-width: 61.25em) {
       .woocommerce-notices-wrapper .woocommerce-message .restore-item:hover, .woocommerce-notices-wrapper .woocommerce-message .restore-item:active {
         color: #FFFFFF !important;
