@@ -9386,7 +9386,8 @@ a.text-dark:hover, a.text-dark:focus {
           .footer__info--nav ul li a {
             text-decoration: none;
             color: #FFFFFF;
-            font-size: 13px; }
+            font-size: 13px;
+            transition: all ease-in-out 0.3s; }
             .footer__info--nav ul li a:hover {
               color: #F4997E; }
     .footer__info--subs {
@@ -9422,12 +9423,14 @@ a.text-dark:hover, a.text-dark:focus {
       display: flex; }
       .footer__direction--contact-email a, .footer__direction--contact-phone a {
         color: #FFFFFF;
+        transition: all ease-in-out 0.3s;
         transition: all ease-in-out 0.3s; }
         .footer__direction--contact-email a:hover, .footer__direction--contact-phone a:hover {
           color: #F4997E; }
     .footer__direction--rrss a:hover i {
       color: #F4997E; }
     .footer__direction--rrss i {
+      transition: all ease-in-out 0.3s;
       font-size: 25px; }
   @media (min-width: 46.25em) and (max-width: 81.24em) {
     .footer__logo {
