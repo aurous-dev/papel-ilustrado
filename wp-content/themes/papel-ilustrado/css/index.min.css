@@ -9658,6 +9658,7 @@ a.text-dark:hover, a.text-dark:focus {
         border-radius: 0;
         text-transform: uppercase;
         letter-spacing: .02em;
+        transition: all ease-in-out 0.3s;
         font-family: 'Raleway', sans-serif;
         font-weight: 400; }
         .w__login .w__login--column .w__login--form button:hover {
@@ -9731,6 +9732,7 @@ a.text-dark:hover, a.text-dark:focus {
       letter-spacing: .02em;
       text-align: center;
       font-weight: 440 !important;
+      transition: all ease-in-out 0.3s;
       font-family: 'Raleway', sans-serif;
       font-weight: 400; }
       .w-lost__container .w-lost__form button:hover {
@@ -9792,6 +9794,7 @@ a.text-dark:hover, a.text-dark:focus {
     text-transform: uppercase;
     letter-spacing: .02em;
     text-align: center;
+    transition: all ease-in-out 0.3s;
     font-family: 'Raleway', sans-serif;
     font-weight: 400; }
     .w-reset__form .w-reset__form--btn button:hover {
@@ -10240,6 +10243,7 @@ form.w-checkout__container {
         color: #2A3D42;
         text-transform: uppercase;
         letter-spacing: 0.03em;
+        transition: all ease-in-out 0.3s;
         font-family: 'Raleway', sans-serif;
         font-weight: 700; }
         .woocommerce-account nav.woocommerce-MyAccount-navigation ul li a:hover {
@@ -10259,7 +10263,8 @@ form.w-checkout__container {
   color: #2A3D42; }
   .woocommerce-account .woocommerce-MyAccount-content a {
     color: #2A3D42;
-    text-decoration: underline; }
+    text-decoration: underline;
+    transition: all ease-in-out 0.3s; }
     .woocommerce-account .woocommerce-MyAccount-content a:hover {
       color: #F4997E; }
   .woocommerce-account .woocommerce-MyAccount-content .woocommerce-message--info {
@@ -10285,6 +10290,7 @@ form.w-checkout__container {
       text-transform: uppercase;
       letter-spacing: .02em;
       padding: 10px 30px;
+      transition: all ease-in-out 0.3s;
       font-family: 'Raleway', sans-serif;
       font-weight: 400; }
       .woocommerce-account .woocommerce-MyAccount-content .woocommerce-message--info .woocommerce-Button.button:hover {
@@ -10346,6 +10352,7 @@ form.w-checkout__container {
     font-size: 14px;
     border-radius: 0;
     outline: none !important;
+    transition: all ease-in-out 0.3s;
     font-family: 'Raleway', sans-serif;
     font-weight: 700; }
     .woocommerce-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm .button:hover {
@@ -10398,6 +10405,7 @@ form.w-checkout__container {
     font-size: 14px;
     border-radius: 0;
     outline: none !important;
+    transition: all ease-in-out 0.3s;
     font-family: 'Raleway', sans-serif;
     font-weight: 700; }
     .woocommerce-account .woocommerce-MyAccount-content form .woocommerce-address-fields .button:hover {
