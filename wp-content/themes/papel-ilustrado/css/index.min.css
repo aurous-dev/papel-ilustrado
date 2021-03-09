@@ -9576,8 +9576,12 @@ a.text-dark:hover, a.text-dark:focus {
       border: none;
       border-radius: 0;
       letter-spacing: 0.05em;
+      transition: all ease-in-out 0.3s;
       font-family: 'Raleway', sans-serif;
       font-weight: 500; }
+      @media (min-width: 61.25em) {
+        .contacto #app form button:hover {
+          background-color: #F4997E; } }
   @media (min-width: 46.25em) and (max-width: 61.24em) {
     .contacto #app {
       height: auto; }

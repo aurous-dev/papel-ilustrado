@@ -36,7 +36,13 @@
             border: none;
             border-radius: 0;
             letter-spacing: 0.05em;
+            transition: $tr3;
             @include fonts-display(500);
+            @include mq($from: desktop) {
+               &:hover {
+                  background-color: $color-salmon;
+               }
+            }
          }
       }
    }
