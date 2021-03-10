@@ -6,6 +6,7 @@
       font-size: 13px;
    }
 }
+
 h2.w-cart__title {
    color: $color-indigo;
    font-size: 22px;
@@ -13,6 +14,7 @@ h2.w-cart__title {
    text-align: center;
    @include fonts-display(700);
 }
+
 .w-cart__form {
    .w-cart__table {
       border-radius: 0 !important;
@@ -96,6 +98,7 @@ h2.w-cart__title {
             border-radius: 0;
             text-transform: uppercase;
             letter-spacing: 0.03em;
+            transition: $tr3;
             @include fonts-display(600); 
             &:hover {
                background-color: $color-salmon;
@@ -207,9 +210,10 @@ h2.w-cart__title {
       border-radius: 0 !important;
       text-transform: uppercase;
       letter-spacing: .02em;
+      transition: $tr3;
       @include fonts-display(600);
       &:hover {
-         background-color: $color-salmon;
+         background-color: $color-salmon !important;
       }
    }
    @include mq($from: mobile, $until: tablet) {
@@ -217,6 +221,39 @@ h2.w-cart__title {
          font-size: 16px;
          height: auto;
          padding: 15px !important;
+      }
+   }
+}
+
+.w-cart__btn {
+   a.button {
+      padding: 15px 20px !important;
+      background-color: $color-indigo !important;
+      color: $color-white !important;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      line-height: 1.2 !important;
+      border-radius: 0;
+      transition: $tr3;
+      @include fonts-display(200);
+      @include mq($from:desktop) {
+         &:hover,
+         &:active {
+            color: $color-white !important;
+            text-decoration: none;
+            background-color: $color-light_orange !important;
+         }
+      }
+      &:disabled {
+         background-color: rgba($color: $color-indigo, $alpha: .5);
+      }
+      @include mq($from: tablet, $until: desktop) {
+         padding: 18px 20px;
+         font-size: 12px;
+      }
+      @include mq($from: mobile, $until: tablet) {
+         padding: 18px 20px;
+         font-size: 14px;
       }
    }
 }

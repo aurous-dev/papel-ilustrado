@@ -7,15 +7,22 @@
    font-size: $f-btn__medium;
    letter-spacing: 0.05em;
    line-height: 1.2;
+   transition: $tr3;
    @include fonts-display(200);
-   &:hover,
-   &:active {
-      color: $color-white;
-      text-decoration: none;
-      background-color: $color-light_orange;
+   @include mq($from:desktop) {
+      &:hover,
+      &:active {
+         color: $color-white;
+         text-decoration: none;
+         background-color: $color-light_orange;
+      }
    }
    &:disabled {
       background-color: rgba($color: $color-indigo, $alpha: .5);
+   }
+   @include mq($from: tablet, $until: desktop) {
+      padding: 18px 20px;
+      font-size: 12px;
    }
    @include mq($from: mobile, $until: tablet) {
       padding: 18px 20px;
@@ -28,10 +35,13 @@
    color: $color-dark_gray;
    padding: 13px 25px;
    text-transform: uppercase;
+   transition: $tr3;
    @include fonts-display(600);
-   &:hover {
-      color: $color-white;
-      background-color: $color-salmon;
+   @include mq($from:desktop) {
+      &:hover {
+         color: $color-white;
+         background-color: $color-salmon;
+      }
    }
 }
 
@@ -40,15 +50,19 @@
    display: flex;
    align-items: center;
    justify-content: flex-end;
-   &:hover,
-   &:active {
-      a{
-         color: $color-indigo;
-         text-decoration: none;
-      }
-      svg {
-         path {
-            fill: $color-salmon;
+   transition: $tr3;
+   @include mq($from:desktop) {
+      &:hover,
+      &:active {
+         a{
+            color: $color-indigo;
+            text-decoration: none;
+         }
+         svg {
+            path {
+               transition: $tr3;
+               fill: $color-salmon;
+            }
          }
       }
    }
@@ -76,10 +90,12 @@
    position: absolute;
    opacity: 0;
    background-color: $color-light_orange;
-   &:hover,
-   &:active {
-      color: $color-white;
-      background-color: $color-light_orange;
+   @include mq($from:desktop) {
+      &:hover,
+      &:active {
+         color: $color-white;
+         background-color: $color-light_orange;
+      }
    }
 }
 
@@ -93,6 +109,7 @@
    color: $color-white;
    text-align: center;
    background: linear-gradient(180deg, rgba(42, 61, 66, 0.7) 14.42%, rgba(42, 61, 66, 0.5) 109.2%);
+   transition: $tr3;
    h3 {
       padding-bottom: 30px;
    }
@@ -106,8 +123,9 @@
          right: 36%;
       }
    }
-   @include mq($from: mobile, $until: tablet) {
+   @include mq($from: mobile, $until: desktop) {
       bottom: 0;
+      padding: 30px 15px;
       h3 {
          font-size: 26px;
          padding-bottom: 20px;
@@ -129,10 +147,13 @@
    color: $white;
    text-transform: uppercase;
    font-size: 15px;
+   transition: $tr3;
    @include fonts-display(400);
-   &:hover {
-      background-color: $color-salmon;
-      color: $white;
+   @include mq($from:desktop) {
+      &:hover {
+         background-color: $color-salmon;
+         color: $white;
+      }
    }
    @include mq($from: mobile, $until: tablet) {
       position: relative;
@@ -148,10 +169,13 @@
    padding: 20px 24px;
    color: $color-white;
    text-transform: uppercase;
+   transition: $tr3;
    @include fonts-display(600);
-   &:hover {
-      color: $color-white;
-      background-color: $color-salmon;
+   @include mq($from:desktop) {
+      &:hover {
+         color: $color-white;
+         background-color: $color-salmon;
+      }
    }
    @include mq($from: mobile, $until: tablet) {
       padding: 16px 22px;

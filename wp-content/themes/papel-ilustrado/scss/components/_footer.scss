@@ -51,6 +51,7 @@
                   text-decoration: none;
                   color: $color-white;
                   font-size: $f-small;
+                  transition: $tr3;
                   &:hover {
                      color: $color-salmon;
                   }
@@ -103,6 +104,7 @@
             a {
                color: $color-white;
                transition: $tr3;
+               transition: $tr3;
                &:hover {
                   color: $color-salmon;
                }
@@ -118,6 +120,7 @@
             }
          }
          i {
+            transition: $tr3;
             font-size: 25px;
          }
       }
@@ -156,8 +159,7 @@
             margin-right: 10px;
          }
       }
-   }
-   
+   } 
    @include mq($from: mobile, $until: desktop) {
       padding: 20px 0;
       display: flex;
