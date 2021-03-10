@@ -1059,6 +1059,7 @@ if (!function_exists('woosg_init')) {
 
 					// TEST DE AGREGAR COSAS SI EL PRODUCTO ES AGRUPADO
 					echo 'HOLA';
+					get_template_part('components/single/test-btn');
 					echo '<br>';
 
 
