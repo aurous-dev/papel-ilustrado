@@ -91,7 +91,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 								</div>
 								<div class="modal-body">
 									<div class="row simple-producto__modal">
-										<img src="https://via.placeholder.com/250" alt="">
+										<img src="https://via.placeholder.com/500" alt="">
 									</div>
 								</div>
 							</div>
