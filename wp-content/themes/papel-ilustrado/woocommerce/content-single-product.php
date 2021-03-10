@@ -66,6 +66,8 @@ if (post_password_required()) {
 		</div>
 	</div>
 </div>
+
+
 <!-- Marco tester -->
 <?php if (get_field('mostrar_marco_tester') == 'show') : ?>
 	<div id="sigle-product-vue">
