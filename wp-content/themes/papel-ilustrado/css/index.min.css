@@ -11667,3 +11667,83 @@ nav.woocommerce-breadcrumb {
       nav.woocommerce-breadcrumb a {
         font-size: 12px !important; } }
 
+#sigle-product-vue .box {
+  display: flex;
+  width: 90%;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+  height: 100vh;
+  align-items: center; }
+  #sigle-product-vue .box__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+    background-color: var(--bg-color); }
+    @media (min-width: 20em) and (max-width: 46.24em) {
+      #sigle-product-vue .box__image {
+        height: 350px; } }
+
+#sigle-product-vue select {
+  height: 2rem;
+  width: 7rem;
+  margin-bottom: 3rem; }
+
+#sigle-product-vue img {
+  max-width: 800px;
+  max-height: 400px; }
+
+#sigle-product-vue .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100%);
+  height: calc(100%);
+  -webkit-box-shadow: inset 164px 166px 7px -163px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: inset 164px 166px 7px -163px rgba(0, 0, 0, 0.62);
+  box-shadow: inset 164px 166px 7px -163px rgba(0, 0, 0, 0.62); }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    #sigle-product-vue .inner {
+      width: unset; } }
+
+#sigle-product-vue .radios {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px; }
+
+#sigle-product-vue .frame-picture {
+  width: auto;
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  -webkit-box-shadow: 10px 10px 23px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 23px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 23px -15px rgba(0, 0, 0, 0.75); }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    #sigle-product-vue .frame-picture {
+      max-height: 100%; }
+      #sigle-product-vue .frame-picture img {
+        max-width: 100% !important;
+        height: auto !important;
+        width: unset !important;
+        max-height: unset;
+        min-height: auto; } }
+
+#sigle-product-vue .withFrame {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: var(--tamano);
+  -moz-border-image: var(--frame-image);
+  -webkit-border-image: var(--frame-image);
+  -o-border-image: var(--frame-image);
+  border-image: var(--frame-image); }
+
+#sigle-product-vue .none {
+  background-color: transparent; }
+  #sigle-product-vue .none .inner {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+

@@ -25,6 +25,7 @@ $variations_attr = function_exists( 'wc_esc_json' ) ? wc_esc_json( $variations_j
 
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
+
 <form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo $variations_attr; // WPCS: XSS ok. ?>">
 	<?php do_action( 'woocommerce_before_variations_form' ); ?>
 
@@ -91,7 +92,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 								</div>
 								<div class="modal-body">
 									<div class="row simple-producto__modal">
-										<img src="https://via.placeholder.com/250" alt="">
+										<img src="https://via.placeholder.com/500" alt="">
 									</div>
 								</div>
 							</div>
@@ -180,6 +181,12 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 	<?php do_action( 'woocommerce_after_variations_form' ); ?>
 </form>
-
+<?php 
+// var_dump($product);
+	$type = $product->ID;
+	// echo $type;
+	$final = WC_Product_Factory::get_product_type($type);
+	echo $final;
+;?>
 <?php
 do_action( 'woocommerce_after_add_to_cart_form' );

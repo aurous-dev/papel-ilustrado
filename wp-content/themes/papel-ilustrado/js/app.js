@@ -24,6 +24,7 @@ AOS.init({
     disable: "mobile",
     once: true,
 });
+
 // Start AOS library
 
 // JS Modules
@@ -47,6 +48,11 @@ Vue.component("formu", require("./components/ContactForm.vue"));
 Vue.component("example", require("./components/Example.vue"));
 Vue.component("selectcompo", require("./components/SelectCompo.vue"));
 
+import regeneratorRuntime from "regenerator-runtime";
+
+import { sigleProductScript } from "./components/SingleProduct";
+
+
 // Import App Vue
 const app = new Vue({
     el: "#app",
@@ -60,6 +66,11 @@ const app = new Vue({
 
 // Import JS
 const application = new initApp();
+// Marco tester
+if (document.querySelector("#sigle-product-vue")) {
+    const sigleProduct = new Vue(sigleProductScript);
+  }
+// Marco tester
 
 // HOME SLIDER
 $(".hero__slider").slick({

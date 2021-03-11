@@ -24,40 +24,38 @@ if( function_exists('acf_add_options_page') ) {
 }
 // If Options PAGE
 
-// Add image to menu
-// add_filter('wp_nav_menu_items', 'my_wp_nav_menu_items', 10, 2);
+//  Expose ACF on products
 
-// function my_wp_nav_menu_items( $items, $args ) {
-	
-// 	// get menu
-// 	$menu = wp_get_nav_menu_object($args->menu);
-	
-	
-// 	// modify primary only
-// 	// if( $args->theme_location == 'top' ) {
-		
-// 		// vars
-// 		$logo = get_field('imagen', $menu);
-// 		// $color = get_field('color', $menu);
-		
-		
-// 		// prepend logo
-// 		$html_logo = '<li class="menu-item-logo"><a href="'.home_url().'"><img src="'.$logo.'" /></a></li>';
-		
-		
-// 		// append style
-// 		// $html_color = '<style type="text/css">.navigation-top{ background: '.$color.';}</style>';
-		
-		
-// 		// append html
-// 		$items = $html_logo . $items;
-		
-// 	// }
-	
-	
-// 	// return
-// 	return $items;
-	
-// }
+$post_types = array_merge(get_post_types(), cptui_get_post_type_slugs());
+
+foreach ($post_types as $type) {
+	add_filter(
+		'acf/rest_api/' . $type . '/get_fields',
+		function ($data, $response) use ($post_types) {
+			if ($response instanceof WP_REST_Response) {
+				$data = $response->get_data();
+			}
+
+			array_walk_recursive($data, 'get_fields_recursive', $post_types);
+
+			return $data;
+		},
+		10,
+		3
+	);
+}
+
+function get_fields_recursive($item)
+{
+	if (is_object($item)) {
+		$item->acf = array();
+
+		if ($fields = get_fields($item)) {
+			$item->acf = $fields;
+			array_walk_recursive($item->acf, 'get_fields_recursive');
+		}
+	}
+}
+
 
 ?>
