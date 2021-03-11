@@ -1,10 +1,10 @@
 <div class="card__container--desc">
    <div class="card__container--desc-title">
-      <div class="tag-disc">
+      <!-- <div class="tag-disc">
          10%
-      </div>
+      </div> -->
       <h3>
-         Serie Abstracción acuarelada turquesa
+         <?php the_title();?>
       </h3>
    </div>
    <div class="card__container--desc-for">
