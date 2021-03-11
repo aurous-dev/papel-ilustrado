@@ -8107,6 +8107,15 @@ a.text-dark:hover, a.text-dark:focus {
         display: flex;
         align-items: center;
         justify-content: center; }
+        .header__menu--search form input[type=submit] {
+          position: absolute;
+          width: 18%;
+          right: 0;
+          opacity: 0;
+          z-index: 2; }
+        .header__menu--search form svg {
+          position: absolute;
+          right: 15px; }
       .header__menu--search input {
         padding: 8px 15px;
         width: 260px;
@@ -11289,23 +11298,23 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
         flex: 0 0 50%;
         max-width: 50%; } }
 
-.search-results {
+.search-result {
   padding-bottom: 100px; }
-  .search-results__grid {
+  .search-result__grid {
     display: flex;
     flex-wrap: wrap; }
-    .search-results__grid .cards {
+    .search-result__grid .cards {
       flex: 0 0 20%;
       max-width: 20%;
       padding: 20px 0; }
   @media (min-width: 46.25em) and (max-width: 61.24em) {
-    .search-results__grid .cards {
+    .search-result__grid .cards {
       flex: 0 0 33.333%;
       max-width: 33.333%; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
-    .search-results {
+    .search-result {
       padding-bottom: 60px; }
-      .search-results__grid .cards {
+      .search-result__grid .cards {
         flex: 0 0 50%;
         max-width: 50%; } }
 

@@ -19,10 +19,10 @@ $the_query = new WP_Query($search_query);
 $total_results = $the_query->found_posts;
 set_query_var('results', $total_results);
 get_template_part('components/single/search-title'); ?>
-<section class="search-results">
+<section class="search-result">
     <?php if ($the_query->have_posts()) : ?>
         <div class="container">
-            <div class="search-results__grid">
+            <div class="search-result__grid">
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                     <?php get_template_part('components/group/card-search'); ?>
                 <?php endwhile; ?>
