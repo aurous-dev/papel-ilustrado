@@ -266,3 +266,88 @@ $(".slider-nav").slick({
 // $(".slider-for").on("setPosition", function(event, slick) {
 //     console.log(event);
 // });
+
+// Test
+
+
+const formulario = document.querySelectorAll('#pa_marco');
+const formulario2 = document.querySelectorAll('#pa_tamano');
+
+const testInput = document.querySelector('#prueba');
+const testInput2 = document.querySelector('#prueba2');
+testInput.addEventListener('change', test)
+testInput2.addEventListener('change', test2)
+
+// formulario.forEach( (element) => {
+
+//     element.addEventListener('change', e => {
+//         console.log(e)
+//     })
+//     // const optionLength = element.children.length
+//     // for(let i = 0; i < optionLength; i++) {
+//     //     if(element.children[i].value === option.value) {
+//     //         element.children[i].selected = true
+//     //     }
+//     // }
+// })
+
+
+function test() {
+    let selectedOption = this.options[testInput.selectedIndex];
+    comprobar(selectedOption)
+   
+}
+function test2() {
+    let selectedOption = this.options[testInput2.selectedIndex];
+    comprobar2(selectedOption)
+}
+
+
+function comprobar(option) {
+    const numero = formulario.length;
+    // for(let i = 0; i < numero; i++) {
+    //     console.log(formulario[i])
+    // }
+    formulario.forEach( (element, index, array) => {
+        const optionLength = element.children.length
+        setTimeout( () => {
+            for(let i = 0; i < optionLength; i++) {
+                element.children[i].selected = false;     
+                if(element.children[i].value === option.value) {
+                    element.children[i].selected = true;     
+                }
+            }
+            element.submit()
+        },index * 1000)     
+    })
+}
+function comprobar2(option) {
+
+    formulario2.forEach( (element, index) => {
+        const optionLength = element.children.length
+        setTimeout( () => {
+            for(let i = 0; i < optionLength; i++) {
+                element.children[i].selected = false;     
+                if(element.children[i].value === option.value) {
+                    element.children[i].selected = true;     
+                }
+            }
+            element.submit()
+        },index * 2000)     
+    })
+}
+
+// const tamano = document.querySelector('#pa_tamano');
+// const hijosFormulario = formulario.children;
+// const hijosTamano = tamano.children;
+
+// Array.prototype.forEach.call(hijosFormulario, (element )=> {
+//     if(element.value !== '' && element.value === 'madera-natural-encajonado') {
+//         console.log(element.selected = true)
+//     }
+// })
+// Array.prototype.forEach.call(hijosTamano, (element )=> {
+//     if(element.value !== '' && element.value === '30x30') {
+//         console.log(element.selected = true)
+//     }
+// })
