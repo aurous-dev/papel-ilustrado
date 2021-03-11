@@ -64,14 +64,13 @@ const app = new Vue({
     },
 });
 
+// Import JS
+const application = new initApp();
 // Marco tester
 if (document.querySelector("#sigle-product-vue")) {
     const sigleProduct = new Vue(sigleProductScript);
   }
 // Marco tester
-
-// Import JS
-const application = new initApp();
 
 // HOME SLIDER
 $(".hero__slider").slick({
@@ -270,84 +269,102 @@ $(".slider-nav").slick({
 // Test
 
 
-const formulario = document.querySelectorAll('#pa_marco');
-const formulario2 = document.querySelectorAll('#pa_tamano');
+// const formulario = document.querySelectorAll('#pa_marco');
+// const formulario2 = document.querySelectorAll('#pa_tamano');
 
-const testInput = document.querySelector('#prueba');
-const testInput2 = document.querySelector('#prueba2');
-testInput.addEventListener('change', test)
-testInput2.addEventListener('change', test2)
+// const testInput = document.querySelector('#prueba');
+// const testInput2 = document.querySelector('#prueba2');
+// testInput.addEventListener('change', test)
+// testInput2.addEventListener('change', test2)
 
-// formulario.forEach( (element) => {
+// // formulario.forEach( (element) => {
 
-//     element.addEventListener('change', e => {
-//         console.log(e)
-//     })
-//     // const optionLength = element.children.length
-//     // for(let i = 0; i < optionLength; i++) {
-//     //     if(element.children[i].value === option.value) {
-//     //         element.children[i].selected = true
-//     //     }
-//     // }
-// })
+// //     element.addEventListener('change', e => {
+// //         console.log(e)
+// //     })
+// //     // const optionLength = element.children.length
+// //     // for(let i = 0; i < optionLength; i++) {
+// //     //     if(element.children[i].value === option.value) {
+// //     //         element.children[i].selected = true
+// //     //     }
+// //     // }
+// // })
 
 
-function test() {
-    let selectedOption = this.options[testInput.selectedIndex];
-    comprobar(selectedOption)
+// function test() {
+//     let selectedOption = this.options[testInput.selectedIndex];
+//     comprobar(selectedOption)
    
-}
-function test2() {
-    let selectedOption = this.options[testInput2.selectedIndex];
-    comprobar2(selectedOption)
-}
+// }
+// function test2() {
+//     let selectedOption = this.options[testInput2.selectedIndex];
+//     comprobar2(selectedOption)
+// }
 
 
-function comprobar(option) {
-    const numero = formulario.length;
-    // for(let i = 0; i < numero; i++) {
-    //     console.log(formulario[i])
-    // }
-    formulario.forEach( (element, index, array) => {
-        const optionLength = element.children.length
-        setTimeout( () => {
-            for(let i = 0; i < optionLength; i++) {
-                element.children[i].selected = false;     
-                if(element.children[i].value === option.value) {
-                    element.children[i].selected = true;     
-                }
-            }
-            element.submit()
-        },index * 1000)     
-    })
-}
-function comprobar2(option) {
+// function comprobar(option) {
+//     const numero = formulario.length;
+//     // for(let i = 0; i < numero; i++) {
+//     //     console.log(formulario[i])
+//     // }
+//     formulario.forEach( (element, index, array) => {
+//         const optionLength = element.children.length
+//         setTimeout( () => {
+//             for(let i = 0; i < optionLength; i++) {
+//                 element.children[i].selected = false;     
+//                 if(element.children[i].value === option.value) {
+//                     element.children[i].selected = true;     
+//                 }
+//             }
+//             element.submit()
+//         },index * 1000)     
+//     })
+// }
+// function comprobar2(option) {
 
-    formulario2.forEach( (element, index) => {
-        const optionLength = element.children.length
-        setTimeout( () => {
-            for(let i = 0; i < optionLength; i++) {
-                element.children[i].selected = false;     
-                if(element.children[i].value === option.value) {
-                    element.children[i].selected = true;     
-                }
-            }
-            element.submit()
-        },index * 2000)     
-    })
-}
+//     formulario2.forEach( (element, index) => {
+//         const optionLength = element.children.length
+//         setTimeout( () => {
+//             for(let i = 0; i < optionLength; i++) {
+//                 element.children[i].selected = false;     
+//                 if(element.children[i].value === option.value) {
+//                     element.children[i].selected = true;     
+//                 }
+//             }
+//             element.submit()
+//         },index * 2000)     
+//     })
+// }
 
-// const tamano = document.querySelector('#pa_tamano');
-// const hijosFormulario = formulario.children;
-// const hijosTamano = tamano.children;
+// // const tamano = document.querySelector('#pa_tamano');
+// // const hijosFormulario = formulario.children;
+// // const hijosTamano = tamano.children;
 
-// Array.prototype.forEach.call(hijosFormulario, (element )=> {
-//     if(element.value !== '' && element.value === 'madera-natural-encajonado') {
-//         console.log(element.selected = true)
-//     }
-// })
-// Array.prototype.forEach.call(hijosTamano, (element )=> {
-//     if(element.value !== '' && element.value === '30x30') {
-//         console.log(element.selected = true)
-//     }
+// // Array.prototype.forEach.call(hijosFormulario, (element )=> {
+// //     if(element.value !== '' && element.value === 'madera-natural-encajonado') {
+// //         console.log(element.selected = true)
+// //     }
+// // })
+// // Array.prototype.forEach.call(hijosTamano, (element )=> {
+// //     if(element.value !== '' && element.value === '30x30') {
+// //         console.log(element.selected = true)
+// //     }
+// // })
+
+// const formulario = document.querySelector(".woosg_products.woosg-table.woosg-products");
+// formulario.addEventListener('click', (e) => {
+//     const btn = document.querySelectorAll('.reset_variations');
+//     const btn2 = document.querySelector('.single_add_to_cart_button.button.alt');
+//     btn.forEach( item => {
+//         if(e.target === item) {
+//             // item.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].children[1].value = 0;
+//             // let prueba = item.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].children[1].value;
+//             // item.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.qty = prueba
+//             // item.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.id = prueba
+//             // item.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.price = prueba
+//             // btn2.classList.remove('woosg-disabled', 'woosg-selection')
+//             // btn2.disabled = false;
+
+//         }
+//     })
 // })

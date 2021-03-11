@@ -47,6 +47,17 @@
             position: relative;
             display: flex;
             @include f-center;
+            input[type=submit] {
+               position: absolute;
+               width: 18%;
+               right: 0;
+               opacity: 0;
+               z-index: 2;
+            }
+            svg {
+               position: absolute;
+               right: 15px;
+            }
          }
          input {
             padding: 8px 15px;

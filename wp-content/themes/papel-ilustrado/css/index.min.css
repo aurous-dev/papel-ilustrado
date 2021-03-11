@@ -8107,6 +8107,15 @@ a.text-dark:hover, a.text-dark:focus {
         display: flex;
         align-items: center;
         justify-content: center; }
+        .header__menu--search form input[type=submit] {
+          position: absolute;
+          width: 18%;
+          right: 0;
+          opacity: 0;
+          z-index: 2; }
+        .header__menu--search form svg {
+          position: absolute;
+          right: 15px; }
       .header__menu--search input {
         padding: 8px 15px;
         width: 260px;
