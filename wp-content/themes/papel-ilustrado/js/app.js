@@ -21,8 +21,8 @@ import selectcompo from "./components/SelectCompo.vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
-    disable: "mobile",
-    once: true,
+   disable: "mobile",
+   once: true,
 });
 
 // Start AOS library
@@ -55,212 +55,212 @@ import { sigleProductScript } from "./components/SingleProduct";
 
 // Import App Vue
 const app = new Vue({
-    el: "#app",
-    components: {
-        formu,
-        selectcompo,
-        ButtonSpinner,
-        example,
-    },
+   el: "#app",
+   components: {
+      formu,
+      selectcompo,
+      ButtonSpinner,
+      example,
+   },
 });
 
 // Import JS
 const application = new initApp();
 // Marco tester
 if (document.querySelector("#sigle-product-vue")) {
-    const sigleProduct = new Vue(sigleProductScript);
-  }
+   const sigleProduct = new Vue(sigleProductScript);
+}
 // Marco tester
 
 // HOME SLIDER
 $(".hero__slider").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: true,
-    // fade: true,
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   dots: false,
+   arrows: true,
+   // fade: true,
 });
 $(".paiting__slider").slick({
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: true,
-    responsive: [
-        {
-            breakpoint: 770,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                dots: true,
-            },
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-            },
-        },
-    ],
+   infinite: true,
+   slidesToShow: 4,
+   slidesToScroll: 1,
+   dots: true,
+   arrows: true,
+   responsive: [
+      {
+         breakpoint: 770,
+         settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+         },
+      },
+      {
+         breakpoint: 480,
+         settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+         },
+      },
+   ],
 });
 $(".composition__slider").slick({
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: true,
-    responsive: [
-        // {
-        //     breakpoint: 770,
-        //     settings: {
-        //         slidesToShow: 1,
-        //         slidesToScroll: 1,
-        //         dots: true,
-        //     },
-        // },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-            },
-        },
-    ],
+   infinite: true,
+   slidesToShow: 2,
+   slidesToScroll: 1,
+   dots: true,
+   arrows: true,
+   responsive: [
+      // {
+      //     breakpoint: 770,
+      //     settings: {
+      //         slidesToShow: 1,
+      //         slidesToScroll: 1,
+      //         dots: true,
+      //     },
+      // },
+      {
+         breakpoint: 480,
+         settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+         },
+      },
+   ],
 });
 $(".picture__slider").slick({
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: true,
-    responsive: [
-        {
-            breakpoint: 770,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                dots: true,
-            },
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-            },
-        },
-    ],
+   infinite: true,
+   slidesToShow: 5,
+   slidesToScroll: 1,
+   dots: true,
+   arrows: true,
+   responsive: [
+      {
+         breakpoint: 770,
+         settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+         },
+      },
+      {
+         breakpoint: 480,
+         settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+         },
+      },
+   ],
 });
 $(".instagram__slider").slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: true,
-    responsive: [
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-            },
-        },
-    ],
+   infinite: true,
+   slidesToShow: 3,
+   slidesToScroll: 1,
+   dots: true,
+   arrows: true,
+   responsive: [
+      {
+         breakpoint: 480,
+         settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+         },
+      },
+   ],
 });
 
 // PAGE SLIDER
 $(".fiveColumn__slider").slick({
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: true,
-    responsive: [
-        {
-            breakpoint: 770,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                dots: true,
-            },
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-            },
-        },
-    ],
+   infinite: true,
+   slidesToShow: 5,
+   slidesToScroll: 1,
+   dots: true,
+   arrows: true,
+   responsive: [
+      {
+         breakpoint: 770,
+         settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+         },
+      },
+      {
+         breakpoint: 480,
+         settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+         },
+      },
+   ],
 });
 $(".fourColumn__slider").slick({
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: true,
-    responsive: [
-        {
-            breakpoint: 770,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                dots: true,
-            },
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-            },
-        },
-    ],
+   infinite: true,
+   slidesToShow: 4,
+   slidesToScroll: 1,
+   dots: true,
+   arrows: true,
+   responsive: [
+      {
+         breakpoint: 770,
+         settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+         },
+      },
+      {
+         breakpoint: 480,
+         settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+         },
+      },
+   ],
 });
 // Slider syncing
 
 $(".slider-for").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: ".slider-nav",
-    responsive: [
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-            },
-        },
-    ],
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: false,
+   fade: true,
+   asNavFor: ".slider-nav",
+   responsive: [
+      {
+         breakpoint: 480,
+         settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+         },
+      },
+   ],
 });
 $(".slider-nav").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: ".slider-for",
-    dots: true,
-    centerMode: true,
-    focusOnSelect: true,
-    responsive: [
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-            },
-        },
-    ],
+   slidesToShow: 3,
+   slidesToScroll: 1,
+   asNavFor: ".slider-for",
+   dots: true,
+   centerMode: true,
+   focusOnSelect: true,
+   responsive: [
+      {
+         breakpoint: 480,
+         settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+         },
+      },
+   ],
 });
 // $(".slider-for").on("setPosition", function(event, slick) {
 //     console.log(event);
@@ -269,102 +269,27 @@ $(".slider-nav").slick({
 // Test
 
 
-// const formulario = document.querySelectorAll('#pa_marco');
-// const formulario2 = document.querySelectorAll('#pa_tamano');
+const formulario = document.querySelectorAll('#pa_marco');
+const formulario2 = document.querySelectorAll('#pa_tamano');
 
-// const testInput = document.querySelector('#prueba');
-// const testInput2 = document.querySelector('#prueba2');
-// testInput.addEventListener('change', test)
-// testInput2.addEventListener('change', test2)
-
-// // formulario.forEach( (element) => {
-
-// //     element.addEventListener('change', e => {
-// //         console.log(e)
-// //     })
-// //     // const optionLength = element.children.length
-// //     // for(let i = 0; i < optionLength; i++) {
-// //     //     if(element.children[i].value === option.value) {
-// //     //         element.children[i].selected = true
-// //     //     }
-// //     // }
-// // })
+formulario.forEach((element) => {
+   element.addEventListener('change',test)
+})
+formulario2.forEach((element) => {
+   element.addEventListener('change',test)
+})
 
 
-// function test() {
-//     let selectedOption = this.options[testInput.selectedIndex];
-//     comprobar(selectedOption)
-   
-// }
-// function test2() {
-//     let selectedOption = this.options[testInput2.selectedIndex];
-//     comprobar2(selectedOption)
-// }
+function test(e) {
+   // console.log(qtyVal,btnAdd)
+   const qtyVal = document.querySelector(".woocommerce-Price-amount.amount");
+   const btnAdd = document.querySelector(".single_add_to_cart_button.button.alt");
+   console.log(qtyVal.innerText.length)
+   if (qtyVal.innerText.length > 5) {
+      setTimeout(() => {
+         btnAdd.classList.remove("woosg-disabled", 'woosg-selection');
+         btnAdd.disabled = false;
+      }, 3000);
 
-
-// function comprobar(option) {
-//     const numero = formulario.length;
-//     // for(let i = 0; i < numero; i++) {
-//     //     console.log(formulario[i])
-//     // }
-//     formulario.forEach( (element, index, array) => {
-//         const optionLength = element.children.length
-//         setTimeout( () => {
-//             for(let i = 0; i < optionLength; i++) {
-//                 element.children[i].selected = false;     
-//                 if(element.children[i].value === option.value) {
-//                     element.children[i].selected = true;     
-//                 }
-//             }
-//             element.submit()
-//         },index * 1000)     
-//     })
-// }
-// function comprobar2(option) {
-
-//     formulario2.forEach( (element, index) => {
-//         const optionLength = element.children.length
-//         setTimeout( () => {
-//             for(let i = 0; i < optionLength; i++) {
-//                 element.children[i].selected = false;     
-//                 if(element.children[i].value === option.value) {
-//                     element.children[i].selected = true;     
-//                 }
-//             }
-//             element.submit()
-//         },index * 2000)     
-//     })
-// }
-
-// // const tamano = document.querySelector('#pa_tamano');
-// // const hijosFormulario = formulario.children;
-// // const hijosTamano = tamano.children;
-
-// // Array.prototype.forEach.call(hijosFormulario, (element )=> {
-// //     if(element.value !== '' && element.value === 'madera-natural-encajonado') {
-// //         console.log(element.selected = true)
-// //     }
-// // })
-// // Array.prototype.forEach.call(hijosTamano, (element )=> {
-// //     if(element.value !== '' && element.value === '30x30') {
-// //         console.log(element.selected = true)
-// //     }
-// // })
-
-// const formulario = document.querySelector(".woosg_products.woosg-table.woosg-products");
-// formulario.addEventListener('click', (e) => {
-//     const btn = document.querySelectorAll('.reset_variations');
-//     const btn2 = document.querySelector('.single_add_to_cart_button.button.alt');
-//     btn.forEach( item => {
-//         if(e.target === item) {
-//             // item.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].children[1].value = 0;
-//             // let prueba = item.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children[0].children[1].value;
-//             // item.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.qty = prueba
-//             // item.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.id = prueba
-//             // item.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.price = prueba
-//             // btn2.classList.remove('woosg-disabled', 'woosg-selection')
-//             // btn2.disabled = false;
-
-//         }
-//     })
-// })
+   }
+}

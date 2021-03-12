@@ -1056,13 +1056,6 @@ if (!function_exists('woosg_init')) {
 
 					echo '<div class="woosg-form">';
 
-
-					// TEST DE AGREGAR COSAS SI EL PRODUCTO ES AGRUPADO
-					echo 'HOLA';
-					get_template_part('components/single/test-btn');
-					echo '<br>';
-
-
 					$type = $product->ID;
 					// echo $type;
 					$final = WC_Product_Factory::get_product_type($type);
@@ -1348,6 +1341,8 @@ if (!function_exists('woosg_init')) {
 						</div>
 		<?php
 						echo '<div class="woosg_total woosg-total woosg-text"></div>';
+
+						get_template_part('components/single/product-btn');
 
 						do_action('woosg_after_table', $product);
 

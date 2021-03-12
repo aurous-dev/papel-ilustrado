@@ -9613,95 +9613,6 @@ a.text-dark:hover, a.text-dark:focus {
             width: 100%;
             margin: 20px 15px 10px; } }
 
-.w__login {
-  max-width: 1140px;
-  padding: 80px 0px;
-  margin: 0 auto; }
-  .w__login .w__login--column {
-    flex: 0 0 50%;
-    max-width: 45%; }
-    .w__login .w__login--column h2 {
-      color: #2A3D42;
-      font-size: 22px;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 700; }
-    .w__login .w__login--column .w__login--form {
-      border: none;
-      padding: 0; }
-      .w__login .w__login--column .w__login--form .w__login--row {
-        margin-bottom: 20px; }
-        .w__login .w__login--column .w__login--form .w__login--row-pass > span {
-          width: 100%; }
-      .w__login .w__login--column .w__login--form label {
-        width: 100%;
-        font-size: 12px;
-        color: #3D3F40;
-        text-transform: uppercase;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 700; }
-      .w__login .w__login--column .w__login--form input {
-        height: 45px;
-        border: 1px solid #D2D2D2;
-        width: 100%;
-        padding: 10px 15px; }
-      .w__login .w__login--column .w__login--form .w__login--rememberme {
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 400;
-        text-transform: capitalize;
-        font-size: 14px; }
-        .w__login .w__login--column .w__login--form .w__login--rememberme input {
-          height: 16px;
-          width: 16px;
-          border: 1px solid #d2d2d2 !important;
-          margin-right: 15px;
-          -webkit-appearance: none;
-          padding: 0; }
-      .w__login .w__login--column .w__login--form button {
-        width: 100%;
-        background-color: #2A3D42;
-        color: #FFFFFF;
-        height: 50px;
-        border-radius: 0;
-        text-transform: uppercase;
-        letter-spacing: .02em;
-        transition: all ease-in-out 0.3s;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 400; }
-        .w__login .w__login--column .w__login--form button:hover {
-          background-color: #F4997E; }
-      .w__login .w__login--column .w__login--form .woocommerce-privacy-policy-text {
-        font-size: 12px;
-        margin-top: -12px;
-        color: #2A3D42; }
-        .w__login .w__login--column .w__login--form .woocommerce-privacy-policy-text a {
-          color: #2A3D42;
-          font-weight: 700;
-          text-decoration: underline; }
-      .w__login .w__login--column .w__login--form .w__login--lostPass a {
-        color: #2A3D42;
-        font-size: 14px;
-        text-decoration: underline; }
-  @media (min-width: 46.25em) and (max-width: 61.24em) {
-    .w__login {
-      max-width: 720px;
-      display: flex;
-      padding: 20px 0; }
-      .w__login .w__login--column {
-        max-width: 50%; } }
-  @media (min-width: 20em) and (max-width: 46.24em) {
-    .w__login {
-      max-width: initial;
-      width: 100%;
-      padding: 0; }
-      .w__login .w__login--column {
-        max-width: initial;
-        width: 100%;
-        flex: 0 0 100%;
-        margin-bottom: 50px; } }
-
 .w-lost__container {
   max-width: 1140px;
   padding: 80px 15px;
@@ -10601,6 +10512,102 @@ form.w-checkout__container {
       .w-received__container .w-received__address address {
         padding: 20px !important;
         overflow-wrap: break-word; } }
+
+.woosg_wrap.woosg-wrap .woosg-products {
+  border: 0; }
+
+.woosg_wrap.woosg-wrap .woosg-product {
+  border: 0; }
+  .woosg_wrap.woosg-wrap .woosg-product .woosg-thumb {
+    width: auto; }
+    .woosg_wrap.woosg-wrap .woosg-product .woosg-thumb img {
+      max-width: unset;
+      width: 70px; }
+  .woosg_wrap.woosg-wrap .woosg-product form.variations_form {
+    margin-top: 8px; }
+    .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations {
+      display: flex;
+      align-items: center; }
+      .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .variation {
+        float: none;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        width: 50%;
+        padding-right: 15px; }
+        .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .variation .label {
+          display: none; }
+        .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .variation .select select {
+          height: 40px;
+          width: 95%;
+          border: 1px solid #D2D2D2;
+          font-weight: 600;
+          font-size: 14px;
+          color: #182224;
+          padding: 0 10px;
+          background-color: #FFFFFF; }
+      .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .reset {
+        position: absolute;
+        right: -25px; }
+        .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .reset a.reset_variations {
+          display: flex;
+          font-size: 0;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #F4997E;
+          color: #FFFFFF;
+          visibility: visible !important;
+          align-items: center;
+          justify-content: center; }
+          .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .reset a.reset_variations::before {
+            content: 'X';
+            font-size: 20px;
+            font-family: 'Raleway', sans-serif; }
+  .woosg_wrap.woosg-wrap .woosg-product .woosg-title-inner {
+    display: inline-block !important;
+    vertical-align: middle; }
+    .woosg_wrap.woosg-wrap .woosg-product .woosg-title-inner a {
+      font-family: 'Raleway', sans-serif;
+      color: #2A3D42;
+      font-size: 15px;
+      font-weight: 500; }
+  .woosg_wrap.woosg-wrap .woosg-product .woosg-price {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 40px;
+    font-family: 'Raleway', sans-serif;
+    color: #2A3D42;
+    font-size: 14px !important;
+    font-weight: 700 !important; }
+    .woosg_wrap.woosg-wrap .woosg-product .woosg-price bdi {
+      font-weight: 700 !important; }
+  .woosg_wrap.woosg-wrap .woosg-product .woosg-qty {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: none; }
+
+.single_add_to_cart_button.button.alt {
+  width: 95%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all ease-in-out 0.3s;
+  background-color: #2A3D42 !important;
+  border: 1px solid #2A3D42 !important;
+  border-radius: 0 !important;
+  height: 42px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500; }
+  .single_add_to_cart_button.button.alt:hover {
+    background-color: #F4997E !important;
+    border: 1px solid #F4997E !important;
+    color: #FFFFFF; }
+  .single_add_to_cart_button.button.alt:disabled:hover {
+    background-color: #2A3D42 !important;
+    border: 1px solid #2A3D42 !important;
+    color: #FFFFFF; }
 
 * {
   margin: 0;
