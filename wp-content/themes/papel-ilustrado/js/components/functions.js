@@ -140,8 +140,10 @@ export function inputValue(e) {
 
 export function reset(e) {
    const btnAdd = document.querySelector(".single_add_to_cart_button.button.alt");
+   const mensaje = document.querySelector('.alerta');
    setTimeout(() => {
       const qtyVal = document.querySelector(".woocommerce-Price-amount.amount");
+      mensaje.remove();
       if (qtyVal.innerText.length > 5) {
          btnAdd.classList.remove("woosg-disabled", 'woosg-selection');
          btnAdd.disabled = false;

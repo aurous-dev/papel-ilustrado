@@ -10566,10 +10566,10 @@ form.w-checkout__container {
             content: 'X';
             font-size: 20px;
             font-family: 'Raleway', sans-serif; }
-      .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .alerta {
+      .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .alerta p {
         color: #F4997E;
         font-size: 12px;
-        margin: 10px 0 0; }
+        margin: 8px 0 0; }
   .woosg_wrap.woosg-wrap .woosg-product .woosg-title-inner {
     display: inline-block !important;
     vertical-align: middle;
@@ -11380,6 +11380,8 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
 
 .simple-product__container {
   margin-bottom: 50px; }
+  .simple-product__container div.product {
+    width: 100% !important; }
 
 .simple-product__title {
   font-size: 22px;

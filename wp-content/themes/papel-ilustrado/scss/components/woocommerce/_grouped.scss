@@ -62,9 +62,11 @@
                }
             }
             .alerta {
-               color: $color-salmon;
-               font-size: 12px;
-               margin: 10px 0 0;
+               p {
+                  color: $color-salmon;
+                  font-size: 12px;
+                  margin: 8px 0 0;
+               }
             }
          }
       }

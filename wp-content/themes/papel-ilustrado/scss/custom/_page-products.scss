@@ -33,6 +33,9 @@
 .simple-product {
    &__container {
       margin-bottom: 50px;
+      div.product {
+         width: 100% !important;
+      }
    }
    &__title {
       font-size: 22px;

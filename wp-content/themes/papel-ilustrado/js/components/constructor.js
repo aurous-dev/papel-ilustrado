@@ -18,7 +18,7 @@ import {
    carts, 
    menuMobile,
    inputValue,
-   reset
+   reset,
 } from './functions.js'
 
 class initApp {
