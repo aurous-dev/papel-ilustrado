@@ -265,31 +265,3 @@ $(".slider-nav").slick({
 // $(".slider-for").on("setPosition", function(event, slick) {
 //     console.log(event);
 // });
-
-// Test
-
-
-const formulario = document.querySelectorAll('#pa_marco');
-const formulario2 = document.querySelectorAll('#pa_tamano');
-
-formulario.forEach((element) => {
-   element.addEventListener('change',test)
-})
-formulario2.forEach((element) => {
-   element.addEventListener('change',test)
-})
-
-
-function test(e) {
-   // console.log(qtyVal,btnAdd)
-   const qtyVal = document.querySelector(".woocommerce-Price-amount.amount");
-   const btnAdd = document.querySelector(".single_add_to_cart_button.button.alt");
-   console.log(qtyVal.innerText.length)
-   if (qtyVal.innerText.length > 5) {
-      setTimeout(() => {
-         btnAdd.classList.remove("woosg-disabled", 'woosg-selection');
-         btnAdd.disabled = false;
-      }, 3000);
-
-   }
-}
