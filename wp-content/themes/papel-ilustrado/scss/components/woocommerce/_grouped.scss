@@ -14,8 +14,10 @@
       form.variations_form {
          margin-top: 8px;
          .variations {
+            position: relative;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             .variation {
                float: none;
                border: 0;
@@ -41,7 +43,8 @@
             }
             .reset {
                position: absolute;
-               right: -10px;
+               right: -20px;
+               top: 5px;
                a.reset_variations {
                   display: flex;
                   font-size: 0;
@@ -50,7 +53,6 @@
                   border-radius: 50%;
                   background-color: $color-salmon;
                   color: $color-white;
-                  visibility: visible !important;
                   @include f-center;
                   &::before {
                      content: 'X';
@@ -58,6 +60,11 @@
                      font-family: 'Raleway', sans-serif;
                   }
                }
+            }
+            .alerta {
+               color: $color-salmon;
+               font-size: 12px;
+               margin: 10px 0 0;
             }
          }
       }

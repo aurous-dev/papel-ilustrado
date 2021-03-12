@@ -287,9 +287,15 @@ function  inputValue(e) {
    const inputDiv1 = varationsDiv.children[0].children[1].children[0].value;
    const inputDiv2 = varationsDiv.children[1].children[1].children[0].value;
    const btnAdd = document.querySelector(".single_add_to_cart_button.button.alt");
-   
-   if (inputDiv1 === '' || inputDiv2 === '') {
-      crearUnDiv(varationsDiv)
+   const mensaje = document.querySelector('.alerta');
+
+   // Confirma que los dos input sean seleccionado
+   if (inputDiv1 === '' || inputDiv2 === '') { 
+      
+      if(!mensaje) {
+         crearUnDiv(varationsDiv);
+      }
+
       setTimeout(() => {
          const qtyVal = document.querySelector(".woocommerce-Price-amount.amount");
          if (qtyVal.innerText.length > 5) {
@@ -297,9 +303,9 @@ function  inputValue(e) {
             btnAdd.disabled = true;
          }
       }, 500);
+
    } else {
       setTimeout(() => {
-         const mensaje = document.querySelector('.mensaje-oculto');
          mensaje.remove();
          const qtyVal = document.querySelector(".woocommerce-Price-amount.amount");
          if (qtyVal.innerText.length > 5) {
@@ -308,6 +314,7 @@ function  inputValue(e) {
          }
       }, 500);
    }
+
 }
 
 function reset(e) {
@@ -322,10 +329,11 @@ function reset(e) {
 }
 
 function crearUnDiv(e) {
+
    const divMessage = document.createElement('div');
    divMessage.innerHTML = `
       <p> Por favor seleccione las dos opciones </p>
    `
-   divMessage.classList.add('mensaje-oculto');
+   divMessage.classList.add('alerta');
    e.appendChild(divMessage);
 }
