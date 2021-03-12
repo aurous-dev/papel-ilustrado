@@ -6,7 +6,7 @@ import Vue from "vue/dist/vue.js";
 import VueSweetalert2 from "vue-sweetalert2";
 import * as VeeValidate from "vee-validate";
 import { Validator } from "vee-validate";
-import es from "vee-validate/dist/locale/es";
+import es, { messages } from "vee-validate/dist/locale/es";
 import { VueReCaptcha } from "vue-recaptcha-v3";
 import ButtonSpinner from "vue-button-spinner";
 // import Vue from 'vue';
@@ -262,6 +262,70 @@ $(".slider-nav").slick({
       },
    ],
 });
-// $(".slider-for").on("setPosition", function(event, slick) {
-//     console.log(event);
-// });
+
+// Test
+
+
+const frameInput = document.querySelectorAll('#pa_marco');
+const sizeInput = document.querySelectorAll('#pa_tamano');
+const clearBtn = document.querySelectorAll('.reset_variations');
+
+
+frameInput.forEach((element) => {
+   element.addEventListener('change', inputValue)
+})
+sizeInput.forEach((element) => {
+   element.addEventListener('change', inputValue)
+})
+clearBtn.forEach((element) => {
+   element.addEventListener('click', reset)
+})
+
+
+function  inputValue(e) {
+   const varationsDiv = e.target.parentElement.parentElement.parentElement;
+   const inputDiv1 = varationsDiv.children[0].children[1].children[0].value;
+   const inputDiv2 = varationsDiv.children[1].children[1].children[0].value;
+   const btnAdd = document.querySelector(".single_add_to_cart_button.button.alt");
+   
+   if (inputDiv1 === '' || inputDiv2 === '') {
+      crearUnDiv(varationsDiv)
+      setTimeout(() => {
+         const qtyVal = document.querySelector(".woocommerce-Price-amount.amount");
+         if (qtyVal.innerText.length > 5) {
+            btnAdd.classList.add("woosg-disabled", 'woosg-selection');
+            btnAdd.disabled = true;
+         }
+      }, 500);
+   } else {
+      setTimeout(() => {
+         const mensaje = document.querySelector('.mensaje-oculto');
+         mensaje.remove();
+         const qtyVal = document.querySelector(".woocommerce-Price-amount.amount");
+         if (qtyVal.innerText.length > 5) {
+            btnAdd.classList.remove("woosg-disabled", 'woosg-selection');
+            btnAdd.disabled = false;
+         }
+      }, 500);
+   }
+}
+
+function reset(e) {
+   const btnAdd = document.querySelector(".single_add_to_cart_button.button.alt");
+   setTimeout(() => {
+      const qtyVal = document.querySelector(".woocommerce-Price-amount.amount");
+      if (qtyVal.innerText.length > 5) {
+         btnAdd.classList.remove("woosg-disabled", 'woosg-selection');
+         btnAdd.disabled = false;
+      }
+   }, 500);
+}
+
+function crearUnDiv(e) {
+   const divMessage = document.createElement('div');
+   divMessage.innerHTML = `
+      <p> Por favor seleccione las dos opciones </p>
+   `
+   divMessage.classList.add('mensaje-oculto');
+   e.appendChild(divMessage);
+}
