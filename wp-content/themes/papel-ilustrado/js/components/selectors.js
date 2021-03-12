@@ -12,3 +12,8 @@ export const menu_container = document.querySelector(".header__container");
 
 // Height menu fixed
 export let responsives = window.matchMedia("(max-width: 979px)");
+
+// Composiciones Agrupadas
+export const frameInput = document.querySelectorAll('#pa_marco');
+export const sizeInput = document.querySelectorAll('#pa_tamano');
+export const clearBtn = document.querySelectorAll('.reset_variations');

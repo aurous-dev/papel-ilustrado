@@ -1,6 +1,25 @@
 
-import {tr_nav, tr_preventDefault, menu, tr_search, menu_container} from './selectors';
-import {clickMenu, columnas, showHidden, showSearch, carts, menuMobile} from './functions.js'
+import {
+   tr_nav, 
+   tr_preventDefault, 
+   menu, 
+   tr_search, 
+   menu_container, 
+   frameInput, 
+   sizeInput, 
+   clearBtn
+} from './selectors';
+
+import {
+   clickMenu, 
+   columnas, 
+   showHidden, 
+   showSearch, 
+   carts, 
+   menuMobile,
+   inputValue,
+   reset
+} from './functions.js'
 
 class initApp {
    constructor() {
@@ -28,6 +47,17 @@ class initApp {
             e.preventDefault();
          });
       });
+
+      // Composiciones Agrupadas
+      frameInput.forEach((element) => {
+         element.addEventListener('change', inputValue)
+      })
+      sizeInput.forEach((element) => {
+         element.addEventListener('change', inputValue)
+      })
+      clearBtn.forEach((element) => {
+         element.addEventListener('click', reset)
+      })
    }
 }
 
