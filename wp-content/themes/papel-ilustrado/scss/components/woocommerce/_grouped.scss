@@ -41,7 +41,7 @@
             }
             .reset {
                position: absolute;
-               right: -25px;
+               right: -10px;
                a.reset_variations {
                   display: flex;
                   font-size: 0;
@@ -64,6 +64,7 @@
       .woosg-title-inner {
          display: inline-block !important;
          vertical-align: middle;
+         margin-right: 40px;
          a {
             font-family: 'Raleway', sans-serif;
             color: $color-indigo;
@@ -74,7 +75,6 @@
       .woosg-price {
          display: inline-block;
          vertical-align: middle;
-         margin-left: 40px;
          font-family: 'Raleway', sans-serif;
          color: $color-indigo;
          font-size: 14px !important;
@@ -88,6 +88,45 @@
          z-index: -1;
          opacity: 0;
          display: none;
+      }
+      // Responsive
+      @include mq($from: mobile, $until: tablet) {
+         form.variations_form {
+            .variations {
+               .variation {
+                  padding-right: 8px;
+                  .select {
+                     select {
+                        height: 35px;
+                        font-size: 12px;
+                        padding: 0 8px;
+                     }
+                  }
+               }
+               .reset {
+                  right: -8px;
+                  a.reset_variations {
+                     width: 25px;
+                     height: 25px;
+                     &::before {
+                        font-size: 16px;
+                     }
+                  }
+               }
+            }
+         }
+         .woosg-title-inner {
+            margin-right: 10px;
+            a {
+               font-family: 'Raleway', sans-serif;
+               color: $color-indigo;
+               font-size: 14px;
+               font-weight: 500;
+            }
+         }
+         .woosg-price {
+            font-size: 13px !important;
+         }
       }
    }
 }

@@ -10548,7 +10548,7 @@ form.w-checkout__container {
           background-color: #FFFFFF; }
       .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .reset {
         position: absolute;
-        right: -25px; }
+        right: -10px; }
         .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .reset a.reset_variations {
           display: flex;
           font-size: 0;
@@ -10566,7 +10566,8 @@ form.w-checkout__container {
             font-family: 'Raleway', sans-serif; }
   .woosg_wrap.woosg-wrap .woosg-product .woosg-title-inner {
     display: inline-block !important;
-    vertical-align: middle; }
+    vertical-align: middle;
+    margin-right: 40px; }
     .woosg_wrap.woosg-wrap .woosg-product .woosg-title-inner a {
       font-family: 'Raleway', sans-serif;
       color: #2A3D42;
@@ -10575,7 +10576,6 @@ form.w-checkout__container {
   .woosg_wrap.woosg-wrap .woosg-product .woosg-price {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 40px;
     font-family: 'Raleway', sans-serif;
     color: #2A3D42;
     font-size: 14px !important;
@@ -10587,6 +10587,29 @@ form.w-checkout__container {
     z-index: -1;
     opacity: 0;
     display: none; }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .variation {
+      padding-right: 8px; }
+      .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .variation .select select {
+        height: 35px;
+        font-size: 12px;
+        padding: 0 8px; }
+    .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .reset {
+      right: -8px; }
+      .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .reset a.reset_variations {
+        width: 25px;
+        height: 25px; }
+        .woosg_wrap.woosg-wrap .woosg-product form.variations_form .variations .reset a.reset_variations::before {
+          font-size: 16px; }
+    .woosg_wrap.woosg-wrap .woosg-product .woosg-title-inner {
+      margin-right: 10px; }
+      .woosg_wrap.woosg-wrap .woosg-product .woosg-title-inner a {
+        font-family: 'Raleway', sans-serif;
+        color: #2A3D42;
+        font-size: 14px;
+        font-weight: 500; }
+    .woosg_wrap.woosg-wrap .woosg-product .woosg-price {
+      font-size: 13px !important; } }
 
 .single_add_to_cart_button.button.alt {
   width: 95%;
