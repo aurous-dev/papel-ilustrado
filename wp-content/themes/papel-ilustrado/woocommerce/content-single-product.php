@@ -68,63 +68,6 @@ if (post_password_required()) {
 </div>
 
 
-<!-- Marco tester -->
-<?php if (get_field('mostrar_marco_tester') == 'show') : ?>
-	<div id="sigle-product-vue">
-		<div class="obra-container__title col-12">
-			<h3>Test de marcos</h3>
-		</div>
-		<div v-if="loading">
-			<div style="text-align:center;margin:0 auto;">Cargando...</div>
-		</div>
-		<div v-else>
-			<div class="row obra-container__price" :style="cssVars">
-				<div class="obra-container__price__info col-lg-5 left">
-					<div class="obra-container__price__info__cost">
-						<h5 v-if="!selectedMarco.nombre_de_marco">Selecciona un marco clickeando en algún ícono de abajo.</h5>
-						<h5 v-else>Tu marco seleccionado es: {{selectedMarco?.nombre_de_marco}}</h5>
-					</div>
-					<div v-if="selectedMarco.descripcion" class="obra-container__price__info__des">
-						Descripción: {{selectedMarco?.descripcion}}
-					</div>
-					<div class="obra-container__price__info__frame">
-						<div class="frame">
-							<div>Selecciona un marco</div>
-							<div class="frame-option">
-								<div v-for="option in obra.marcos" :key="option.id">
-									<button @click="changeFrame(option)">
-										<img :src="option.icono" />
-									</button>
-								</div>
-								<div>
-									<button @click="changeFrame({})">
-										<!-- Sin Marco -->
-										<img src="<?php echo get_template_directory_uri(); ?>/img/png/no_marco.png" alt="">
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="obra-container__price__info__des">
-						Ahora que probaste el marco que deseas seleccionalo antes de agregar al carrito.
-					</div>
-					<div class="obra-container__price__info__des">
-						<a href="#" style="text-decoration:underline;">Ya probé el marco que quiero, ir a comprar</a>
-					</div>
-				</div>
-				<div class="obra-container__price__img col-lg-7 right">
-					<div v-if="obra.images" class="box__image">
-						<div class="frame-picture" :style="cssVars" :class="Object.keys(selectedMarco).length === 0 ? 'none' : 'withFrame'">
-							<img :src="obra.images[0].src" alt="">
-							<div class="inner"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-<?php endif; ?>
-<!-- Marco tester -->
 
 <!-- SECOND SECTION  -->
 <section class="container-fluid paiting">

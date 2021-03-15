@@ -149,17 +149,27 @@
    border: 1px solid $color-indigo !important;
    border-radius: 0 !important;
    height: 42px;
+   outline: none !important;
    @include fonts-display(500);
-   &:hover {
-      background-color: $color-salmon !important;
-      border: 1px solid $color-salmon !important;
-      color: $color-white;
+   @include mq($from: desktop) {
+      &:hover {
+         background-color: $color-salmon !important;
+         border: 1px solid $color-salmon !important;
+         color: $color-white;
+      }
    }
-   &:disabled {
+   &.disabled {
       &:hover {
          background-color: $color-indigo !important;
          border: 1px solid $color-indigo !important;
          color: $color-white;
       }
    }
+   @include mq($from: mobile, $until: desktop) {
+      width: 100%;
+   }
 }
+// Elimina el zoom de la imagen para mobile y tablet
+// @include mq() {
+//    figure
+// }

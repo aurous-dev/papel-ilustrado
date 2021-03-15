@@ -77,7 +77,8 @@ export const sigleProductScript = {
     }
   },
   methods: {
-    changeFrame: function(marcoObject) {
+    changeFrame: function(marcoObject, event) {
+      if(event) event.preventDefault()
       this.selectedMarco = marcoObject;
     }
   },
