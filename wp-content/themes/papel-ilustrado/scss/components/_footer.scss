@@ -125,7 +125,7 @@
          }
       }
    }
-   @include mq($from: tablet, $until: wide) {
+   @include mq($from: desktop, $until: wide) {
       &__logo {
          font-size: 12px;
       }
@@ -157,10 +157,16 @@
          font-size: 12px;
          i {
             margin-right: 10px;
+            margin-bottom: 0;
+         }
+         &--contact {
+            &-email {
+               padding: 0;
+            }
          }
       }
    } 
-   @include mq($from: mobile, $until: desktop) {
+   @include mq($from: tablet, $until: desktop) {
       padding: 20px 0;
       display: flex;
       flex-direction: column;
@@ -168,7 +174,103 @@
          padding-top: 0;
          padding-bottom: 20px;
          border-bottom: 1px solid #355957;
-         align-items: center;
+         align-items: stretch;
+         order: 1;
+         font-size: 12px;
+         &--address {
+            padding: 10px 0;
+            align-items: center;
+         }
+         &--time {
+            align-items: center;
+         }
+         &--contact {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            &-email {
+               i {
+                  margin-bottom: 8px;
+               }
+               &:last-child {
+                  i {
+                     margin-bottom: 0;
+                  }
+               }
+            }
+         }
+         &--rrss {
+            display: none;
+         }
+      }
+      &__info {
+         flex-wrap: wrap;
+         align-items: stretch;
+         padding: 20px 0;
+         order: 2;
+         &--nav {
+            flex: 0 0 50%;
+            max-width: 50%;
+            width: 100%;
+            padding: 0 15px;
+            ul {
+               li {
+                  a {
+                     font-size: 11px;
+                  }
+               }
+            }
+         }
+         &--subs {
+            flex: 0 0 50%;
+            max-width: 50%;
+            width: 100%;
+            text-align: center;
+            padding: 0 15px;
+            height: auto;
+            h3 {
+               text-align: center;
+            }
+            form {
+               
+            }
+            input {
+               width: 85%;
+               height: 35px;
+               padding: 5px 10px;
+               font-size: 12px;
+            }
+            .btn-send {
+               display: block;
+               width: 85%;
+               font-size: 12px;
+               padding: 5px 18px;
+               margin: 12px auto 0;
+            }
+         }
+      }
+      &__logo {
+         line-height: 2;
+         order: 3;
+         font-size: 12px;
+         top: 0;
+         img {
+            width: 200px;
+         }
+      }
+
+   }
+   @include mq($from: mobile, $until: tablet) {
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      &__direction {
+         align-items: flex-start;
+         flex-direction: column;
+         border-bottom: 1px solid #355957;
+         margin: 0 -15px;
+         padding-bottom: 20px;
+         padding-top: 0;
          order: 1;
          &--address {
             padding: 20px 0;
@@ -187,6 +289,7 @@
       }
       &__info {
          flex-direction: column;
+         margin: 0 -15px;
          padding: 20px 0;
          border: none;
          order: 2;
@@ -206,7 +309,7 @@
                justify-content: space-between;
             }
             input {
-               width: 85%;
+               width: 71%;
                height: 100%;
                font-size: 12px;
             }
@@ -222,26 +325,6 @@
       &__logo {
          line-height: 2;
          order: 3;
-         img {
-            width: 200px;
-         }
-      }
-   }
-   @include mq($from: mobile, $until: tablet) {
-      &__direction {
-         flex-direction: column;
-         margin: 0 -15px;
-         align-items: flex-start;
-      }
-      &__info {
-         margin: 0 -15px;
-         &--subs {
-            input {
-               width: 71%;
-            }
-         }
-      }
-      &__logo {
          img {
             width: 60%;
          }

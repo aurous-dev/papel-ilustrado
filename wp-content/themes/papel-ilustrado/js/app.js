@@ -29,6 +29,8 @@ AOS.init({
 
 // JS Modules
 import initApp from './components/constructor.js'
+
+import './components/sliders.js'
 // JS Modules
 
 
@@ -66,11 +68,15 @@ const app = new Vue({
 
 // Import JS
 const application = new initApp();
+// Import JS
+
 // Marco tester
 if (document.querySelector("#sigle-product-vue")) {
    const sigleProduct = new Vue(sigleProductScript);
 }
 // Marco tester
+
+
 
 // HOME SLIDER
 $(".hero__slider").slick({
@@ -185,7 +191,7 @@ $(".fiveColumn__slider").slick({
       {
          breakpoint: 770,
          settings: {
-            slidesToShow: 3,
+            slidesToShow: 4,
             slidesToScroll: 1,
             dots: true,
          },
