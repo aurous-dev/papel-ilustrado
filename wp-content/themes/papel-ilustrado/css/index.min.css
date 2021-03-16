@@ -9953,14 +9953,16 @@ a.text-dark:hover, a.text-dark:focus {
       transition: all ease-in-out 0.3s;
       align-items: center;
       justify-content: center; }
-      .policies__link--div:hover {
-        color: #FFFFFF;
-        background-color: #A7A7A7; }
+      @media (min-width: 61.25em) {
+        .policies__link--div:hover {
+          color: #FFFFFF;
+          background-color: #A7A7A7; } }
     .policies__link:nth-child(2n) .policies__link--div {
       background-color: #F4997E; }
-      .policies__link:nth-child(2n) .policies__link--div:hover {
-        color: #FFFFFF;
-        background-color: #A7A7A7; }
+      @media (min-width: 61.25em) {
+        .policies__link:nth-child(2n) .policies__link--div:hover {
+          color: #FFFFFF;
+          background-color: #A7A7A7; } }
   .policies__info {
     color: #FFFFFF;
     margin-bottom: 35px;
@@ -10000,6 +10002,8 @@ a.text-dark:hover, a.text-dark:focus {
   @media (min-width: 46.25em) and (max-width: 61.24em) {
     .policies {
       padding-bottom: 50px; }
+      .policies__link--div {
+        height: 200px; }
       .policies__info--container {
         padding: 30px 45px; }
       .policies__info--title h2,
@@ -10011,6 +10015,11 @@ a.text-dark:hover, a.text-dark:focus {
   @media (min-width: 20em) and (max-width: 46.24em) {
     .policies {
       padding-bottom: 50px; }
+      .policies__link {
+        font-size: 18px; }
+        .policies__link--div {
+          height: auto;
+          padding: 40px 0; }
       .policies__info--container {
         padding: 30px; }
       .policies__info--title {

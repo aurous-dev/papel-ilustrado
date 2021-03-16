@@ -10,17 +10,21 @@
          background-color: $color-dark_green;
          transition: $tr3;
          @include f-center;
-         &:hover {
-            color: $color-white;
-            background-color: $color-silver;
+         @include mq($from: desktop) {
+            &:hover {
+               color: $color-white;
+               background-color: $color-silver;
+            }
          }
       }
       &:nth-child(2n) {
          .policies__link--div {
             background-color: $color-salmon;
-            &:hover {
-               color: $color-white;
-               background-color: $color-silver;
+            @include mq($from: desktop) {
+               &:hover {
+                  color: $color-white;
+                  background-color: $color-silver;
+               }
             }
          }
       }
@@ -79,6 +83,11 @@
    }
    @include mq($from: tablet, $until: desktop) {
       padding-bottom: 50px;
+      &__link {
+         &--div {
+            height: 200px;
+         }
+      }
       &__info {
          &--container {
             padding: 30px 45px;
@@ -97,6 +106,13 @@
    }
    @include mq($from: mobile, $until: tablet) {
       padding-bottom: 50px;
+      &__link {
+         font-size: 18px;
+         &--div {
+            height: auto;
+            padding: 40px 0;
+         }
+      }
       &__info {
          &--container {
             padding: 30px;
