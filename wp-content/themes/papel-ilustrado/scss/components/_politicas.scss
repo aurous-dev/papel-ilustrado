@@ -1,8 +1,5 @@
 .policies {
-   padding-bottom: 150px;
-   &__container{
-
-   }
+   padding-bottom: 120px;
    &__link {
       color: $color-white;
       font-size: 22px;
@@ -20,12 +17,47 @@
       }
       &:nth-child(2n) {
          .policies__link--div {
-            background-color: $color-light_orange;
+            background-color: $color-salmon;
             &:hover {
                color: $color-white;
                background-color: $color-silver;
             }
          }
       }
+   }
+   &__info {
+      // height: 100px;
+      color: $color-white;
+      margin-bottom: 35px;
+      @include fonts-display(500);
+      &:nth-child(4n-2), 
+      &:nth-child(4n-3) {
+         background:$color-indigo content-box;
+      }
+      &:nth-child(4n), 
+      &:nth-child(4n-1) {
+         background: $color-salmon content-box;
+      }
+      &--container {
+         padding: 30px 60px;
+      }
+      &--title {
+         position: relative;
+         @include fonts-display(600);
+         .number {
+            position: absolute;
+            left: -20px;
+            font-size: 22px;
+         }
+         h2 {
+            @include fonts-display(600);
+            font-size: 22px;
+            margin-bottom: 30px;
+         }
+      }
+      &--desc {
+         font-size: 13px;
+      }
+     
    }
 }
