@@ -58,4 +58,7 @@ function get_fields_recursive($item)
 }
 
 
+// Expand max variations in bulk
+define( 'WC_MAX_LINKED_VARIATIONS', 100 );
+
 ?>

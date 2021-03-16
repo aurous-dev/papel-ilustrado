@@ -26,7 +26,6 @@ AOS.init({
 
 // Start AOS library
 
-
 // Import Slick Slider & bootstrap
 require("./app/slick.js");
 require("./bootstrap.js");
@@ -47,7 +46,6 @@ import regeneratorRuntime from "regenerator-runtime";
 
 import { sigleProductScript } from "./components/SingleProduct";
 
-
 // Import App Vue
 const app = new Vue({
     el: "#app",
@@ -62,7 +60,7 @@ const app = new Vue({
 // Marco tester
 if (document.querySelector("#sigle-product-vue")) {
     const sigleProduct = new Vue(sigleProductScript);
-  }
+}
 // Marco tester
 
 // HOME SLIDER
@@ -382,3 +380,30 @@ function carts() {
         });
     }
 }
+
+// Test
+
+const qtyVal = document.querySelector(".woosg_total");
+const btnAdd = document.querySelector(".single_add_to_cart_button");
+console.log(qtyVal.innerText.length);
+
+document.querySelector(".woosg_wrap").onmousedown = function() {
+    // Este funciona con el click adicional en la caja 
+    if (qtyVal.children.length > 5) {
+        btnAdd.classList.remove("woosg-disabled");
+        btnAdd.disabled = false;
+        console.log("Valor " + qtyVal.innerText.length);
+    }
+};
+// });
+
+// const test = document.querySelector('.woosg-form')
+// test.addEventListener('click', prueba)
+
+// function prueba() {
+//     if (qtyVal.innerText.length > 5) {
+//         btnAdd.classList.remove("woosg-disabled");
+//         btnAdd.disabled = false;
+//         console.log("Valor " + qtyVal.innerText.length);
+//     }
+// }
