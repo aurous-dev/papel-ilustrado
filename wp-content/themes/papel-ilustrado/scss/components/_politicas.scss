@@ -39,7 +39,7 @@
          background: $color-salmon content-box;
       }
       &--container {
-         padding: 30px 60px;
+         padding: 30px 50px;
       }
       &--title {
          position: relative;
@@ -59,5 +59,65 @@
          font-size: 13px;
       }
      
+   }
+   @include mq($from: desktop, $until: wide) {
+      padding-bottom: 100px;
+      &__info {
+         &--container {
+            padding: 30px 45px;
+         }
+         &--title {
+            h2,
+            .number {
+               font-size: 20px;
+            }
+         }
+         &--desc {
+            font-size: 12px;
+         }
+      }
+   }
+   @include mq($from: tablet, $until: desktop) {
+      padding-bottom: 50px;
+      &__info {
+         &--container {
+            padding: 30px 45px;
+         }
+         &--title {
+            h2,
+            .number {
+               font-size: 18px;
+               margin-bottom: 20px;
+            }
+         }
+         &--desc {
+            font-size: 12px;
+         }
+      }
+   }
+   @include mq($from: mobile, $until: tablet) {
+      padding-bottom: 50px;
+      &__info {
+         &--container {
+            padding: 30px;
+         }
+         &--title {
+            display: flex;
+            h2 {
+               display: inline-block;
+               font-size: 18px;
+            }
+            .number {
+               font-size: 18px;
+               margin-bottom: 20px;
+               display: inline-block;
+               left: -10px;
+               position: relative;
+            }
+         }
+         &--desc {
+            font-size: 12px;
+         }
+      }
    }
 }

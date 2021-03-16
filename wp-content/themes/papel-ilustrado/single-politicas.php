@@ -17,6 +17,7 @@ get_header();
                </div>
                <div class="policies__info--desc">
                   Para Santiago contamos con despacho interno para nuestros productos, por lo que no funcionamos a través de currier. Es la forma más segura y rápida en que recibirás tu pedido. 
+                  Para Santiago contamos con despacho interno para nuestros productos, por lo que no funcionamos a través de currier. Es la forma más segura y rápida en que recibirás tu pedido. 
                </div>
             </div>
          </div>
