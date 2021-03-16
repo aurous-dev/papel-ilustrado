@@ -8,6 +8,14 @@ export function allSliders () {
       dots: false,
       arrows: true,
       // fade: true,
+      responsive: [
+         {
+            breakpoint: 770,
+            settings: {
+               arrows: false,
+            },
+         },
+      ],
    });
    $(".paiting__slider").slick({
       infinite: true,

@@ -55,9 +55,27 @@
          }
       }
    }
+   @include mq($from: tablet, $until: desktop) {
+      &__slider {
+         .slick-prev {
+            left: -40px;
+         }
+         .slick-next {
+            right: -40px;
+         }
+      }
+   }
    @include mq($from: mobile, $until: tablet) {
       .title {
          padding: 0;
+      }
+      &__slider {
+         .slick-prev {
+            left: -5px;
+         }
+         .slick-next {
+            right: -5px;
+         }
       }
    }
 }

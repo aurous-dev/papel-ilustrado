@@ -25,7 +25,7 @@
         font-weight: 600;
         filter: grayscale(1);
         transform: rotate(180deg);
-        @include mq($from: mobile, $until: tablet) {
+        @include mq($from: mobile, $until: desktop) {
             width: auto;
             height: auto;
             background: rgba($color: $color-white, $alpha: .8);
@@ -58,7 +58,7 @@
         font-size: 50px;
         font-weight: 600;
         filter: grayscale(1);
-        @include mq($from: mobile, $until: tablet) {
+        @include mq($from: mobile, $until: desktop) {
             width: auto;
             height: auto;
             background: rgba($color: $color-white, $alpha: .8);
