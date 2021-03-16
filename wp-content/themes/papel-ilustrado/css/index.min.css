@@ -9939,6 +9939,29 @@ a.text-dark:hover, a.text-dark:focus {
   .simple-product__btn .buy {
     width: 100%; } }
 
+.policies {
+  padding-bottom: 150px; }
+  .policies__link {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; }
+    .policies__link--div {
+      display: flex;
+      height: 250px;
+      background-color: #355957;
+      transition: all ease-in-out 0.3s;
+      align-items: center;
+      justify-content: center; }
+      .policies__link--div:hover {
+        color: #FFFFFF;
+        background-color: #A7A7A7; }
+    .policies__link:nth-child(2n) .policies__link--div {
+      background-color: #F5AF9A; }
+      .policies__link:nth-child(2n) .policies__link--div:hover {
+        color: #FFFFFF;
+        background-color: #A7A7A7; }
+
 .w-lost__container {
   max-width: 1140px;
   padding: 80px 15px;
@@ -10990,7 +11013,6 @@ body, html {
       min-height: 55vh; } }
 
 #app {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

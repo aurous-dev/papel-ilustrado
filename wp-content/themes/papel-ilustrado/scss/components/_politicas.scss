@@ -1,0 +1,31 @@
+.policies {
+   padding-bottom: 150px;
+   &__container{
+
+   }
+   &__link {
+      color: $color-white;
+      font-size: 22px;
+      @include fonts-display(600);
+      &--div {
+         display: flex;
+         height: 250px;
+         background-color: $color-dark_green;
+         transition: $tr3;
+         @include f-center;
+         &:hover {
+            color: $color-white;
+            background-color: $color-silver;
+         }
+      }
+      &:nth-child(2n) {
+         .policies__link--div {
+            background-color: $color-light_orange;
+            &:hover {
+               color: $color-white;
+               background-color: $color-silver;
+            }
+         }
+      }
+   }
+}
