@@ -339,6 +339,14 @@
         &--twice {
             max-height: 280px;
         }
+        &--desc {
+            &-price {
+                .price-off,
+                .price-normal {
+                    display: block;
+                }
+            }
+        }
     }
     @include mq($from: mobile, $until: tablet) {
         grid-template-rows: unset;
@@ -442,26 +450,5 @@
             animation-fill-mode: forwards;
             //   test animation Erasmo
         }
-    }
-}
-@-webkit-keyframes zoomin {
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-    100% {
-        -webkit-transform: scale(1.10);
-        transform: scale(1.10);
-    }
-}
-
-@-webkit-keyframes zoomout {
-    0% {
-        -webkit-transform: scale(1.10);
-        transform: scale(1.10);
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
     }
 }

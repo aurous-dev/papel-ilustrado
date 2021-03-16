@@ -715,6 +715,22 @@
   transform: perspective(2500px) rotateX(0); }
 
 @charset "UTF-8";
+@-webkit-keyframes zoomin {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); } }
+
+@-webkit-keyframes zoomout {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -9274,7 +9290,10 @@ a.text-dark:hover, a.text-dark:focus {
       .card__container--img {
         padding: 5px; }
       .card__container--twice {
-        max-height: 280px; } }
+        max-height: 280px; }
+      .card__container--desc-price .price-off,
+      .card__container--desc-price .price-normal {
+        display: block; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .card__container {
       grid-template-rows: unset;
@@ -9353,22 +9372,6 @@ a.text-dark:hover, a.text-dark:focus {
       -webkit-animation: zoomout 0.3s linear;
       animation: zoomout 0.3s linear;
       animation-fill-mode: forwards; }
-
-@-webkit-keyframes zoomin {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1); }
-  100% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1); } }
-
-@-webkit-keyframes zoomout {
-  0% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1); }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
 
 #footer {
   background-color: #2A3D42; }
