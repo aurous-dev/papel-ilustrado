@@ -8546,7 +8546,8 @@ a.text-dark:hover, a.text-dark:focus {
       #menu-principal > li:nth-child(n+4) {
         margin-left: 50px; }
     #menu-principal > li.menu-item-has-children > .sub-menu {
-      width: 100%; } }
+      width: 100%;
+      padding: 20px 30px 40px; } }
   @media (min-width: 46.25em) and (max-width: 61.24em) {
     #menu-principal {
       justify-content: space-between; }
