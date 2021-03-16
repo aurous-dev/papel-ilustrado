@@ -36,7 +36,46 @@
             border: none;
             border-radius: 0;
             letter-spacing: 0.05em;
+            transition: $tr3;
             @include fonts-display(500);
+            @include mq($from: desktop) {
+               &:hover {
+                  background-color: $color-salmon;
+               }
+            }
+         }
+      }
+   }
+   @include mq($from: tablet, $until: desktop) {
+      #app {
+         height: auto;
+         form {
+            padding: 50px 35px;
+            margin: 0 auto;
+            .form-group {
+               input {
+                  height: 38px;
+               }
+            }
+         }
+      }
+   }
+   @include mq($from: mobile, $until: tablet) {
+      padding: 40px 15px 60px;
+      #app {
+         height: auto;
+         form {
+            padding: 25px 10px 30px;
+            .form-group {
+               input {
+                  height: 38px;
+               }
+            }
+            button {
+               font-size: 14px;
+               width: 100%;
+               margin: 20px 15px 10px;
+            }
          }
       }
    }

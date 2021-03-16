@@ -52,6 +52,18 @@
          }
       }
    }
+   @include mq($from: tablet, $until: desktop) {
+      &__slider {
+         .slick-prev {
+            top: 35%;
+            left: -40px;
+         }
+         .slick-next {
+            top: 35%;
+            right: -40px;
+         }
+      }
+   }
    @include mq($from: mobile, $until: tablet) {
       padding: 50px 15px 100px;
       margin: 0;

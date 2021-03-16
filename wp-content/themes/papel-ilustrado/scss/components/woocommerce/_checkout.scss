@@ -162,6 +162,7 @@ form.w-checkout__container {
             color: $color-white;
             text-transform: uppercase;
             font-size: 16px;
+            transition: $tr3;
             @include fonts-display(700);
             &:hover {
                background-color: $color-salmon;

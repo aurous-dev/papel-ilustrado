@@ -57,14 +57,26 @@
       }
    }
    // Responsive
-   @include mq($from: mobile, $until: tablet) {
+   @include mq($from: tablet, $until: desktop) {
       &__slider {
          .slick-prev {
-            left: -20px;
+            left: -40px;
             top: 35%;
          }
          .slick-next {
-            right: -20px;
+            right: -40px;
+            top: 35%;
+         }
+      }
+   }
+   @include mq($from: mobile, $until: tablet) {
+      &__slider {
+         .slick-prev {
+            left: -32px;
+            top: 35%;
+         }
+         .slick-next {
+            right: -33px;
             top: 35%;
          }
       }

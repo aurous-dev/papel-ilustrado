@@ -13,6 +13,7 @@
          }
          svg {
             path {
+               transition: $tr3;
                fill: rgba($color: #E5E5E5, $alpha: .2);
             }
          }
@@ -89,6 +90,7 @@
          }
          svg {
             path {
+               transition: $tr3;
                fill: rgba($color: #D2D2D2, $alpha: .2);
             }
          }

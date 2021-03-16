@@ -1,4 +1,4 @@
-.search-results {
+.search-result {
    padding-bottom: 100px;
    &__grid {
       display: flex;
@@ -7,6 +7,14 @@
          flex: 0 0 20%;
          max-width: 20%;
          padding: 20px 0;
+      }
+   }
+   @include mq($from: tablet, $until: desktop) {
+      &__grid {
+         .cards {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+         }
       }
    }
    @include mq($from: mobile, $until: tablet) {

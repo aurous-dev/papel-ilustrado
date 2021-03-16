@@ -6,9 +6,9 @@ get_header();
 
 ?>
 <?php get_template_part('components/single/search-title');?>
-<section class="search-results">
+<section class="search-result">
    <div class="container">
-      <div class="search-results__grid">
+      <div class="search-result__grid">
          <?php get_template_part('components/group/card-search');?>
       </div>
    </div>

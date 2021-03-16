@@ -9,10 +9,7 @@
 @import './footer';
 @import './filter';
 @import './contact';
+@import './frame-tester';
 // Woocomerce
-@import './woocommerce/login';
-@import './woocommerce/lost';
-@import './woocommerce/cart';
-@import './woocommerce/checkout';
-@import './woocommerce/dashboard';
-@import './woocommerce/received';
+@import './woocommerce/index';
+

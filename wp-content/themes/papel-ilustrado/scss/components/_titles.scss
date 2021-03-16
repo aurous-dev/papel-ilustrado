@@ -41,6 +41,7 @@
       letter-spacing: 0.05em;
       a {
          color: $color-indigo;
+         transition: $tr3;
          @include fonts-display(500);
          &:hover {
             color: $color-salmon;

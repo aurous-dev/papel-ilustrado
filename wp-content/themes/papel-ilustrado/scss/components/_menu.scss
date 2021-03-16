@@ -7,6 +7,7 @@
    letter-spacing: 0.05em;
    @include f-center;
    @include fonts-display(700);
+   // Lista principal
    & > li {
       margin-right: 60px;
       &:nth-child(3) {
@@ -21,6 +22,7 @@
          text-decoration: none;
          font-size: $f-normal;
          color: $color-indigo;
+         transition: $tr3;
       }
       @include mq($from: desktop) {
          & > a:hover {
@@ -78,6 +80,7 @@
          visibility: hidden;
          z-index: 1000;
          left: 50%;
+         transition: $tr3;
          #banner_cuadros {
             img {
                max-width: 400px;
@@ -110,6 +113,7 @@
                   text-decoration-color: $color-white;
                   text-transform: capitalize;
                   letter-spacing: 0.2px;
+                  transition: $tr3;
                   &:hover {
                      text-decoration-color: $color-indigo;
                   }
@@ -124,6 +128,64 @@
          .column2 {
             column-count: 2;
             column-gap: 40px;
+         }
+      }
+   }
+   // RESPONSIVE
+   @include mq($from: desktop, $until: wide) {
+      & > li {
+         margin-right: 50px;
+         &:nth-child(n+4) {
+            margin-left: 50px;
+         }  
+      }
+      &> li.menu-item-has-children {
+         &> .sub-menu {
+            width: 100%;
+         }
+      }
+   }
+   @include mq($from: tablet, $until: desktop) {
+      justify-content: space-between;
+      & > li {
+         margin-right: 25px;
+         &:nth-child(n+4) {
+            margin-left: 25px;
+         }
+         a {
+            font-size: 12px;
+         }
+      }
+      &> li.menu-item-has-children {
+         &> .sub-menu {
+            top: 189px;
+            padding: 20px 15px 30px;
+            width: 100%;
+            #banner_cuadros {
+               a {
+                  padding: 0;
+               }
+               img {
+                  max-width: 300px;
+               }
+            }
+            & > li {
+               padding: 10px 15px;
+               & > .sub-menu {
+                  padding-top: 10px;
+                  li {
+                     padding: 0;
+                  }
+               }
+            }
+            .column3 {
+               column-count: 3;
+               column-gap: 20px;
+            }
+            .column2 {
+               column-count: 2;
+               column-gap: 20px;
+            }
          }
       }
    }
@@ -190,6 +252,12 @@
                column-count: 2;
                column-gap: 40px;
             }
+            #banner_cuadros {
+               img {
+                  max-width: unset;
+                  width: 100%;
+               }
+            }
          }
          &.active {
             & > a {
@@ -204,7 +272,3 @@
       }
    }
 }
-// erasmo test banner images
-// #banner_cuadros {
-//    display:none;
-// }

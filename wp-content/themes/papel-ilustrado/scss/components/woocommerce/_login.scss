@@ -60,6 +60,7 @@
             border-radius: 0;
             text-transform: uppercase;
             letter-spacing: .02em;
+            transition: $tr3;
             @include fonts-display(400);
             &:hover {
                background-color: $color-salmon;
