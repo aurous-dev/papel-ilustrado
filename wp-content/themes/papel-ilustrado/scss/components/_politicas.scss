@@ -1,0 +1,139 @@
+.policies {
+   padding-bottom: 120px;
+   &__link {
+      color: $color-white;
+      font-size: 22px;
+      @include fonts-display(600);
+      &--div {
+         display: flex;
+         height: 250px;
+         background-color: $color-dark_green;
+         transition: $tr3;
+         @include f-center;
+         @include mq($from: desktop) {
+            &:hover {
+               color: $color-white;
+               background-color: $color-silver;
+            }
+         }
+      }
+      &:nth-child(2n) {
+         .policies__link--div {
+            background-color: $color-salmon;
+            @include mq($from: desktop) {
+               &:hover {
+                  color: $color-white;
+                  background-color: $color-silver;
+               }
+            }
+         }
+      }
+   }
+   &__info {
+      // height: 100px;
+      color: $color-white;
+      margin-bottom: 35px;
+      @include fonts-display(500);
+      &:nth-child(4n-2), 
+      &:nth-child(4n-3) {
+         background:$color-indigo content-box;
+      }
+      &:nth-child(4n), 
+      &:nth-child(4n-1) {
+         background: $color-salmon content-box;
+      }
+      &--container {
+         padding: 30px 50px;
+      }
+      &--title {
+         position: relative;
+         @include fonts-display(600);
+         .number {
+            position: absolute;
+            left: -20px;
+            font-size: 22px;
+         }
+         h2 {
+            @include fonts-display(600);
+            font-size: 22px;
+            margin-bottom: 30px;
+         }
+      }
+      &--desc {
+         font-size: 13px;
+      }
+     
+   }
+   @include mq($from: desktop, $until: wide) {
+      padding-bottom: 100px;
+      &__info {
+         &--container {
+            padding: 30px 45px;
+         }
+         &--title {
+            h2,
+            .number {
+               font-size: 20px;
+            }
+         }
+         &--desc {
+            font-size: 12px;
+         }
+      }
+   }
+   @include mq($from: tablet, $until: desktop) {
+      padding-bottom: 50px;
+      &__link {
+         &--div {
+            height: 200px;
+         }
+      }
+      &__info {
+         &--container {
+            padding: 30px 45px;
+         }
+         &--title {
+            h2,
+            .number {
+               font-size: 18px;
+               margin-bottom: 20px;
+            }
+         }
+         &--desc {
+            font-size: 12px;
+         }
+      }
+   }
+   @include mq($from: mobile, $until: tablet) {
+      padding-bottom: 50px;
+      &__link {
+         font-size: 18px;
+         &--div {
+            height: auto;
+            padding: 40px 0;
+         }
+      }
+      &__info {
+         &--container {
+            padding: 30px;
+         }
+         &--title {
+            display: flex;
+            h2 {
+               display: inline-block;
+               font-size: 18px;
+            }
+            .number {
+               font-size: 18px;
+               margin-bottom: 20px;
+               display: inline-block;
+               left: -10px;
+               position: relative;
+            }
+         }
+         &--desc {
+            font-size: 12px;
+         }
+      }
+   }
+}
