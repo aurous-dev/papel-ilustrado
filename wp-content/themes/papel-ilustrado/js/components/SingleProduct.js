@@ -88,6 +88,7 @@ export const sigleProductScript = {
       this.valor = values;
       const inputMarco = document.querySelector('#pa_marco').children;
       
+      // Iterador
       for (const inputs in inputMarco) {
         if (Object.hasOwnProperty.call(inputMarco, inputs)) {
           const select = inputMarco[inputs];
