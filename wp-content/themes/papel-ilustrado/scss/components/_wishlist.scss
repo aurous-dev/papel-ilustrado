@@ -1,0 +1,93 @@
+#yith-wcwl-form {
+   max-width: 1140px;
+   padding: 80px 15px;
+   margin: 0 auto;
+
+   // Titulo
+   .wishlist-title-container {
+      text-align: center;
+      .wishlist-title {
+         margin: 0;
+         text-align: center;
+         h2 {
+            color: $color-indigo;
+            font-size: 22px;
+            margin-bottom: 20px;
+            text-align: center;
+            @include fonts-display(700);
+         }
+         a {
+            display: none;
+         }
+      }
+   }
+
+   // Tabla
+   table.wishlist_table {
+      border: 1px solid rgba($color: $color-black, $alpha: .1);
+      border-collapse: collapse;
+      thead {
+         th {
+            border: 0;
+            color: $color-dark_gray;
+            font-size: 14px;
+            text-transform: uppercase;
+            @include fonts-display(700);
+            &.product-price {
+               text-align: center;
+            }
+         }
+      }
+      tbody {
+         tr {
+            border-top: 1px solid rgba($color: $color-black, $alpha: .1); 
+            td {
+               border: 0;
+               color: $color-dark_gray;
+               font-size: 13px;
+               text-transform: uppercase;
+               @include fonts-display(700);
+               span.woocommerce-Price-currencySymbol {
+                  color: #D2D2D2;
+               }
+               ins {
+                  text-decoration: none;
+                  margin-left: 10px;
+               }
+               a {
+                  color: $color-dark_gray;
+               }
+               // btn
+               &.product-add-to-cart {
+                  a {
+                     margin: 0 auto !important;
+                     padding: 10px 13px !important;
+                     background-color: $color-white;
+                     border: 1px solid $color-indigo;
+                     display: block !important;
+                     max-width: 60%;
+                     border-radius: 0;
+                     font-size: 13px;
+                     transition: $tr3;
+                     &:hover {
+                        background-color: $color-salmon;
+                        border: 1px solid $color-salmon;
+                        color: $color-white;
+                     }
+                  }
+               }
+
+               // Eliminar
+               &.product-remove {
+                  a {
+                     margin: 0 auto;
+                     background: #EB5757;
+                     color: #FFFFFF !important;
+                     font-size: 17px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

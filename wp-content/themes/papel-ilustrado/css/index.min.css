@@ -10143,6 +10143,72 @@ a.text-dark:hover, a.text-dark:focus {
             margin-bottom: 20px;
             font-size: 22px; } }
 
+#yith-wcwl-form {
+  max-width: 1140px;
+  padding: 80px 15px;
+  margin: 0 auto; }
+  #yith-wcwl-form .wishlist-title-container {
+    text-align: center; }
+    #yith-wcwl-form .wishlist-title-container .wishlist-title {
+      margin: 0;
+      text-align: center; }
+      #yith-wcwl-form .wishlist-title-container .wishlist-title h2 {
+        color: #2A3D42;
+        font-size: 22px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700; }
+      #yith-wcwl-form .wishlist-title-container .wishlist-title a {
+        display: none; }
+  #yith-wcwl-form table.wishlist_table {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-collapse: collapse; }
+    #yith-wcwl-form table.wishlist_table thead th {
+      border: 0;
+      color: #3D3F40;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700; }
+      #yith-wcwl-form table.wishlist_table thead th.product-price {
+        text-align: center; }
+    #yith-wcwl-form table.wishlist_table tbody tr {
+      border-top: 1px solid rgba(0, 0, 0, 0.1); }
+      #yith-wcwl-form table.wishlist_table tbody tr td {
+        border: 0;
+        color: #3D3F40;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700; }
+        #yith-wcwl-form table.wishlist_table tbody tr td span.woocommerce-Price-currencySymbol {
+          color: #D2D2D2; }
+        #yith-wcwl-form table.wishlist_table tbody tr td ins {
+          text-decoration: none;
+          margin-left: 10px; }
+        #yith-wcwl-form table.wishlist_table tbody tr td a {
+          color: #3D3F40; }
+        #yith-wcwl-form table.wishlist_table tbody tr td.product-add-to-cart a {
+          margin: 0 auto !important;
+          padding: 10px 13px !important;
+          background-color: #FFFFFF;
+          border: 1px solid #2A3D42;
+          display: block !important;
+          max-width: 60%;
+          border-radius: 0;
+          font-size: 13px;
+          transition: all ease-in-out 0.3s; }
+          #yith-wcwl-form table.wishlist_table tbody tr td.product-add-to-cart a:hover {
+            background-color: #F4997E;
+            border: 1px solid #F4997E;
+            color: #FFFFFF; }
+        #yith-wcwl-form table.wishlist_table tbody tr td.product-remove a {
+          margin: 0 auto;
+          background: #EB5757;
+          color: #FFFFFF !important;
+          font-size: 17px; }
+
 .w-lost__container {
   max-width: 1140px;
   padding: 80px 15px;
