@@ -65,32 +65,6 @@
                      </button>
                   </div>
                   <div class="modal-body">
-                     <div class="row simple-product__modal">
-                        <div class="col-md-5 col-12 simple-product__modal--img">
-                           <img src="https://via.placeholder.com/250" alt="">
-                        </div>
-                        <div class="col-md-7 col-12 simple-product__modal--info">
-                           <h2 class="simple-product__title">Probador de marcos</h2>
-                           <div class="simple-product__desc">
-                              <div>Previsualiza tu marco y selecciona el que más te guste para tu cuadro.</div>
-                              <div class="simple-product__size--form">
-                                 <div class="form__size">
-                                    <div class="form__title">
-                                       Selecciona tu marco
-                                    </div>
-                                    <div class="form__select">
-                                       <select name="#" id="#">
-                                          <option value="desfualt"> Negro </option>
-                                       </select>
-                                    </div>
-                                 </div>
-                              </div>
-                              <!-- <div class="simple-product__btn">
-                                 <a href="#" class="add"> Seleccionar Marco</a>
-                              </div> -->
-                           </div>
-                        </div>
-                     </div>
 
                      <!-- Marco tester -->
                      <?php if (get_field('mostrar_marco_tester') == 'show') : ?>
@@ -142,7 +116,9 @@
                                     </div>
                                     <div class="simple-product__btn">
                                        <a href="#" class="add"
-                                          @click="obtenerValue(selectedMarco?.nombre_de_marco, $event)">Ya probé el marco que quiero, ir a comprar</a>
+                                          @click="obtenerValue(selectedMarco?.nombre_de_marco, $event)"
+                                          aria-label="Close"
+                                          class="close" data-dismiss="modal">Selecionar Marco</a>
                                     </div>
                                  </div>
                               </div>

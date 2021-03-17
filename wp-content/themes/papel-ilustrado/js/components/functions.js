@@ -110,6 +110,7 @@ export function inputValue(e) {
    // Mensaje de alerta
    const mensaje = document.querySelector('.alerta');
 
+   console.log(varationsDiv, inputDiv1, inputDiv1, btnAdd, mensaje)
    // Confirma que el value de los dos inputs no sean vacios
    if (inputDiv1 === '' || inputDiv2 === '') {
 
@@ -141,9 +142,11 @@ export function inputValue(e) {
 export function reset(e) {
    const btnAdd = document.querySelector(".single_add_to_cart_button.button.alt");
    const mensaje = document.querySelector('.alerta');
+   if(mensaje) {
+      mensaje.remove();
+   }
    setTimeout(() => {
       const qtyVal = document.querySelector(".woocommerce-Price-amount.amount");
-      mensaje.remove();
       if (qtyVal.innerText.length > 5) {
          btnAdd.classList.remove("woosg-disabled", 'woosg-selection');
          btnAdd.disabled = false;
