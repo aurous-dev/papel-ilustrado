@@ -10037,6 +10037,47 @@ a.text-dark:hover, a.text-dark:focus {
       .policies__info--desc {
         font-size: 12px; } }
 
+.about {
+  padding-bottom: 100px; }
+  .about__hero {
+    margin-bottom: 50px; }
+    .about__hero--img {
+      margin-bottom: 45px; }
+      .about__hero--img img {
+        width: 100%;
+        height: 550px;
+        object-fit: cover; }
+    .about__hero--desc {
+      max-width: 60%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #2A3D42; }
+  .about__container {
+    color: #2A3D42;
+    align-items: center;
+    padding: 60px 0; }
+    .about__container--img {
+      order: 1; }
+      .about__container--img img {
+        height: 500px;
+        width: 100%;
+        object-fit: cover; }
+    .about__container--info {
+      order: 2;
+      font-size: 14px;
+      line-height: 1.7; }
+      .about__container--info h3 {
+        margin-bottom: 50px;
+        font-size: 22px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600; }
+    .about__container:nth-child(odd) .about__container--img {
+      order: 2; }
+    .about__container:nth-child(odd) .about__container--info {
+      order: 1; }
+
 .w-lost__container {
   max-width: 1140px;
   padding: 80px 15px;
