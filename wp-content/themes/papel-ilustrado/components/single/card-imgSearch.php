@@ -13,7 +13,7 @@
    <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
    <!-- Esto es solo si es composición o serie -->
    <?php
-   if (get_field('tipo_de_producto') != 'simple' || !get_field('tipo_de_producto')) : ?>
+   if (get_field('tipo_de_producto') == 'simple' || !get_field('tipo_de_producto')) : ?>
       <div class="search__buy">Puedes comprar indivual</div>
    <?php endif; ?>
    <!-- Esto es solo si es composición o serie -->

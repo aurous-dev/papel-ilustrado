@@ -53,7 +53,6 @@ import regeneratorRuntime from "regenerator-runtime";
 
 import { sigleProductScript } from "./components/SingleProduct";
 
-
 // Import App Vue
 const app = new Vue({
    el: "#app",
