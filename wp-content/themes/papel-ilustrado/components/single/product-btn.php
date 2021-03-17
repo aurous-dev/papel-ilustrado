@@ -85,9 +85,9 @@
                                     </div>
                                  </div>
                               </div>
-                              <div class="simple-product__btn">
+                              <!-- <div class="simple-product__btn">
                                  <a href="#" class="add"> Seleccionar Marco</a>
-                              </div>
+                              </div> -->
                            </div>
                         </div>
                      </div>
@@ -114,7 +114,7 @@
                                     </div>
                                     <div class="obra-container__price__info__cost">
                                        <h5 v-if="!selectedMarco.nombre_de_marco" class="simple-product__desc">Selecciona un marco clickeando en algún ícono de abajo.</h5>
-                                       <h5 v-else class="simple-product__desc">Tu marco seleccionado es: {{selectedMarco?.nombre_de_marco}}</h5>
+                                       <h5 v-else class="simple-product__desc">Tu marco seleccionado es: <span class="name_frame">{{selectedMarco?.nombre_de_marco}}</span></h5>
                                     </div>
                                     <div v-if="selectedMarco.descripcion" class="simple-product__desc">
                                        Descripción: {{selectedMarco?.descripcion}}
@@ -140,8 +140,9 @@
                                     <div class="obra-container__price__info__des">
                                        Ahora que probaste el marco que deseas seleccionalo antes de agregar al carrito.
                                     </div>
-                                    <div class="obra-container__price__info__des">
-                                       <a href="#" style="text-decoration:underline;">Ya probé el marco que quiero, ir a comprar</a>
+                                    <div class="simple-product__btn">
+                                       <a href="#" class="add"
+                                          @click="obtenerValue(selectedMarco?.nombre_de_marco, $event)">Ya probé el marco que quiero, ir a comprar</a>
                                     </div>
                                  </div>
                               </div>

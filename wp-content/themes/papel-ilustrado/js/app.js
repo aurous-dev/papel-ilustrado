@@ -75,3 +75,19 @@ if (document.querySelector("#sigle-product-vue")) {
 // Marco tester
 
 allSliders();
+
+const probar = document.querySelector('.marco-icon a')
+
+probar.addEventListener('click', mifuncion)
+
+function mifuncion(e) {
+   setTimeout(() => {
+      const prueba = document.querySelector('#sigle-product-vue .simple-product__btn')
+      if(prueba) {
+         console.log(`si existo`)
+      } else {
+         console.log(`no existo`)
+      }
+   }, 1000);
+
+}

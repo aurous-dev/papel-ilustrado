@@ -22,7 +22,8 @@ export const sigleProductScript = {
     },
     regs: [],
     selected: "none",
-    loading: false
+    loading: false,
+    valor: '',
   },
   filters: {
     none: function(str) {
@@ -80,6 +81,28 @@ export const sigleProductScript = {
     changeFrame: function(marcoObject, event) {
       if(event) event.preventDefault()
       this.selectedMarco = marcoObject;
+    },
+
+    obtenerValue: function(values, e) {
+      if(e) e.preventDefault();
+      this.valor = values;
+      const inputMarco = document.querySelector('#pa_marco').children;
+      
+      for (const inputs in inputMarco) {
+        if (Object.hasOwnProperty.call(inputMarco, inputs)) {
+          const select = inputMarco[inputs];
+          const inputValue = inputMarco[inputs].value ;
+          const withoutSpace = this.valor.replace(' ', '-');
+          let [firstLetter, ...restLetter] = withoutSpace
+          const lower = `${firstLetter.toLowerCase()}${restLetter.join('')}`
+
+          if(inputValue === lower) {
+            select.selected = true;
+          }
+        }
+      }
+
+
     }
   },
   created: async function() {
