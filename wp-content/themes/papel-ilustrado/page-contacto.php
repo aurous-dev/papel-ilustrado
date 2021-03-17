@@ -6,7 +6,10 @@ get_header();
 
 ?>
 <div class="container-fluid contacto">
-   <?php get_template_part('components/single/title');?>
+   <?php
+   $title = get_the_title();
+   set_query_var('title', $title);
+   get_template_part('components/single/title');?>
    <div class="container">
       <div class="contacto__container">
          <div id="app">
