@@ -9756,14 +9756,22 @@ a.text-dark:hover, a.text-dark:focus {
   .simple-product__size--btn .heart-icon {
     display: flex;
     width: fit-content; }
-    .simple-product__size--btn .heart-icon:hover svg path {
-      fill: #F4997E; }
-    .simple-product__size--btn .heart-icon svg path {
-      fill-rule: evenodd !important;
-      fill: rgba(229, 229, 229, 0.15);
-      stroke: #F4997E;
-      stroke-width: 2px;
-      transition: all ease-in-out 0.3s; }
+    .simple-product__size--btn .heart-icon .yith-wcwl-add-to-wishlist {
+      margin-top: 0; }
+    .simple-product__size--btn .heart-icon .yith-wcwl-wishlistexistsbrowse span {
+      display: none !important; }
+    .simple-product__size--btn .heart-icon .yith-wcwl-wishlistexistsbrowse i {
+      color: #F4997E !important; }
+    .simple-product__size--btn .heart-icon .yith-wcwl-wishlistaddedbrowse a {
+      display: none !important; }
+    .simple-product__size--btn .heart-icon .yith-wcwl-wishlistaddedbrowse i {
+      color: #F4997E !important; }
+    .simple-product__size--btn .heart-icon i {
+      transition: all ease-in-out 0.3s;
+      font-family: 'FontAwesome' !important; }
+    @media (min-width: 61.25em) {
+      .simple-product__size--btn .heart-icon:hover i {
+        color: #F4997E; } }
   .simple-product__size--btn .size-icon a {
     display: flex;
     justify-content: center;

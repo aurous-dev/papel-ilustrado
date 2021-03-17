@@ -83,20 +83,34 @@
          .heart-icon {
             display: flex;
             width: fit-content;
-            &:hover {
-               svg {
-                  path {
-                     fill: $color-salmon;
-                  }
+            .yith-wcwl-add-to-wishlist {
+               margin-top: 0;
+            }
+            .yith-wcwl-wishlistexistsbrowse {
+               span {
+                  display: none !important;
+               }
+               i {
+                  color: $color-salmon !important;
                }
             }
-            svg {
-               path {
-                  fill-rule: evenodd !important;
-                  fill: rgba(229, 229, 229, 0.15);
-                  stroke: $color-salmon;
-                  stroke-width: 2px;
-                  transition: $tr3;
+            .yith-wcwl-wishlistaddedbrowse {
+               a {
+                  display: none !important;
+               }
+               i {
+                  color: $color-salmon !important;
+               }
+            }
+            i {
+               transition: $tr3;
+               font-family: 'FontAwesome' !important;
+            }
+            @include mq($from: desktop) {
+               &:hover {
+                  i {
+                     color: $color-salmon;
+                  }
                }
             }
          }
@@ -141,12 +155,6 @@
             font-size: 14px;
             font-weight: 500;
          }
-         // .special {
-         //    display: flex;
-         //    flex-wrap: wrap;
-         //    align-items: center;
-         //    width: 50%;
-         // }
       }
    }
    &__btn {
@@ -185,6 +193,7 @@
          color: $color-indigo;
       }
    }
+
    // Ventana modal
    &__modal {
       padding: 20px 20px 50px;
