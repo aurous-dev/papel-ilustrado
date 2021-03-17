@@ -9702,11 +9702,12 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 700; }
 
 .simple-product__size--form {
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: flex-start; }
   .simple-product__size--form .form__size {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center; }
@@ -9719,19 +9720,39 @@ a.text-dark:hover, a.text-dark:focus {
     margin-bottom: 0;
     font-family: 'Raleway', sans-serif;
     font-weight: 700; }
-  .simple-product__size--form .form__select select {
-    height: 45px;
-    width: 90%;
-    border: 1px solid #D2D2D2;
-    font-weight: 600;
-    font-size: 14px;
-    color: #182224;
-    padding: 0 10px; }
-  .simple-product__size--form .form__select a {
-    position: absolute;
-    color: #2A3D42; }
+  .simple-product__size--form .form__select {
+    position: relative; }
+    .simple-product__size--form .form__select select {
+      height: 45px;
+      width: 90%;
+      border: 1px solid #D2D2D2;
+      font-weight: 600;
+      font-size: 14px;
+      color: #182224;
+      padding: 0 10px; }
   .simple-product__size--form .frame-option {
     display: flex; }
+  .simple-product__size--form .alerta p {
+    color: #F4997E;
+    font-size: 12px;
+    margin: 8px 0 0; }
+  .simple-product__size--form .reset_variations {
+    position: absolute;
+    right: -20px;
+    top: 5px;
+    display: flex;
+    font-size: 0 !important;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F4997E;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center; }
+    .simple-product__size--form .reset_variations::before {
+      content: 'X';
+      font-size: 20px;
+      font-family: 'Raleway', sans-serif; }
 
 .simple-product__size--btn {
   display: flex;
@@ -9783,19 +9804,6 @@ a.text-dark:hover, a.text-dark:focus {
     text-decoration: underline; }
   .simple-product__size--btn .marco-icon .modal-dialog {
     max-width: 1140px; }
-  .simple-product__size--btn .marco-icon .modal-header {
-    border-bottom: 0; }
-    .simple-product__size--btn .marco-icon .modal-header .close span {
-      color: #FFFFFF;
-      background-color: #F4997E;
-      border-radius: 50%;
-      display: flex;
-      font-weight: 100;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
   .simple-product__size--btn a {
     color: #2A3D42;
     font-size: 14px;
@@ -10208,6 +10216,22 @@ a.text-dark:hover, a.text-dark:focus {
           background: #EB5757;
           color: #FFFFFF !important;
           font-size: 17px; }
+
+.modal-header {
+  border-bottom: 0; }
+  .modal-header .close {
+    outline: none !important; }
+    .modal-header .close span {
+      color: #FFFFFF;
+      background-color: #F4997E;
+      border-radius: 50%;
+      display: flex;
+      font-weight: 100;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
 
 .w-lost__container {
   max-width: 1140px;

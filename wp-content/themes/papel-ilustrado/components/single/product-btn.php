@@ -35,7 +35,7 @@
                      </button>
                   </div>
                   <div class="modal-body">
-                     <div class="row simple-producto__modal">
+                     <div class="row simple-product__modal">
                         <img src="https://via.placeholder.com/500" alt="">
                      </div>
                   </div>

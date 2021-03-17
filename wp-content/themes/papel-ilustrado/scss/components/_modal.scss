@@ -1,0 +1,17 @@
+.modal-header {
+   border-bottom: 0;
+   .close {
+      outline: none !important;
+      span {
+         color: $color-white;
+         background-color: $color-salmon;
+         border-radius: 50%;
+         display: flex;
+         font-weight: 100;
+         width: 30px;
+         height: 30px;
+         display: flex;
+         @include f-center;
+      }
+   }
+}

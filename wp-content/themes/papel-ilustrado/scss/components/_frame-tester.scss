@@ -23,10 +23,12 @@
    }
    &__size {
       &--form {
+         flex-wrap: wrap;
          display: flex;
-         @include f-center;
+         align-items: center;
+         justify-content: flex-start;
          .form__size {
-            width: 100%;
+            width: 50%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -41,6 +43,7 @@
             @include fonts-display(700);
          }
          .form__select {
+            position: relative;
             select {
                height: 45px;
                width: 90%;
@@ -50,13 +53,34 @@
                color: #182224;
                padding: 0 10px;
             }
-            a {
-               position: absolute;
-               color: $color-indigo;
-            }
          }
          .frame-option {
             display: flex;
+         }
+         .alerta {
+            p {
+               color: $color-salmon;
+               font-size: 12px;
+               margin: 8px 0 0;
+            }
+         }
+         .reset_variations {
+            position: absolute;
+            right: -20px;
+            top: 5px;
+            display: flex;
+            font-size: 0 !important;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $color-salmon;
+            color: $color-white;
+            @include f-center;
+            &::before {
+               content: 'X';
+               font-size: 20px;
+               font-family: 'Raleway', sans-serif;
+            }
          }
       }
       &--btn {
@@ -133,22 +157,7 @@
             .modal-dialog {
                max-width: 1140px;
             }
-            .modal-header {
-               border-bottom: 0;
-               .close {
-                  span {
-                     color: $color-white;
-                     background-color: $color-salmon;
-                     border-radius: 50%;
-                     display: flex;
-                     font-weight: 100;
-                     width: 30px;
-                     height: 30px;
-                     display: flex;
-                     @include f-center;
-                  }
-               }
-            }
+
          }
          a {
             color: $color-indigo;
