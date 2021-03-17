@@ -1,8 +1,15 @@
+<?php
+if(!$title) {
+   $title = get_sub_field('titulo');
+} else {
+   $title = get_query_var('title');
+}
+?>
 <div class="container">
    <div class="title">
-      <?php if (get_sub_field('titulo')) : ?>
+      <?php if ($title) : ?>
          <h2>
-            <?php the_sub_field('titulo'); ?>
+            <?php echo $title; ?>
          </h2>
       <?php endif; ?>
       <?php if (have_rows('boton')) : ?>

@@ -23,9 +23,15 @@ get_template_part('components/single/search-title'); ?>
     <?php if ($the_query->have_posts()) : ?>
         <div class="container">
             <div class="search-result__grid">
-                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <?php get_template_part('components/group/card-search'); ?>
-                <?php endwhile; ?>
+                <?php
+                $value = 1;
+                while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                    <?php
+                    $value++;
+                    set_query_var('value', $value);
+                    get_template_part('components/group/card-search'); ?>
+                <?php
+                endwhile; ?>
 
             </div>
         </div>
