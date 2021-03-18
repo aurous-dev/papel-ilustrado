@@ -82,7 +82,7 @@
                </div>
             <?php else : ?>
                <div class="header__menu--sesions">
-                  <a href="/my-account">Iniciar sesión / Registrarse</a>
+                  <a href="<?php echo get_home_url(); ?>/my-account">Iniciar sesión / Registrarse</a>
                </div>
             <?php endif; ?>
          </div>
