@@ -9618,6 +9618,124 @@ a.text-dark:hover, a.text-dark:focus {
     padding: 13px 15px;
     font-size: 13px; }
 
+.filter-widgets {
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 50px !important;
+  border-bottom: 1px solid #cccccc75; }
+  .filter-widgets ul li {
+    padding: 0px !important; }
+
+.dhwc_ajax_acf_filter:nth-child(2) {
+  width: 30% !important;
+  border-left: 1px solid #ccc;
+  padding-left: 30px !important;
+  min-height: 300px !important; }
+  .dhwc_ajax_acf_filter:nth-child(2) ul {
+    display: flex;
+    flex-wrap: wrap; }
+    .dhwc_ajax_acf_filter:nth-child(2) ul li {
+      height: 50px;
+      width: 50px;
+      border: 1px solid #fff;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      padding: 0 !important;
+      margin: 0px !important; }
+      .dhwc_ajax_acf_filter:nth-child(2) ul li a {
+        display: flex;
+        border: 0 !important;
+        font-size: 0.75em;
+        color: #fff !important;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-negro {
+    background-color: #000; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-gris {
+    background-color: #959386; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-blanco {
+    background-color: #fff; }
+    .dhwc_ajax_acf_filter:nth-child(2) .tr-blanco a {
+      color: #000 !important; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-burdeo {
+    background-color: #8e1e26; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-rojo {
+    background-color: #ea3223; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-rosa {
+    background-color: #f0bdc1; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-cafe {
+    background-color: #a25728; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-ocre {
+    background-color: #b28748; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-naranjo {
+    background-color: #e58547; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-militar {
+    background-color: #617829; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-verde {
+    background-color: #5b9d2f; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-menta {
+    background-color: #6dad8c; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-mostaza {
+    background-color: #d3bb40; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-amarillo {
+    background-color: #f3e95d; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-arena {
+    background-color: #eee6a1; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-azul {
+    background-color: #33708b; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-celeste {
+    background-color: #52a1c2; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-agua {
+    background-color: #d1eaf1; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-marino {
+    background-color: #1a3757; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-piedra {
+    background-color: #496775; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-petroleo {
+    background-color: #2f444b; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-morado {
+    background-color: #5f4063; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-violeta {
+    background-color: #937599; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-lila {
+    background-color: #cbb3ce; }
+  .dhwc_ajax_acf_filter:nth-child(2) .tr-multi {
+    background: red;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, orange, green, blue, violet);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, orange, green, blue, violet);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, orange, green, blue, violet);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, orange, green, blue, violet);
+    /* Standard syntax (must be last) */ }
+
+.dhwc_ajax_acf_filter:nth-child(1) {
+  width: 15% !important;
+  border-left: 1px solid #ccc;
+  padding-left: 30px !important; }
+
+.dhwc_ajax_acf_filter:nth-child(1) {
+  border-left: none; }
+
+.dhwc_ajax_acf_filter:nth-child(4),
+.dhwc_ajax_acf_filter:nth-child(5),
+.dhwc_ajax_acf_filter:nth-child(3) {
+  width: 20% !important;
+  border-left: 1px solid #ccc;
+  padding-left: 30px !important; }
+
+.dhwc_ajax_acf_filter:nth-child(3) {
+  width: 15% !important; }
+
+.dhwc_ajax_acf_filter,
+.widget_price_filter {
+  min-height: 350px !important; }
+
 .contacto {
   padding: 60px 15px 100px; }
   .contacto #app form {
