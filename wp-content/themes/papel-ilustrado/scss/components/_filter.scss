@@ -18,3 +18,184 @@
       }
    }
 }
+
+// Styles from Filters
+
+.filter-widgets {
+   padding: 0 !important;
+   margin: 0 !important;
+   margin-bottom: 50px !important;
+   border-bottom: 1px solid #cccccc75;
+   ul {
+       li {
+           padding: 0px !important;
+       }
+   }
+}
+.dhwc_ajax_acf_filter:nth-child(2) {
+   width: 30% !important;
+   border-left: 1px solid #ccc;
+   padding-left: 30px !important;
+   min-height: 300px !important;
+   ul {
+       display: flex;
+       flex-wrap: wrap;
+       li {
+           height: 50px;
+           width: 50px;
+           border: 1px solid #fff;
+           display: flex !important;
+           justify-content: center !important;
+           align-items: center !important;
+           padding: 0 !important;
+           margin: 0px !important;
+           
+           a {
+               display: flex;
+               border: 0 !important;
+               font-size: 0.75em;
+               // color: transparent !important;
+               color: #fff !important;
+               height: 100%;
+               width: 100%;
+               justify-content: center;
+               align-items: center;
+           }
+       }
+   }
+   .tr-negro {
+       background-color: #000;
+   }
+   .tr-gris {
+       background-color: #959386;
+   }
+   .tr-blanco {
+       background-color: #fff;
+       a {
+           color: #000 !important;
+       }
+   }
+   .tr-burdeo {
+       background-color: #8e1e26;
+   }
+   .tr-rojo {
+       background-color: #ea3223;
+   }
+   .tr-rosa {
+       background-color: #f0bdc1;
+   }
+   .tr-cafe {
+       background-color: #a25728;
+   }
+   .tr-ocre {
+       background-color: #b28748;
+   }
+   .tr-naranjo {
+       background-color: #e58547;
+   }
+   .tr-militar {
+       background-color: #617829;
+   }
+   .tr-verde {
+       background-color: #5b9d2f;
+   }
+   .tr-menta {
+       background-color: #6dad8c;
+   }
+   .tr-mostaza {
+       background-color: #d3bb40;
+   }
+   .tr-amarillo {
+       background-color: #f3e95d;
+   }
+   .tr-arena {
+       background-color: #eee6a1;
+   }
+   .tr-azul {
+       background-color: #33708b;
+   }
+   .tr-celeste {
+       background-color: #52a1c2;
+   }
+   .tr-agua {
+       background-color: #d1eaf1;
+   }
+   .tr-marino {
+       background-color: #1a3757;
+   }
+   .tr-piedra {
+       background-color: #496775;
+   }
+   .tr-petroleo {
+       background-color: #2f444b;
+   }
+   .tr-morado {
+       background-color: #5f4063;
+   }
+   .tr-violeta {
+       background-color: #937599;
+   }
+   .tr-lila {
+       background-color: #cbb3ce;
+   }
+   .tr-multi {
+       // background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+       background: red; /* For browsers that do not support gradients */
+       background: -webkit-linear-gradient(
+           left,
+           orange,
+           green,
+           blue,
+           violet
+       ); /* For Safari 5.1 to 6.0 */
+       background: -o-linear-gradient(
+           right,
+           orange,
+           green,
+           blue,
+           violet
+       ); /* For Opera 11.1 to 12.0 */
+       background: -moz-linear-gradient(
+           right,
+           orange,
+           green,
+           blue,
+           violet
+       ); /* For Firefox 3.6 to 15 */
+       background: linear-gradient(
+           to right,
+           orange,
+           green,
+           blue,
+           violet
+       ); /* Standard syntax (must be last) */
+       // a {
+       //     color: #000 !important;
+       // }
+   }
+}
+// .dhwc_ajax_acf_filter:nth-child(1),
+// .dhwc_ajax_acf_filter:nth-child(2) {
+.dhwc_ajax_acf_filter:nth-child(1) {
+   width: 15% !important;
+   border-left: 1px solid #ccc;
+   padding-left: 30px !important;
+}
+
+.dhwc_ajax_acf_filter:nth-child(1) {
+   border-left: none;
+}
+.dhwc_ajax_acf_filter:nth-child(4),
+.dhwc_ajax_acf_filter:nth-child(5),
+.dhwc_ajax_acf_filter:nth-child(3) {
+   width: 20% !important;
+   border-left: 1px solid #ccc;
+   padding-left: 30px !important;
+}
+.dhwc_ajax_acf_filter:nth-child(3) {
+   width: 15% !important;
+}
+.dhwc_ajax_acf_filter,
+.widget_price_filter {
+   min-height: 350px !important;
+}
