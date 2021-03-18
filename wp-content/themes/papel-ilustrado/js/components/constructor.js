@@ -19,6 +19,7 @@ import {
    menuMobile,
    inputValue,
    reset,
+   closeMenu
 } from './functions.js'
 
 class initApp {
@@ -29,6 +30,9 @@ class initApp {
    App() {
       // Menu dropdown Deskto
       tr_nav.addEventListener("click", clickMenu);
+
+      // Cerrar el menu cuando le doy click afuera
+      window.addEventListener('click', closeMenu);
 
       // Columnas
       document.addEventListener("DOMContentLoaded", columnas);

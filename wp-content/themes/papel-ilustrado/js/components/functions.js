@@ -163,3 +163,14 @@ export function crearUnDiv(e) {
    divMessage.classList.add('alerta');
    e.appendChild(divMessage);
 }
+
+// Cerrar menu cuando doy click afuera
+export function closeMenu(e) {
+   tr_preventDefault.forEach((a) => {
+      if(a !== e.target) {
+         if(a.parentElement.classList.contains('active')) {
+            a.parentElement.classList.remove('active')
+         }
+      } 
+   });
+}
