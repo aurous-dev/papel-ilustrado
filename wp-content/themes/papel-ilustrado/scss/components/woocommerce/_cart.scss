@@ -65,6 +65,7 @@ h2.w-cart__title {
          }
          .w-cart__table--price,
          .w-cart__table--subtotal {
+            text-align: center;
             span {
                color: $color-indigo;
                text-align: center;
@@ -141,6 +142,7 @@ h2.w-cart__title {
    @include mq($from: mobile, $until: desktop) {
       .w-cart__table {
          border: 0 !important;
+         padding-left: 25px !important;
          tbody {
             tr {
                margin-bottom: 20px;
@@ -148,6 +150,14 @@ h2.w-cart__title {
                td {
                   &:first-child {
                      border-top: 0 !important;
+                  }
+                  &.w-cart__table--remove {
+                     position: absolute;
+                     left: 0;
+                  }
+                  &.w-cart__table--quantity,
+                  &.w-cart__table--subtotal {
+                     display: none;
                   }
                }
             }
@@ -162,6 +172,31 @@ h2.w-cart__title {
                }
                button {
                   width: 100% !important;
+               }
+            }
+         }
+      }
+   }
+   @include mq($from: mobile, $until: tablet) {
+      .w-cart__table {
+         padding-left: 17px !important;
+         tbody {
+            tr {
+               td {
+                  &.w-cart__table--remove {
+                     position: absolute;
+                     left: -5px;
+                  }
+               }
+            }
+         }
+         .w-cart__actions {
+            .w-cart__coupon {
+               &--input {
+                  font-size: 10px;
+               }
+               button {
+                  font-size: 12px;
                }
             }
          }
@@ -218,7 +253,7 @@ h2.w-cart__title {
    }
    @include mq($from: mobile, $until: tablet) {
       a {
-         font-size: 16px;
+         font-size: 16px !important;
          height: auto;
          padding: 15px !important;
       }
