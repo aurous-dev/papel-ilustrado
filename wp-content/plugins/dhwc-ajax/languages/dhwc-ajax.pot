@@ -1,0 +1,856 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DHWC Ajax\n"
+"POT-Creation-Date: 2021-03-15 09:15+0700\n"
+"PO-Revision-Date: 2020-06-02 09:18+0700\n"
+"Last-Translator: \n"
+"Language-Team: Sitesao\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;_x;esc_html__;esc_attr__;"
+"esc_html_e;esc_attr_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/class-dhwc-ajax-admin-settings.php:12
+msgid "DHWC Ajax Toolbox"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:24
+msgid "General"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:29
+msgid "Show Ajax toolbox on"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:36
+#: includes/class-dhwc-ajax-frontend.php:348
+#: includes/widgets/class-dhwc-ajax-widget-price-range-filter.php:129
+#: includes/widgets/class-dhwc-ajax-widget-price-range-filter.php:131
+msgid "All"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:37
+msgid "Only Shop page"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:38
+msgid "Product taxonomy archive"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:39
+#: includes/class-dhwc-ajax-admin-settings.php:101
+#: includes/class-dhwc-ajax-admin-settings.php:123
+msgid "Hide"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:43
+msgid "Header"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:44
+msgid "Display Categories Menu"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:52
+#: includes/class-dhwc-ajax-admin-settings.php:174
+msgid "Result count"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:53
+msgid "Display result count"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:62
+msgid "Ordering"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:63
+msgid "Display ordering"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:72
+msgid "Ajax Single Add to cart"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:73
+msgid "Enable Ajax Single Add to cart"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:83
+#: includes/class-dhwc-ajax-frontend.php:232
+#: includes/widgets/class-dhwc-ajax-widget-weight-dimensions-filter.php:90
+msgid "Filter"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:88
+msgid "Widgets filter display"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:94
+#: includes/class-dhwc-ajax-admin-settings.php:119
+msgid ""
+"If use as Sidebar, please add DHWC Ajax Filter widgets type for your sidebar"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:97
+msgid "Above product list"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:98
+msgid "Absolute"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:99
+#: includes/class-dhwc-ajax-admin-settings.php:198
+msgid "Sidebar"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:100
+msgid "Off Canvas"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:105
+msgid "Filter widget max height (px)"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:106
+msgid ""
+"Will display scrollbar for filter widgets have content longer. Default fit "
+"content"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:113
+msgid "Search filter display"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:122
+msgid "Show"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:131
+msgid "Pagination"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:136
+#: includes/widgets/class-dhwc-ajax-widget-weight-dimensions-filter.php:47
+msgid "Type"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:143
+msgid "Number"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:144
+msgid "Infinite Scroll"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:145
+msgid "Load More button"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:153
+msgid "Javascript elements selector"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:158
+msgid "Product list"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:159
+msgid "Enter product list class, default is: ul.products"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:166
+msgid "Product item"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:167
+msgid "Enter product list item class, default is: li.product"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:175
+msgid "Enter result count class, default is: .woocommerce-result-count"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:182
+msgid "Pagination wrapper"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:183
+msgid "Enter pagination wrapper class, default is: .woocommerce-pagination"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:190
+msgid "Pagination next"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:191
+msgid "Enter pagination next class, default is: .next"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:199
+msgid "Enter sidebar class, default is: .widget-area"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:206
+msgid "Page title"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:207
+msgid "Enter page title class, default is: .entry-title"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:214
+msgid "Page breadcrumb"
+msgstr ""
+
+#: includes/class-dhwc-ajax-admin-settings.php:215
+msgid "Enter page breadcrumbs class, default is: .woocommerce-breadcrumb"
+msgstr ""
+
+#: includes/class-dhwc-ajax-assets.php:28
+msgid "Remove search filter"
+msgstr ""
+
+#: includes/class-dhwc-ajax-frontend.php:202
+msgid "Categories"
+msgstr ""
+
+#: includes/class-dhwc-ajax-frontend.php:214
+msgid "Showing: "
+msgstr ""
+
+#: includes/class-dhwc-ajax-frontend.php:243
+msgid "Search"
+msgstr ""
+
+#: includes/class-dhwc-ajax-frontend.php:253
+msgid "Filter within search results"
+msgstr ""
+
+#: includes/class-dhwc-ajax-frontend.php:290
+msgid "Please add Product Filter Widget type to sidebar:"
+msgstr ""
+
+#: includes/class-dhwc-ajax-frontend.php:290 includes/class-dhwc-ajax.php:151
+msgid "DHWC Ajax"
+msgstr ""
+
+#: includes/class-dhwc-ajax-frontend.php:324
+msgid "Filter & Refine"
+msgstr ""
+
+#: includes/class-dhwc-ajax-frontend.php:324
+msgid "Close"
+msgstr ""
+
+#: includes/class-dhwc-ajax-frontend.php:497
+msgid "Load more"
+msgstr ""
+
+#: includes/class-dhwc-ajax-frontend.php:520
+#, php-format
+msgid "Search result for %s"
+msgstr ""
+
+#: includes/class-dhwc-ajax.php:96
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:23
+#, php-format
+msgid ""
+"<strong>%s</strong> requires <strong><a href=\"http://www.woothemes.com/"
+"woocommerce/\" target=\"_blank\">WooCommerce</a></strong> plugin to be "
+"installed and activated on your site."
+msgstr ""
+
+#: includes/class-dhwc-ajax.php:152
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:37
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:62
+msgid "Brands"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:63
+msgid "Product brand base"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:73
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:52
+msgid "product-brand"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:93
+msgid ""
+"Product brands for your store can be managed here. To change the order of "
+"brands on the front-end you can drag and drop to sort them. To see more "
+"brands listed click the \"screen options\" link at the top of the page."
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:127
+#: includes/dhwc-variation-swatches/includes/class-admin.php:317
+#: includes/dhwc-variation-swatches/init.php:45
+msgid "Image"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:148
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:159
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:231
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:163
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:236
+#: includes/dhwc-variation-swatches/includes/class-admin.php:152
+#: includes/dhwc-variation-swatches/includes/class-admin.php:323
+msgid "Upload/Add image"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:164
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:237
+#: includes/dhwc-variation-swatches/includes/class-admin.php:153
+#: includes/dhwc-variation-swatches/includes/class-admin.php:324
+msgid "Remove image"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:188
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:261
+#: includes/dhwc-variation-swatches/includes/class-admin.php:87
+msgid "Choose an image"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:190
+#: includes/dhwc-brand/includes/class-dhwc-brand-admin.php:263
+#: includes/dhwc-variation-swatches/includes/class-admin.php:88
+msgid "Use image"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:58
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:60
+msgid "Product Brands"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:61
+msgid "Product Brand"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:63
+msgid "Search Product Brands"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:64
+msgid "All Product Brands"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:65
+msgid "Parent Product Brand"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:66
+msgid "Parent Product Brand:"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:67
+msgid "Edit Product Brand"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:68
+msgid "Update Product Brand"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:69
+msgid "Add New Product Brand"
+msgstr ""
+
+#: includes/dhwc-brand/includes/class-dhwc-brand.php:70
+msgid "New Product Brand Name"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget-layered-nav.php:7
+msgid ""
+"Shows product brands in a widget which lets you narrow down the list of "
+"products when viewing product archive."
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget-layered-nav.php:9
+msgid "DHWC Brands Filter"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget-layered-nav.php:18
+msgid "Brands Filter"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget-layered-nav.php:19
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget-slider.php:22
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:19
+#: includes/widgets/class-dhwc-ajax-widget-acf-filter.php:34
+#: includes/widgets/class-dhwc-ajax-widget-attribute-filter.php:59
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:16
+#: includes/widgets/class-dhwc-ajax-widget-price-range-filter.php:32
+#: includes/widgets/class-dhwc-ajax-widget-product-brand-filter.php:48
+#: includes/widgets/class-dhwc-ajax-widget-product-category-filter.php:23
+#: includes/widgets/class-dhwc-ajax-widget-product-sorting.php:28
+#: includes/widgets/class-dhwc-ajax-widget-product-status-filter.php:33
+#: includes/widgets/class-dhwc-ajax-widget-product-tag-filter.php:49
+#: includes/widgets/class-dhwc-ajax-widget-product-taxonomy-filter.php:49
+#: includes/widgets/class-dhwc-ajax-widget-stock-filter.php:33
+#: includes/widgets/class-dhwc-ajax-widget-weight-dimensions-filter.php:43
+msgid "Title"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget-slider.php:6
+msgid "Shows product brans with slider."
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget-slider.php:8
+msgid "DHWC Brands Slider"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget-slider.php:21
+msgid "Brands Slider"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget-slider.php:27
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:24
+#: includes/widgets/class-dhwc-ajax-widget-product-category-filter.php:28
+#: includes/widgets/class-dhwc-ajax-widget-product-taxonomy-filter.php:69
+msgid "Order by"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget-slider.php:29
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:26
+msgid "Brand order"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget-slider.php:30
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:27
+#: includes/dhwc-variation-swatches/includes/class-admin.php:281
+#: includes/widgets/class-dhwc-ajax-widget-product-category-filter.php:31
+#: includes/widgets/class-dhwc-ajax-widget-product-taxonomy-filter.php:72
+msgid "Name"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget-slider.php:36
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:53
+msgid "Hide empty brands"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:7
+msgid "A list or dropdown of product brands."
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:9
+msgid "DHWC Brands"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:18
+msgid "Product brands"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:33
+msgid "Show as dropdown"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:38
+#: includes/widgets/class-dhwc-ajax-widget-acf-filter.php:45
+#: includes/widgets/class-dhwc-ajax-widget-attribute-filter.php:79
+#: includes/widgets/class-dhwc-ajax-widget-price-range-filter.php:58
+#: includes/widgets/class-dhwc-ajax-widget-product-brand-filter.php:53
+#: includes/widgets/class-dhwc-ajax-widget-product-category-filter.php:56
+#: includes/widgets/class-dhwc-ajax-widget-product-status-filter.php:38
+#: includes/widgets/class-dhwc-ajax-widget-product-tag-filter.php:54
+#: includes/widgets/class-dhwc-ajax-widget-product-taxonomy-filter.php:83
+#: includes/widgets/class-dhwc-ajax-widget-stock-filter.php:38
+msgid "Show product counts"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:43
+#: includes/widgets/class-dhwc-ajax-widget-product-category-filter.php:46
+msgid "Show hierarchy"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:48
+msgid "Only show children of the current brand"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:58
+msgid "Maximum depth"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:203
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:236
+msgid "Select a brand"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:242
+msgid "No matches found"
+msgstr ""
+
+#: includes/dhwc-brand/includes/widgets/class-dhwc-brand-widget.php:257
+msgid "No product categories exist."
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:193
+msgid "Select terms"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:209
+msgid "Select all"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:210
+msgid "Select none"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:211
+msgid "Add new"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:277
+msgid "Add new term"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:287
+msgid "Slug"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:299
+msgid "Cancel"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:300
+msgid "Add New"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:310
+#: includes/dhwc-variation-swatches/init.php:44
+msgid "Color"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:332
+#: includes/dhwc-variation-swatches/init.php:46
+msgid "Label"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:359
+msgid "Wrong request"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:363
+msgid "Not enough data"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:367
+msgid "Taxonomy is not exists"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:371
+msgid "This term is exists"
+msgstr ""
+
+#: includes/dhwc-variation-swatches/includes/class-admin.php:385
+msgid "Added successfully"
+msgstr ""
+
+#: includes/functions.php:126
+msgid "On Sale"
+msgstr ""
+
+#: includes/functions.php:127
+msgid "Featured"
+msgstr ""
+
+#: includes/functions.php:133
+msgid "Weight"
+msgstr ""
+
+#: includes/functions.php:134
+msgid "Length"
+msgstr ""
+
+#: includes/functions.php:135
+msgid "Width"
+msgstr ""
+
+#: includes/functions.php:136
+msgid "Height"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-acf-filter.php:9
+msgid "Display product filter with Advanced Custom Fields in your store"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-acf-filter.php:11
+msgid "DHWC Ajax ACF Filter"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-acf-filter.php:33
+msgid "Filter Custom Field"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-acf-filter.php:39
+msgid "Filter by Field"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-attribute-filter.php:7
+msgid "Display a list of attributes to filter products in your store."
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-attribute-filter.php:9
+msgid "DHWC Ajax Attribute Filter"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-attribute-filter.php:58
+#: includes/widgets/class-dhwc-ajax-widget-price-range-filter.php:31
+msgid "Filter by"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-attribute-filter.php:64
+msgid "Attribute"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-attribute-filter.php:70
+#: includes/widgets/class-dhwc-ajax-widget-product-brand-filter.php:58
+#: includes/widgets/class-dhwc-ajax-widget-product-category-filter.php:37
+#: includes/widgets/class-dhwc-ajax-widget-product-taxonomy-filter.php:60
+msgid "Query type"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-attribute-filter.php:72
+#: includes/widgets/class-dhwc-ajax-widget-product-brand-filter.php:60
+#: includes/widgets/class-dhwc-ajax-widget-product-category-filter.php:39
+#: includes/widgets/class-dhwc-ajax-widget-product-taxonomy-filter.php:62
+msgid "AND"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-attribute-filter.php:73
+#: includes/widgets/class-dhwc-ajax-widget-product-brand-filter.php:61
+#: includes/widgets/class-dhwc-ajax-widget-product-category-filter.php:40
+#: includes/widgets/class-dhwc-ajax-widget-product-taxonomy-filter.php:63
+msgid "OR"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:9
+msgid "Display a list of active product filters."
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:11
+msgid "DHWC Ajax Active Product Filters"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:15
+msgid "Active filters"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:91
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:121
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:143
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:161
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:177
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:194
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:225
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:233
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:253
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:262
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:270
+msgid "Remove filter"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:161
+msgid "Category"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:177
+msgid "Brand"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:194
+msgid "Tag"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:236
+msgid "Price"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:239
+msgid "Price min"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:242
+msgid "Price max"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:254
+#, php-format
+msgid "Rated %s out of 5"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:263
+msgid "Stock status"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-layered-nav-filters.php:271
+msgid "Product status"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-price-range-filter.php:9
+msgid "Display a price range to filter products in your store"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-price-range-filter.php:11
+msgid "DHWC Ajax Price Range Filter"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-price-range-filter.php:40
+msgid "Price range size"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-price-range-filter.php:48
+msgid "Max price ranges"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-price-range-filter.php:53
+msgid "Hide empty price ranges"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-brand-filter.php:7
+msgid "Display a list of brands to filter products in your store."
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-brand-filter.php:9
+msgid "DHWC Ajax Product Brand Filter"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-brand-filter.php:47
+msgid "Filter Brands"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-category-filter.php:8
+msgid "Display a list of categories to filter products in your store."
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-category-filter.php:10
+msgid "DHWC Ajax Product Categories Filter"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-category-filter.php:22
+msgid "Filter Categories"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-category-filter.php:30
+#: includes/widgets/class-dhwc-ajax-widget-product-taxonomy-filter.php:71
+msgid "Category order"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-category-filter.php:51
+#: includes/widgets/class-dhwc-ajax-widget-product-taxonomy-filter.php:78
+msgid "Only show children of the current category"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-sorting.php:6
+msgid "Display WooCommerce Product sorting list."
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-sorting.php:8
+msgid "DHWC Ajax Product Sorting"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-sorting.php:27
+msgid "Product Sorting"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-sorting.php:43
+msgid "Default sorting"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-sorting.php:44
+msgid "Sort by popularity"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-sorting.php:45
+msgid "Sort by average rating"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-sorting.php:46
+msgid "Sort by newness"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-sorting.php:47
+msgid "Sort by price: low to high"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-sorting.php:48
+msgid "Sort by price: high to low"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-status-filter.php:9
+msgid "Display product filter with status: Featured, Sale..."
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-status-filter.php:11
+msgid "DHWC Ajax Product Status Filter"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-status-filter.php:32
+msgid "Filter Status"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-tag-filter.php:8
+msgid "Display a list of tag to filter products in your store."
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-tag-filter.php:10
+msgid "DHWC Ajax Product Tags Filter"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-tag-filter.php:48
+msgid "Filter Tags"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-taxonomy-filter.php:7
+msgid "Display a list of custom taxonomy to filter products in your store."
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-taxonomy-filter.php:9
+msgid "DHWC Ajax Product Custom Taxonomy Filter"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-taxonomy-filter.php:48
+msgid "Custom Taxonomy"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-product-taxonomy-filter.php:54
+msgid "Taxonomy"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-stock-filter.php:9
+msgid "Display product filter with stock status in your store"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-stock-filter.php:11
+msgid "DHWC Ajax Stock Filter"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-stock-filter.php:32
+msgid "Filter Stock Status"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-weight-dimensions-filter.php:11
+msgid "Display product filter with Weight - Dimensions"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-weight-dimensions-filter.php:13
+msgid "DHWC Ajax Product Weight - Dimensions Filter"
+msgstr ""
+
+#: includes/widgets/class-dhwc-ajax-widget-weight-dimensions-filter.php:42
+msgid "Filter Weight - Dimensions"
+msgstr ""
