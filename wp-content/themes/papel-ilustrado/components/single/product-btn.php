@@ -9,12 +9,6 @@
    </div>
    <div class="heart-icon">
       <?php echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?>
-      <!-- <a href="#">
-         <svg width="21" height="20" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.3497 17.3072C11.5897 17.9972 10.4197 17.9972 9.65967 17.2972L9.54966 17.1972C4.29966 12.4472 0.869665 9.33723 0.999665 5.45723C1.05966 3.75723 1.92966 2.12723 3.33966 1.16723C5.97966 -0.632771 9.23967 0.207229 10.9997 2.26723C12.7597 0.207229 16.0197 -0.642771 18.6597 1.16723C20.0697 2.12723 20.9397 3.75723 20.9997 5.45723C21.1397 9.33723 17.6997 12.4472 12.4497 17.2172L12.3497 17.3072Z" fill="#F49A7E" />
-         </svg>
-         Guardar
-      </a> -->
    </div>
    <div class="size-icon">
       <a href="#" data-toggle="modal" data-target="#sizeModal">
@@ -46,6 +40,8 @@
       <!-- Modal -->
 
    </div>
+<?php
+if (get_field('mostrar_marco_tester') == 'show') :?>
    <div class="marco-icon">
       <a href="#" data-toggle="modal" data-target="#marcoModal">
          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -133,4 +129,6 @@
       </div>
       <!-- Modal -->
    </div>
+<?php endif;?>
+
 </div>

@@ -10,9 +10,19 @@
    <div class="card__container--desc-for">
       Desde
    </div>
+   
    <div class="card__container--desc-price">
-      <span class="price-off">$18.000 c/u</span>
-      <span class="price-normal"> $20.000</span>
+      <span class="price-off"><?php
+      $price = get_post_meta( get_the_ID(), '_price', true );
+      echo wc_price( $price );
+      // echo $price;
+      ?> c/u</span>
+      <!-- <span class="price-normal">
+      <?php
+      $price = get_post_meta( get_the_ID(), '_price', true );
+      echo wc_price( $price );
+      // echo $price;
+      ?></span> -->
    </div>
    <div class="heart-icon" id="like-icon">
       <svg width="21" height="20" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">

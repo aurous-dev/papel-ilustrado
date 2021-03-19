@@ -1058,8 +1058,8 @@ if (!function_exists('woosg_init')) {
 
 					$type = $product->ID;
 					// echo $type;
-					$final = WC_Product_Factory::get_product_type($type);
-					echo $final;
+					// $final = WC_Product_Factory::get_product_type($type);
+					// // echo $final;
 
 
 					// TEST DE AGREGAR COSAS SI EL PRODUCTO ES AGRUPADO

@@ -5,6 +5,7 @@
 get_header();
 
 ?>
+hola
 <?php get_template_part('components/single/search-title');?>
 <section class="search-result">
    <div class="container">
