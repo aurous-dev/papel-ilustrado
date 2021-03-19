@@ -187,7 +187,22 @@ header.woocommerce-products-header,
    }
 }
 
-
+// Btn cargas mas
+.dhwc-ajax__pagination.is-loadmore.is-ajax-pagination {
+   padding-bottom: 50px;
+   a {
+      border: 0;
+      background-color: $color-indigo;
+      color: $color-white;
+      font-size: 16px;
+      padding: 18px 30px;
+      transition: $tr3;
+      @include fonts-display(600);
+      &:hover {
+         background-color: $color-salmon;
+      }
+   }
+}
 
 
 

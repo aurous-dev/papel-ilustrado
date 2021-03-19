@@ -9731,6 +9731,20 @@ header.woocommerce-products-header,
               -webkit-transform: translateY(-50%);
               transform: translateY(-50%); }
 
+.dhwc-ajax__pagination.is-loadmore.is-ajax-pagination {
+  padding-bottom: 50px; }
+  .dhwc-ajax__pagination.is-loadmore.is-ajax-pagination a {
+    border: 0;
+    background-color: #2A3D42;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 18px 30px;
+    transition: all ease-in-out 0.3s;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; }
+    .dhwc-ajax__pagination.is-loadmore.is-ajax-pagination a:hover {
+      background-color: #F4997E; }
+
 .filter-widgets {
   padding: 0 !important;
   margin: 0 !important;
