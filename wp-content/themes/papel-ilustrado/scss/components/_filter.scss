@@ -21,15 +21,253 @@
 
 // Styles from Filters
 
+// Width
+header.woocommerce-products-header,
+.dhwc-ajax__clearfix,
+.dhwc-ajax__toolbar.is-dot-style,
+.dhwc-ajax__clearfix,
+.woocommerce-products-loop-wrapper {
+   max-width: 1140px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+// Menu filters
+.dhwc-ajax__toolbar.is-dot-style {
+   margin-top: 30px;
+   position: relative;
+
+   // Nav filtros
+   .toolbar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .toolbar__filter-buttons {
+         a {
+            color: $color-indigo;
+            transition: $tr3;
+            display: flex;
+            align-items: center;
+            &.js-active {
+               color: $color-salmon;
+            }
+            @include mq($from: desktop) {
+               &:hover {
+                  color: $color-salmon;
+               }
+            }
+         }
+      }
+      .toolbar-wc {
+         display: flex;
+         align-items: center;
+         p {
+            margin-bottom: 0;
+         }
+         form.woocommerce-ordering {
+            select {
+               border: 1px solid #D2D2D2;
+               padding: 8px 20px;
+               font-size: 14px;
+               color: $color-gray;
+               width: 270px;
+            }
+         }
+      }
+   }
+
+   // Cuerpo del filtro
+   .toolbar-body {
+      position: relative;
+      .toolbar__filter-widgets {
+         position: absolute;
+         top: -10px;
+         width: 100%;
+         box-shadow: 0px 4px 20px rgba($color: #000000, $alpha: .45);
+         background-color: $color-white;
+         z-index: 10;
+         padding: 40px;
+         .filter-widgets {
+            margin-bottom: 0 !important;
+            border: 0 !important;
+         }
+         .widgettitle {
+            font-size: 14px;
+            color: $color-indigo;
+            text-transform: uppercase;
+            @include fonts-display(700)
+         }
+      }
+      // Categorias
+      .dhwc_ajax_category_filter {
+         @include mq($from: desktop) {
+            max-width: 40%;
+            width: 100%;
+         }
+         .widgetcontent {
+            .filter__list {
+               ul {
+                  column-count: 3;
+               }
+            }
+         }
+      }
+
+      // Lista General
+      .widgetcontent {
+         padding: 0;
+         .filter__list {
+            ul {
+               li{
+                  margin: 0 0 5px !important;
+                  a {
+                     font-size: 14px;
+                     color: $color-indigo;
+                     padding: 5px 0 1px !important;
+                     @include fonts-display(500);
+                     &::after {
+                        border-bottom: 2px solid $color-silver !important;
+                     }
+                  }
+                  .count {
+                     display: none;
+                  }
+                  
+                  // Selecionado
+                  &.chosen {
+                     a {
+                        font-weight: 600;
+                        border-bottom: 2px solid $color-silver !important;
+                        &::before,
+                        &::after {
+                           display: none !important;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      // tag categoria activada
+      .toolbar__filter-active {
+         position: absolute;
+         top: -60px;
+         left: 77px;
+         max-width: 50%;
+         .woocommerce {
+            min-height: auto;
+            padding: 0;
+            ul {
+               overflow: initial;
+               li {
+                  &::before {
+                     display: none !important;
+                  }
+                  a {
+                     border: 1px solid $color-light_white;
+                     background-color: $color-light_white;
+                     color: $color-indigo;
+                     transition: $tr3;
+                     padding: 8px 32px 8px 16px;
+                     font-size: 14px;
+                     @include fonts-display(500);
+                     &:hover {
+                        border: 1px solid #D2D2D2;
+                        background-color: $color-white;
+                        color: $color-indigo;
+                     }
+                     &::before {
+                        content: "\e901";
+                        position: absolute;
+                        right: 12px;
+                        top: 55%;
+                        margin: 0;
+                        font-size: 14px;
+                        font-family: 'dhwc-ajax';
+                        color: $color-indigo;
+                        opacity: 1;
+                        display: block!important;
+                        -webkit-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   @include mq($from: mobile, $until: desktop) {
+      .toolbar-header {
+         .toolbar-wc {
+            form.woocommerce-ordering {
+               display: block;
+               select {
+                  padding: 5px 10px;
+                  width: 100%;
+               }
+            }
+         }
+      }
+
+      .toolbar-body {
+         .toolbar__filter-widgets {
+            width: 100vw;
+            left: -15px;
+            padding: 25px 15px;
+            box-shadow: none;
+         }
+         .widgetcontent {
+            padding: 0;
+            .filter__list {
+               ul {
+                  column-count: 2 !important;
+               }
+            }
+         }
+         .toolbar__filter-active {
+            position: initial;
+            max-width: 100%;
+            top: 0;
+            left: 0;
+            li {
+               padding: 0 !important;
+               margin-bottom: 20px;
+            }
+         }
+      }
+   }
+}
+
+// Btn cargas mas
+.dhwc-ajax__pagination.is-loadmore.is-ajax-pagination {
+   padding-bottom: 50px;
+   a {
+      border: 0;
+      background-color: $color-indigo;
+      color: $color-white;
+      font-size: 16px;
+      padding: 18px 30px;
+      transition: $tr3;
+      @include fonts-display(600);
+      &:hover {
+         background-color: $color-salmon;
+      }
+   }
+}
+
+
 .filter-widgets {
    padding: 0 !important;
    margin: 0 !important;
    margin-bottom: 50px !important;
    border-bottom: 1px solid #cccccc75;
    ul {
-       li {
-           padding: 0px !important;
-       }
+      li {
+         padding: 0px !important;
+      }
    }
 }
 .dhwc_ajax_acf_filter:nth-child(2) {
@@ -38,140 +276,140 @@
    padding-left: 30px !important;
    min-height: 300px !important;
    ul {
-       display: flex;
-       flex-wrap: wrap;
-       li {
-           height: 50px;
-           width: 50px;
-           border: 1px solid #fff;
-           display: flex !important;
-           justify-content: center !important;
-           align-items: center !important;
-           padding: 0 !important;
-           margin: 0px !important;
-           
-           a {
-               display: flex;
-               border: 0 !important;
-               font-size: 0.75em;
-               // color: transparent !important;
-               color: #fff !important;
-               height: 100%;
-               width: 100%;
-               justify-content: center;
-               align-items: center;
-           }
-       }
+      display: flex;
+      flex-wrap: wrap;
+      li {
+         height: 50px;
+         width: 50px;
+         border: 1px solid #fff;
+         display: flex !important;
+         justify-content: center !important;
+         align-items: center !important;
+         padding: 0 !important;
+         margin: 0px !important;
+
+         a {
+            display: flex;
+            border: 0 !important;
+            font-size: 0.75em;
+            // color: transparent !important;
+            color: #fff !important;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+         }
+      }
    }
    .tr-negro {
-       background-color: #000;
+      background-color: #000;
    }
    .tr-gris {
-       background-color: #959386;
+      background-color: #959386;
    }
    .tr-blanco {
-       background-color: #fff;
-       a {
-           color: #000 !important;
-       }
+      background-color: #fff;
+      a {
+         color: #000 !important;
+      }
    }
    .tr-burdeo {
-       background-color: #8e1e26;
+      background-color: #8e1e26;
    }
    .tr-rojo {
-       background-color: #ea3223;
+      background-color: #ea3223;
    }
    .tr-rosa {
-       background-color: #f0bdc1;
+      background-color: #f0bdc1;
    }
    .tr-cafe {
-       background-color: #a25728;
+      background-color: #a25728;
    }
    .tr-ocre {
-       background-color: #b28748;
+      background-color: #b28748;
    }
    .tr-naranjo {
-       background-color: #e58547;
+      background-color: #e58547;
    }
    .tr-militar {
-       background-color: #617829;
+      background-color: #617829;
    }
    .tr-verde {
-       background-color: #5b9d2f;
+      background-color: #5b9d2f;
    }
    .tr-menta {
-       background-color: #6dad8c;
+      background-color: #6dad8c;
    }
    .tr-mostaza {
-       background-color: #d3bb40;
+      background-color: #d3bb40;
    }
    .tr-amarillo {
-       background-color: #f3e95d;
+      background-color: #f3e95d;
    }
    .tr-arena {
-       background-color: #eee6a1;
+      background-color: #eee6a1;
    }
    .tr-azul {
-       background-color: #33708b;
+      background-color: #33708b;
    }
    .tr-celeste {
-       background-color: #52a1c2;
+      background-color: #52a1c2;
    }
    .tr-agua {
-       background-color: #d1eaf1;
+      background-color: #d1eaf1;
    }
    .tr-marino {
-       background-color: #1a3757;
+      background-color: #1a3757;
    }
    .tr-piedra {
-       background-color: #496775;
+      background-color: #496775;
    }
    .tr-petroleo {
-       background-color: #2f444b;
+      background-color: #2f444b;
    }
    .tr-morado {
-       background-color: #5f4063;
+      background-color: #5f4063;
    }
    .tr-violeta {
-       background-color: #937599;
+      background-color: #937599;
    }
    .tr-lila {
-       background-color: #cbb3ce;
+      background-color: #cbb3ce;
    }
    .tr-multi {
-       // background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
-       background: red; /* For browsers that do not support gradients */
-       background: -webkit-linear-gradient(
-           left,
-           orange,
-           green,
-           blue,
-           violet
-       ); /* For Safari 5.1 to 6.0 */
-       background: -o-linear-gradient(
-           right,
-           orange,
-           green,
-           blue,
-           violet
-       ); /* For Opera 11.1 to 12.0 */
-       background: -moz-linear-gradient(
-           right,
-           orange,
-           green,
-           blue,
-           violet
-       ); /* For Firefox 3.6 to 15 */
-       background: linear-gradient(
-           to right,
-           orange,
-           green,
-           blue,
-           violet
-       ); /* Standard syntax (must be last) */
-       // a {
-       //     color: #000 !important;
-       // }
+      // background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+      background: red; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(
+         left,
+         orange,
+         green,
+         blue,
+         violet
+      ); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(
+         right,
+         orange,
+         green,
+         blue,
+         violet
+      ); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(
+         right,
+         orange,
+         green,
+         blue,
+         violet
+      ); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(
+         to right,
+         orange,
+         green,
+         blue,
+         violet
+      ); /* Standard syntax (must be last) */
+      // a {
+      //     color: #000 !important;
+      // }
    }
 }
 // .dhwc_ajax_acf_filter:nth-child(1),

@@ -1,4 +1,4 @@
-import { menu, tr_header } from './selectors.js';
+import { menu, tr_header, tr_preventDefault } from './selectors.js';
 
 // Menu dropdown Desktop
 export function clickMenu(a) {
