@@ -31,19 +31,6 @@ get_header();
             </div>
       <?php endwhile;
       endif; ?>
-      <!-- <div class="row about__container">
-         <div class="col-md-6 about__container--img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/nosotros.png" alt="">
-         </div>
-         <div class="col-md-6 about__container--info">
-            <h3>¿A Dónde deseas enviar?</h3>
-            <div>
-               Puedes modifcar el tamaño y marco de cada cuadro o eliminar cuadros. Recuerda que esta personalización cambiará el look de cada cuadro y puede no ser similar al diseño original de la serie. Puedes modifcar el tamaño y marco de cada cuadro o eliminar cuadros. Recuerda que esta personalización cambiará el look de cada cuadro y puede no ser similar al diseño original de la serie.
-               <br><br>
-               Puedes modifcar el tamaño y marco de cada cuadro o eliminar cuadros. Recuerda que esta personalización cambiará el look de cada cuadro y puede no ser similar al diseño original de la serie.
-            </div>
-         </div>
-      </div> -->
    </div>
 </div>
 

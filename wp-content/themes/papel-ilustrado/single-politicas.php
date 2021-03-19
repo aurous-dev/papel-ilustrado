@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /* Template Name: Politica Single */
 
@@ -6,78 +6,32 @@ get_header();
 
 ?>
 <div class="container-fluid policies">
-   <?php get_template_part('components/single/title');?>
+   <?php
+   $title = get_the_title();
+   set_query_var('title', $title);
+   get_template_part('components/single/title'); ?>
    <div class="container">
       <div class="row policies__container">
-         <div class="col-md-6 policies__info">
-            <div class="policies__info--container">
-               <div class="policies__info--title">
-                  <span class="number">1.</span>
-                  <h2>¿Por qué medio envían mi pedido?</h2>
+         <?php if (have_rows('politica')) : ?>
+            <?php while (have_rows('politica')) : the_row();
+               $rowNumber = get_row_index(); ?>
+               <div class="col-md-6 policies__info">
+                  <div class="policies__info--container">
+                     <div class="policies__info--title">
+                        <span class="number"><?php echo $rowNumber; ?>.</span>
+                        <h2>
+                           <?php the_sub_field('titulo'); ?>
+                        </h2>
+                     </div>
+                     <div class="policies__info--desc">
+                        <?php the_sub_field('descripcion'); ?>
+                     </div>
+                  </div>
                </div>
-               <div class="policies__info--desc">
-                  Para Santiago contamos con despacho interno para nuestros productos, por lo que no funcionamos a través de currier. Es la forma más segura y rápida en que recibirás tu pedido. 
-                  Para Santiago contamos con despacho interno para nuestros productos, por lo que no funcionamos a través de currier. Es la forma más segura y rápida en que recibirás tu pedido. 
-               </div>
-            </div>
-         </div>
-         <div class="col-md-6 policies__info">
-            <div class="policies__info--container">
-               <div class="policies__info--title">
-                  <span class="number">1.</span>
-                  <h2>¿Por qué medio envían mi pedido?</h2>
-               </div>
-               <div class="policies__info--desc">
-                  Para Santiago contamos con despacho interno para nuestros productos, por lo que no funcionamos a través de currier. Es la forma más segura y rápida en que recibirás tu pedido. 
-               </div>
-            </div>
-         </div>
-         <div class="col-md-6 policies__info">
-            <div class="policies__info--container">
-               <div class="policies__info--title">
-                  <span class="number">1.</span>
-                  <h2>¿Por qué medio envían mi pedido?</h2>
-               </div>
-               <div class="policies__info--desc">
-                  Para Santiago contamos con despacho interno para nuestros productos, por lo que no funcionamos a través de currier. Es la forma más segura y rápida en que recibirás tu pedido. 
-               </div>
-            </div>
-         </div>
-         <div class="col-md-6 policies__info">
-            <div class="policies__info--container">
-               <div class="policies__info--title">
-                  <span class="number">1.</span>
-                  <h2>¿Por qué medio envían mi pedido?</h2>
-               </div>
-               <div class="policies__info--desc">
-                  Para Santiago contamos con despacho interno para nuestros productos, por lo que no funcionamos a través de currier. Es la forma más segura y rápida en que recibirás tu pedido. 
-               </div>
-            </div>
-         </div>
-         <div class="col-md-6 policies__info">
-            <div class="policies__info--container">
-               <div class="policies__info--title">
-                  <span class="number">1.</span>
-                  <h2>¿Por qué medio envían mi pedido?</h2>
-               </div>
-               <div class="policies__info--desc">
-                  Para Santiago contamos con despacho interno para nuestros productos, por lo que no funcionamos a través de currier. Es la forma más segura y rápida en que recibirás tu pedido. 
-               </div>
-            </div>
-         </div>
-         <div class="col-md-6 policies__info">
-            <div class="policies__info--container">
-               <div class="policies__info--title">
-                  <span class="number">1.</span>
-                  <h2>¿Por qué medio envían mi pedido?</h2>
-               </div>
-               <div class="policies__info--desc">
-                  Para Santiago contamos con despacho interno para nuestros productos, por lo que no funcionamos a través de currier. Es la forma más segura y rápida en que recibirás tu pedido. 
-               </div>
-            </div>
-         </div>
+         <?php endwhile;
+         endif; ?>
       </div>
    </div>
 </div>
 
-<?php get_footer();?>
+<?php get_footer(); ?>
