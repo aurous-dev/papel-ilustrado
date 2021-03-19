@@ -33,19 +33,29 @@ header.woocommerce-products-header,
    padding: 0 15px;
 }
 
+// Menu filters
 .dhwc-ajax__toolbar.is-dot-style {
    margin-top: 30px;
    position: relative;
+
+   // Nav filtros
    .toolbar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       .toolbar__filter-buttons {
          a {
             color: $color-indigo;
             transition: $tr3;
+            display: flex;
+            align-items: center;
             &.js-active {
                color: $color-salmon;
             }
-            &:hover {
-               color: $color-salmon;
+            @include mq($from: desktop) {
+               &:hover {
+                  color: $color-salmon;
+               }
             }
          }
       }
@@ -66,14 +76,17 @@ header.woocommerce-products-header,
          }
       }
    }
+
+   // Cuerpo del filtro
    .toolbar-body {
-      position: absolute;
-      top: 40px;
-      width: 100%;
-      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
-      background-color: $color-white;
-      z-index: 10;
+      position: relative;
       .toolbar__filter-widgets {
+         position: absolute;
+         top: -10px;
+         width: 100%;
+         box-shadow: 0px 4px 20px rgba($color: #000000, $alpha: .45);
+         background-color: $color-white;
+         z-index: 10;
          padding: 40px;
          .filter-widgets {
             margin-bottom: 0 !important;
@@ -110,9 +123,9 @@ header.woocommerce-products-header,
                   margin: 0 0 5px !important;
                   a {
                      font-size: 14px;
-                     color: #182224;
+                     color: $color-indigo;
                      padding: 5px 0 1px !important;
-                     @include fonts-display(400);
+                     @include fonts-display(500);
                      &::after {
                         border-bottom: 2px solid $color-silver !important;
                      }
@@ -137,10 +150,10 @@ header.woocommerce-products-header,
          }
       }
 
-      // Lista categoria activada
+      // tag categoria activada
       .toolbar__filter-active {
          position: absolute;
-         top: -40px;
+         top: -60px;
          left: 77px;
          max-width: 50%;
          .woocommerce {
@@ -185,6 +198,47 @@ header.woocommerce-products-header,
          }
       }
    }
+
+   @include mq($from: mobile, $until: desktop) {
+      .toolbar-header {
+         .toolbar-wc {
+            form.woocommerce-ordering {
+               display: block;
+               select {
+                  padding: 5px 10px;
+                  width: 100%;
+               }
+            }
+         }
+      }
+
+      .toolbar-body {
+         .toolbar__filter-widgets {
+            width: 100vw;
+            left: -15px;
+            padding: 25px 15px;
+            box-shadow: none;
+         }
+         .widgetcontent {
+            padding: 0;
+            .filter__list {
+               ul {
+                  column-count: 2 !important;
+               }
+            }
+         }
+         .toolbar__filter-active {
+            position: initial;
+            max-width: 100%;
+            top: 0;
+            left: 0;
+            li {
+               padding: 0 !important;
+               margin-bottom: 20px;
+            }
+         }
+      }
+   }
 }
 
 // Btn cargas mas
@@ -203,7 +257,6 @@ header.woocommerce-products-header,
       }
    }
 }
-
 
 
 .filter-widgets {
