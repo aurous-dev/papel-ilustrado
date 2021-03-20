@@ -261,8 +261,10 @@ header.woocommerce-products-header,
    .dhwc-ajax__toolbar.is-dot-style {
       .toolbar-body {
          .dhwc_ajax_acf_filter:nth-child(2) {
-            width: 20.1% !important;
-            min-height: 300px !important;
+            @include mq($from: tablet) {
+               width: 20.1% !important;
+               min-height: 300px !important;
+            }
             padding-right: 0;
             ul {
                display: flex !important;
@@ -299,6 +301,16 @@ header.woocommerce-products-header,
                      height: 29px;
                      padding: 0 8px !important;
                      left: -8px;
+                  }
+               }
+            }
+            @include mq($from: mobile, $until: tablet) {
+               min-height: auto !important;
+               ul {
+                  li {
+                     flex: 0 0 20%;
+                     left: 0;
+                     padding: 0 13px;
                   }
                }
             }
