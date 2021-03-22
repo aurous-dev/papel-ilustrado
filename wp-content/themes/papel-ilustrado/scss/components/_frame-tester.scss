@@ -376,3 +376,19 @@
       }
    }
 }
+
+.guide {
+   max-width: 700px;
+   width: 100%;
+   &__container {
+      max-width: unset;
+      .modal-content {
+         width: 100%;
+      }
+      iframe {
+         .ndfHFb-c4YZDc-cYSp0e-s2gQvd {
+            overflow-x: hidden !important;
+         }
+      }
+   }
+}

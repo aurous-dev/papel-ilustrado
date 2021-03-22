@@ -10251,6 +10251,16 @@ header.woocommerce-products-header,
   .simple-product__btn .buy {
     width: 100%; } }
 
+.guide {
+  max-width: 700px;
+  width: 100%; }
+  .guide__container {
+    max-width: unset; }
+    .guide__container .modal-content {
+      width: 100%; }
+    .guide__container iframe .ndfHFb-c4YZDc-cYSp0e-s2gQvd {
+      overflow-x: hidden !important; }
+
 .policies {
   padding-bottom: 120px; }
   .policies__link {

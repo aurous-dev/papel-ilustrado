@@ -20,8 +20,8 @@
 
       <!-- Modal -->
       <div class="modal fade" id="sizeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-         <div class="modal-dialog" role="document">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-dialog guide" role="document">
+            <div class="modal-dialog modal-dialog-centered guide__container" role="document">
                <div class="modal-content">
                   <div class="modal-header">
                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -30,9 +30,7 @@
                   </div>
                   <div class="modal-body">
                      <div class="row simple-product__modal">
-                        <iframe src="http://docs.google.com/gview?url=https://b510305f-7635-43a1-a9ce-724b285e2cd9.filesusr.com/ugd/1b7b74_7d3790861db340b3902c0997d151203b.pdf&embedded=true" style="width:718px; height:500px;" frameborder="0"></iframe>
-
-                        <!-- <img src="<?php the_field('guia_de_tamanos', 'option'); ?>" alt="Guía de tamaños"> -->
+                        <iframe src="http://docs.google.com/gview?url=https://b510305f-7635-43a1-a9ce-724b285e2cd9.filesusr.com/ugd/1b7b74_7d3790861db340b3902c0997d151203b.pdf&embedded=true" style="width:700px; height:500px;" frameborder="0"></iframe>
                      </div>
                   </div>
                </div>
