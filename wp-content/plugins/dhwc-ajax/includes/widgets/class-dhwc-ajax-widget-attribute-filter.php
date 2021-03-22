@@ -383,7 +383,7 @@ class DHWC_Ajax_Widget_Attribute_Filter extends DHWC_Ajax_Widget {
 			if($show_count){
 				$term_html .= ' ' . apply_filters( 'dhwc_ajax_attribute_filter_count', '<span class="count">' . absint( $count ) . '</span>', $count, $term );
 			}
-			echo '<li'. ( $option_is_set ? ' class="chosen"' : '' ) . '>';
+			echo '<li class="tr-' . $value . '" '. ( $option_is_set ? ' class="chosen"' : '' ) . '>';
 			echo apply_filters( 'dhwc_ajax_attribute_filter_term_html', $term_html, $term, $link, $count );
 			echo '</li>';
 		}
