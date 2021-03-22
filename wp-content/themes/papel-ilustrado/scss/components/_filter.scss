@@ -1,26 +1,3 @@
-.section-filter {
-   justify-content: space-between;
-   align-items: center;
-   &__search {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      i {
-         font-size: 16px;
-         color: $color-indigo;
-         margin-right: 10px;
-      }
-   }
-   &__form {
-      select {
-         padding: 13px 15px;
-         font-size: 13px;
-      }
-   }
-}
-
-// Styles from Filters
-
 // Width
 header.woocommerce-products-header,
 .dhwc-ajax__clearfix,
@@ -102,7 +79,7 @@ header.woocommerce-products-header,
       // Categorias
       .dhwc_ajax_category_filter {
          @include mq($from: desktop) {
-            max-width: 40%;
+            max-width: 38%;
             width: 100%;
          }
          .widgetcontent {
@@ -111,6 +88,14 @@ header.woocommerce-products-header,
                   column-count: 3;
                }
             }
+         }
+      }
+      // Tamaños
+      .woocommerce-widget-layered-nav {
+         width: auto;
+         ul {
+            column-count: 2;
+            column-gap: 20px;
          }
       }
 
@@ -122,7 +107,7 @@ header.woocommerce-products-header,
                li{
                   margin: 0 0 5px !important;
                   a {
-                     font-size: 14px;
+                     font-size: 13px;
                      color: $color-indigo;
                      padding: 5px 0 1px !important;
                      @include fonts-display(500);
@@ -270,148 +255,184 @@ header.woocommerce-products-header,
       }
    }
 }
-.dhwc_ajax_acf_filter:nth-child(2) {
-   width: 30% !important;
-   border-left: 1px solid #ccc;
-   padding-left: 30px !important;
-   min-height: 300px !important;
-   ul {
-      display: flex;
-      flex-wrap: wrap;
-      li {
-         height: 50px;
-         width: 50px;
-         border: 1px solid #fff;
-         display: flex !important;
-         justify-content: center !important;
-         align-items: center !important;
-         padding: 0 !important;
-         margin: 0px !important;
 
-         a {
-            display: flex;
-            border: 0 !important;
-            font-size: 0.75em;
-            // color: transparent !important;
-            color: #fff !important;
-            height: 100%;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
+// Colores
+.woocommerce {
+   .dhwc-ajax__toolbar.is-dot-style {
+      .toolbar-body {
+         .dhwc_ajax_acf_filter:nth-child(2) {
+            @include mq($from: tablet) {
+               width: 20.1% !important;
+               min-height: 300px !important;
+            }
+            padding-right: 0;
+            ul {
+               display: flex !important;
+               flex-wrap: wrap;
+               li {
+                  display: flex !important;
+                  justify-content: center !important;
+                  align-items: center !important;
+                  height: 42px;
+                  width: 42px;
+                  border: 1px solid #fff;
+                  border-radius: 50%;
+                  padding: 0 11px !important;
+                  margin: 0 0 10px !important;
+                  flex: 0 0 33.333%;
+                  left: -11px;
+                  a {
+                     display: flex;
+                     border: 0 !important;
+                     font-size: 0.75em;
+                     color: transparent !important;
+                     // color: #fff !important;
+                     height: 100%;
+                     width: 100%;
+                     justify-content: center;
+                     align-items: center;
+                     &::after {
+                        display: none !important;
+                     }
+                  }
+               }
+               @include mq($from: tablet, $until: desktop) {
+                  li {
+                     height: 29px;
+                     padding: 0 8px !important;
+                     left: -8px;
+                  }
+               }
+            }
+            @include mq($from: mobile, $until: tablet) {
+               min-height: auto !important;
+               ul {
+                  li {
+                     flex: 0 0 20%;
+                     left: 0;
+                     padding: 0 13px;
+                  }
+               }
+            }
+            .tr-negro {
+               background: #000 content-box;
+            }
+            .tr-gris {
+               background: #959386 content-box;
+            }
+            .tr-blanco {
+               background: #fff content-box;
+               a {
+                  color: transparent !important;
+                  border: 1px solid #D2D2D2 !important;
+                  border-radius: 50%;
+                  // color: #000 !important;
+               }
+            }
+            .tr-burdeo {
+               background: #8e1e26 content-box;
+            }
+            .tr-rojo {
+               background: #ea3223 content-box;
+            }
+            .tr-rosa {
+               background: #f0bdc1 content-box;
+            }
+            .tr-cafe {
+               background: #a25728 content-box;
+            }
+            .tr-ocre {
+               background: #b28748 content-box;
+            }
+            .tr-naranjo {
+               background: #e58547 content-box;
+            }
+            .tr-militar {
+               background: #617829 content-box;
+            }
+            .tr-verde {
+               background: #5b9d2f content-box;
+            }
+            .tr-menta {
+               background: #6dad8c content-box;
+            }
+            .tr-mostaza {
+               background: #d3bb40 content-box;
+            }
+            .tr-amarillo {
+               background: #f3e95d content-box;
+            }
+            .tr-arena {
+               background: #eee6a1 content-box;
+            }
+            .tr-azul {
+               background: #33708b content-box;
+            }
+            .tr-celeste {
+               background: #52a1c2 content-box;
+            }
+            .tr-agua {
+               background: #d1eaf1 content-box;
+            }
+            .tr-marino {
+               background: #1a3757 content-box;
+            }
+            .tr-piedra {
+               background: #496775 content-box;
+            }
+            .tr-petroleo {
+               background: #2f444b content-box;
+            }
+            .tr-morado {
+               background: #5f4063 content-box;
+            }
+            .tr-violeta {
+               background: #937599 content-box;
+            }
+            .tr-lila {
+               background: #cbb3ce content-box;
+            }
+            .tr-multi {
+               // background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+               background: red content-box; /* For browsers that do not support gradients */
+               background: content-box -webkit-linear-gradient(
+                  left,
+                  orange,
+                  green,
+                  blue,
+                  violet
+               ); /* For Safari 5.1 to 6.0 */
+               background: content-box -o-linear-gradient(
+                  right,
+                  orange,
+                  green,
+                  blue,
+                  violet
+               ); /* For Opera 11.1 to 12.0 */
+               background: content-box -moz-linear-gradient(
+                  right,
+                  orange,
+                  green,
+                  blue,
+                  violet
+               ); /* For Firefox 3.6 to 15 */
+               background: content-box linear-gradient(
+                  to right,
+                  orange,
+                  green,
+                  blue,
+                  violet
+               ); /* Standard syntax (must be last) */
+               // a {
+               //     color: #000 !important;
+               // }
+            }
          }
       }
-   }
-   .tr-negro {
-      background-color: #000;
-   }
-   .tr-gris {
-      background-color: #959386;
-   }
-   .tr-blanco {
-      background-color: #fff;
-      a {
-         color: #000 !important;
-      }
-   }
-   .tr-burdeo {
-      background-color: #8e1e26;
-   }
-   .tr-rojo {
-      background-color: #ea3223;
-   }
-   .tr-rosa {
-      background-color: #f0bdc1;
-   }
-   .tr-cafe {
-      background-color: #a25728;
-   }
-   .tr-ocre {
-      background-color: #b28748;
-   }
-   .tr-naranjo {
-      background-color: #e58547;
-   }
-   .tr-militar {
-      background-color: #617829;
-   }
-   .tr-verde {
-      background-color: #5b9d2f;
-   }
-   .tr-menta {
-      background-color: #6dad8c;
-   }
-   .tr-mostaza {
-      background-color: #d3bb40;
-   }
-   .tr-amarillo {
-      background-color: #f3e95d;
-   }
-   .tr-arena {
-      background-color: #eee6a1;
-   }
-   .tr-azul {
-      background-color: #33708b;
-   }
-   .tr-celeste {
-      background-color: #52a1c2;
-   }
-   .tr-agua {
-      background-color: #d1eaf1;
-   }
-   .tr-marino {
-      background-color: #1a3757;
-   }
-   .tr-piedra {
-      background-color: #496775;
-   }
-   .tr-petroleo {
-      background-color: #2f444b;
-   }
-   .tr-morado {
-      background-color: #5f4063;
-   }
-   .tr-violeta {
-      background-color: #937599;
-   }
-   .tr-lila {
-      background-color: #cbb3ce;
-   }
-   .tr-multi {
-      // background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
-      background: red; /* For browsers that do not support gradients */
-      background: -webkit-linear-gradient(
-         left,
-         orange,
-         green,
-         blue,
-         violet
-      ); /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient(
-         right,
-         orange,
-         green,
-         blue,
-         violet
-      ); /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient(
-         right,
-         orange,
-         green,
-         blue,
-         violet
-      ); /* For Firefox 3.6 to 15 */
-      background: linear-gradient(
-         to right,
-         orange,
-         green,
-         blue,
-         violet
-      ); /* Standard syntax (must be last) */
-      // a {
-      //     color: #000 !important;
-      // }
-   }
+   } 
 }
+
+
 // .dhwc_ajax_acf_filter:nth-child(1),
 // .dhwc_ajax_acf_filter:nth-child(2) {
 .dhwc_ajax_acf_filter:nth-child(1) {
