@@ -30,7 +30,9 @@
                   </div>
                   <div class="modal-body">
                      <div class="row simple-product__modal">
-                        <img src="https://via.placeholder.com/500" alt="">
+                        <iframe src="http://docs.google.com/gview?url=https://b510305f-7635-43a1-a9ce-724b285e2cd9.filesusr.com/ugd/1b7b74_7d3790861db340b3902c0997d151203b.pdf&embedded=true" style="width:718px; height:500px;" frameborder="0"></iframe>
+
+                        <!-- <img src="<?php the_field('guia_de_tamanos', 'option'); ?>" alt="Guía de tamaños"> -->
                      </div>
                   </div>
                </div>
@@ -40,95 +42,92 @@
       <!-- Modal -->
 
    </div>
-<?php
-if (get_field('mostrar_marco_tester') == 'show') :?>
-   <div class="marco-icon">
-      <a href="#" data-toggle="modal" data-target="#marcoModal">
-         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0001 1.66699C5.40008 1.66699 1.66675 5.40033 1.66675 10.0003C1.66675 14.6003 5.40008 18.3337 10.0001 18.3337C14.6001 18.3337 18.3334 14.6003 18.3334 10.0003C18.3334 5.40033 14.6001 1.66699 10.0001 1.66699ZM10.0001 14.167C9.54175 14.167 9.16675 13.792 9.16675 13.3337V10.0003C9.16675 9.54199 9.54175 9.16699 10.0001 9.16699C10.4584 9.16699 10.8334 9.54199 10.8334 10.0003V13.3337C10.8334 13.792 10.4584 14.167 10.0001 14.167ZM9.16675 7.50033H10.8334V5.83366H9.16675V7.50033Z" fill="#355957" />
-         </svg>
-         Probar Marco
-      </a>
+   <?php
+   if (get_field('tipo_de_producto') == 'simple' && get_field('mostrar_marco_tester') == 'show') : ?>
+      <div class="marco-icon">
+         <a href="#" data-toggle="modal" data-target="#marcoModal">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0001 1.66699C5.40008 1.66699 1.66675 5.40033 1.66675 10.0003C1.66675 14.6003 5.40008 18.3337 10.0001 18.3337C14.6001 18.3337 18.3334 14.6003 18.3334 10.0003C18.3334 5.40033 14.6001 1.66699 10.0001 1.66699ZM10.0001 14.167C9.54175 14.167 9.16675 13.792 9.16675 13.3337V10.0003C9.16675 9.54199 9.54175 9.16699 10.0001 9.16699C10.4584 9.16699 10.8334 9.54199 10.8334 10.0003V13.3337C10.8334 13.792 10.4584 14.167 10.0001 14.167ZM9.16675 7.50033H10.8334V5.83366H9.16675V7.50033Z" fill="#355957" />
+            </svg>
+            Probar Marco
+         </a>
 
-      <!-- Modal -->
-      <div class="modal fade" id="marcoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-         <div class="modal-dialog" role="document">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-               <div class="modal-content">
-                  <div class="modal-header">
-                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                     </button>
-                  </div>
-                  <div class="modal-body">
+         <!-- Modal -->
+         <div class="modal fade" id="marcoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+               <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="modal-body">
 
-                     <!-- Marco tester -->
-                     <?php if (get_field('mostrar_marco_tester') == 'show') : ?>
-                        <div id="sigle-product-vue">
-                           <div v-if="loading">
-                              <div style="text-align:center;margin:0 auto;">Cargando...</div>
-                           </div>
-                           <div v-else>
-                              <div class="row simple-product__modal" :style="cssVars">
-                                 <div class="col-md-5 col-12 simple-product__modal--img">
-                                    <div v-if="obra.images" class="box__image">
-                                       <div class="frame-picture" :style="cssVars" :class="Object.keys(selectedMarco).length === 0 ? 'none' : 'withFrame'">
-                                          <img :src="obra.images[0].src" alt="">
-                                          <div class="inner"></div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-7 col-12 simple-product__modal--info">
-                                    <div class="obra-container__title">
-                                       <h3 class="simple-product__title">Test de marcos</h3>
-                                    </div>
-                                    <div class="obra-container__price__info__cost">
-                                       <h5 v-if="!selectedMarco.nombre_de_marco" class="simple-product__desc">Selecciona un marco clickeando en algún ícono de abajo.</h5>
-                                       <h5 v-else class="simple-product__desc">Tu marco seleccionado es: <span class="name_frame">{{selectedMarco?.nombre_de_marco}}</span></h5>
-                                    </div>
-                                    <div v-if="selectedMarco.descripcion" class="simple-product__desc">
-                                       Descripción: {{selectedMarco?.descripcion}}
-                                    </div>
-                                    <div class="simple-product__size--form">
-                                       <div class="frame form__size">
-                                          <div class="form__title">Selecciona un marco</div>
-                                          <div class="frame-option">
-                                             <div v-for="option in obra.marcos" :key="option.id">
-                                                <button @click="changeFrame(option, $event)">
-                                                   <img :src="option.icono" />
-                                                </button>
-                                             </div>
-                                             <div>
-                                                <button @click="changeFrame({}, $event)">
-                                                   <!-- Sin Marco -->
-                                                   <img src="<?php echo get_template_directory_uri(); ?>/img/png/no_marco.png" alt="">
-                                                </button>
-                                             </div>
+                        <!-- Marco tester -->
+                        <?php if (get_field('mostrar_marco_tester') == 'show') : ?>
+                           <div id="sigle-product-vue">
+                              <div v-if="loading">
+                                 <div style="text-align:center;margin:0 auto;">Cargando...</div>
+                              </div>
+                              <div v-else>
+                                 <div class="row simple-product__modal" :style="cssVars">
+                                    <div class="col-md-5 col-12 simple-product__modal--img">
+                                       <div v-if="obra.images" class="box__image">
+                                          <div class="frame-picture" :style="cssVars" :class="Object.keys(selectedMarco).length === 0 ? 'none' : 'withFrame'">
+                                             <img :src="obra.images[0].src" alt="">
+                                             <div class="inner"></div>
                                           </div>
                                        </div>
                                     </div>
-                                    <div class="obra-container__price__info__des">
-                                       Ahora que probaste el marco que deseas seleccionalo antes de agregar al carrito.
-                                    </div>
-                                    <div class="simple-product__btn">
-                                       <a href="#" class="add"
-                                          @click="obtenerValue(selectedMarco?.nombre_de_marco, $event)"
-                                          aria-label="Close"
-                                          class="close" data-dismiss="modal">Selecionar Marco</a>
+                                    <div class="col-md-7 col-12 simple-product__modal--info">
+                                       <div class="obra-container__title">
+                                          <h3 class="simple-product__title">Test de marcos</h3>
+                                       </div>
+                                       <div class="obra-container__price__info__cost">
+                                          <h5 v-if="!selectedMarco.nombre_de_marco" class="simple-product__desc">Selecciona un marco clickeando en algún ícono de abajo.</h5>
+                                          <h5 v-else class="simple-product__desc">Tu marco seleccionado es: <span class="name_frame">{{selectedMarco?.nombre_de_marco}}</span></h5>
+                                       </div>
+                                       <div v-if="selectedMarco.descripcion" class="simple-product__desc">
+                                          Descripción: {{selectedMarco?.descripcion}}
+                                       </div>
+                                       <div class="simple-product__size--form">
+                                          <div class="frame form__size">
+                                             <div class="form__title">Selecciona un marco</div>
+                                             <div class="frame-option">
+                                                <div v-for="option in obra.marcos" :key="option.id">
+                                                   <button @click="changeFrame(option, $event)">
+                                                      <img :src="option.icono" />
+                                                   </button>
+                                                </div>
+                                                <div>
+                                                   <button @click="changeFrame({}, $event)">
+                                                      <!-- Sin Marco -->
+                                                      <img src="<?php echo get_template_directory_uri(); ?>/img/png/no_marco.png" alt="">
+                                                   </button>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="obra-container__price__info__des">
+                                          Ahora que probaste el marco que deseas seleccionalo antes de agregar al carrito.
+                                       </div>
+                                       <div class="simple-product__btn">
+                                          <a href="#" class="add" @click="obtenerValue(selectedMarco?.nombre_de_marco, $event)" aria-label="Close" class="close" data-dismiss="modal">Selecionar Marco</a>
+                                       </div>
                                     </div>
                                  </div>
                               </div>
                            </div>
-                        </div>
-                     <?php endif; ?>
-                     <!-- Marco tester -->
+                        <?php endif; ?>
+                        <!-- Marco tester -->
+                     </div>
                   </div>
                </div>
             </div>
          </div>
+         <!-- Modal -->
       </div>
-      <!-- Modal -->
-   </div>
-<?php endif;?>
+   <?php endif; ?>
 
 </div>

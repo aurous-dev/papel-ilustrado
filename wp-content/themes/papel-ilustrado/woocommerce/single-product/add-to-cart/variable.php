@@ -82,12 +82,12 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 	<?php do_action( 'woocommerce_after_variations_form' ); ?>
 </form>
-<?php 
+<!-- <?php 
 // var_dump($product);
 	$type = $product->ID;
 	// echo $type;
 	$final = WC_Product_Factory::get_product_type($type);
 	echo $final;
-;?>
+;?> -->
 <?php
 do_action( 'woocommerce_after_add_to_cart_form' );
