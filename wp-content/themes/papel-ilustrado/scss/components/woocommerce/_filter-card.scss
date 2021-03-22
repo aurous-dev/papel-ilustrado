@@ -1,0 +1,72 @@
+.woocommerce-products-loop-wrapper {
+   ul.products {
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      li.product {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         a {
+            display: flex;
+            flex-direction: column;
+            @include f-center;
+            &.button {
+               display: none;
+            }
+            h2.woocommerce-loop-product__title {
+               color: $color-indigo;
+               font-size: 13px;
+               margin-bottom: 5px;
+               max-width: 85%;
+               text-align: center;
+               @include fonts-display(700);
+            }
+            .price {
+               display: flex;
+               flex-wrap: wrap;
+               text-align: center;
+               color: $color-indigo;
+               font-size: 14px;
+               @include f-center;
+               @include fonts-display(600);
+               &::before {
+                  content: 'Desde';
+                  text-transform: uppercase;
+                  color: $color-gray;
+                  display: block;
+                  font-size: 11px;
+                  width: 100%;
+                  @include fonts-display(500)
+               }
+               .woocommerce-Price-amount.amount {
+                  &::after {
+                     content: ' c/u';
+                  }
+               }
+
+               // Order
+               del {
+                  order: 3;
+                  font-size: 12px;
+                  span {
+                     color: $color-indigo;
+                     &::after {
+                        display: none;
+                     }
+                  }
+               }
+               ins {
+                  margin-right: 5px;
+                  text-decoration: none;
+                  span {
+                     color: $color-salmon;
+                     text-decoration: none;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

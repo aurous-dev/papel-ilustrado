@@ -138,7 +138,7 @@ header.woocommerce-products-header,
       // tag categoria activada
       .toolbar__filter-active {
          position: absolute;
-         top: -55px;
+         top: -60px;
          left: 77px;
          max-width: 50%;
          .woocommerce {
@@ -147,6 +147,9 @@ header.woocommerce-products-header,
             ul {
                overflow: initial;
                li {
+                  &.chosen {
+                     padding: 0 !important;
+                  }
                   &::before {
                      display: none !important;
                   }
@@ -260,13 +263,14 @@ header.woocommerce-products-header,
 .woocommerce {
    .dhwc-ajax__toolbar.is-dot-style {
       .toolbar-body {
-         #dhwc_ajax_acf_filter-2 {
+         .variation-swatches-select {
+            margin-top: 20px;
             @include mq($from: tablet) {
                width: 33% !important;
                min-height: 300px !important;
             }
             padding-right: 0;
-            ul {
+            ul.variation-swatches.is-select {
                display: flex !important;
                flex-wrap: wrap;
                li {
@@ -284,7 +288,7 @@ header.woocommerce-products-header,
                   @include mq($from: desktop) {
                      &:hover {
                         a {
-                           border: 3px solid #F41414;
+                           border: 3px solid #F41414 !important;
                         }
                      }
                   }
@@ -333,8 +337,7 @@ header.woocommerce-products-header,
             .tr-blanco {
                background: #fff content-box;
                a {
-                  color: transparent !important;
-                  border: 1px solid #D2D2D2;
+                  border: 1px solid #D2D2D2 !important;
                   border-radius: 50%;
                   // color: #000 !important;
                }

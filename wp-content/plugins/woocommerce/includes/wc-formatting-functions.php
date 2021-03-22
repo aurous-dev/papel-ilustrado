@@ -585,7 +585,7 @@ function wc_price( $price, $args = array() ) {
 
 	$formatted_price = ( $negative ? '-' : '' ) . sprintf( $args['price_format'], '<span class="woocommerce-Price-currencySymbol">' . get_woocommerce_currency_symbol( $args['currency'] ) . '</span>', $price );
 	// $test = 'hola';
-	$return          = '<span class="woocommerce-Price-amount amount">desde <bdi>' . $formatted_price . '</bdi> C/U </span>';
+	$return          = '<span class="woocommerce-Price-amount amount"><bdi>' . $formatted_price . '</bdi></span>';
 
 	if ( $args['ex_tax_label'] && wc_tax_enabled() ) {
 		$return .= ' <small class="woocommerce-Price-taxLabel tax_label">' . WC()->countries->ex_tax_or_vat() . '</small>';
