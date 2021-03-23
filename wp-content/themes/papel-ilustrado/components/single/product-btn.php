@@ -71,7 +71,7 @@
                               <div v-else>
                                  <div class="row simple-product__modal" :style="cssVars">
                                     <div class="col-md-5 col-12 simple-product__modal--img">
-                                       <div v-if="obra.images" class="box__image">
+                                       <div v-if="obra.images.lenght > 0" class="box__image">
                                           <div class="frame-picture" :style="cssVars" :class="Object.keys(selectedMarco).length === 0 ? 'none' : 'withFrame'">
                                              <img :src="obra.images[0].src" alt="">
                                              <div class="inner"></div>
@@ -101,7 +101,7 @@
                                                 <div>
                                                    <button @click="changeFrame({}, $event)">
                                                       <!-- Sin Marco -->
-                                                      <img src="<?php echo get_template_directory_uri(); ?>/img/png/no_marco.png" alt="">
+                                                      <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/png/no_marco.png" alt=""> -->
                                                    </button>
                                                 </div>
                                              </div>
