@@ -34,3 +34,38 @@
       }
    }
 }
+
+.build-composition {
+   &__slider {
+      .slider-nav {
+         .slick-track {
+            transform: translate3d(0, 0, 0) !important;
+         }
+      }
+   }
+   &__nav {
+      img {
+         height: 80px;
+         width: 80px;
+      }
+   }
+   &__for {
+      .build-for__container {
+         position: relative;
+         height: 500px;
+         display: flex;
+         justify-content: center;
+         align-items: flex-end;
+         padding-bottom: 140px;
+      }
+      .build__bg {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         @include bg-center;
+      }
+   }
+}

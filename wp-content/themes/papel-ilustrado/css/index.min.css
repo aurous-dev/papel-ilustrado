@@ -8700,6 +8700,16 @@ a.text-dark:hover, a.text-dark:focus {
     font-family: 'Raleway', sans-serif;
     font-weight: 400; }
 
+.build-compostion__title {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 30px; }
+  .build-compostion__title h2 {
+    color: #2A3D42;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; }
+
 .hero {
   padding: 20px 0; }
   .hero__slider {
@@ -12535,6 +12545,33 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
       .page-composiciones__grid .cards {
         flex: 0 0 50%;
         max-width: 50%; } }
+
+.build-composition__slider .slider-nav .slick-track {
+  transform: translate3d(0, 0, 0) !important; }
+
+.build-composition__nav img {
+  height: 80px;
+  width: 80px; }
+
+.build-composition__for .build-for__container {
+  position: relative;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 140px; }
+
+.build-composition__for .build__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all .5s ease-in-out; }
 
 .search-result {
   padding-bottom: 100px; }

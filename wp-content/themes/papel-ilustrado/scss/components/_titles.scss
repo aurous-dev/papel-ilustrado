@@ -69,3 +69,14 @@
       @include fonts-display(400);
    }
 }
+
+.build-compostion__title {
+   text-align: center;
+   font-size: 14px;
+   margin-bottom: 30px;
+   h2 {
+      color: $color-indigo;
+      font-size: 22px;
+      @include fonts-display(600);
+   }
+}
