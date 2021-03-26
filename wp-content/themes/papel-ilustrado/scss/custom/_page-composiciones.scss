@@ -36,28 +36,18 @@
 }
 
 .build-composition {
-   &__slider {
-      .slider-nav {
-         .slick-track {
-            transform: translate3d(0, 0, 0) !important;
-         }
-      }
-   }
    &__nav {
       img {
          height: 80px;
          width: 80px;
       }
    }
-   &__for {
-      .build-for__container {
-         position: relative;
-         height: 500px;
-         display: flex;
-         justify-content: center;
-         align-items: flex-end;
-         padding-bottom: 140px;
-      }
+   &__modal {
+      position: relative;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       .build__bg {
          position: absolute;
          top: 0;
@@ -66,6 +56,57 @@
          height: 100%;
          z-index: -1;
          @include bg-center;
+      }
+      .build__btn {
+         position: relative;
+         top: -140px;
+      }
+   }
+}
+
+.build-modal__container {
+   max-width: 1140px;
+   margin: 0 auto;
+   .build-compostion__title {
+      max-width: 65%;
+      margin: 0 auto 50px;
+   }
+   .modal-content {
+      top: 10px;
+   }
+   .modal-body {
+      padding: 20px 40px;
+   }
+   .modal-header {
+      position: absolute;
+      right: 0;
+      z-index: 10;
+   }
+   .build__filter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-indigo;
+      margin-bottom: 50px;
+      &--icon {
+         margin-right: 20px;
+      }
+      form {
+         select {
+            width: 200px;
+            height: 45px;
+         }
+      }
+   }
+   .build__row {
+      height: 400px;
+      overflow-x: scroll;
+      &--arts {
+         margin-bottom: 20px;
+         img {
+            max-width: 100%;
+            height: auto;
+         }
       }
    }
 }

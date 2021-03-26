@@ -12546,32 +12546,64 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
         flex: 0 0 50%;
         max-width: 50%; } }
 
-.build-composition__slider .slider-nav .slick-track {
-  transform: translate3d(0, 0, 0) !important; }
-
 .build-composition__nav img {
   height: 80px;
   width: 80px; }
 
-.build-composition__for .build-for__container {
+.build-composition__modal {
   position: relative;
   height: 500px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 140px; }
+  align-items: flex-end; }
+  .build-composition__modal .build__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all .5s ease-in-out; }
+  .build-composition__modal .build__btn {
+    position: relative;
+    top: -140px; }
 
-.build-composition__for .build__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  transition: all .5s ease-in-out; }
+.build-modal__container {
+  max-width: 1140px;
+  margin: 0 auto; }
+  .build-modal__container .build-compostion__title {
+    max-width: 65%;
+    margin: 0 auto 50px; }
+  .build-modal__container .modal-content {
+    top: 10px; }
+  .build-modal__container .modal-body {
+    padding: 20px 40px; }
+  .build-modal__container .modal-header {
+    position: absolute;
+    right: 0;
+    z-index: 10; }
+  .build-modal__container .build__filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2A3D42;
+    margin-bottom: 50px; }
+    .build-modal__container .build__filter--icon {
+      margin-right: 20px; }
+    .build-modal__container .build__filter form select {
+      width: 200px;
+      height: 45px; }
+  .build-modal__container .build__row {
+    height: 400px;
+    overflow-x: scroll; }
+    .build-modal__container .build__row--arts {
+      margin-bottom: 20px; }
+      .build-modal__container .build__row--arts img {
+        max-width: 100%;
+        height: auto; }
 
 .search-result {
   padding-bottom: 100px; }

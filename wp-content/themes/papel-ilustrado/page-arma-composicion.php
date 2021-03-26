@@ -18,6 +18,7 @@ get_header();
 <!-- SECOND SECTION -->
 <section class="container-fluid build-composition__slider">
    <div class="container">
+      <!-- Slider -->
       <div class="slider-nav">
          <div class="build-composition__nav">
             <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
@@ -28,86 +29,116 @@ get_header();
          <div class="build-composition__nav">
             <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
          </div>
+         <div class="build-composition__nav">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
+         </div>
+         <div class="build-composition__nav">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
+         </div>
+         <div class="build-composition__nav">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
+         </div>
+         <div class="build-composition__nav">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
+         </div>
+         <div class="build-composition__nav">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
+         </div>
+         <div class="build-composition__nav">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
+         </div>
+         <div class="build-composition__nav">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
+         </div>
+         <div class="build-composition__nav">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
+         </div>
       </div>
-      <div class="slider-for">
-         <div class="build-composition__for">
-            <div class="build-for__container">
-               <div class="build__bg"  style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/medida.png');"></div>
-               <a href="#" class="build__btn btn-principal" data-toggle="modal" data-target="#build-modal">Selecciona diagramación</a>
-               <!-- <div class="buid__modal">
-                  Modal
-                  <div class="modal fade" id="build-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                           <div class="modal-content">
-                              <div class="modal-header">
-                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                 </button>
-                              </div>
-                              <div class="modal-body">
-                                 Hola soy una
-                              </div>
+
+      <!-- Imagen Principal -->
+      <div class="build-composition__modal">
+         <div class="build__bg"  style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/medida.png');"></div>
+         <button class="build__btn btn-principal" data-toggle="modal" data-target="#build-modal">Selecciona diagramación</button>
+         <div class="buid__modal">
+
+         <!-- Modal -->
+         <div class="modal fade" id="build-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <!-- Centrar la modal -->
+               <div class="modal-dialog modal-dialog-centered build-modal__container" role="document">
+                  <div class="modal-content">
+                     <!-- Btn de cerrar-->
+                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <!-- Btn de cerrar-->
+
+                     <!-- Contenido-->
+                     <div class="modal-body">
+                        <div class="build-compostion__title">
+                           <h2>PASO 2: Selecciona las obras</h2>
+                           <div>
+                              Elige el orden de las obras que desees para tu composición, éstas se enumerarán de la primera a la 
+                              última dependiendo de la cantidad de la diagramación
+                           </div>
+                        </div>
+
+                        <div class="build__filter">
+                           <div class="build__filter--icon">
+                              <i class="fas fa-filter"></i>
+                              filtrar por
+                           </div>
+                           <form action="">
+                              <select name="categoria" id="categoria">
+                                 <option value="" selected> Categoría </option>
+                              </select>
+                              <select name="color" id="color">
+                                 <option value="" selected> Color </option>
+                              </select>
+                              <select name="tags" id="tags">
+                                 <option value="" selected> Temas/tags </option>
+                              </select>
+                           </form>
+                        </div>
+
+                        <div class="row build__row">
+                           <!-- Deberian ser btn como los marcos -->
+                           <div class="col-md-2 col-4 build__row--arts">
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+                           </div>
+                           <div class="col-md-2 col-4 build__row--arts">
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+                           </div>
+                           <div class="col-md-2 col-4 build__row--arts">
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+                           </div>
+                           <div class="col-md-2 col-4 build__row--arts">
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+                           </div>
+                           <div class="col-md-2 col-4 build__row--arts">
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+                           </div>
+                           <div class="col-md-2 col-4 build__row--arts">
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+                           </div>
+                           <div class="col-md-2 col-4 build__row--arts">
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+                           </div>
+                           <div class="col-md-2 col-4 build__row--arts">
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+                           </div>
+                           <div class="col-md-2 col-4 build__row--arts">
+                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
                            </div>
                         </div>
                      </div>
+                     <!-- Contenido-->
                   </div>
-                  Modal
-               </div> -->
-            </div>
+               </div>
+               <!-- Centrar la modal -->
          </div>
-         <div class="build-composition__for">
-            <div class="build-for__container">
-               <div class="build__bg"  style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/medida.png');"></div>
-               <a href="#" class="build__btn btn-principal" data-toggle="modal" data-target="#build-modal">Selecciona diagramación</a>
-               <!-- <div class="buid__modal">
-                  Modal
-                  <div class="modal fade" id="build-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                           <div class="modal-content">
-                              <div class="modal-header">
-                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                 </button>
-                              </div>
-                              <div class="modal-body">
-                                 Hola soy una
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  Modal
-               </div> -->
-            </div>
-         </div>
-         <div class="build-composition__for">
-            <div class="build-for__container">
-               <div class="build__bg"  style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/medida.png');"></div>
-               <a href="#" class="build__btn btn-principal" data-toggle="modal" data-target="#build-modal">Selecciona diagramación</a>
-               <!-- <div class="buid__modal">
-                  Modal
-                  <div class="modal fade" id="build-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                           <div class="modal-content">
-                              <div class="modal-header">
-                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                 </button>
-                              </div>
-                              <div class="modal-body">
-                                 Hola soy una
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  Modal
-               </div> -->
-            </div>
-         </div>
+         <!-- Modal -->
       </div>
    </div>
 </section>

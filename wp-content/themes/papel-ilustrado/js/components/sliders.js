@@ -161,33 +161,23 @@ export function allSliders () {
          },
       ],
    });
-   // Slider syncing
-
-   $(".slider-for").slick({
-      slidesToShow: 1,
+   
+   // Slider Arma tu composicion
+   $(".slider-nav").slick({
+      infinite: true,
+      slidesToShow: 10,
       slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      asNavFor: ".slider-nav",
+      dots: true,
+      arrows: true,
       responsive: [
          {
-            breakpoint: 480,
+            breakpoint: 770,
             settings: {
-               slidesToShow: 1,
+               slidesToShow: 3,
                slidesToScroll: 1,
                dots: true,
             },
          },
-      ],
-   });
-   $(".slider-nav").slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      asNavFor: ".slider-for",
-      dots: true,
-      centerMode: true,
-      focusOnSelect: true,
-      responsive: [
          {
             breakpoint: 480,
             settings: {
