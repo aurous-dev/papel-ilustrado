@@ -10157,13 +10157,23 @@ header.woocommerce-products-header,
     justify-content: center; }
   .simple-product__modal--info {
     padding-right: 150px; }
+    .simple-product__modal--info .simple-product__desc {
+      margin-bottom: 12px; }
+    .simple-product__modal--info .obra-container__price__info__des {
+      font-size: 14px; }
     .simple-product__modal--info .simple-product__size--form {
-      margin-top: 45px; }
-    .simple-product__modal--info .form__select select {
-      width: 80%; }
-    .simple-product__modal--info .simple-product__btn .add {
-      width: 80%;
-      text-decoration: none; }
+      margin-top: 30px; }
+      .simple-product__modal--info .simple-product__size--form .form__size {
+        width: 100%;
+        margin-bottom: 12px; }
+      .simple-product__modal--info .simple-product__size--form .form__select select {
+        width: 80%;
+        margin-bottom: 20px; }
+    .simple-product__modal--info .simple-product__btn {
+      width: 100%; }
+      .simple-product__modal--info .simple-product__btn .add {
+        width: 80%;
+        text-decoration: none; }
 
 @media (min-width: 46.25em) and (max-width: 61.24em) {
   .simple-product__container span.onsale {
@@ -12820,11 +12830,6 @@ nav.woocommerce-breadcrumb {
     @media (min-width: 20em) and (max-width: 46.24em) {
       #sigle-product-vue .box__image {
         height: 350px; } }
-
-#sigle-product-vue select {
-  height: 2rem;
-  width: 7rem;
-  margin-bottom: 3rem; }
 
 #sigle-product-vue img {
   max-width: 800px;

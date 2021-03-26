@@ -214,15 +214,33 @@
       }
       &--info {
          padding-right: 150px;
-         .simple-product__size--form {
-            margin-top: 45px;
+
+         // Descriptions
+         .simple-product__desc {
+            margin-bottom: 12px;
          }
-         .form__select {
-            select {
-               width: 80%;
+         .obra-container__price__info__des {
+            font-size: 14px;
+         }
+
+         // Inputs
+         .simple-product__size--form {
+            margin-top: 30px;
+            .form__size {
+               width: 100%;
+               margin-bottom: 12px;
+            }
+            .form__select {
+               select {
+                  width: 80%;
+                  margin-bottom: 20px;
+               }
             }
          }
+
+         // Button
          .simple-product__btn {
+            width: 100%;
             .add {
                width: 80%;
                text-decoration: none;

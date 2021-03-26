@@ -83,7 +83,7 @@
                                        <h3 class="simple-product__title">Test de marcos</h3>
                                     </div>
                                     <div class="obra-container__price__info__cost">
-                                       <h5 v-if="!selectedMarco.nombre_de_marco" class="simple-product__desc">Selecciona un marco clickeando en algún ícono de abajo.</h5>
+                                       <h5 v-if="!selectedMarco.nombre_de_marco" class="simple-product__desc">Previsualiza tu marco y selecciona el que más te guste para tu cuadro.</h5>
                                        <h5 v-else class="simple-product__desc">Tu marco seleccionado es: <span class="name_frame">{{selectedMarco?.nombre_de_marco}}</span></h5>
                                     </div>
                                     <div v-if="selectedMarco.descripcion" class="simple-product__desc">
@@ -92,7 +92,7 @@
                                     <div class="simple-product__size--form">
                                        <div class="frame form__size">
                                           <div class="form__title">Selecciona un marco</div>
-                                          <div class="frame-option">
+                                          <div class="frame-option form__select">
                                              <select v-model="selectedMarco">
                                                 <option v-for="option in obra.marcos" :key="option.nombre_de_marco" :value="option">
                                                    {{ option.nombre_de_marco | none }}
