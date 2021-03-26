@@ -10287,7 +10287,25 @@ header.woocommerce-products-header,
     .simple-product__size--btn .size-icon a {
       justify-content: flex-start; }
   .simple-product__btn .buy {
-    width: 100%; } }
+    width: 100%; }
+  .simple-product__modal--info {
+    padding: 0; }
+  .simple-product__modal .obra-container__price__info__des {
+    font-size: 12px; }
+  .simple-product__modal .simple-product__size--form {
+    margin-top: 20px; }
+    .simple-product__modal .simple-product__size--form .form__size {
+      width: 100%;
+      margin-bottom: 12px; }
+    .simple-product__modal .simple-product__size--form .form__select select {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 15px;
+      font-size: 12px; }
+  .simple-product__modal .simple-product__btn .add {
+    width: 100%;
+    font-size: 13px !important;
+    padding: 10px !important; } }
 
 .guide {
   max-width: 700px;
