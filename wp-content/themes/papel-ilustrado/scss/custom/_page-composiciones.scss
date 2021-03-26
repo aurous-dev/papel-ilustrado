@@ -12,11 +12,10 @@
          &.test {
             flex: 0 0 33% !important;
             max-width: 33% !important;
-            
          }
       }
    }
-   @include mq($from: tablet, $until: desktop ) {
+   @include mq($from: tablet, $until: desktop) {
       &__grid {
          .cards {
             flex: 0 0 33.333%;
@@ -106,6 +105,29 @@
          img {
             max-width: 100%;
             height: auto;
+         }
+      }
+   }
+}
+
+.slider-nav {
+   @include slider__marginB;
+   .slick-prev {
+      @include slider__arrowLeft;
+      left: -30px;
+      &:hover {
+         &::before {
+            filter: grayscale(0);
+         }
+      }
+   }
+   .slick-next {
+      @include slider__arrowRight;
+      right: -30px;
+      top: 41%;
+      &:hover {
+         &::before {
+            filter: grayscale(0);
          }
       }
    }

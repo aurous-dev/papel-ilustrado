@@ -167,7 +167,7 @@ export function allSliders () {
       infinite: true,
       slidesToShow: 10,
       slidesToScroll: 1,
-      dots: true,
+      dots: false,
       arrows: true,
       responsive: [
          {
