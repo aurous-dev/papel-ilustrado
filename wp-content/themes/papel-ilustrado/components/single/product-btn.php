@@ -62,49 +62,42 @@
                      </div>
                      <div class="modal-body">
 
-                        <!-- Marco tester -->
-                        <?php if (get_field('mostrar_marco_tester') == 'show') : ?>
-                           <div id="sigle-product-vue">
-                              <div v-if="loading">
-                                 <div style="text-align:center;margin:0 auto;">Cargando...</div>
-                              </div>
-                              <div v-else>
-                                 <div class="row simple-product__modal" :style="cssVars">
-                                    <div class="col-md-5 col-12 simple-product__modal--img">
-                                       <div v-if="obra.images.lenght > 0" class="box__image">
-                                          <div class="frame-picture" :style="cssVars" :class="Object.keys(selectedMarco).length === 0 ? 'none' : 'withFrame'">
-                                             <img :src="obra.images[0].src" alt="">
-                                             <div class="inner"></div>
-                                          </div>
+                     <!-- Marco tester -->
+                     <?php if (get_field('mostrar_marco_tester') == 'show') : ?>
+                        <div id="sigle-product-vue">
+                           <div v-if="loading">
+                              <div style="text-align:center;margin:0 auto;">Cargando...</div>
+                           </div>
+                           <div v-else>
+                              <div class="row simple-product__modal" :style="cssVars">
+                                 <div class="col-md-5 col-12 simple-product__modal--img">
+                                    <div v-if="obra.images.length > 0" class="box__image">
+                                       <div class="frame-picture" :style="cssVars" :class="Object.keys(selectedMarco).length === 0 ? 'none' : 'withFrame'">
+                                          <img :src="obra.images[0].src" alt="">
+                                          <div class="inner"></div>
                                        </div>
                                     </div>
-                                    <div class="col-md-7 col-12 simple-product__modal--info">
-                                       <div class="obra-container__title">
-                                          <h3 class="simple-product__title">Test de marcos</h3>
-                                       </div>
-                                       <div class="obra-container__price__info__cost">
-                                          <h5 v-if="!selectedMarco.nombre_de_marco" class="simple-product__desc">Selecciona un marco clickeando en algún ícono de abajo.</h5>
-                                          <h5 v-else class="simple-product__desc">Tu marco seleccionado es: <span class="name_frame">{{selectedMarco?.nombre_de_marco}}</span></h5>
-                                       </div>
-                                       <div v-if="selectedMarco.descripcion" class="simple-product__desc">
-                                          Descripción: {{selectedMarco?.descripcion}}
-                                       </div>
-                                       <div class="simple-product__size--form">
-                                          <div class="frame form__size">
-                                             <div class="form__title">Selecciona un marco</div>
-                                             <div class="frame-option">
-                                                <div v-for="option in obra.marcos" :key="option.id">
-                                                   <button @click="changeFrame(option, $event)">
-                                                      <img :src="option.icono" />
-                                                   </button>
-                                                </div>
-                                                <div>
-                                                   <button @click="changeFrame({}, $event)">
-                                                      <!-- Sin Marco -->
-                                                      <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/png/no_marco.png" alt=""> -->
-                                                   </button>
-                                                </div>
-                                             </div>
+                                 </div>
+                                 <div class="col-md-7 col-12 simple-product__modal--info">
+                                    <div class="obra-container__title">
+                                       <h3 class="simple-product__title">Test de marcos</h3>
+                                    </div>
+                                    <div class="obra-container__price__info__cost">
+                                       <h5 v-if="!selectedMarco.nombre_de_marco" class="simple-product__desc">Selecciona un marco clickeando en algún ícono de abajo.</h5>
+                                       <h5 v-else class="simple-product__desc">Tu marco seleccionado es: <span class="name_frame">{{selectedMarco?.nombre_de_marco}}</span></h5>
+                                    </div>
+                                    <div v-if="selectedMarco.descripcion" class="simple-product__desc">
+                                       Descripción: {{selectedMarco?.descripcion}}
+                                    </div>
+                                    <div class="simple-product__size--form">
+                                       <div class="frame form__size">
+                                          <div class="form__title">Selecciona un marco</div>
+                                          <div class="frame-option">
+                                             <select v-model="selectedMarco">
+                                                <option v-for="option in obra.marcos" :key="option.nombre_de_marco" :value="option">
+                                                   {{ option.nombre_de_marco | none }}</option
+                                                >
+                                             </select>
                                           </div>
                                        </div>
                                        <div class="obra-container__price__info__des">
