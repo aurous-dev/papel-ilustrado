@@ -58,8 +58,9 @@ get_header();
       <!-- Imagen Principal -->
       <div class="build-composition__modal">
          <div class="build__bg"  style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/medida.png');"></div>
+
+         <!-- btn para abrir modal -->
          <button class="build__btn btn-principal" data-toggle="modal" data-target="#build-modal">Selecciona diagramación</button>
-         <div class="buid__modal">
 
          <!-- Modal -->
          <div class="modal fade" id="build-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
