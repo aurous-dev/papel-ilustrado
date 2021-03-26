@@ -62,8 +62,8 @@
                      </div>
                      <div class="modal-body">
 
-                     <!-- Marco tester -->
-                     <?php if (get_field('mostrar_marco_tester') == 'show') : ?>
+                        <!-- Marco tester -->
+                        <?php if (get_field('mostrar_marco_tester') == 'show') : ?>
                         <div id="sigle-product-vue">
                            <div v-if="loading">
                               <div style="text-align:center;margin:0 auto;">Cargando...</div>
@@ -95,8 +95,8 @@
                                           <div class="frame-option">
                                              <select v-model="selectedMarco">
                                                 <option v-for="option in obra.marcos" :key="option.nombre_de_marco" :value="option">
-                                                   {{ option.nombre_de_marco | none }}</option
-                                                >
+                                                   {{ option.nombre_de_marco | none }}
+                                                </option>
                                              </select>
                                           </div>
                                        </div>
@@ -110,6 +110,7 @@
                                  </div>
                               </div>
                            </div>
+                        </div>
                         <?php endif; ?>
                         <!-- Marco tester -->
                      </div>
