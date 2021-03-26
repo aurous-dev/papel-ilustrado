@@ -10762,10 +10762,13 @@ header.woocommerce-products-header,
 
 form.w-checkout__container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px; }
+  form.w-checkout__container .woocommerce-NoticeGroup.woocommerce-NoticeGroup-checkout {
+    flex: 0 0 100%; }
   form.w-checkout__container .col2-set {
     width: 45%;
     display: flex;
@@ -10825,8 +10828,6 @@ form.w-checkout__container {
         padding: 10px 15px;
         margin-bottom: 100px; }
   form.w-checkout__container #order_review_heading {
-    position: relative;
-    left: 90px;
     display: block;
     white-space: nowrap;
     color: #2A3D42;
@@ -10838,7 +10839,6 @@ form.w-checkout__container {
     font-weight: 700; }
   form.w-checkout__container .woocommerce-checkout-review-order {
     width: 50%;
-    margin-top: 50px;
     position: relative;
     z-index: 2; }
     form.w-checkout__container .woocommerce-checkout-review-order table.shop_table {
