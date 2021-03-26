@@ -21,17 +21,16 @@ import selectcompo from "./components/SelectCompo.vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
-   disable: "mobile",
-   once: true,
+  disable: "mobile",
+  once: true,
 });
 
 // Start AOS library
 
 // JS Modules
-import initApp from './components/constructor.js'
-import {allSliders} from './components/sliders.js'
+import initApp from "./components/constructor.js";
+import { allSliders } from "./components/sliders.js";
 // JS Modules
-
 
 // Import Slick Slider & bootstrap
 require("./app/slick.js");
@@ -52,16 +51,17 @@ Vue.component("selectcompo", require("./components/SelectCompo.vue"));
 import regeneratorRuntime from "regenerator-runtime";
 
 import { sigleProductScript } from "./components/SingleProduct";
+import { compositionComponentScript } from "./components/CompositionComponent";
 
 // Import App Vue
 const app = new Vue({
-   el: "#app",
-   components: {
-      formu,
-      selectcompo,
-      ButtonSpinner,
-      example,
-   },
+  el: "#app",
+  components: {
+    formu,
+    selectcompo,
+    ButtonSpinner,
+    example,
+  },
 });
 
 // Import JS
@@ -70,8 +70,13 @@ const application = new initApp();
 
 // Marco tester
 if (document.querySelector("#sigle-product-vue")) {
-   const sigleProduct = new Vue(sigleProductScript);
+  const sigleProduct = new Vue(sigleProductScript);
 }
 // Marco tester
+// Create Composition
+if (document.querySelector("#composition-component")) {
+  const compositionComponent = new Vue(compositionComponentScript);
+}
+// Create Composition
 
 allSliders();

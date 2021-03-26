@@ -17,47 +17,17 @@ get_header();
 <!-- FIRTS SECTION -->
 <!-- SECOND SECTION -->
 <section class="container-fluid build-composition__slider">
-   <div class="container">
+   <div id="composition-component" class="container">
       <!-- Slider -->
       <div class="slider-nav">
-         <div class="build-composition__nav">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
-         </div>
-         <div class="build-composition__nav">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
-         </div>
-         <div class="build-composition__nav">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
-         </div>
-         <div class="build-composition__nav">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
-         </div>
-         <div class="build-composition__nav">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
-         </div>
-         <div class="build-composition__nav">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
-         </div>
-         <div class="build-composition__nav">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
-         </div>
-         <div class="build-composition__nav">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
-         </div>
-         <div class="build-composition__nav">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
-         </div>
-         <div class="build-composition__nav">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
-         </div>
-         <div class="build-composition__nav">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/png/medida.png" alt="">
-         </div>
+         <button  class="build-composition__nav" v-for="(com, index) in compositions" key="com.id" @click="setComposition(index)">
+            <img :src="'<?php echo get_template_directory_uri(); ?>'+com.image" alt="">
+         </button>
       </div>
 
       <!-- Imagen Principal -->
-      <div class="build-composition__modal">
-         <div class="build__bg"  style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/png/medida.png');"></div>
+      <div v-if='selectedComposition.image' class="build-composition__modal">
+         <div class="build__bg" :style="`background-image: url('<?php echo get_template_directory_uri(); ?>${selectedComposition.image}');`"></div>
 
          <!-- btn para abrir modal -->
          <button class="build__btn btn-principal" data-toggle="modal" data-target="#build-modal">Selecciona diagramación</button>
