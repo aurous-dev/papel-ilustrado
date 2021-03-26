@@ -24,7 +24,7 @@ export default class API {
         prices,
         images,
         // artista,
-        marcos: [...aVerMarcos]
+        marcos: [...aVerMarcos],
       };
       return finalObject;
     } catch (error) {
@@ -49,7 +49,10 @@ export default class API {
       const marcosFiltered = allMarcosArray.data.filter((marco) =>
         marcosArray.includes(marco.id)
       );
-      const marcosInfoArray = marcosFiltered.map((marco) => marco.acf);
+      const marcosInfoArray = marcosFiltered.map((marco) => ({
+        id: marco.id,
+        ...marco.acf,
+      }));
       /* let marcosInfoArray = Promise.all(
         marcosArray.map((elem) => {
           return this.getOneFrame(elem).then((res) => res);

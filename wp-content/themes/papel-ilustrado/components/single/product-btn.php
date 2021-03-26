@@ -71,7 +71,7 @@ if (get_field('mostrar_marco_tester') == 'show') :?>
                            <div v-else>
                               <div class="row simple-product__modal" :style="cssVars">
                                  <div class="col-md-5 col-12 simple-product__modal--img">
-                                    <div v-if="obra.images" class="box__image">
+                                    <div v-if="obra.images.length > 0" class="box__image">
                                        <div class="frame-picture" :style="cssVars" :class="Object.keys(selectedMarco).length === 0 ? 'none' : 'withFrame'">
                                           <img :src="obra.images[0].src" alt="">
                                           <div class="inner"></div>
@@ -93,17 +93,11 @@ if (get_field('mostrar_marco_tester') == 'show') :?>
                                        <div class="frame form__size">
                                           <div class="form__title">Selecciona un marco</div>
                                           <div class="frame-option">
-                                             <div v-for="option in obra.marcos" :key="option.id">
-                                                <button @click="changeFrame(option, $event)">
-                                                   <img :src="option.icono" />
-                                                </button>
-                                             </div>
-                                             <div>
-                                                <button @click="changeFrame({}, $event)">
-                                                   <!-- Sin Marco -->
-                                                   <img src="<?php echo get_template_directory_uri(); ?>/img/png/no_marco.png" alt="">
-                                                </button>
-                                             </div>
+                                             <select v-model="selectedMarco">
+                                                <option v-for="option in obra.marcos" :key="option.nombre_de_marco" :value="option">
+                                                   {{ option.nombre_de_marco | none }}</option
+                                                >
+                                             </select>
                                           </div>
                                        </div>
                                     </div>
