@@ -12569,7 +12569,8 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
     transition: all .5s ease-in-out; }
   .build-composition__modal .build__btn {
     position: relative;
-    top: -140px; }
+    top: -140px;
+    border: none; }
 
 .build-modal__container {
   max-width: 1140px;
