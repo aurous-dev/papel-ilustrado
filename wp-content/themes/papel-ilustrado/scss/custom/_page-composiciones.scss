@@ -1,189 +1,227 @@
 .page-composiciones {
-   padding-bottom: 100px;
-   &__grid {
-      display: flex;
-      flex-wrap: wrap;
+  padding-bottom: 100px;
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    margin: 0 -15px;
+    .cards {
+      flex: 0 0 25%;
+      max-width: 25%;
       padding: 20px 0;
-      margin: 0 -15px;
+      &.test {
+        flex: 0 0 33% !important;
+        max-width: 33% !important;
+      }
+    }
+  }
+  @include mq($from: tablet, $until: desktop) {
+    &__grid {
       .cards {
-         flex: 0 0 25%;
-         max-width: 25%;
-         padding: 20px 0;
-         &.test {
-            flex: 0 0 33% !important;
-            max-width: 33% !important;
-         }
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
       }
-   }
-   @include mq($from: tablet, $until: desktop) {
-      &__grid {
-         .cards {
-            flex: 0 0 33.333%;
-            max-width: 33.333%;
-         }
+    }
+  }
+  @include mq($from: mobile, $until: tablet) {
+    padding-bottom: 60px;
+    &__grid {
+      .cards {
+        flex: 0 0 50%;
+        max-width: 50%;
       }
-   }
-   @include mq($from: mobile, $until: tablet) {
-      padding-bottom: 60px;
-      &__grid {
-         .cards {
-            flex: 0 0 50%;
-            max-width: 50%;
-         }
-      }
-   }
+    }
+  }
 }
 
 .build-composition {
-   &__nav {
-      img {
-         height: 80px;
-         width: 80px;
+  &__nav {
+    img {
+      height: 80px;
+      width: 80px;
+    }
+  }
+  &__modal {
+    position: relative;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    .build__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      @include bg-center;
+
+      /* Aqui esta esto para cuando no hay composicion seleccionada */
+      &-noselected {
+        background: $color-indigo;
+        outline: white 4px dashed;
+        outline-offset: -2rem;
       }
-   }
-   &__modal {
+    }
+    .build__btn {
       position: relative;
-      height: 500px;
+      top: -140px;
+    }
+    .build-price {
+      width: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      padding: 20px;
+      justify-content: center;
       align-items: center;
-      .build__bg {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         z-index: -1;
-         @include bg-center;
+      background-color: rgba($color: $color-indigo, $alpha: 0.4);
+      &__number {
+        display: flex;
+        color: $color-white;
+        font-size: 26px;
+        margin-right: 50px;
+        @include fonts-display(500);
+        h2 {
+          font-size: 26px;
+          color: $color-white;
+          text-transform: uppercase;
+          margin: 0;
+          @include fonts-display(500);
+        }
       }
-      .build__btn {
-         position: relative;
-         top: -140px;
-      }
-      .build-price {
-         width: 100%;
-         display: flex;
-         padding: 20px;
-         justify-content: center;
-         align-items: center;
-         background-color: rgba($color: $color-indigo, $alpha: .4);
-         &__number {
-            display: flex;
+    }
+    .build_lista {
+      position: absolute;
+      right: 0;
+      // background-color: black;
+      color: white;
+      top: 10px;
+      ul {
+        li {
+          display: flex;
+          margin: 0.2rem;
+
+          .no-selected {
+            width: 15rem;
+            background-color: $color-indigo;
             color: $color-white;
-            font-size: 26px;
-            margin-right: 50px;
-            @include fonts-display(500);
-            h2 {
-               font-size: 26px;
-               color: $color-white;
-               text-transform: uppercase;
-               margin: 0;
-               @include fonts-display(500);
+            outline: 2px white dashed !important;
+            outline-offset: -0.5rem;
+          }
+
+          .selected {
+            width: 15rem;
+            position: relative;
+            display: grid;
+            text-align: left;
+            grid-template-columns: 2rem auto 1rem;
+            grid-template-rows: repeat(2, 1fr);
+            background-color: $color-indigo;
+            color: $color-white;
+
+            button {
+              grid-row: span 2;
+              background-color: rgba($color: $color-indigo, $alpha: 0.4);
             }
-   
-         }
-      }
-      .build_lista {
-         position: absolute;
-         right: 0;
-         background-color: black;
-         color: white;
-         top: 10px;
-         ul {
-            li {
-               display: flex;
+            .selected-close {
+              grid-row: span 2;
+              place-self: center;
+              cursor: pointer;
             }
-         }
+            .number {
+              position: absolute;
+            }
+          }
+        }
       }
-   }
+    }
+  }
 }
 
 .build-modal__container {
-   max-width: 1140px;
-   margin: 0 auto;
-   .build-compostion__title {
-      max-width: 65%;
-      margin: 0 auto 50px;
-   }
-   .modal-content {
-      top: 10px;
-   }
-   .modal-body {
-      padding: 20px 40px;
-   }
-   .modal-header {
-      position: absolute;
-      right: 0;
-      z-index: 10;
-   }
-   .build__filter {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: $color-indigo;
-      margin-bottom: 50px;
-      &--icon {
-         margin-right: 20px;
+  max-width: 1140px;
+  margin: 0 auto;
+  .build-compostion__title {
+    max-width: 65%;
+    margin: 0 auto 50px;
+  }
+  .modal-content {
+    top: 10px;
+  }
+  .modal-body {
+    padding: 20px 40px;
+  }
+  .modal-header {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+  }
+  .build__filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-indigo;
+    margin-bottom: 50px;
+    &--icon {
+      margin-right: 20px;
+    }
+    form {
+      select {
+        width: 200px;
+        height: 45px;
       }
-      form {
-         select {
-            width: 200px;
-            height: 45px;
-         }
+    }
+  }
+  .build__row {
+    height: 400px;
+    overflow-x: scroll;
+    &--arts {
+      margin-bottom: 20px;
+      img {
+        max-width: 100%;
+        height: auto;
       }
-   }
-   .build__row {
-      height: 400px;
-      overflow-x: scroll;
-      &--arts {
-         margin-bottom: 20px;
-         img {
-            max-width: 100%;
-            height: auto;
-         }
-      }
-   }
+    }
+  }
 
-   // Version mobile
-   &.mobile {
-      .build__row {
-         height: auto;
-         overflow: unset;
-         
+  // Version mobile
+  &.mobile {
+    .build__row {
+      height: auto;
+      overflow: unset;
+    }
+    .build-price {
+      &__container {
+        display: flex;
+        @include f-center;
       }
-      .build-price {
-         &__container {
-            display: flex;
-            @include f-center;
-         }
-         &__number {
-            display: flex;
-            @include f-center;
-         }
+      &__number {
+        display: flex;
+        @include f-center;
       }
-   }
+    }
+  }
 }
 
 .slider-nav {
-   @include slider__marginB;
-   .slick-prev {
-      @include slider__arrowLeft;
-      left: -30px;
-      &:hover {
-         &::before {
-            filter: grayscale(0);
-         }
+  @include slider__marginB;
+  .slick-prev {
+    @include slider__arrowLeft;
+    left: -30px;
+    &:hover {
+      &::before {
+        filter: grayscale(0);
       }
-   }
-   .slick-next {
-      @include slider__arrowRight;
-      right: -30px;
-      top: 41%;
-      &:hover {
-         &::before {
-            filter: grayscale(0);
-         }
+    }
+  }
+  .slick-next {
+    @include slider__arrowRight;
+    right: -30px;
+    top: 41%;
+    &:hover {
+      &::before {
+        filter: grayscale(0);
       }
-   }
+    }
+  }
 }

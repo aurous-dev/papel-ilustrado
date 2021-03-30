@@ -20,22 +20,35 @@ get_header();
    <div id="composition-component" class="container">
       <!-- Slider -->
       <div class="slider-nav">
-         <button  class="build-composition__nav" v-for="(com, index) in compositions" key="com.id" @click="setComposition(index)">
-            <img :src="'<?php echo get_template_directory_uri(); ?>'+com.image" alt="">
+         <button  class="build-composition__nav" v-for="(com, index) in compositions" :key="com.id" @click="setComposition(index)">
+            <img :src="com.icono" alt="">
          </button>
       </div>
 
       <!-- Imagen Principal -->
-      <div v-if='selectedComposition.image' class="build-composition__modal">
-         <div class="build__bg" :style="`background-image: url('<?php echo get_template_directory_uri(); ?>${selectedComposition.image}');`"></div>
+      <div class="build-composition__modal">
+         <div v-if='selectedComposition && selectedComposition.imagen' class="build__bg" :style="`background-image: url('${selectedComposition.imagen}');`"></div>
+         <!-- Antes de seleccionar la composicion -->
+         <div v-else class="build__bg build__bg-noselected"></div>
 
          <!-- lista selecciona -->
-         <div class="build_lista">
+         <div class="build_lista" v-if='selectedComposition && selectedComposition.imagen'>
             <ul>
-               <li>
-                  <img src="#" alt="">
-                  <div class="description">Descripcion del producto</div>
-                  <div class="number">1</div>
+               <li v-for="(art, index) in selectedComposition.obras">
+                  <button v-if="!selectedArtworks[index]" class="no-selected" @click="setDimensions(art, index)" data-toggle="modal" data-target="#build-modal">
+                     <img src="#" alt="">
+                     <div class="description">Selecciona una obra {{art}}</div>
+                     <div class="number">{{index+1}}</div>
+                  </button>
+                  <div v-else class="selected">
+                     <button @click="setDimensions(art, index)" data-toggle="modal" data-target="#build-modal">
+                        <img src="#" alt="">
+                     </button>
+                     <div class="description">{{selectedArtworks[index].name}}</div>
+                     <span class="selected-close" aria-hidden="true" @click="removeArtwork(index)">&times;</span>
+                     <div class="description">Tamaño: {{art}}</div>
+                     <div class="number">{{index+1}}</div>
+                  </div>
                </li>
             </ul>
          </div>
@@ -44,16 +57,16 @@ get_header();
 
 
          <!-- btn para abrir modal -->
-         <button class="build__btn btn-principal" data-toggle="modal" data-target="#build-modal">Selecciona diagramación</button>
+         <button v-if="step === 0" class="build__btn btn-principal" data-toggle="modal" data-target="#build-modal">Selecciona diagramación</button>
          <!-- btn para abrir modal -->
          
          <!-- DIV de precio -->
-         <div class="build-price">
+         <div class="build-price" v-if='selectedComposition && selectedComposition.imagen'>
             <div class="build-price__number">
                <h2>Precio Total:</h2>
                <span>$39.900</span>
             </div>
-            <button class="build-price__btn btn-principal">
+            <button class="build-price__btn btn-principal" :disabled="!areAllArtsSelected">
                Agregar al carrito
             </button>
          </div>
@@ -102,32 +115,10 @@ get_header();
 
                         <div class="row build__row">
                            <!-- Deberian ser btn como los marcos -->
-                           <div class="col-md-2 col-4 build__row--arts">
-                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
-                           </div>
-                           <div class="col-md-2 col-4 build__row--arts">
-                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
-                           </div>
-                           <div class="col-md-2 col-4 build__row--arts">
-                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
-                           </div>
-                           <div class="col-md-2 col-4 build__row--arts">
-                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
-                           </div>
-                           <div class="col-md-2 col-4 build__row--arts">
-                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
-                           </div>
-                           <div class="col-md-2 col-4 build__row--arts">
-                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
-                           </div>
-                           <div class="col-md-2 col-4 build__row--arts">
-                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
-                           </div>
-                           <div class="col-md-2 col-4 build__row--arts">
-                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
-                           </div>
-                           <div class="col-md-2 col-4 build__row--arts">
-                              <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+                           <div v-for="product in filteredProducts" class="col-md-2 col-4 build__row--arts">
+                              <button type="button" class="close" data-dismiss="modal" :aria-label="`Seleccionar ${product.name}`" @click="selectArtwork(product)">
+                                 <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+                              </button>
                            </div>
                         </div>
                      </div>
@@ -140,7 +131,7 @@ get_header();
       </div>
 
       <!-- Para mobile -->
-      <div class="build-modal__container mobile">
+      <div v-if="step > 0" class="build-modal__container mobile">
          <div class="build-compostion__title">
             <h2>PASO 2: Selecciona las obras</h2>
             <div>

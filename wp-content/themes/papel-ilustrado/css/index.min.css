@@ -12704,7 +12704,12 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all .5s ease-in-out; }
+    transition: all .5s ease-in-out;
+    /* Aqui esta esto para cuando no hay composicion seleccionada */ }
+    .build-composition__modal .build__bg-noselected {
+      background: #2A3D42;
+      outline: white 4px dashed;
+      outline-offset: -2rem; }
   .build-composition__modal .build__btn {
     position: relative;
     top: -140px; }
@@ -12732,11 +12737,35 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
   .build-composition__modal .build_lista {
     position: absolute;
     right: 0;
-    background-color: black;
     color: white;
     top: 10px; }
     .build-composition__modal .build_lista ul li {
-      display: flex; }
+      display: flex;
+      margin: 0.2rem; }
+      .build-composition__modal .build_lista ul li .no-selected {
+        width: 15rem;
+        background-color: #2A3D42;
+        color: #FFFFFF;
+        outline: 2px white dashed !important;
+        outline-offset: -0.5rem; }
+      .build-composition__modal .build_lista ul li .selected {
+        width: 15rem;
+        position: relative;
+        display: grid;
+        text-align: left;
+        grid-template-columns: 2rem auto 1rem;
+        grid-template-rows: repeat(2, 1fr);
+        background-color: #2A3D42;
+        color: #FFFFFF; }
+        .build-composition__modal .build_lista ul li .selected button {
+          grid-row: span 2;
+          background-color: rgba(42, 61, 66, 0.4); }
+        .build-composition__modal .build_lista ul li .selected .selected-close {
+          grid-row: span 2;
+          place-self: center;
+          cursor: pointer; }
+        .build-composition__modal .build_lista ul li .selected .number {
+          position: absolute; }
 
 .build-modal__container {
   max-width: 1140px;
