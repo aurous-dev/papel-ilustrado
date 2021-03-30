@@ -10934,7 +10934,7 @@ form.w-checkout__container {
             font-size: 14px; }
       form.w-checkout__container #order_review_heading {
         left: auto;
-        margin: 0 15px;
+        margin: 0 0 20px;
         font-size: 16px; }
       form.w-checkout__container .woocommerce-checkout-review-order {
         width: 100%;
@@ -11968,6 +11968,8 @@ h2.w-cart__title {
     text-decoration: none; }
     * a:hover {
       text-decoration: none; }
+  * button {
+    border: none; }
 
 body, html {
   background-color: rgba(229, 229, 229, 0.15);
@@ -12689,8 +12691,9 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
   position: relative;
   height: 500px;
   display: flex;
-  justify-content: center;
-  align-items: flex-end; }
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; }
   .build-composition__modal .build__bg {
     position: absolute;
     top: 0;
@@ -12704,8 +12707,36 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
     transition: all .5s ease-in-out; }
   .build-composition__modal .build__btn {
     position: relative;
-    top: -140px;
-    border: none; }
+    top: -140px; }
+  .build-composition__modal .build-price {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(42, 61, 66, 0.4); }
+    .build-composition__modal .build-price__number {
+      display: flex;
+      color: #FFFFFF;
+      font-size: 26px;
+      margin-right: 50px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500; }
+      .build-composition__modal .build-price__number h2 {
+        font-size: 26px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500; }
+  .build-composition__modal .build_lista {
+    position: absolute;
+    right: 0;
+    background-color: black;
+    color: white;
+    top: 10px; }
+    .build-composition__modal .build_lista ul li {
+      display: flex; }
 
 .build-modal__container {
   max-width: 1140px;
@@ -12740,6 +12771,17 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
       .build-modal__container .build__row--arts img {
         max-width: 100%;
         height: auto; }
+  .build-modal__container.mobile .build__row {
+    height: auto;
+    overflow: unset; }
+  .build-modal__container.mobile .build-price__container {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .build-modal__container.mobile .build-price__number {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 .slider-nav.slick-slider {
   margin-bottom: 0 !important; }

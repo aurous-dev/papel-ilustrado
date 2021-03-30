@@ -29,8 +29,35 @@ get_header();
       <div v-if='selectedComposition.image' class="build-composition__modal">
          <div class="build__bg" :style="`background-image: url('<?php echo get_template_directory_uri(); ?>${selectedComposition.image}');`"></div>
 
+         <!-- lista selecciona -->
+         <div class="build_lista">
+            <ul>
+               <li>
+                  <img src="#" alt="">
+                  <div class="description">Descripcion del producto</div>
+                  <div class="number">1</div>
+               </li>
+            </ul>
+         </div>
+         <!-- lista selecciona -->
+         
+
+
          <!-- btn para abrir modal -->
          <button class="build__btn btn-principal" data-toggle="modal" data-target="#build-modal">Selecciona diagramación</button>
+         <!-- btn para abrir modal -->
+         
+         <!-- DIV de precio -->
+         <div class="build-price">
+            <div class="build-price__number">
+               <h2>Precio Total:</h2>
+               <span>$39.900</span>
+            </div>
+            <button class="build-price__btn btn-principal">
+               Agregar al carrito
+            </button>
+         </div>
+         <!-- DIV de precio -->
 
          <!-- Modal -->
          <div class="modal fade" id="build-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -110,6 +137,94 @@ get_header();
                <!-- Centrar la modal -->
          </div>
          <!-- Modal -->
+      </div>
+
+      <!-- Para mobile -->
+      <div class="build-modal__container mobile">
+         <div class="build-compostion__title">
+            <h2>PASO 2: Selecciona las obras</h2>
+            <div>
+               Elige el orden de las obras que desees para tu composición, éstas se enumerarán de la primera a la 
+               última dependiendo de la cantidad de la diagramación
+            </div>
+         </div>
+
+         <div class="build__filter">
+            <div class="build__filter--icon">
+               <i class="fas fa-filter"></i>
+               filtrar por
+            </div>
+            <form action="">
+               <select name="categoria" id="categoria">
+                  <option value="" selected> Categoría </option>
+               </select>
+               <select name="color" id="color">
+                  <option value="" selected> Color </option>
+               </select>
+               <select name="tags" id="tags">
+                  <option value="" selected> Temas/tags </option>
+               </select>
+            </form>
+         </div>
+
+         <div class="row build__row">
+            <!-- Deberian ser btn como los marcos -->
+            <div class="col-md-2 col-6 build__row--arts">
+               <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+            </div>
+            <div class="col-md-2 col-6 build__row--arts">
+               <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+            </div>
+            <div class="col-md-2 col-6 build__row--arts">
+               <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+            </div>
+            <div class="col-md-2 col-6 build__row--arts">
+               <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+            </div>
+            <div class="col-md-2 col-6 build__row--arts">
+               <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+            </div>
+            <div class="col-md-2 col-6 build__row--arts">
+               <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+            </div>
+            <div class="col-md-2 col-6 build__row--arts">
+               <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+            </div>
+            <div class="col-md-2 col-6 build__row--arts">
+               <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+            </div>
+            <div class="col-md-2 col-6 build__row--arts">
+               <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+            </div>
+         </div>
+         
+         <div class="build-price">
+            <!-- 
+               Debe cambiar de mensaje y de clase cuando se seleccionen la cantidad de marco correcta 
+
+               Tipo 1:
+               clase => Red: cuando no lo han seleccionado todas las obras
+               mensaje => Paso 2 selecciona las obras
+
+               Tipo 2:
+               clase => Green: cuando selecciono todos las Obras
+               Mensaje => Si ya esta listo. Agregar al carrito
+            
+            -->
+
+            <div class="build-price__msg green">
+               <div class="msg">Si ya esta listo. Agregar al carrito</div>
+            </div>
+            <div class="build-price__container">
+               <div class="build-price__number">
+                  <h2>Precio Total:</h2>
+                  <span>$39.900</span>
+               </div>
+               <button class="build-price__btn btn-principal">
+                  Agregar al carrito
+               </button>
+            </div>
+         </div>
       </div>
    </div>
 </section>

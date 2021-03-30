@@ -45,8 +45,9 @@
       position: relative;
       height: 500px;
       display: flex;
-      justify-content: center;
-      align-items: flex-end;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
       .build__bg {
          position: absolute;
          top: 0;
@@ -59,7 +60,41 @@
       .build__btn {
          position: relative;
          top: -140px;
-         border: none;
+      }
+      .build-price {
+         width: 100%;
+         display: flex;
+         padding: 20px;
+         justify-content: center;
+         align-items: center;
+         background-color: rgba($color: $color-indigo, $alpha: .4);
+         &__number {
+            display: flex;
+            color: $color-white;
+            font-size: 26px;
+            margin-right: 50px;
+            @include fonts-display(500);
+            h2 {
+               font-size: 26px;
+               color: $color-white;
+               text-transform: uppercase;
+               margin: 0;
+               @include fonts-display(500);
+            }
+   
+         }
+      }
+      .build_lista {
+         position: absolute;
+         right: 0;
+         background-color: black;
+         color: white;
+         top: 10px;
+         ul {
+            li {
+               display: flex;
+            }
+         }
       }
    }
 }
@@ -106,6 +141,25 @@
          img {
             max-width: 100%;
             height: auto;
+         }
+      }
+   }
+
+   // Version mobile
+   &.mobile {
+      .build__row {
+         height: auto;
+         overflow: unset;
+         
+      }
+      .build-price {
+         &__container {
+            display: flex;
+            @include f-center;
+         }
+         &__number {
+            display: flex;
+            @include f-center;
          }
       }
    }
