@@ -10760,6 +10760,42 @@ header.woocommerce-products-header,
       align-items: center;
       justify-content: center; }
 
+.build-compostion__title {
+  max-width: 65%;
+  margin: 0 auto 50px; }
+
+.modal-content {
+  top: 10px; }
+
+.modal-body {
+  padding: 20px 40px; }
+
+.modal-header {
+  position: absolute;
+  right: 0;
+  z-index: 10; }
+
+.build__filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2A3D42;
+  margin-bottom: 50px; }
+  .build__filter--icon {
+    margin-right: 20px; }
+  .build__filter form select {
+    width: 200px;
+    height: 45px; }
+
+.build__row {
+  height: 400px;
+  overflow-x: scroll; }
+  .build__row--arts {
+    margin-bottom: 20px; }
+    .build__row--arts img {
+      max-width: 100%;
+      height: auto; }
+
 form.w-checkout__container {
   display: flex;
   flex-wrap: wrap;
@@ -12738,9 +12774,29 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
     .build-composition__modal .build_lista ul li {
       display: flex; }
 
+@media (min-width: 20em) and (max-width: 46.24em) {
+  .build-composition__slider {
+    position: relative;
+    padding-bottom: 100px; } }
+
 .build-modal__container {
   max-width: 1140px;
   margin: 0 auto; }
+  .build-modal__container .modal-header {
+    border-bottom: 0; }
+    .build-modal__container .modal-header .close {
+      outline: none !important; }
+      .build-modal__container .modal-header .close span {
+        color: #FFFFFF;
+        background-color: #F4997E;
+        border-radius: 50%;
+        display: flex;
+        font-weight: 100;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
   .build-modal__container .build-compostion__title {
     max-width: 65%;
     margin: 0 auto 50px; }
@@ -12771,17 +12827,56 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
       .build-modal__container .build__row--arts img {
         max-width: 100%;
         height: auto; }
-  .build-modal__container.mobile .build__row {
-    height: auto;
-    overflow: unset; }
-  .build-modal__container.mobile .build-price__container {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  .build-modal__container.mobile .build-price__number {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
+  .build-modal__container.mobile {
+    display: none; }
+    .build-modal__container.mobile .build__row {
+      height: auto;
+      overflow: unset; }
+    .build-modal__container.mobile .build-price__container {
+      align-items: center;
+      justify-content: center;
+      display: flex; }
+    .build-modal__container.mobile .build-price__number {
+      align-items: center;
+      justify-content: center;
+      display: flex; }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .build-modal__container.mobile {
+      display: block; }
+      .build-modal__container.mobile .build-price {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw; }
+        .build-modal__container.mobile .build-price__msg {
+          color: #FFFFFF;
+          font-size: 12px;
+          text-align: center;
+          padding: 6px 10px;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 500; }
+          .build-modal__container.mobile .build-price__msg.green {
+            background-color: #355957; }
+          .build-modal__container.mobile .build-price__msg.red {
+            background-color: #F4997E; }
+        .build-modal__container.mobile .build-price__number {
+          color: #FFFFFF;
+          font-size: 18px;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700; }
+          .build-modal__container.mobile .build-price__number h2 {
+            display: none; }
+        .build-modal__container.mobile .build-price__container {
+          background-color: #2A3D42;
+          padding: 8px 20px;
+          justify-content: space-between; }
+          .build-modal__container.mobile .build-price__container button {
+            background-color: #FFFFFF;
+            color: #2A3D42;
+            font-weight: 700;
+            padding: 12px 20px; }
+            .build-modal__container.mobile .build-price__container button.disable {
+              color: rgba(255, 255, 255, 0.4); } }
 
 .slider-nav.slick-slider {
   margin-bottom: 0 !important; }

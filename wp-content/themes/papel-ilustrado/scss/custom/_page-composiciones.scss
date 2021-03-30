@@ -97,70 +97,86 @@
          }
       }
    }
+
+   // Responsive
+   @include mq($from: mobile, $until: tablet) {
+      &__slider {
+         position: relative;
+         padding-bottom: 100px;
+
+      }
+   }
 }
+
 
 .build-modal__container {
    max-width: 1140px;
    margin: 0 auto;
-   .build-compostion__title {
-      max-width: 65%;
-      margin: 0 auto 50px;
-   }
-   .modal-content {
-      top: 10px;
-   }
-   .modal-body {
-      padding: 20px 40px;
-   }
-   .modal-header {
-      position: absolute;
-      right: 0;
-      z-index: 10;
-   }
-   .build__filter {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: $color-indigo;
-      margin-bottom: 50px;
-      &--icon {
-         margin-right: 20px;
-      }
-      form {
-         select {
-            width: 200px;
-            height: 45px;
-         }
-      }
-   }
-   .build__row {
-      height: 400px;
-      overflow-x: scroll;
-      &--arts {
-         margin-bottom: 20px;
-         img {
-            max-width: 100%;
-            height: auto;
-         }
-      }
-   }
-
+   @import '../components/modal';
    // Version mobile
    &.mobile {
+      display: none;
       .build__row {
          height: auto;
-         overflow: unset;
-         
+         overflow: unset;     
       }
       .build-price {
          &__container {
-            display: flex;
             @include f-center;
+            display: flex;
          }
          &__number {
-            display: flex;
             @include f-center;
+            display: flex;
          }
+      }
+   }
+   @include mq($from: mobile, $until: tablet) {
+      &.mobile {
+         display: block;
+         .build-price {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            &__msg {
+               color: $color-white;
+               font-size: 12px;
+               text-align: center;
+               padding: 6px 10px;
+               @include fonts-display(500);
+               &.green {
+                  background-color: $color-dark_green;
+               }
+               &.red {
+                  background-color: $color-salmon;
+               }
+
+            }
+            &__number {
+               color: $color-white;
+               font-size: 18px;
+               @include fonts-display(700);
+               h2 {
+                  display: none;
+               }
+            }
+            &__container {
+               background-color: $color-indigo;
+               padding: 8px 20px;
+               justify-content: space-between;
+               button {
+                  background-color: $color-white;
+                  color: $color-indigo;
+                  font-weight: 700;
+                  padding: 12px 20px;
+                  &.disable {
+                     color: rgba($color: $color-white, $alpha: .4)
+                  }
+               }
+            }
+         }
+
       }
    }
 }
