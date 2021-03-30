@@ -8,16 +8,22 @@ get_header();
 <?php get_template_part('components/single/page-title');?>
 
 <!-- FIRTS SECTION -->
-<section class="build-compostion__title">
+<!-- <section class="build-compostion__title">
    <div class="container">
       <h2>PASO 1: Selecciona su diagramación</h2>
       <div>elige la diagramación que quieras colocar en tu espacio favorito, tenemos muchas combinaciones.</div>
    </div>
-</section>
+</section> -->
 <!-- FIRTS SECTION -->
 <!-- SECOND SECTION -->
 <section class="container-fluid build-composition__slider">
    <div id="composition-component" class="container">
+      <section class="build-compostion__title">
+         <div class="container">
+            <h2>PASO 1: Selecciona su diagramación</h2>
+            <div>elige la diagramación que quieras colocar en tu espacio favorito, tenemos muchas combinaciones.</div>
+         </div>
+      </section>
       <!-- Slider -->
       <div class="slider-nav">
          <button  class="build-composition__nav" v-for="(com, index) in compositions" key="com.id" @click="setComposition(index)">
@@ -141,13 +147,13 @@ get_header();
 
       <!-- Para mobile -->
       <div class="build-modal__container mobile">
-         <div class="build-compostion__title">
+         <!-- <div class="build-compostion__title">
             <h2>PASO 2: Selecciona las obras</h2>
             <div>
                Elige el orden de las obras que desees para tu composición, éstas se enumerarán de la primera a la 
                última dependiendo de la cantidad de la diagramación
             </div>
-         </div>
+         </div> -->
 
          <div class="build__filter">
             <div class="build__filter--icon">
@@ -220,6 +226,8 @@ get_header();
                   <h2>Precio Total:</h2>
                   <span>$39.900</span>
                </div>
+
+               <!-- Añadir clase disabled para que agrege el bg correcto -->
                <button class="build-price__btn btn-principal">
                   Agregar al carrito
                </button>
