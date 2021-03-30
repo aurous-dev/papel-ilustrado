@@ -9815,7 +9815,6 @@ header.woocommerce-products-header,
         display: flex;
         font-size: 0.75em;
         color: transparent !important;
-        color: #fff !important;
         height: 100%;
         width: 100%;
         justify-content: center;
@@ -9847,8 +9846,7 @@ header.woocommerce-products-header,
     background: #fff content-box; }
     .woocommerce .dhwc-ajax__toolbar.is-dot-style .toolbar-body .variation-swatches-select .tr-blanco a {
       border: 1px solid #D2D2D2 !important;
-      border-radius: 50%;
-      color: #000 !important; }
+      border-radius: 50%; }
   .woocommerce .dhwc-ajax__toolbar.is-dot-style .toolbar-body .variation-swatches-select .tr-burdeo {
     background: #8e1e26 content-box; }
   .woocommerce .dhwc-ajax__toolbar.is-dot-style .toolbar-body .variation-swatches-select .tr-rojo {
