@@ -56,6 +56,13 @@
          height: 100%;
          z-index: -1;
          @include bg-center;
+
+         /* Aqui esta esto para cuando no hay composicion seleccionada */
+         &-noselected {
+            background: $color-indigo;
+            outline: white 4px dashed;
+            outline-offset: -2rem;
+         }
       }
       .build__btn {
          position: relative;
@@ -67,7 +74,7 @@
          padding: 20px;
          justify-content: center;
          align-items: center;
-         background-color: rgba($color: $color-indigo, $alpha: .4);
+         background-color: rgba($color: $color-indigo, $alpha: 0.4);
          &__number {
             display: flex;
             color: $color-white;
@@ -81,44 +88,74 @@
                margin: 0;
                @include fonts-display(500);
             }
-   
          }
       }
       .build_lista {
          position: absolute;
          right: 0;
-         background-color: black;
+         // background-color: black;
          color: white;
          top: 10px;
          ul {
             li {
                display: flex;
+               margin: 0.2rem;
+
+               .no-selected {
+                  width: 15rem;
+                  background-color: $color-indigo;
+                  color: $color-white;
+                  outline: 2px white dashed !important;
+                  outline-offset: -0.5rem;
+               }
+
+               .selected {
+                  width: 15rem;
+                  position: relative;
+                  display: grid;
+                  text-align: left;
+                  grid-template-columns: 2rem auto 1rem;
+                  grid-template-rows: repeat(2, 1fr);
+                  background-color: $color-indigo;
+                  color: $color-white;
+
+                  button {
+                     grid-row: span 2;
+                     background-color: rgba($color: $color-indigo, $alpha: 0.4);
+                  }
+                  .selected-close {
+                     grid-row: span 2;
+                     place-self: center;
+                     cursor: pointer;
+                  }
+                  .number {
+                     position: absolute;
+                  }
+               }
             }
          }
       }
-   }
 
-   // Responsive
-   @include mq($from: mobile, $until: tablet) {
-      &__slider {
-         position: relative;
-         padding-bottom: 100px;
-
+      // Responsive
+      @include mq($from: mobile, $until: tablet) {
+         &__slider {
+            position: relative;
+            padding-bottom: 100px;
+         }
       }
    }
 }
 
-
 .build-modal__container {
    max-width: 1140px;
    margin: 0 auto;
-   @import '../components/modal';
+   @import "../components/modal";
    // Version mobile
    &.mobile {
       display: none;
       .build__row {
          height: auto;
-         overflow: unset;     
+         overflow: unset;
       }
       .build-price {
          &__container {
@@ -151,7 +188,6 @@
                &.red {
                   background-color: $color-salmon;
                }
-
             }
             &__number {
                color: $color-white;
@@ -171,12 +207,11 @@
                   font-weight: 700;
                   padding: 12px 20px;
                   &.disabled {
-                     color: rgba($color: $color-white, $alpha: .4)
+                     color: rgba($color: $color-white, $alpha: 0.4);
                   }
                }
             }
          }
-
       }
    }
 }
