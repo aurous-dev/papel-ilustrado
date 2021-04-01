@@ -54,14 +54,13 @@ export function showSearch(e) {
 }
 
 // Test para separar palabras en carrito
-export function carts() {
-   const prueba = document.querySelectorAll(".w-cart__table--name a");
-   if (prueba) {
-      prueba.forEach((m) => {
-         const number = m.textContent.indexOf(" - ");
-         const final = m.textContent.length;
-         m.innerHTML = `${m.textContent.substring(0, number)} <br>
-                           <span> ${m.textContent.substring(
+export function carts(element) {
+   if (element) {
+      element.forEach((e) => {
+         const number = e.textContent.indexOf(" - ");
+         const final = e.textContent.length;
+         e.innerHTML = `${e.textContent.substring(0, number)} <br>
+                           <span> ${e.textContent.substring(
             number + 3,
             final
          )} </span>

@@ -17,3 +17,7 @@ export let responsives = window.matchMedia("(max-width: 979px)");
 export const frameInput = document.querySelectorAll('#pa_marco');
 export const sizeInput = document.querySelectorAll('#pa_tamano');
 export const clearBtn = document.querySelectorAll('.reset_variations');
+
+// Product name for Checkout
+export const nameCart = document.querySelectorAll(".w-cart__table--name a");
+export const nameCheckout = document.querySelectorAll('form.w-checkout__container .woocommerce-checkout-review-order table.shop_table tbody td.product-name')
