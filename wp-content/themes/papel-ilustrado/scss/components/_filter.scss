@@ -351,14 +351,17 @@ header.woocommerce-products-header,
             .tr-rosa {
                background: #f0bdc1 content-box;
             }
+            .tr-beige {
+               background: #dec6a9 content-box;
+            }
             .tr-cafe {
-               background: #a25728 content-box;
+               background: #5c472e content-box;
             }
             .tr-ocre {
                background: #b28748 content-box;
             }
-            .tr-naranjo {
-               background: #e58547 content-box;
+            .tr-naranja {
+               background: #e9a617 content-box;
             }
             .tr-militar {
                background: #617829 content-box;
@@ -373,7 +376,7 @@ header.woocommerce-products-header,
                background: #d3bb40 content-box;
             }
             .tr-amarillo {
-               background: #f3e95d content-box;
+               background: #f1ce09 content-box;
             }
             .tr-arena {
                background: #eee6a1 content-box;
@@ -383,6 +386,9 @@ header.woocommerce-products-header,
             }
             .tr-celeste {
                background: #52a1c2 content-box;
+            }
+            .tr-turquesa {
+               background: #49a0b2 content-box;
             }
             .tr-agua {
                background: #d1eaf1 content-box;
@@ -397,13 +403,71 @@ header.woocommerce-products-header,
                background: #2f444b content-box;
             }
             .tr-morado {
-               background: #5f4063 content-box;
+               background: #88779d content-box;
             }
             .tr-violeta {
                background: #937599 content-box;
             }
             .tr-lila {
                background: #cbb3ce content-box;
+            }
+            .tr-blanco-negro {
+               // background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+               background: black content-box; /* For browsers that do not support gradients */
+               background: content-box -webkit-linear-gradient(
+                  left,
+                  white,
+                  black
+               ); /* For Safari 5.1 to 6.0 */
+               background: content-box -o-linear-gradient(
+                  right,
+                  white,
+                  black
+               ); /* For Opera 11.1 to 12.0 */
+               background: content-box -moz-linear-gradient(
+                  right,
+                  white,
+                  black
+               ); /* For Firefox 3.6 to 15 */
+               background: content-box linear-gradient(
+                  to right,
+                  white,
+                  black
+               ); /* Standard syntax (must be last) */
+               // a {
+               //     color: #000 !important;
+               // }
+            }
+            .tr-dorado {
+               // background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+               background: black content-box; /* For browsers that do not support gradients */
+               background: content-box -webkit-linear-gradient(
+                  left,
+                  #d1a944,
+                  #f0e399,
+                  #d1a944,
+               ); /* For Safari 5.1 to 6.0 */
+               background: content-box -o-linear-gradient(
+                  right,
+                  #d1a944,
+                  #f0e399,
+                  #d1a944,
+               ); /* For Opera 11.1 to 12.0 */
+               background: content-box -moz-linear-gradient(
+                  right,
+                  #d1a944,
+                  #f0e399,
+                  #d1a944,
+               ); /* For Firefox 3.6 to 15 */
+               background: content-box linear-gradient(
+                  to right,
+                  #d1a944,
+                  #f0e399,
+                  #d1a944,
+               ); /* Standard syntax (must be last) */
+               // a {
+               //     color: #000 !important;
+               // }
             }
             .tr-multi {
                // background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
