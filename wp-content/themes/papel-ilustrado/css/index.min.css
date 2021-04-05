@@ -12846,8 +12846,8 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
   @media (min-width: 20em) and (max-width: 46.24em) {
     .build-composition__modal {
       height: 460px;
-      height: calc(0.67 * 300px);
-      max-width: 300px; }
+      height: calc(0.67 * 295px);
+      width: 295px; }
       .build-composition__modal__slider {
         position: relative;
         padding-bottom: 100px; } }
@@ -13024,6 +13024,38 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
         transform: scale(0.8); } }
   .slider-nav .slick-next:hover::before {
     filter: grayscale(0); }
+
+#composition-component {
+  display: flex;
+  flex-direction: column; }
+  #composition-component > .build-compostion__title {
+    order: 1; }
+  #composition-component > .slider-nav {
+    order: 2; }
+  #composition-component > .build-composition__modal {
+    order: 3; }
+  #composition-component > .btn-principal, #composition-component > .btn-card {
+    order: 4; }
+  #composition-component > .mobile {
+    order: 3; }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    #composition-component {
+      padding: 0; }
+      #composition-component > .build-compostion__title {
+        order: 1;
+        margin: 10px 0;
+        max-width: unset;
+        width: 100%; }
+        #composition-component > .build-compostion__title > .container {
+          padding: 0; }
+      #composition-component > .slider-nav {
+        order: 3; }
+      #composition-component > .build-composition__modal {
+        order: 2; }
+      #composition-component > .btn-principal, #composition-component > .btn-card {
+        order: 4; }
+      #composition-component > .mobile {
+        order: 3; } }
 
 .search-result {
   padding-bottom: 100px; }
