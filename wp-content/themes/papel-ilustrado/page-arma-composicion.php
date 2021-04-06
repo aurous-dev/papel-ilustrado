@@ -12,8 +12,8 @@ get_header();
    <div id="composition-component" class="container">
       <section class="build-compostion__title">
          <div class="container">
-            <h2>PASO 1: Selecciona su diagramación</h2>
-            <div>elige la diagramación que quieras colocar en tu espacio favorito, tenemos muchas combinaciones.</div>
+            <h2>{{stepInfo.title}}</h2>
+            <div>{{stepInfo.description}}</div>
          </div>
       </section>
       <!-- Slider -->
@@ -34,13 +34,11 @@ get_header();
             <ul>
                <li v-for="(art, index) in selectedComposition.obras">
                   <button v-if="!selectedArtworks[index]" class="no-selected" @click="setDimensions(art, index)" data-toggle="modal" data-target="#build-modal">
-                     <img src="#" alt="">
                      <div class="description">Selecciona una obra {{art}}</div>
-                     <div class="number">{{index+1}}</div>
                   </button>
                   <div v-else class="selected">
                      <button @click="setDimensions(art, index)" data-toggle="modal" data-target="#build-modal">
-                        <img src="#" alt="">
+                        <img class="artimage" :src="selectedArtworks[index].images[0].src" alt="">
                      </button>
                      <div class="description">{{selectedArtworks[index].name}}</div>
                      <span class="selected-close" aria-hidden="true" @click="removeArtwork(index)">&times;</span>
@@ -57,10 +55,10 @@ get_header();
          <!-- btn para abrir modal -->
          
          <!-- DIV de precio -->
-         <div class="build-price" v-if='selectedComposition && selectedComposition.imagen'>
+         <div v-if="step === 2" class="build-price" v-if='selectedComposition && selectedComposition.imagen'>
             <div class="build-price__number">
                <h2>Precio Total:</h2>
-               <span>$39.900</span>
+               <span>${{totalPrice}}</span>
             </div>
             <button class="build-price__btn btn-principal" :disabled="!areAllArtsSelected">
                Agregar al carrito
@@ -84,11 +82,8 @@ get_header();
                      <!-- Contenido-->
                      <div class="modal-body">
                         <div class="build-compostion__title">
-                           <h2>PASO 2: Selecciona las obras</h2>
-                           <div>
-                              Elige el orden de las obras que desees para tu composición, éstas se enumerarán de la primera a la 
-                              última dependiendo de la cantidad de la diagramación
-                           </div>
+                           <h2>{{stepInfo.title}}</h2>
+                           <div>{{stepInfo.description}}</div>
                         </div>
 
                         <div class="build__filter">
@@ -112,8 +107,14 @@ get_header();
                         <div class="row build__row">
                            <!-- Deberian ser btn como los marcos -->
                            <div v-for="product in filteredProducts" class="col-md-2 col-4 build__row--arts">
-                              <button type="button" class="close" data-dismiss="modal" :aria-label="`Seleccionar ${product.name}`" @click="selectArtwork(product)">
-                                 <img src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+                              <button type="button" data-dismiss="modal" :aria-label="`Seleccionar ${product.name}`" @click="touchArtwork(product)">
+                                 <div v-show="selectedArtworks.some(sp => sp && sp.id === product.id)" class="selected-overlay">
+                                    <span>
+                                       {{selectedArtworksMap.get(product.id)+1 || 0}}
+                                    </span>
+                                 </div>
+                                 <img v-if="product.images[0]" :src="product.images[0].src" alt="">
+                                 <img v-else src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
                               </button>
                            </div>
                         </div>
@@ -125,6 +126,19 @@ get_header();
          </div>
          <!-- Modal -->
       </div>
+
+      <!-- SELECTOR DE MARCOS -->
+      <div v-if="step === 2">
+         <select v-model="selectedMarco">
+            <option selected>
+               Sin marco
+            </option>
+            <option v-for="option in marcos" :key="option.name" :value="option.slug">
+               {{ option.name }}
+            </option>
+         </select>
+      </div>
+      <!-- SELECTOR DE MARCOS -->
 
       <!-- Para mobile -->
       <!-- Boton que indica que pase al siguiente paso  -->

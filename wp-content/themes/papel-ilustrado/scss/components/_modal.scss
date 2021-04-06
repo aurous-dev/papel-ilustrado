@@ -1,60 +1,63 @@
 .modal-header {
-   border-bottom: 0;
-   .close {
-      outline: none !important;
-      span {
-         color: $color-white;
-         background-color: $color-salmon;
-         border-radius: 50%;
-         display: flex;
-         font-weight: 100;
-         width: 30px;
-         height: 30px;
-         display: flex;
-         @include f-center;
-      }
-   }
+  border-bottom: 0;
+  .close {
+    outline: none !important;
+    span {
+      color: $color-white;
+      background-color: $color-salmon;
+      border-radius: 50%;
+      display: flex;
+      font-weight: 100;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      @include f-center;
+    }
+  }
 }
 
 .build-compostion__title {
-   max-width: 65%;
-   margin: 0 auto 50px;
+  max-width: 65%;
+  margin: 0 auto 50px;
 }
 .modal-content {
-   top: 10px;
+  top: 10px;
 }
 .modal-body {
-   padding: 20px 40px;
+  padding: 20px 40px;
 }
 .modal-header {
-   position: absolute;
-   right: 0;
-   z-index: 10;
+  position: absolute;
+  right: 0;
+  z-index: 10;
 }
 .build__filter {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   color: $color-indigo;
-   margin-bottom: 50px;
-   &--icon {
-      margin-right: 20px;
-   }
-   form {
-      select {
-         width: 200px;
-         height: 45px;
-      }
-   }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-indigo;
+  margin-bottom: 50px;
+  &--icon {
+    margin-right: 20px;
+  }
+  form {
+    select {
+      width: 200px;
+      height: 45px;
+    }
+  }
 }
 .build__row {
-   height: 400px;
-   overflow-x: scroll;
-   &--arts {
-      margin-bottom: 20px;
-      img {
-         max-width: 100%;
-         height: auto;
-      }
-   }
+  height: 400px;
+  overflow-x: scroll;
+  &--arts {
+    margin-bottom: 20px;
+    button {
+      position: relative;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
