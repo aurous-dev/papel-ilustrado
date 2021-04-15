@@ -12756,8 +12756,7 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  position: relative;
-  margin: 0 auto; }
+  position: relative; }
   .build-composition__modal .build__bg {
     position: absolute;
     top: 0;
@@ -12871,7 +12870,9 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
       max-width: 300px; }
       .build-composition__modal__slider {
         position: relative;
-        padding-bottom: 100px; } }
+        padding-bottom: 100px; }
+      .build-composition__modal .build_lista {
+        display: none; } }
 
 .build-modal__container {
   max-width: 1140px;
@@ -12936,11 +12937,59 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
       align-items: center;
       justify-content: center;
       display: flex; }
+    .build-modal__container.mobile .build_lista ul li {
+      display: flex;
+      margin: 0.2rem; }
+      .build-modal__container.mobile .build_lista ul li .no-selected {
+        width: 15rem;
+        background-color: #2A3D42;
+        color: #FFFFFF;
+        outline: 2px white dashed !important;
+        outline-offset: -0.5rem;
+        padding: 1rem; }
+        .build-modal__container.mobile .build_lista ul li .no-selected.on-selection {
+          background-color: #355957; }
+      .build-modal__container.mobile .build_lista ul li .selected {
+        width: 15rem;
+        position: relative;
+        display: grid;
+        text-align: left;
+        grid-template-columns: 3rem auto 1rem;
+        grid-template-rows: repeat(2, 1fr);
+        color: #FFFFFF;
+        column-gap: 0.5rem; }
+        .build-modal__container.mobile .build_lista ul li .selected .artimage {
+          width: 100%;
+          height: 100%;
+          object-fit: contain; }
+        .build-modal__container.mobile .build_lista ul li .selected button {
+          grid-row: span 2;
+          background-color: #2A3D42; }
+        .build-modal__container.mobile .build_lista ul li .selected .description {
+          background-color: #2A3D42;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+        .build-modal__container.mobile .build_lista ul li .selected .selected-close {
+          grid-row: span 2;
+          place-self: center;
+          cursor: pointer; }
+        .build-modal__container.mobile .build_lista ul li .selected .number {
+          width: 1.5rem;
+          height: 1.5rem;
+          background-color: #F4997E;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          left: -0.8rem;
+          top: 0.8rem; }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .build-modal__container.mobile {
       display: block; }
       .build-modal__container.mobile .build-price {
-        position: absolute;
+        position: fixed;
         bottom: 0;
         left: 0;
         width: 100vw; }

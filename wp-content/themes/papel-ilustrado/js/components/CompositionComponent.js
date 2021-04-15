@@ -251,10 +251,12 @@ export const compositionComponentScript = {
     },
     touchArtwork(product) {
       if (this.selectedArtworksMap.has(product.id)) {
+        console.log(product.id, "Estaba seleccionado");
         if (
           this.selectedArtworksMap.get(product.id) !==
           this.selectedDimensions.index
         ) {
+          console.log(product.id, "Era de otro");
           this.removeArtwork(this.selectedArtworksMap.get(product.id));
           this.selectArtwork(product);
         } else {
@@ -267,6 +269,12 @@ export const compositionComponentScript = {
     selectArtwork(product) {
       const newSelectedArtworks = [...this.selectedArtworks];
       newSelectedArtworks[this.selectedDimensions.index] = product;
+      for (let [k, v] of this.selectedArtworksMap) {
+        if (v === this.selectedDimensions.index) {
+          console.log(v, "el index ya estaba ocupado");
+          this.selectedArtworksMap.delete(k);
+        }
+      }
       this.selectedArtworksMap.set(product.id, this.selectedDimensions.index);
       this.selectedArtworks = [...newSelectedArtworks];
       if (this.areAllArtsSelected) {
@@ -275,6 +283,12 @@ export const compositionComponentScript = {
     },
     removeArtwork(index) {
       const newSelectedArtworks = [...this.selectedArtworks];
+      for (let [k, v] of this.selectedArtworksMap) {
+        if (v === index) {
+          console.log(v, "el index ya estaba ocupado");
+          this.selectedArtworksMap.delete(k);
+        }
+      }
       this.selectedArtworksMap.delete(this.selectedArtworks[index].id);
       newSelectedArtworks[index] = undefined;
       this.selectedArtworks = [...newSelectedArtworks];
