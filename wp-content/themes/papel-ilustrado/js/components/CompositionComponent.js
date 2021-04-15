@@ -1,7 +1,9 @@
 import axios from "axios";
+window.jQuery = $;
+window.$ = $;
 
-// const baseUrl = "http://localhost:8888/papel-ilustrado";
-const baseUrl = "http://localhost/papel-ilustrado";
+const baseUrl = "http://localhost:8888/papel-ilustrado";
+// const baseUrl = "http://localhost/papel-ilustrado";
 
 const stepsDescription = [
   {
@@ -46,6 +48,8 @@ export const compositionComponentScript = {
   created: async function() {
     this.isLoading = true;
     await this.callCompositions(1);
+    await this.slider();
+    window.addEventListener('resize', this.unslike)
     await this.callMarcos(1);
     await this.callProducts(1);
     // await this.callACF(1);
@@ -149,6 +153,29 @@ export const compositionComponentScript = {
         await this.callCompositions(page + 1);
       } else {
         return null;
+      }
+    },
+    async slider() {
+      $(".slider-nav").slick({
+        infinite: true,
+        slidesToShow: 10,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 770,
+            settings: {
+              slidesToShow: 5,
+              slidesToScroll: 1,
+              dots: true,
+            },
+          },
+        ],
+      });
+      if (window.outerWidth < 500) {
+        const sliderComposition = document.querySelector('.slider-nav');
+        sliderComposition.classList.add('slider_mobile')
       }
     },
     async callMarcos(page) {
@@ -297,5 +324,16 @@ export const compositionComponentScript = {
       this.step = step;
       this.stepInfo = stepsDescription[this.step];
     },
+    unslike() {
+      if (window.outerWidth < 500) {
+        const sliderComposition = document.querySelector('.slider-nav');
+        sliderComposition.classList.add('slider_mobile')
+        sliderComposition.classList.remove('slider-nav', 'slick-initialized', 'slick-slider')
+      } else {
+        const sliderComposition = document.querySelector('.slider_mobile');
+        sliderComposition.classList.add('slider-nav', 'slick-initialized', 'slick-slider');
+        sliderComposition.classList.remove('slider_mobile')
+      } 
+    }
   },
 };
