@@ -9,7 +9,9 @@ import {
    sizeInput,
    clearBtn,
    nameCart,
-   nameCheckout
+   nameCheckout,
+   cartAPI,
+   observerOptions
 } from './selectors';
 
 import {
@@ -21,7 +23,8 @@ import {
    menuMobile,
    inputValue,
    reset,
-   closeMenu
+   closeMenu,
+   observer
 } from './functions.js'
 
 class initApp {
@@ -30,34 +33,37 @@ class initApp {
    }
 
    App() {
-      // Menu dropdown Deskto
+      //-------------- MENU DROPDOWN DESKTO
       tr_nav.addEventListener("click", clickMenu);
+      //-------------- MENU DROPDOWN DESKTO
 
-      // Cerrar el menu cuando le doy click afuera
+      //-------------- CERRAR EL MENU CUANDO LE DOY CLICK AFUERA
       window.addEventListener('click', closeMenu);
+      //-------------- CERRAR EL MENU CUANDO LE DOY CLICK AFUERA
 
-      // Columnas
+      //-------------- COLUMNAS
       document.addEventListener("DOMContentLoaded", columnas);
       document.addEventListener("DOMContentLoaded", () => {
          carts(nameCart)
          carts(nameCheckout)
       });
+      //-------------- COLUMNAS
 
-      // btns burguer and search
+      //-------------- BTNS BURGUER AND SEARCH
       menu.addEventListener("click", showHidden);
       tr_search.addEventListener("click", showSearch);
-
-      // btns burguer and search
       menu_container.addEventListener("click", menuMobile);
+      //-------------- BTNS BURGUER AND SEARCH
 
-      // Prevenir que se comporte como un enlace
+      //-------------- PREVENIR QUE SE COMPORTE COMO UN ENLACE
       tr_preventDefault.forEach((a) => {
          a.addEventListener("click", (e) => {
             e.preventDefault();
          });
       });
+      //-------------- PREVENIR QUE SE COMPORTE COMO UN ENLACE
 
-      // Composiciones Agrupadas
+      //-------------- COMPOSICIONES AGRUPADAS
       frameInput.forEach((element) => {
          element.addEventListener('change', inputValue)
       })
@@ -67,8 +73,9 @@ class initApp {
       clearBtn.forEach((element) => {
          element.addEventListener('click', reset)
       })
+      //-------------- COMPOSICIONES AGRUPADAS
 
-      // Input Cart disabled
+      //-------------- INPUT CART DISABLED
       nameCheckout.forEach(e => {
          const productName = e.outerText.indexOf(', ');
          const total = e.outerText.length;
@@ -91,6 +98,11 @@ class initApp {
          }
 
       })
+      //-------------- INPUT CART DISABLED
+
+      //-------------- API
+      observer.observe(cartAPI, observerOptions);
+      //-------------- API
    }
 }
 

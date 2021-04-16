@@ -21,3 +21,11 @@ export const clearBtn = document.querySelectorAll('.reset_variations');
 // Product name for Checkout
 export const nameCart = document.querySelectorAll(".w-cart__table--name a");
 export const nameCheckout = document.querySelectorAll('form.w-checkout__container .woocommerce-checkout-review-order table.shop_table tbody td.product-name')
+
+// API
+export const cartAPI = document.querySelector('#main');
+export const observerOptions = {
+   attributes: false,
+   childList: true,
+   subtree: true
+}

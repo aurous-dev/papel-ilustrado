@@ -1,6 +1,6 @@
 import { menu, tr_header, tr_preventDefault } from './selectors.js';
 
-// Menu dropdown Desktop
+//------------------- MENU DROPDOWN DESKTOP
 export function clickMenu(a) {
    const menu = a.path[2].children;
    Array.from(menu).forEach((m) => {
@@ -17,8 +17,9 @@ export function clickMenu(a) {
       }
    });
 }
+//------------------- MENU DROPDOWN DESKTOP
 
-// Columnas para el menu
+//------------------- COLUMNAS PARA EL MENU
 export function columnas() {
    const items = document.querySelectorAll(
       "#menu-principal > .menu-item-has-children > .sub-menu"
@@ -41,8 +42,9 @@ export function columnas() {
       }
    });
 }
+//------------------- COLUMNAS PARA EL MENU
 
-// Ocultar y Mostrar Menu y Buqueda (Mobile)
+//------------------- OCULTAR Y MOSTRAR MENU Y BUQUEDA (MOBILE)
 export function showHidden() {
    menu.classList.toggle("active");
    tr_header.classList.toggle("active");
@@ -52,24 +54,49 @@ export function showSearch(e) {
    const menu_search = document.querySelector(".header__menu--search");
    menu_search.classList.toggle("srch");
 }
+//------------------- OCULTAR Y MOSTRAR MENU Y BUQUEDA (MOBILE)
 
-// Test para separar palabras en carrito
+
+//------------------- SEPARAR PALABRAS EN CARRITO
 export function carts(element) {
    if (element) {
       element.forEach((e) => {
          const number = e.textContent.indexOf(" - ");
          const final = e.textContent.length;
-         e.innerHTML = `${e.textContent.substring(0, number)} <br>
-                           <span> ${e.textContent.substring(
-            number + 3,
-            final
-         )} </span>
-                           `;
+         e.innerHTML =
+         `
+            ${e.textContent.substring(0, number)} <br>
+            <span> ${e.textContent.substring( number + 3, final)} </span>
+         `;
       });
    }
 }
+// API
+export const observer = new MutationObserver( mutationListener => {
+   mutationListener.forEach( mutation => {
 
-// Funcion de cerrar y abrir en menu mobile
+      if(mutation.addedNodes.length) {
+         if (mutation.addedNodes[0].classList[1] === 'w-cart__form') {
+            const element = document.querySelectorAll(".w-cart__table--name a");
+            element.forEach((e) => {
+               const number = e.textContent.indexOf(" - ");
+               const final = e.textContent.length;
+               e.innerHTML =
+               `
+               ${e.textContent.substring(0, number)} <br>
+                  <span> ${e.textContent.substring(
+                  number + 3,
+                  final
+               )} </span>
+               `;
+            });
+         }
+      }
+   } )
+})
+//------------------- SEPARAR PALABRAS EN CARRITO
+
+//------------------- FUNCION DE CERRAR Y ABRIR EN MENU MOBILE
 export function menuMobile(e) {
    const positions = e.path;
    const menuHeader_search = document.querySelector(".header__menu--search");
@@ -90,9 +117,9 @@ export function menuMobile(e) {
       }
    });
 }
+//------------------- FUNCION DE CERRAR Y ABRIR EN MENU MOBILE
 
-// Composiciones agrupadas
-
+//------------------ COMPOSICIONES AGRUPADAS
 export function inputValue(e) {
    // Div padre
    const varationsDiv = e.target.parentElement.parentElement.parentElement;
@@ -138,7 +165,6 @@ export function inputValue(e) {
    }
 
 }
-
 export function reset(e) {
    const btnAdd = document.querySelector(".single_add_to_cart_button.button.alt");
    const mensaje = document.querySelector('.alerta');
@@ -153,7 +179,6 @@ export function reset(e) {
       }
    }, 500);
 }
-
 export function crearUnDiv(e) {
 
    const divMessage = document.createElement('div');
@@ -163,8 +188,9 @@ export function crearUnDiv(e) {
    divMessage.classList.add('alerta');
    e.appendChild(divMessage);
 }
+//------------------ COMPOSICIONES AGRUPADAS
 
-// Cerrar menu cuando doy click afuera
+//------------------ CERRAR MENU CUANDO DOY CLICK AFUERA
 export function closeMenu(e) {
    tr_preventDefault.forEach((a) => {
       if(a !== e.target) {
@@ -174,3 +200,4 @@ export function closeMenu(e) {
       } 
    });
 }
+//------------------ CERRAR MENU CUANDO DOY CLICK AFUERA
