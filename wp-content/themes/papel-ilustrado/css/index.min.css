@@ -10933,11 +10933,14 @@ form.w-checkout__container {
         font-family: 'Raleway', sans-serif;
         font-weight: 700; }
       form.w-checkout__container .woocommerce-checkout-review-order table.shop_table tbody td.product-name {
-        font-size: 12px;
-        text-transform: uppercase;
+        font-size: 14px;
+        text-transform: capitalize;
         z-index: 1;
         font-family: 'Raleway', sans-serif;
         font-weight: 700; }
+        form.w-checkout__container .woocommerce-checkout-review-order table.shop_table tbody td.product-name span {
+          color: #A7A7A7;
+          font-weight: 500; }
       form.w-checkout__container .woocommerce-checkout-review-order table.shop_table tbody td.product-total span {
         color: #2A3D42;
         text-align: center;

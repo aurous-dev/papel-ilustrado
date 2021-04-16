@@ -59,17 +59,15 @@ export function showSearch(e) {
 
 //------------------- SEPARAR PALABRAS EN CARRITO
 export function carts(element) {
-   if (element) {
-      element.forEach((e) => {
-         const number = e.textContent.indexOf(" - ");
-         const final = e.textContent.length;
-         e.innerHTML =
-         `
-            ${e.textContent.substring(0, number)} <br>
-            <span> ${e.textContent.substring( number + 3, final)} </span>
-         `;
-      });
-   }
+   element.forEach((e) => {
+      const number = e.textContent.indexOf(" - ");
+      const final = e.textContent.length;
+      e.innerHTML =
+      `
+         ${e.textContent.substring(0, number)} <br>
+         <span> ${e.textContent.substring( number + 3, final)} </span>
+      `;
+   });
 }
 // API
 export const observer = new MutationObserver( mutationListener => {
@@ -78,18 +76,11 @@ export const observer = new MutationObserver( mutationListener => {
       if(mutation.addedNodes.length) {
          if (mutation.addedNodes[0].classList[1] === 'w-cart__form') {
             const element = document.querySelectorAll(".w-cart__table--name a");
-            element.forEach((e) => {
-               const number = e.textContent.indexOf(" - ");
-               const final = e.textContent.length;
-               e.innerHTML =
-               `
-               ${e.textContent.substring(0, number)} <br>
-                  <span> ${e.textContent.substring(
-                  number + 3,
-                  final
-               )} </span>
-               `;
-            });
+            carts(element)
+            return;
+         } else if (mutation.addedNodes[0].classList[0] === 'shop_table') {
+            const element = document.querySelectorAll('table.shop_table tbody td.product-name');
+            carts(element)
          }
       }
    } )

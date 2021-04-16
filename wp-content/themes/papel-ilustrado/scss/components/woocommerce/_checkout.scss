@@ -117,10 +117,14 @@ form.w-checkout__container {
          }
          tbody {
             td.product-name {
-               font-size: 12px;
-               text-transform: uppercase;
+               font-size: 14px;
+               text-transform: capitalize;
                z-index: 1;
                @include fonts-display(700);
+               span {
+                  color: #A7A7A7;
+                  font-weight: 500;
+               }
             }
             td.product-total {
                span {
