@@ -13023,7 +13023,26 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
             font-weight: 700;
             padding: 12px 20px; }
             .build-modal__container.mobile .build-price__container button.disabled {
-              color: rgba(255, 255, 255, 0.4); } }
+              color: rgba(255, 255, 255, 0.4); }
+    .build-modal__container .build__filter {
+      justify-content: flex-start;
+      flex-wrap: wrap; }
+      .build-modal__container .build__filter .build__filter--icon {
+        margin: 10px 0; }
+      .build-modal__container .build__filter form {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%; }
+        .build-modal__container .build__filter form select {
+          width: 49%;
+          margin: 5px 0;
+          padding: 0 10px;
+          border-radius: 0;
+          color: #535B5B;
+          border: 1px solid #D2D2D2;
+          height: 48px; }
+          .build-modal__container .build__filter form select:nth-child(2n+1) {
+            margin-right: 2%; } }
 
 .selected-overlay {
   position: absolute;
