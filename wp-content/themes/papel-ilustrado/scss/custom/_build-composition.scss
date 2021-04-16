@@ -81,6 +81,7 @@
                   outline: 2px white dashed !important;
                   outline-offset: -0.5rem;
                   padding: 1rem;
+                  @include fonts-display(500);
                }
 
                .selected {
@@ -111,7 +112,7 @@
                      // white-space: nowrap;
                      // text-overflow: ellipsis;
                      padding: 2px 8px;
-                     @include fonts-display(600);
+                     @include fonts-display(500);
                   }
 
                   .selected-close {
@@ -162,6 +163,38 @@
          height: 460px;
          height: calc(0.67 * #{$width});
          max-width: $width;
+         .build_lista {
+            width: 50%;
+            ul {
+               padding: 20px 15px;
+               li {
+                  .selected {
+                     grid-template-columns: 40px auto 20px;
+                     grid-template-rows: repeat(2, 20px);
+                     .number {
+                        width: 20px;
+                        height: 20px;
+                        left: 10px;
+                        top: 12px;
+                     }
+                     .selected-close {
+                        top: 10px;
+                        width: 18px;
+                        height: 18px;
+                     }
+                     .description {
+                        font-size: 12px;
+                        padding: 1px 5px;
+                     }
+                  }
+                  .no-selected {
+                     outline: 1px white dashed !important;
+                     padding: 10px;
+                     font-size: 14px;
+                  }
+               }
+            }
+         }
       }
 
       // Responsive

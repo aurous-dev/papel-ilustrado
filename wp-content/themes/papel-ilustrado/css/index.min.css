@@ -13206,7 +13206,9 @@ nav.woocommerce-breadcrumb {
           color: #FFFFFF;
           outline: 2px white dashed !important;
           outline-offset: -0.5rem;
-          padding: 1rem; }
+          padding: 1rem;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 500; }
         .build-composition__modal .build_lista ul li .selected {
           width: 100%;
           position: relative;
@@ -13227,7 +13229,7 @@ nav.woocommerce-breadcrumb {
             background-color: #2A3D42;
             padding: 2px 8px;
             font-family: 'Raleway', sans-serif;
-            font-weight: 600; }
+            font-weight: 500; }
           .build-composition__modal .build_lista ul li .selected .selected-close {
             position: relative;
             top: 15px;
@@ -13265,7 +13267,30 @@ nav.woocommerce-breadcrumb {
     .build-composition__modal {
       height: 460px;
       height: calc(0.67 * 690px);
-      max-width: 690px; } }
+      max-width: 690px; }
+      .build-composition__modal .build_lista {
+        width: 50%; }
+        .build-composition__modal .build_lista ul {
+          padding: 20px 15px; }
+          .build-composition__modal .build_lista ul li .selected {
+            grid-template-columns: 40px auto 20px;
+            grid-template-rows: repeat(2, 20px); }
+            .build-composition__modal .build_lista ul li .selected .number {
+              width: 20px;
+              height: 20px;
+              left: 10px;
+              top: 12px; }
+            .build-composition__modal .build_lista ul li .selected .selected-close {
+              top: 10px;
+              width: 18px;
+              height: 18px; }
+            .build-composition__modal .build_lista ul li .selected .description {
+              font-size: 12px;
+              padding: 1px 5px; }
+          .build-composition__modal .build_lista ul li .no-selected {
+            outline: 1px white dashed !important;
+            padding: 10px;
+            font-size: 14px; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .build-composition__modal {
       height: 460px;
