@@ -129,7 +129,8 @@ get_header();
       </div>
 
       <!-- SELECTOR DE MARCOS -->
-      <div v-if="step === 2">
+      <div class="btn-select" v-if="step === 2">
+         Selecciona el marco: 
          <select v-model="selectedMarco">
             <option selected>
                Sin marco
@@ -154,23 +155,24 @@ get_header();
             <ul>
                <li v-for="(art, index) in selectedComposition.obras">
                   <button v-if="!selectedArtworks[index]" class="no-selected" :class="{'on-selection': selectedDimensions && selectedDimensions.index === index}" @click="setDimensions(art, index)">
-                     <div class="description">Selecciona una obra {{art}}</div>
+                     <div class="description">Selecciona una obra</div>
                   </button>
                   <div v-else class="selected">
                      <button @click="setDimensions(art, index)">
                         <img class="artimage" :src="selectedArtworks[index].images[0].src" alt="">
                      </button>
-                     <div class="description">{{selectedArtworks[index].name}}</div>
+                     <div class="description mt-3">{{selectedArtworks[index].name}}</div>
+                     <div class="description mt-1">{{art}}</div>
                      <span class="selected-close" aria-hidden="true" @click="removeArtwork(index)">&times;</span>
-                     <div class="description">Tamaño: {{art}}</div>
-                     <div class="number">{{index+1}}</div>
+                     <!-- <div class="number">{{index+1}}</div> -->
                   </div>
                </li>
             </ul>
          </div>
          <!-- SELECCION DE TAMAÑO DE OBRA PARA MOBILE -->
          <!-- SELECTOR DE MARCOS -->
-         <div v-if="step === 2">
+         <div class="btn-select"  v-if="step === 2">
+            Selecciona el marco: 
             <select v-model="selectedMarco">
                <option selected>
                   Sin marco

@@ -196,6 +196,9 @@
          .build_lista {
             display: none;
          }
+         .build-price {
+            display: none;
+         }
       }
    }
 }
@@ -224,33 +227,19 @@
       }
       .build_lista {
          ul {
+            display: flex;
+            flex-wrap: wrap;
             li {
-               display: flex;
-               margin: 0.2rem;
-
-               .no-selected {
-                  width: 15rem;
-                  background-color: $color-indigo;
-                  color: $color-white;
-                  outline: 2px white dashed !important;
-                  outline-offset: -0.5rem;
-                  padding: 1rem;
-
-                  &.on-selection {
-                     background-color: $color-dark_green;
-                  }
-               }
-
+               flex: 0 0 32%;
+               padding: 0 1%;
+               max-width: 32%;
                .selected {
-                  width: 15rem;
                   position: relative;
-                  display: grid;
-                  text-align: left;
-                  grid-template-columns: 3rem auto 1rem;
-                  grid-template-rows: repeat(2, 1fr);
-                  // background-color: $color-indigo;
-                  color: $color-white;
-                  column-gap: 0.5rem;
+                  display: flex;
+                  flex-direction: column;
+                  width: 100%;
+                  font-size: 12px;
+                  text-align: center;
 
                   .artimage {
                      width: 100%;
@@ -259,21 +248,25 @@
                   }
 
                   button {
-                     grid-row: span 2;
                      background-color: $color-indigo;
-                  }
-
-                  .description {
-                     background-color: $color-indigo;
-                     overflow: hidden;
-                     white-space: nowrap;
-                     text-overflow: ellipsis;
                   }
 
                   .selected-close {
-                     grid-row: span 2;
-                     place-self: center;
-                     cursor: pointer;
+                     position: absolute;
+                     top: -5px;
+                     right: -5px;
+                     width: 20px;
+                     height: 20px;
+                     background-color: $color-salmon;
+                     color: $color-white;
+                     display: flex;
+                     border-radius: 50%;
+                     @include f-center;
+                  }
+
+                  .description {
+                     color: $color-indigo;
+                     @include fonts-display(700);
                   }
 
                   .number {
@@ -289,7 +282,20 @@
                      top: 0.8rem;
                   }
                }
+
+               .no-selected {
+                  background-color: $color-indigo;
+                  color: $color-white;
+                  width: 100%;
+                  font-size: 14px;
+                  padding: 5px;
+                  height: 60px;
+                  &.on-selection {
+                     background-color: $color-dark_green;
+                  }
+               }
             }
+
          }
       }
    }
@@ -336,6 +342,9 @@
                   }
                }
             }
+         }
+         .btn-select {
+            display: flex;
          }
       }
       // Filtro
@@ -388,8 +397,27 @@
    }
 }
 
-// Orden de los divs y estilos de los sliders
+.btn-select {
+   margin: 40px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 14px;
+   color: $color-indigo;
+   select {
+      width: 50%;
+      padding: 0 10px;
+      border-radius: 0;
+      color: $color-gray;
+      border: 1px solid #D2D2D2;
+      height: 45px;
+   }
+   @include mq($from:mobile, $until: tablet) {
+      display: none;
+   }
+}
 
+// Orden de los divs y estilos de los sliders
 #composition-component {
    display: flex;
    flex-direction: column;

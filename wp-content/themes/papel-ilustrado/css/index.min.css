@@ -12874,6 +12874,8 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
         position: relative;
         padding-bottom: 100px; }
       .build-composition__modal .build_lista {
+        display: none; }
+      .build-composition__modal .build-price {
         display: none; } }
 
 .build-modal__container {
@@ -12939,54 +12941,62 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
       align-items: center;
       justify-content: center;
       display: flex; }
-    .build-modal__container.mobile .build_lista ul li {
+    .build-modal__container.mobile .build_lista ul {
       display: flex;
-      margin: 0.2rem; }
-      .build-modal__container.mobile .build_lista ul li .no-selected {
-        width: 15rem;
-        background-color: #2A3D42;
-        color: #FFFFFF;
-        outline: 2px white dashed !important;
-        outline-offset: -0.5rem;
-        padding: 1rem; }
-        .build-modal__container.mobile .build_lista ul li .no-selected.on-selection {
-          background-color: #355957; }
-      .build-modal__container.mobile .build_lista ul li .selected {
-        width: 15rem;
-        position: relative;
-        display: grid;
-        text-align: left;
-        grid-template-columns: 3rem auto 1rem;
-        grid-template-rows: repeat(2, 1fr);
-        color: #FFFFFF;
-        column-gap: 0.5rem; }
-        .build-modal__container.mobile .build_lista ul li .selected .artimage {
-          width: 100%;
-          height: 100%;
-          object-fit: contain; }
-        .build-modal__container.mobile .build_lista ul li .selected button {
-          grid-row: span 2;
-          background-color: #2A3D42; }
-        .build-modal__container.mobile .build_lista ul li .selected .description {
-          background-color: #2A3D42;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis; }
-        .build-modal__container.mobile .build_lista ul li .selected .selected-close {
-          grid-row: span 2;
-          place-self: center;
-          cursor: pointer; }
-        .build-modal__container.mobile .build_lista ul li .selected .number {
-          width: 1.5rem;
-          height: 1.5rem;
-          background-color: #F4997E;
-          border-radius: 50%;
+      flex-wrap: wrap; }
+      .build-modal__container.mobile .build_lista ul li {
+        flex: 0 0 32%;
+        padding: 0 1%;
+        max-width: 32%; }
+        .build-modal__container.mobile .build_lista ul li .selected {
+          position: relative;
           display: flex;
-          justify-content: center;
-          align-items: center;
-          position: absolute;
-          left: -0.8rem;
-          top: 0.8rem; }
+          flex-direction: column;
+          width: 100%;
+          font-size: 12px;
+          text-align: center; }
+          .build-modal__container.mobile .build_lista ul li .selected .artimage {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; }
+          .build-modal__container.mobile .build_lista ul li .selected button {
+            background-color: #2A3D42; }
+          .build-modal__container.mobile .build_lista ul li .selected .selected-close {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            background-color: #F4997E;
+            color: #FFFFFF;
+            display: flex;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center; }
+          .build-modal__container.mobile .build_lista ul li .selected .description {
+            color: #2A3D42;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700; }
+          .build-modal__container.mobile .build_lista ul li .selected .number {
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: #F4997E;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: -0.8rem;
+            top: 0.8rem; }
+        .build-modal__container.mobile .build_lista ul li .no-selected {
+          background-color: #2A3D42;
+          color: #FFFFFF;
+          width: 100%;
+          font-size: 14px;
+          padding: 5px;
+          height: 60px; }
+          .build-modal__container.mobile .build_lista ul li .no-selected.on-selection {
+            background-color: #355957; }
   @media (min-width: 20em) and (max-width: 46.24em) {
     .build-modal__container.mobile {
       display: block; }
@@ -13024,6 +13034,8 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
             padding: 12px 20px; }
             .build-modal__container.mobile .build-price__container button.disabled {
               color: rgba(255, 255, 255, 0.4); }
+      .build-modal__container.mobile .btn-select {
+        display: flex; }
     .build-modal__container .build__filter {
       justify-content: flex-start;
       flex-wrap: wrap; }
@@ -13062,6 +13074,24 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
     font-size: 1.5rem;
     background-color: #F4997E;
     color: white; }
+
+.btn-select {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #2A3D42; }
+  .btn-select select {
+    width: 50%;
+    padding: 0 10px;
+    border-radius: 0;
+    color: #535B5B;
+    border: 1px solid #D2D2D2;
+    height: 45px; }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .btn-select {
+      display: none; } }
 
 #composition-component {
   display: flex;
