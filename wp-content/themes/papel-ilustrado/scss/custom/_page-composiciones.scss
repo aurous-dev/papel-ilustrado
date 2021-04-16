@@ -304,9 +304,11 @@
          display: block;
          .build-price {
             position: fixed;
-            bottom: 0;
+            bottom: -1px;
             left: 0;
             width: 100vw;
+            background-color: $color-indigo;
+            z-index: 1000;
             &__msg {
                color: $color-white;
                font-size: 12px;
@@ -491,6 +493,17 @@
 
       .btn__mobile{
          display: block;
+         font-size: 14px;
+         text-align: left;
+         text-decoration: underline ;
+         color: $color-indigo;
+         margin: 20px 0;
+         background-color: transparent;
+         @include fonts-display(600);
+         svg {
+            transform: rotate(180deg);
+            margin-right: 5px;
+         }
       }
 
       // slider mobile

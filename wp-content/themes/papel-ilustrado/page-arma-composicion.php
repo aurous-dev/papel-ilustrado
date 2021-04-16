@@ -10,7 +10,11 @@ get_header();
 <!-- FIRTS SECTION -->
 <section class="container-fluid build-composition__slider">
    <div id="composition-component" class="container">
-      <button class="btn__mobile" v-if="step > 0" @click="changeStep(step -1)"><--- Volver al paso anterior</button>
+      <button class="btn__mobile" v-if="step > 0" @click="changeStep(step -1)">
+         <svg width="16" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 8.59249H12.17L7.29 13.4725C6.9 13.8625 6.9 14.5025 7.29 14.8925C7.68 15.2825 8.31 15.2825 8.7 14.8925L15.29 8.30249C15.68 7.91249 15.68 7.28249 15.29 6.89249L8.71 0.292486C8.52317 0.105233 8.26952 0 8.005 0C7.74048 0 7.48683 0.105233 7.3 0.292486C6.91 0.682486 6.91 1.31249 7.3 1.70249L12.17 6.59249H1C0.45 6.59249 0 7.04249 0 7.59249C0 8.14249 0.45 8.59249 1 8.59249Z" fill="#F4997E" />
+         </svg>Volver al paso anterior
+      </button>
       <section class="build-compostion__title">
          <div class="container">
             <h2>{{stepInfo.title}}</h2>
