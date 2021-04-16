@@ -82,9 +82,9 @@ get_header();
                <h2>Precio Total:</h2>
                <span>${{totalPrice}}</span>
             </div>
-            <button class="build-price__btn btn-principal" :disabled="!areAllArtsSelected">
+            <a class="build-price__btn btn-principal" :disabled="!areAllArtsSelected" :href="urlToCart">
                Agregar al carrito
-            </button>
+            </a>
          </div>
          <!-- DIV de precio -->
 

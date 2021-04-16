@@ -101,7 +101,9 @@ class initApp {
       //-------------- INPUT CART DISABLED
 
       //-------------- API
-      observer.observe(cartAPI, observerOptions);
+      if(cartAPI) {
+         observer.observe(cartAPI, observerOptions);
+      }
       //-------------- API
    }
 }

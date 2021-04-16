@@ -124,6 +124,13 @@ export const compositionComponentScript = {
       }
       return 0;
     },
+    urlToCart() {
+      if(this.finalArtworksInfo && this.finalArtworksInfo.length > 0) {
+        const productsIds = this.finalArtworksInfo.join(",");
+        return `${baseUrl}/cart/add-to-cart =${productsIds}`;
+      }
+      return '#';
+    }
   },
   methods: {
     console(title, info) {
