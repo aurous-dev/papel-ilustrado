@@ -44,6 +44,7 @@ export const compositionComponentScript = {
      */
     step: 0,
     stepInfo: stepsDescription[0],
+    mobile: true,
   },
   created: async function() {
     this.isLoading = true;
@@ -175,7 +176,9 @@ export const compositionComponentScript = {
       });
       if (window.outerWidth < 500) {
         const sliderComposition = document.querySelector('.slider-nav');
-        sliderComposition.classList.add('slider_mobile')
+        await sliderComposition.classList.add('slider_mobile');
+        sliderComposition.classList.remove('slider-nav', 'slick-initialized', 'slick-slider')
+
       }
     },
     async callMarcos(page) {
@@ -323,6 +326,10 @@ export const compositionComponentScript = {
     changeStep(step) {
       this.step = step;
       this.stepInfo = stepsDescription[this.step];
+      console.log(step)
+      if (step >= 0) {
+        this.mobile = true;
+      }
     },
     unslike() {
       if (window.outerWidth < 500) {

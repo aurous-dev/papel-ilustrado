@@ -10,7 +10,7 @@ get_header();
 <!-- FIRTS SECTION -->
 <section class="container-fluid build-composition__slider">
    <div id="composition-component" class="container">
-      <button v-if="step > 0" @click="changeStep(step -1)"><--- Volver al paso anterior</button>
+      <button class="btn__mobile" v-if="step > 0" @click="changeStep(step -1)"><--- Volver al paso anterior</button>
       <section class="build-compostion__title">
          <div class="container">
             <h2>{{stepInfo.title}}</h2>
