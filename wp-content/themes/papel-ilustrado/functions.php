@@ -113,4 +113,147 @@ add_action( 'after_setup_theme', 'setup_woocommerce_support' );
 {
   add_theme_support('woocommerce');
 }
+
+// Add multiple productos/variants to cart
+
+function woocommerce_maybe_add_multiple_products_to_cart() {
+  // Make sure WC is installed, and add-to-cart qauery arg exists, and contains at least one comma.
+  if ( ! class_exists( 'WC_Form_Handler' ) || empty( $_REQUEST['add-to-cart'] ) || false === strpos( $_REQUEST['add-to-cart'], ',' ) ) {
+      return;
+  }
+
+  remove_action( 'wp_loaded', array( 'WC_Form_Handler', 'add_to_cart_action' ), 20 );
+
+  $product_ids = explode( ',', $_REQUEST['add-to-cart'] );
+  $count       = count( $product_ids );
+  $number      = 0;
+
+  foreach ( $product_ids as $product_id ) {
+      if ( ++$number === $count ) {
+          // Ok, final item, let's send it back to woocommerce's add_to_cart_action method for handling.
+          $_REQUEST['add-to-cart'] = $product_id;
+
+          return WC_Form_Handler::add_to_cart_action();
+      }
+
+      $product_id        = apply_filters( 'woocommerce_add_to_cart_product_id', absint( $product_id ) );
+      $was_added_to_cart = false;
+
+      $adding_to_cart    = wc_get_product( $product_id );
+
+      if ( ! $adding_to_cart ) {
+          continue;
+      }
+
+      if ( $adding_to_cart->is_type( 'simple' ) ) {
+
+          // quantity applies to all products atm
+          $quantity          = empty( $_REQUEST['quantity'] ) ? 1 : wc_stock_amount( $_REQUEST['quantity'] );
+          $passed_validation = apply_filters( 'woocommerce_add_to_cart_validation', true, $product_id, $quantity );
+
+          if ( $passed_validation && false !== WC()->cart->add_to_cart( $product_id, $quantity ) ) {
+              wc_add_to_cart_message( array( $product_id => $quantity ), true );
+          }
+
+      } else {
+
+          $variation_id       = empty( $_REQUEST['variation_id'] ) ? '' : absint( wp_unslash( $_REQUEST['variation_id'] ) );
+          $quantity           = empty( $_REQUEST['quantity'] ) ? 1 : wc_stock_amount( wp_unslash( $_REQUEST['quantity'] ) ); // WPCS: sanitization ok.
+          $missing_attributes = array();
+          $variations         = array();
+          $adding_to_cart     = wc_get_product( $product_id );
+
+          if ( ! $adding_to_cart ) {
+            continue;
+          }
+
+          // If the $product_id was in fact a variation ID, update the variables.
+          if ( $adding_to_cart->is_type( 'variation' ) ) {
+            $variation_id   = $product_id;
+            $product_id     = $adding_to_cart->get_parent_id();
+            $adding_to_cart = wc_get_product( $product_id );
+
+            if ( ! $adding_to_cart ) {
+              continue;
+            }
+          }
+
+          // Gather posted attributes.
+          $posted_attributes = array();
+
+          foreach ( $adding_to_cart->get_attributes() as $attribute ) {
+            if ( ! $attribute['is_variation'] ) {
+              continue;
+            }
+            $attribute_key = 'attribute_' . sanitize_title( $attribute['name'] );
+
+            if ( isset( $_REQUEST[ $attribute_key ] ) ) {
+              if ( $attribute['is_taxonomy'] ) {
+                // Don't use wc_clean as it destroys sanitized characters.
+                $value = sanitize_title( wp_unslash( $_REQUEST[ $attribute_key ] ) );
+              } else {
+                $value = html_entity_decode( wc_clean( wp_unslash( $_REQUEST[ $attribute_key ] ) ), ENT_QUOTES, get_bloginfo( 'charset' ) ); // WPCS: sanitization ok.
+              }
+
+              $posted_attributes[ $attribute_key ] = $value;
+            }
+          }
+
+          // If no variation ID is set, attempt to get a variation ID from posted attributes.
+          if ( empty( $variation_id ) ) {
+            $data_store   = WC_Data_Store::load( 'product' );
+            $variation_id = $data_store->find_matching_product_variation( $adding_to_cart, $posted_attributes );
+          }
+
+          // Do we have a variation ID?
+          if ( empty( $variation_id ) ) {
+            throw new Exception( __( 'Please choose product options&hellip;', 'woocommerce' ) );
+          }
+
+          // Check the data we have is valid.
+          $variation_data = wc_get_product_variation_attributes( $variation_id );
+
+          foreach ( $adding_to_cart->get_attributes() as $attribute ) {
+            if ( ! $attribute['is_variation'] ) {
+              continue;
+            }
+
+            // Get valid value from variation data.
+            $attribute_key = 'attribute_' . sanitize_title( $attribute['name'] );
+            $valid_value   = isset( $variation_data[ $attribute_key ] ) ? $variation_data[ $attribute_key ]: '';
+
+            /**
+             * If the attribute value was posted, check if it's valid.
+             *
+             * If no attribute was posted, only error if the variation has an 'any' attribute which requires a value.
+             */
+            if ( isset( $posted_attributes[ $attribute_key ] ) ) {
+              $value = $posted_attributes[ $attribute_key ];
+
+              // Allow if valid or show error.
+              if ( $valid_value === $value ) {
+                $variations[ $attribute_key ] = $value;
+              } elseif ( '' === $valid_value && in_array( $value, $attribute->get_slugs() ) ) {
+                // If valid values are empty, this is an 'any' variation so get all possible values.
+                $variations[ $attribute_key ] = $value;
+              } else {
+                throw new Exception( sprintf( __( 'Invalid value posted for %s', 'woocommerce' ), wc_attribute_label( $attribute['name'] ) ) );
+              }
+            } elseif ( '' === $valid_value ) {
+              $missing_attributes[] = wc_attribute_label( $attribute['name'] );
+            }
+          }
+          if ( ! empty( $missing_attributes ) ) {
+            throw new Exception( sprintf( _n( '%s is a required field', '%s are required fields', count( $missing_attributes ), 'woocommerce' ), wc_format_list_of_items( $missing_attributes ) ) );
+          }
+
+        $passed_validation = apply_filters( 'woocommerce_add_to_cart_validation', true, $product_id, $quantity, $variation_id, $variations );
+
+        if ( $passed_validation && false !== WC()->cart->add_to_cart( $product_id, $quantity, $variation_id, $variations ) ) {
+          wc_add_to_cart_message( array( $product_id => $quantity ), true );
+        }
+      }
+  }
+}
+add_action( 'wp_loaded', 'woocommerce_maybe_add_multiple_products_to_cart', 15 );
 ?>
