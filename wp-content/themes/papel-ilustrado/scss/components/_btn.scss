@@ -184,19 +184,19 @@
 }
 
 .btn-select {
-   margin: 40px 0;
    display: flex;
    justify-content: space-between;
    align-items: center;
    font-size: 14px;
    color: $color-indigo;
+   width: 93%;
    select {
       width: 50%;
       padding: 0 10px;
       border-radius: 0;
       color: $color-gray;
       border: 1px solid #D2D2D2;
-      height: 45px;
+      height: 35px;
    }
    @include mq($from:mobile, $until: tablet) {
       display: none;

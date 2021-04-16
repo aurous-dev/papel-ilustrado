@@ -58,7 +58,7 @@
       .build_lista {
          position: absolute;
          right: 10px;
-         color:$color-white;
+         color: $color-indigo;
          top: 5px;
          width: 40%;
          ul {
@@ -77,9 +77,9 @@
 
                .no-selected {
                   width: 100%;
-                  background-color: $color-indigo;
-                  color: $color-white;
-                  outline: 2px white dashed !important;
+                  background-color: $color-light_white;
+                  color: $color-indigo;
+                  outline: 2px $color-dark_gray dashed !important;
                   outline-offset: -0.5rem;
                   padding: 1rem;
                   @include fonts-display(500);
@@ -92,30 +92,46 @@
                   text-align: left;
                   grid-template-columns: 50px auto 20px;
                   grid-template-rows: repeat(2, 18px);
-                  // background-color: $color-indigo;
-                  color: $color-white;
+                  color: $color-indigo;
                   column-gap: 0.5rem;
+                  
 
                   .artimage {
                      width: 100%;
                      height: 100%;
                      object-fit: contain;
+                     &__container {
+                        width: fit-content;
+                        height: 100%;
+                        margin: 0 auto;
+                        position: relative;
+                        &::before {
+                           content: '';
+                           width: 100%;
+                           height: 100%;
+                           position: absolute;
+                           background: rgba($color: $color-indigo, $alpha: .40);
+                        }
+                     }
                   }
 
                   button {
                      grid-row: span 2;
-                     // background-color: $color-indigo;
                   }
 
                   .description {
                      display: flex;
                      align-items: center;
-                     background-color: $color-indigo;
-                     // overflow: hidden;
-                     // white-space: nowrap;
-                     // text-overflow: ellipsis;
+                     background-color: $color-light_white;
                      padding: 0 10px;
                      @include fonts-display(500);
+                     border: 1px solid $color-dark_gray;
+                     &:nth-child(2) {
+                        border-bottom: none;
+                     }
+                     &:nth-child(4) {
+                        border-top: none;
+                     }
                   }
 
                   .selected-close {
@@ -131,17 +147,18 @@
                   }
 
                   .number {
-                     width: 1.5rem;
-                     height: 1.5rem;
+                     width: 20px;
+                     height: 20px;
                      background-color: $color-salmon;
                      border-radius: 50%;
                      display: flex;
                      justify-content: center;
                      align-items: center;
                      position: absolute;
-                     left: 13px;
-                     top: 5px;
+                     left: 15px;
+                     top: 9px;
                      font-size: 12px;
+                     color: $color-white;
                   }
                }
             }
@@ -243,10 +260,12 @@
          }
       }
       .build_lista {
+         color: $color-indigo;
          ul {
             display: flex;
             flex-wrap: wrap;
             li {
+               display: flex;
                flex: 0 0 32%;
                padding: 0 1%;
                max-width: 32%;
@@ -257,11 +276,25 @@
                   width: 100%;
                   font-size: 12px;
                   text-align: center;
+                  outline: 1px solid rgba($color: $color-dark_gray, $alpha: .75);
+                  padding-bottom: 5px;
 
                   .artimage {
                      width: 100%;
                      max-height: 115px;
                      object-fit: contain;
+                     &__container {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        &::before {
+                           content: '';
+                           width: 100%;
+                           height: 100%;
+                           position: absolute;
+                           background: rgba($color: $color-indigo, $alpha: .40);
+                        }
+                     }
                   }
 
                   button {
@@ -270,10 +303,10 @@
 
                   .selected-close {
                      position: absolute;
-                     top: -5px;
-                     right: -5px;
-                     width: 20px;
-                     height: 20px;
+                     top: -4px;
+                     right: -4px;
+                     width: 23px;
+                     height: 23px;
                      background-color: $color-salmon;
                      color: $color-white;
                      display: flex;
@@ -287,27 +320,29 @@
                   }
 
                   .number {
-                     width: 1.5rem;
-                     height: 1.5rem;
+                     width: 40px;
+                     height: 40px;
                      background-color: $color-salmon;
                      border-radius: 50%;
                      display: flex;
                      justify-content: center;
                      align-items: center;
                      position: absolute;
-                     left: -0.8rem;
-                     top: 0.8rem;
+                     left: 30px;
+                     top: 35px;
+                     color: $color-white;
                   }
                }
 
                .no-selected {
-                  background-color: $color-indigo;
-                  color: $color-white;
+                  background-color: $color-light_white;
+                  color: $color-indigo;
+                  border: 2px dashed $color-dark_gray;
                   width: 100%;
                   font-size: 14px;
                   padding: 5px;
                   &.on-selection {
-                     background-color: $color-dark_green;
+                     background-color: #DCDCDC;
                   }
                }
             }
@@ -363,6 +398,8 @@
          }
          .btn-select {
             display: flex;
+            width: auto;
+            margin: 40px 0;
          }
       }
       // Filtro
