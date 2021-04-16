@@ -12932,6 +12932,21 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
               width: 100%;
               height: auto; } }
 
+@media (min-width: 46.25em) and (max-width: 61.24em) {
+  #build-modal .modal-content {
+    max-width: 95%;
+    margin: 0 auto; }
+  #build-modal .modal-body {
+    padding: 40px; }
+    #build-modal .modal-body .build__filter {
+      justify-content: space-between; }
+      #build-modal .modal-body .build__filter form select {
+        width: 160px;
+        height: 40px;
+        padding: 0 10px;
+        font-size: 14px;
+        margin: 0 3px; } }
+
 .search-result {
   padding-bottom: 100px; }
   .search-result__grid {

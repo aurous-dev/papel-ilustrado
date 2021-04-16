@@ -183,3 +183,27 @@
    }
 
 }
+
+#build-modal {
+   @include mq($from: tablet, $until: desktop) {
+      .modal-content {
+         max-width: 95%;
+         margin: 0 auto;
+      }
+      .modal-body {
+         padding: 40px;
+         .build__filter {
+            justify-content: space-between;
+            form {
+               select {
+                  width: 160px;
+                  height: 40px;
+                  padding: 0 10px;
+                  font-size: 14px;
+                  margin: 0 3px;
+               }
+            }
+         }
+      }
+   }  
+}
