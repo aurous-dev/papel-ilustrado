@@ -12786,7 +12786,8 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
 
 #composition-component {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-bottom: 80px; }
   #composition-component > .build-compostion__title {
     order: 1; }
   #composition-component > .slider-nav {
@@ -13183,55 +13184,73 @@ nav.woocommerce-breadcrumb {
         font-weight: 500; }
   .build-composition__modal .build_lista {
     position: absolute;
-    right: 0;
-    color: white;
-    top: 10px; }
-    .build-composition__modal .build_lista ul li {
+    right: 10px;
+    color: #FFFFFF;
+    top: 10px;
+    width: 40%; }
+    .build-composition__modal .build_lista ul {
       display: flex;
-      margin: 0.2rem; }
-      .build-composition__modal .build_lista ul li .no-selected {
-        width: 15rem;
-        background-color: #2A3D42;
-        color: #FFFFFF;
-        outline: 2px white dashed !important;
-        outline-offset: -0.5rem;
-        padding: 1rem; }
-      .build-composition__modal .build_lista ul li .selected {
-        width: 15rem;
-        position: relative;
-        display: grid;
-        text-align: left;
-        grid-template-columns: 3rem auto 1rem;
-        grid-template-rows: repeat(2, 1fr);
-        color: #FFFFFF;
-        column-gap: 0.5rem; }
-        .build-composition__modal .build_lista ul li .selected .artimage {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      background-color: #FFFFFF;
+      width: 100%;
+      padding: 40px 20px; }
+      .build-composition__modal .build_lista ul li {
+        display: flex;
+        margin: 0.2rem;
+        width: 100%; }
+        .build-composition__modal .build_lista ul li .no-selected {
           width: 100%;
-          height: 100%;
-          object-fit: contain; }
-        .build-composition__modal .build_lista ul li .selected button {
-          grid-row: span 2;
-          background-color: #2A3D42; }
-        .build-composition__modal .build_lista ul li .selected .description {
           background-color: #2A3D42;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis; }
-        .build-composition__modal .build_lista ul li .selected .selected-close {
-          grid-row: span 2;
-          place-self: center;
-          cursor: pointer; }
-        .build-composition__modal .build_lista ul li .selected .number {
-          width: 1.5rem;
-          height: 1.5rem;
-          background-color: #F4997E;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: absolute;
-          left: -0.8rem;
-          top: 0.8rem; }
+          color: #FFFFFF;
+          outline: 2px white dashed !important;
+          outline-offset: -0.5rem;
+          padding: 1rem; }
+        .build-composition__modal .build_lista ul li .selected {
+          width: 100%;
+          position: relative;
+          display: grid;
+          text-align: left;
+          grid-template-columns: 50px auto 20px;
+          grid-template-rows: repeat(2, 1fr);
+          color: #FFFFFF;
+          column-gap: 0.5rem; }
+          .build-composition__modal .build_lista ul li .selected .artimage {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; }
+          .build-composition__modal .build_lista ul li .selected button {
+            grid-row: span 2;
+            background-color: #2A3D42; }
+          .build-composition__modal .build_lista ul li .selected .description {
+            background-color: #2A3D42;
+            padding: 2px 8px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600; }
+          .build-composition__modal .build_lista ul li .selected .selected-close {
+            position: relative;
+            top: 15px;
+            width: 20px;
+            height: 20px;
+            background-color: #F4997E;
+            color: #FFFFFF;
+            display: flex;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center; }
+          .build-composition__modal .build_lista ul li .selected .number {
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: #F4997E;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 13px;
+            top: 18px;
+            font-size: 12px; }
   @media (min-width: 81.25em) {
     .build-composition__modal {
       height: 700px;

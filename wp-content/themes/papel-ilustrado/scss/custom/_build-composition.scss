@@ -57,17 +57,25 @@
       }
       .build_lista {
          position: absolute;
-         right: 0;
-         // background-color: black;
-         color: white;
+         right: 10px;
+         color:$color-white;
          top: 10px;
+         width: 40%;
          ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            background-color: $color-white;
+            width: 100%;
+            padding: 40px 20px;
             li {
                display: flex;
                margin: 0.2rem;
+               width: 100%;
 
                .no-selected {
-                  width: 15rem;
+                  width: 100%;
                   background-color: $color-indigo;
                   color: $color-white;
                   outline: 2px white dashed !important;
@@ -76,11 +84,11 @@
                }
 
                .selected {
-                  width: 15rem;
+                  width: 100%;
                   position: relative;
                   display: grid;
                   text-align: left;
-                  grid-template-columns: 3rem auto 1rem;
+                  grid-template-columns: 50px auto 20px;
                   grid-template-rows: repeat(2, 1fr);
                   // background-color: $color-indigo;
                   color: $color-white;
@@ -99,15 +107,23 @@
 
                   .description {
                      background-color: $color-indigo;
-                     overflow: hidden;
-                     white-space: nowrap;
-                     text-overflow: ellipsis;
+                     // overflow: hidden;
+                     // white-space: nowrap;
+                     // text-overflow: ellipsis;
+                     padding: 2px 8px;
+                     @include fonts-display(600);
                   }
 
                   .selected-close {
-                     grid-row: span 2;
-                     place-self: center;
-                     cursor: pointer;
+                     position: relative;
+                     top: 15px;
+                     width: 20px;
+                     height: 20px;
+                     background-color: $color-salmon;
+                     color: $color-white;
+                     display: flex;
+                     border-radius: 50%;
+                     @include f-center;
                   }
 
                   .number {
@@ -119,8 +135,9 @@
                      justify-content: center;
                      align-items: center;
                      position: absolute;
-                     left: -0.8rem;
-                     top: 0.8rem;
+                     left: 13px;
+                     top: 18px;
+                     font-size: 12px;
                   }
                }
             }
