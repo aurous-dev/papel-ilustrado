@@ -1,0 +1,341 @@
+.build-composition {
+   &__nav {
+      img {
+         height: 80px;
+         width: 80px;
+      }
+   }
+   &__modal {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      .build__bg {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         @include bg-center;
+
+         /* Aqui esta esto para cuando no hay composicion seleccionada */
+         &-noselected {
+            background: $color-indigo;
+            outline: white 4px dashed;
+            outline-offset: -2rem;
+         }
+      }
+      .build__btn {
+         position: relative;
+         top: -140px;
+      }
+      .build-price {
+         width: 100%;
+         display: flex;
+         padding: 20px;
+         justify-content: center;
+         align-items: center;
+         background-color: rgba($color: $color-indigo, $alpha: 0.4);
+         &__number {
+            display: flex;
+            color: $color-white;
+            font-size: 26px;
+            margin-right: 50px;
+            @include fonts-display(500);
+            h2 {
+               font-size: 26px;
+               color: $color-white;
+               text-transform: uppercase;
+               margin: 0;
+               @include fonts-display(500);
+            }
+         }
+      }
+      .build_lista {
+         position: absolute;
+         right: 0;
+         // background-color: black;
+         color: white;
+         top: 10px;
+         ul {
+            li {
+               display: flex;
+               margin: 0.2rem;
+
+               .no-selected {
+                  width: 15rem;
+                  background-color: $color-indigo;
+                  color: $color-white;
+                  outline: 2px white dashed !important;
+                  outline-offset: -0.5rem;
+                  padding: 1rem;
+               }
+
+               .selected {
+                  width: 15rem;
+                  position: relative;
+                  display: grid;
+                  text-align: left;
+                  grid-template-columns: 3rem auto 1rem;
+                  grid-template-rows: repeat(2, 1fr);
+                  // background-color: $color-indigo;
+                  color: $color-white;
+                  column-gap: 0.5rem;
+
+                  .artimage {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: contain;
+                  }
+
+                  button {
+                     grid-row: span 2;
+                     background-color: $color-indigo;
+                  }
+
+                  .description {
+                     background-color: $color-indigo;
+                     overflow: hidden;
+                     white-space: nowrap;
+                     text-overflow: ellipsis;
+                  }
+
+                  .selected-close {
+                     grid-row: span 2;
+                     place-self: center;
+                     cursor: pointer;
+                  }
+
+                  .number {
+                     width: 1.5rem;
+                     height: 1.5rem;
+                     background-color: $color-salmon;
+                     border-radius: 50%;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     position: absolute;
+                     left: -0.8rem;
+                     top: 0.8rem;
+                  }
+               }
+            }
+         }
+      }
+
+      // Altura para la ventana modal
+      @include mq($from: wide) {
+         $width: 1040px;
+         height: 700px;
+         height: calc(0.67 * #{$width});
+         max-width: $width;
+      }
+      @include mq($from: desktop, $until: wide) {
+         $width: 900px;
+         height: 600px;
+         height: calc(0.67 * #{$width});
+         max-width: $width;
+      }
+      @include mq($from: tablet, $until: desktop) {
+         $width: 690px;
+         height: 460px;
+         height: calc(0.67 * #{$width});
+         max-width: $width;
+      }
+
+      // Responsive
+      @include mq($from: mobile, $until: tablet) {
+         $width: 300px;
+         height: 460px;
+         height: calc(0.67 * #{$width});
+         max-width: $width;
+         &__slider {
+            position: relative;
+            padding-bottom: 100px;
+         }
+         .build_lista {
+            display: none;
+         }
+         .build-price {
+            display: none;
+         }
+      }
+   }
+}
+
+.build-modal__container {
+   max-width: 1140px;
+   margin: 0 auto;
+   @import "../components/modal";
+
+   // Version mobile
+   &.mobile {
+      display: none;
+      .build__row {
+         height: auto;
+         overflow: unset;
+      }
+      .build-price {
+         &__container {
+            @include f-center;
+            display: flex;
+         }
+         &__number {
+            @include f-center;
+            display: flex;
+         }
+      }
+      .build_lista {
+         ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+               flex: 0 0 32%;
+               padding: 0 1%;
+               max-width: 32%;
+               .selected {
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 100%;
+                  font-size: 12px;
+                  text-align: center;
+
+                  .artimage {
+                     width: 100%;
+                     max-height: 115px;
+                     object-fit: contain;
+                  }
+
+                  button {
+                     background-color: $color-indigo;
+                  }
+
+                  .selected-close {
+                     position: absolute;
+                     top: -5px;
+                     right: -5px;
+                     width: 20px;
+                     height: 20px;
+                     background-color: $color-salmon;
+                     color: $color-white;
+                     display: flex;
+                     border-radius: 50%;
+                     @include f-center;
+                  }
+
+                  .description {
+                     color: $color-indigo;
+                     @include fonts-display(700);
+                  }
+
+                  .number {
+                     width: 1.5rem;
+                     height: 1.5rem;
+                     background-color: $color-salmon;
+                     border-radius: 50%;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     position: absolute;
+                     left: -0.8rem;
+                     top: 0.8rem;
+                  }
+               }
+
+               .no-selected {
+                  background-color: $color-indigo;
+                  color: $color-white;
+                  width: 100%;
+                  font-size: 14px;
+                  padding: 5px;
+                  &.on-selection {
+                     background-color: $color-dark_green;
+                  }
+               }
+            }
+
+         }
+      }
+   }
+   @include mq($from: mobile, $until: tablet) {
+      &.mobile {
+         display: block;
+         .build-price {
+            position: fixed;
+            bottom: -1px;
+            left: 0;
+            width: 100vw;
+            background-color: $color-indigo;
+            z-index: 1000;
+            &__msg {
+               color: $color-white;
+               font-size: 12px;
+               text-align: center;
+               padding: 6px 10px;
+               @include fonts-display(500);
+               &.green {
+                  background-color: $color-dark_green;
+               }
+               &.red {
+                  background-color: $color-salmon;
+               }
+            }
+            &__number {
+               color: $color-white;
+               font-size: 18px;
+               @include fonts-display(700);
+               h2 {
+                  display: none;
+               }
+            }
+            &__container {
+               background-color: $color-indigo;
+               padding: 8px 20px;
+               justify-content: space-between;
+               button {
+                  background-color: $color-white;
+                  color: $color-indigo;
+                  font-weight: 700;
+                  padding: 12px 20px;
+                  &.disabled {
+                     color: rgba($color: $color-white, $alpha: 0.4);
+                  }
+               }
+            }
+         }
+         .btn-select {
+            display: flex;
+         }
+      }
+      // Filtro
+      .build__filter {
+         justify-content: flex-start;
+         flex-wrap: wrap;
+         .build__filter--icon {
+            margin: 10px 0;
+         }
+         form {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            select {
+               width: 49%;
+               margin: 5px 0;
+               padding: 0 10px;
+               border-radius: 0;
+               color: $color-gray;
+               border: 1px solid #D2D2D2;
+               height: 40px;
+               &:nth-child(2n+1) {
+                  margin-right: 2%;
+               }
+            }
+         }
+      }
+   }
+}
