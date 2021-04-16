@@ -12957,7 +12957,7 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
           text-align: center; }
           .build-modal__container.mobile .build_lista ul li .selected .artimage {
             width: 100%;
-            height: 100%;
+            max-height: 115px;
             object-fit: contain; }
           .build-modal__container.mobile .build_lista ul li .selected button {
             background-color: #2A3D42; }
@@ -12993,8 +12993,7 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
           color: #FFFFFF;
           width: 100%;
           font-size: 14px;
-          padding: 5px;
-          height: 60px; }
+          padding: 5px; }
           .build-modal__container.mobile .build_lista ul li .no-selected.on-selection {
             background-color: #355957; }
   @media (min-width: 20em) and (max-width: 46.24em) {
@@ -13054,7 +13053,7 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
           border-radius: 0;
           color: #535B5B;
           border: 1px solid #D2D2D2;
-          height: 48px; }
+          height: 40px; }
           .build-modal__container .build__filter form select:nth-child(2n+1) {
             margin-right: 2%; } }
 
@@ -13216,12 +13215,12 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
       #composition-component .slider-nav {
         display: flex;
         flex-wrap: wrap; }
-        #composition-component .slider-nav .button {
+        #composition-component .slider-nav button {
           display: block;
           flex: 0 0 25%;
           max-width: 25%;
           padding: 0 8px; }
-          #composition-component .slider-nav .button img {
+          #composition-component .slider-nav button img {
             width: 100%;
             height: auto; }
       #composition-component .slider_mobile {

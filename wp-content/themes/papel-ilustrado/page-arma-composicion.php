@@ -160,6 +160,7 @@ get_header();
                <li v-for="(art, index) in selectedComposition.obras">
                   <button v-if="!selectedArtworks[index]" class="no-selected" :class="{'on-selection': selectedDimensions && selectedDimensions.index === index}" @click="setDimensions(art, index)">
                      <div class="description">Selecciona una obra</div>
+                     <div class="description">{{art}}</div>
                   </button>
                   <div v-else class="selected">
                      <button @click="setDimensions(art, index)">
@@ -168,7 +169,7 @@ get_header();
                      <div class="description mt-3">{{selectedArtworks[index].name}}</div>
                      <div class="description mt-1">{{art}}</div>
                      <span class="selected-close" aria-hidden="true" @click="removeArtwork(index)">&times;</span>
-                     <!-- <div class="number">{{index+1}}</div> -->
+                     <div class="number">{{index+1}}</div>
                   </div>
                </li>
             </ul>
