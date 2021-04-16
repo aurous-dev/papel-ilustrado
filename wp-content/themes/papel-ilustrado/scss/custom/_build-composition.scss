@@ -59,7 +59,7 @@
          position: absolute;
          right: 10px;
          color:$color-white;
-         top: 10px;
+         top: 5px;
          width: 40%;
          ul {
             display: flex;
@@ -68,11 +68,12 @@
             justify-content: center;
             background-color: $color-white;
             width: 100%;
-            padding: 40px 20px;
+            padding: 20px;
             li {
                display: flex;
                margin: 0.2rem;
                width: 100%;
+               font-size: 13px;
 
                .no-selected {
                   width: 100%;
@@ -90,7 +91,7 @@
                   display: grid;
                   text-align: left;
                   grid-template-columns: 50px auto 20px;
-                  grid-template-rows: repeat(2, 1fr);
+                  grid-template-rows: repeat(2, 18px);
                   // background-color: $color-indigo;
                   color: $color-white;
                   column-gap: 0.5rem;
@@ -103,21 +104,23 @@
 
                   button {
                      grid-row: span 2;
-                     background-color: $color-indigo;
+                     // background-color: $color-indigo;
                   }
 
                   .description {
+                     display: flex;
+                     align-items: center;
                      background-color: $color-indigo;
                      // overflow: hidden;
                      // white-space: nowrap;
                      // text-overflow: ellipsis;
-                     padding: 2px 8px;
+                     padding: 0 10px;
                      @include fonts-display(500);
                   }
 
                   .selected-close {
                      position: relative;
-                     top: 15px;
+                     top: 8px;
                      width: 20px;
                      height: 20px;
                      background-color: $color-salmon;
@@ -137,7 +140,7 @@
                      align-items: center;
                      position: absolute;
                      left: 13px;
-                     top: 18px;
+                     top: 5px;
                      font-size: 12px;
                   }
                }
