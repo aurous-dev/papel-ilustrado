@@ -251,9 +251,9 @@ get_header();
                </div>
 
                <!-- Añadir clase disabled para que agrege el bg correcto -->
-               <button :disabled="step <= 1 ? true : false" class="build-price__btn btn-principal">
+               <a :disabled="step <= 1 ? true : false" class="build-price__btn btn-principal" :href="urlToCart">
                   Agregar al carrito
-               </button>
+               </a>
             </div>
          </div>
       </div>

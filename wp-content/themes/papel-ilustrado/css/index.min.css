@@ -13510,13 +13510,13 @@ nav.woocommerce-breadcrumb {
           background-color: #2A3D42;
           padding: 8px 20px;
           justify-content: space-between; }
-          .build-modal__container.mobile .build-price__container button {
-            background-color: #FFFFFF;
-            color: #2A3D42;
-            font-weight: 700;
-            padding: 12px 20px; }
-            .build-modal__container.mobile .build-price__container button.disabled {
-              color: rgba(255, 255, 255, 0.4); }
+        .build-modal__container.mobile .build-price__btn {
+          background-color: #FFFFFF;
+          color: #2A3D42;
+          font-weight: 700;
+          padding: 12px 20px; }
+          .build-modal__container.mobile .build-price__btn.disabled {
+            color: rgba(255, 255, 255, 0.4); }
       .build-modal__container.mobile .btn-select {
         display: flex;
         width: auto;

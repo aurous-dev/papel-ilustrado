@@ -385,14 +385,14 @@
                background-color: $color-indigo;
                padding: 8px 20px;
                justify-content: space-between;
-               button {
-                  background-color: $color-white;
-                  color: $color-indigo;
-                  font-weight: 700;
-                  padding: 12px 20px;
-                  &.disabled {
-                     color: rgba($color: $color-white, $alpha: 0.4);
-                  }
+            }
+            &__btn {
+               background-color: $color-white;
+               color: $color-indigo;
+               font-weight: 700;
+               padding: 12px 20px;
+               &.disabled {
+                  color: rgba($color: $color-white, $alpha: 0.4);
                }
             }
          }

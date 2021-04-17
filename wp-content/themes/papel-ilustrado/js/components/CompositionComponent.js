@@ -127,7 +127,7 @@ export const compositionComponentScript = {
     urlToCart() {
       if(this.finalArtworksInfo && this.finalArtworksInfo.length > 0) {
         const productsIds = this.finalArtworksInfo.join(",");
-        return `${baseUrl}/cart/add-to-cart =${productsIds}`;
+        return `${baseUrl}/cart/?add-to-cart=${productsIds}`;
       }
       return '#';
     }
@@ -345,8 +345,10 @@ export const compositionComponentScript = {
         sliderComposition.classList.remove('slider-nav', 'slick-initialized', 'slick-slider')
       } else {
         const sliderComposition = document.querySelector('.slider_mobile');
-        sliderComposition.classList.add('slider-nav', 'slick-initialized', 'slick-slider');
-        sliderComposition.classList.remove('slider_mobile')
+        if(sliderComposition) {
+          sliderComposition.classList.add('slider-nav', 'slick-initialized', 'slick-slider');
+          sliderComposition.classList.remove('slider_mobile')
+        }
       } 
     }
   },
