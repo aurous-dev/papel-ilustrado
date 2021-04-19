@@ -1,0 +1,78 @@
+.lightbox {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   background-color: rgba($color: $color-indigo, $alpha: .4);
+   z-index: 10000;
+   display: flex;
+   @include f-center;
+   &__container {
+      height: 100vh;
+      display: flex;
+      @include f-center;
+   }
+   &__content {
+      width: 70%;
+      margin: 0 auto;
+      // min-height: 500px;
+      position: relative;
+      padding: 45px;
+      &--color {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         &.none {
+            display: none;
+         }
+      }
+      &--img {
+         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+         &.none {
+            display: none;
+         }
+      }
+   }
+   &__body {
+      position: relative;
+      padding: 40px;
+      text-align: center;
+      @include fonts-display(500);
+      h2 {
+         @include fonts-display(700);
+         margin-bottom: 20px;
+      }
+      .closed {
+         position: absolute;
+         top: -5px;
+         right: -5px;
+         color: $color-white;
+         background-color: $color-indigo;
+         border-radius: 50%;
+         width: 30px;
+         height: 30px;
+         display: flex;
+         @include f-center;
+         &:hover {
+            background-color: $color-salmon;
+         }
+      }
+      .btn-container {
+         display: flex;
+         @include f-center;
+         .btn-principal {
+            display: block;
+            position: relative;
+            bottom: -50px;
+         }
+      }
+   }
+}
