@@ -4,7 +4,7 @@ window.$ = $;
 
 // const baseUrl = "http://localhost:8888/papel-ilustrado";
 // const baseUrl = "http://localhost/papel-ilustrado";
-const baseUrl = "http://aurouslabs.cl/papel-ilustrado";
+const baseUrl = "http://aurouslabs.cl/papelilustrado";
 
 const stepsDescription = [
   {
