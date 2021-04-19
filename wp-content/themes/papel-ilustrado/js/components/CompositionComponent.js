@@ -2,12 +2,13 @@ import axios from "axios";
 window.jQuery = $;
 window.$ = $;
 
-const baseUrl = "http://localhost:8888/papel-ilustrado";
+// const baseUrl = "http://localhost:8888/papel-ilustrado";
 // const baseUrl = "http://localhost/papel-ilustrado";
+const baseUrl = "http://aurouslabs.cl/papel-ilustrado";
 
 const stepsDescription = [
   {
-    title: "PASO 1: Selecciona su diagramación",
+    title: "PASO 1: Selecciona diagramación",
     description:
       "Elige la diagramación que quieras colocar en tu espacio favorito, tenemos muchas combinaciones.",
   },
@@ -17,7 +18,7 @@ const stepsDescription = [
       "Elige en orden las obras que desees para tu composición, éstas se enumerarán de la primera a la última dependiendo de la cantidad de la diagramación.",
   },
   {
-    title: "PASO 3: Selecciona el marco y manda al carrito",
+    title: "PASO 3: Selecciona el marco y agrega al carrito",
     description:
       "Elige el marco que desees para las obras de tu composición, al hacerlo se mostrará el precio total.",
   },
