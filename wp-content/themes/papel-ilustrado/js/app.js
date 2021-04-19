@@ -80,3 +80,22 @@ if (document.querySelector("#composition-component")) {
 // Create Composition
 
 allSliders();
+
+const lightbox__btn = document.querySelector('.lightbox .lightbox__body .btn-principal');
+const lightbox__closed = document.querySelector('.lightbox .lightbox__body .closed');
+const lightbox__div = document.querySelector('.lightbox');
+
+lightbox__btn.addEventListener('click', prueba);
+lightbox__closed.addEventListener('click', prueba);
+
+function prueba(e) {
+  e.preventDefault();
+  sessionStorage.setItem('visito', 1)
+  lightbox__div.classList.remove('active')
+}
+
+if (!sessionStorage.getItem('visito')) {
+  lightbox__div.classList.add('active');
+} else {
+  lightbox__div.classList.remove('active')
+}
