@@ -10920,6 +10920,29 @@ header.woocommerce-products-header,
         .lightbox__body .btn-container .btn-principal:hover, .lightbox__body .btn-container .btn-card:hover {
           background-color: #F4997E;
           color: #FFFFFF; }
+  @media (min-width: 46.25em) and (max-width: 61.24em) {
+    .lightbox__content {
+      width: 90%; } }
+  @media (min-width: 20em) and (max-width: 46.24em) {
+    .lightbox > .container {
+      padding: 0; }
+    .lightbox__content {
+      width: 100%;
+      padding: 25px; }
+    .lightbox__body {
+      padding: 25px;
+      font-size: 12px; }
+      .lightbox__body .closed {
+        width: 25px;
+        height: 25px;
+        font-size: 13px; }
+      .lightbox__body h2 {
+        margin-bottom: 16px;
+        font-size: 28px; }
+      .lightbox__body .btn-container .btn-principal, .lightbox__body .btn-container .btn-card {
+        font-size: 12px;
+        bottom: -40px;
+        padding: 12px 22px; } }
 
 form.w-checkout__container {
   display: flex;

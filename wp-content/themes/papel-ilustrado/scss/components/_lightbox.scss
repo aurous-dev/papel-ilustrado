@@ -87,4 +87,38 @@
          }
       }
    }
+   @include mq($from: tablet, $until: desktop) {
+      &__content {
+         width: 90%;
+      }
+   }
+   @include mq($from: mobile, $until: tablet) {
+      &>.container {
+         padding: 0;
+      }
+      &__content {
+         width: 100%;
+         padding: 25px;
+      }
+      &__body {
+         padding: 25px;
+         font-size: 12px;
+         .closed {
+            width: 25px;
+            height: 25px;
+            font-size: 13px;
+         }
+         h2 {
+            margin-bottom: 16px;
+            font-size: 28px;
+         }
+         .btn-container {
+            .btn-principal {
+               font-size: 12px;
+               bottom: -40px;
+               padding: 12px 22px;
+            }
+         }
+      }
+   }
 }
