@@ -72,20 +72,53 @@ export function carts(element) {
 // API
 export const observer = new MutationObserver( mutationListener => {
    mutationListener.forEach( mutation => {
+      if(mutation.addedNodes.length && mutation.addedNodes[0].classList) {
+         const cartTable = mutation.addedNodes[0].classList[1];
+         const shopTable = mutation.addedNodes[0].classList[0];
 
-      if(mutation.addedNodes.length) {
-         if (mutation.addedNodes[0].classList[1] === 'w-cart__form') {
-            const element = document.querySelectorAll(".w-cart__table--name a");
-            carts(element)
-            return;
-         } else if (mutation.addedNodes[0].classList[0] === 'shop_table') {
-            const element = document.querySelectorAll('table.shop_table tbody td.product-name');
-            carts(element)
+         if (cartTable === 'w-cart__form') {
+            const cartTd = document.querySelectorAll(".w-cart__table--name a");
+            carts(cartTd)
+            return
+         } 
+
+         if (shopTable === 'shop_table') {
+            const shopTd = document.querySelectorAll('table.shop_table tbody td.product-name');
+            carts(shopTd)
+            inputDisabled(shopTd)
+            return
          }
       }
    } )
 })
 //------------------- SEPARAR PALABRAS EN CARRITO
+
+//-------------- INPUT CART DISABLED
+function inputDisabled(element) {
+   element.forEach(e => {
+      const productName = e.children[1].outerText.indexOf(', ');
+      const total = e.children[1].outerText.length;
+      const onlyNumber = e.children[1].outerText.substring((productName + 2), total);
+   
+      const firstSize = onlyNumber.indexOf('x');
+      const secondSize = onlyNumber.indexOf(' ×');
+   
+      const firstNumber = parseInt(onlyNumber.substring(0, firstSize));
+      const SecondNumber = parseInt(onlyNumber.substring((firstSize + 1), secondSize));
+   
+      if (firstNumber > 65 || SecondNumber > 90) {
+         const inputCity = document.querySelector('#billing_city');
+         const inputRegion = document.querySelector('#billing_state');
+   
+         inputCity.value = 'Santiago'
+         inputCity.disabled = true
+         inputRegion.value = 'Metropolitana'
+         inputRegion.disabled = true
+      }
+   
+   })
+}
+//-------------- INPUT CART DISABLED
 
 //------------------- FUNCION DE CERRAR Y ABRIR EN MENU MOBILE
 export function menuMobile(e) {

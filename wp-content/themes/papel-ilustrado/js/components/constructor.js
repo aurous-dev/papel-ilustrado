@@ -76,28 +76,29 @@ class initApp {
       //-------------- COMPOSICIONES AGRUPADAS
 
       //-------------- INPUT CART DISABLED
-      nameCheckout.forEach(e => {
-         const productName = e.outerText.indexOf(', ');
-         const total = e.outerText.length;
-         const onlyNumber = e.outerText.substring((productName + 2), total);
+      // nameCheckout.forEach(e => {
+      //    console.log(e.children[1].innerText)
+      //    // const productName = e.children[1].outerText.indexOf(', ');
+      //    // const total = e.children[1].outerText.length;
+      //    // const onlyNumber = e.children[1].outerText.substring((productName + 2), total);
 
-         const firstSize = onlyNumber.indexOf('X')
-         const secondSize = onlyNumber.indexOf(' ×')
+      //    // const firstSize = onlyNumber.indexOf('X')
+      //    // const secondSize = onlyNumber.indexOf(' ×')
 
-         const firstNumber = parseInt(onlyNumber.substring(0, firstSize))
-         const SecondNumber = parseInt(onlyNumber.substring((firstSize + 1), secondSize))
+      //    // const firstNumber = parseInt(onlyNumber.substring(0, firstSize))
+      //    // const SecondNumber = parseInt(onlyNumber.substring((firstSize + 1), secondSize))
 
-         if (firstNumber > 65 || SecondNumber > 90) {
-            const inputCity = document.querySelector('#billing_city');
-            const inputRegion = document.querySelector('#billing_state');
+      //    // if (firstNumber > 65 || SecondNumber > 90) {
+      //    //    const inputCity = document.querySelector('#billing_city');
+      //    //    const inputRegion = document.querySelector('#billing_state');
 
-            inputCity.value = 'Santiago'
-            inputCity.disabled = true
-            inputRegion.value = 'Metropolitana'
-            inputRegion.disabled = true
-         }
+      //    //    inputCity.value = 'Santiago'
+      //    //    inputCity.disabled = true
+      //    //    inputRegion.value = 'Metropolitana'
+      //    //    inputRegion.disabled = true
+      //    // }
 
-      })
+      // })
       //-------------- INPUT CART DISABLED
 
       //-------------- API
