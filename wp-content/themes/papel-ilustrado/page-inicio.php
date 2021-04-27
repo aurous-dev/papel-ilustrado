@@ -48,31 +48,6 @@ get_header();
 </section>
 <!-- SECOND SECTION  -->
 <!-- THIRD SECTION  -->
-<!-- <section class="container-fluid composition">
-   <?php if (have_rows('titulo_de_seccion_composiciones')) : ?>
-      <?php while (have_rows('titulo_de_seccion_composiciones')) : the_row(); ?>
-         <?php get_template_part('components/single/title'); ?>
-      <?php endwhile; ?>
-   <?php endif; ?>
-   <div class="container">
-      <div class="composition__slider">
-         <?php if (have_rows('composiciones_recomendadas')) : ?>
-
-            <?php while (have_rows('composiciones_recomendadas')) : the_row(); 
-            $rowNumber = get_row_index() * 3; ?>
-               <a href="<?php the_sub_field('url_destino'); ?>" class="big-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $rowNumber; ?>00">
-                  <div>
-                     <div class="big-card__container">
-                        <div class="big-card__container--img" style="background-image: url('<?php the_sub_field('imagen_de_fondo'); ?>');"></div>
-                        <?php get_template_part('components/single/card-special'); ?>
-                     </div>
-                  </div>
-               </a>
-            <?php endwhile; ?>
-         <?php endif; ?>
-      </div>
-   </div>
-</section> -->
 <section class="container-fluid composition">
 	<?php
 	$title = 'Composiciones';
@@ -116,7 +91,10 @@ get_header();
 <section class="container-fluid picture">
    <?php if (have_rows('titulo_de_seccion_individuales')) : ?>
       <?php while (have_rows('titulo_de_seccion_individuales')) : the_row(); ?>
-         <?php get_template_part('components/single/title'); ?>
+         <?php
+         $title = get_sub_field('titulo');
+         set_query_var('title', $title);
+         get_template_part('components/single/title'); ?>
       <?php endwhile; ?>
    <?php endif; ?>
    <div class="container">
