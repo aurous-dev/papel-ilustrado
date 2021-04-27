@@ -31,7 +31,7 @@
    &__menu{
       display: flex;
       padding-top: 25px;
-      @include f-center(center, center);
+      @include d-flex(center, center);
       @include fonts-display(400);
       &--search{
          display: flex;
@@ -46,7 +46,7 @@
             width: 60%;
             position: relative;
             display: flex;
-            @include f-center(center, center);
+            @include d-flex(center, center);
             input[type=submit] {
                position: absolute;
                width: 18%;
@@ -80,7 +80,7 @@
             width: 50px;
             display: flex;
             right: 5px;
-            @include f-center(center, center);
+            @include d-flex(center, center);
             i {
                font-size: 20px;
                color: $color-dark_green;
@@ -158,7 +158,7 @@
       display: flex;
       position: relative;
       height: 35px;
-      @include f-center(center, center);
+      @include d-flex(center, center);
       &::before {
          content: '';
          position: absolute;
@@ -168,7 +168,7 @@
       }
       a {
          display: flex;
-         @include f-center(center, center);
+         @include d-flex(center, center);
       }
       img {
          position: absolute;

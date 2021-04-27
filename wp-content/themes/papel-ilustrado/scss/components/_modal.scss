@@ -11,7 +11,7 @@
       width: 30px;
       height: 30px;
       display: flex;
-      @include f-center(center, center);
+      @include d-flex(center, center);
     }
   }
 }

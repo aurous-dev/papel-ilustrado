@@ -13,7 +13,7 @@
         background-color: $color-white;
         z-index: 1;
         transition: $tr3;
-        @include f-center(center,center);
+        @include d-flex(center,center);
         .btn-card {
             transition: $tr5;
         }
@@ -47,7 +47,7 @@
         }
         &-full {
             display: flex;
-            @include f-center(center,center);
+            @include d-flex(center,center);
             width: fit-content;
             width: -moz-fit-content;
             height: fit-content;
@@ -75,7 +75,7 @@
         padding: 20px;
         z-index: 1;
         transition: $tr3;
-        @include f-center(center, center);
+        @include d-flex(center, center);
         &::before {
             content: '';
             position: absolute;
@@ -121,7 +121,7 @@
                 color: $color-white;
                 background-color: $color-salmon;
                 @include fonts-display(700);
-                @include f-center(center, center);
+                @include d-flex(center, center);
             }
             h3 {
                 color: $color-indigo;
@@ -186,7 +186,7 @@
         width: fit-content;
         height: fit-content;
         transition: $tr3;
-        @include f-center(center, center);
+        @include d-flex(center, center);
         @include fonts-display(400);
         @include mq($from: desktop) {
             &:hover {
@@ -225,7 +225,7 @@
         padding: 10px;
         position: relative;
         background-color: $color-white;
-        @include f-center(center, center);
+        @include d-flex(center, center);
         @include mq($from: desktop) {
             &:hover {
                 .twice-btn {
@@ -279,7 +279,7 @@
         padding: 10px;
         position: relative;
         // background-color: $color-white;
-        @include f-center(center, center);
+        @include d-flex(center, center);
         @include mq($from: desktop) {
             &:hover {
                 .twice-btn {
@@ -394,7 +394,7 @@
 .card__instagram {
     padding: 0 10px;
     display: flex;
-    @include f-center(center, center);
+    @include d-flex(center, center);
     img {
         max-width: 100%;
         max-height: 100%;

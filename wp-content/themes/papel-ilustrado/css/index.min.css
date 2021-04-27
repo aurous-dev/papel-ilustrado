@@ -13112,13 +13112,13 @@ nav.woocommerce-breadcrumb {
   width: 80px; }
 
 .build-composition__modal {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  margin: 0 auto;
-  width: 100%; }
+  align-items: center; }
   .build-composition__modal .build__bg {
     position: absolute;
     top: 0;
@@ -13140,8 +13140,8 @@ nav.woocommerce-breadcrumb {
     top: -140px; }
   .build-composition__modal .build-price {
     width: 100%;
-    display: flex;
     padding: 20px;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(42, 61, 66, 0.4); }
@@ -13168,8 +13168,8 @@ nav.woocommerce-breadcrumb {
     .build-composition__modal .build_lista ul {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
       justify-content: center;
+      align-items: flex-start;
       background-color: #FFFFFF;
       width: 100%;
       padding: 20px; }
@@ -13237,18 +13237,18 @@ nav.woocommerce-breadcrumb {
             justify-content: center;
             align-items: center; }
           .build-composition__modal .build_lista ul li .selected .number {
+            position: absolute;
+            left: 15px;
+            top: 9px;
             width: 20px;
             height: 20px;
             background-color: #F4997E;
             border-radius: 50%;
+            font-size: 12px;
+            color: #FFFFFF;
             display: flex;
             justify-content: center;
-            align-items: center;
-            position: absolute;
-            left: 15px;
-            top: 9px;
-            font-size: 12px;
-            color: #FFFFFF; }
+            align-items: center; }
   @media (min-width: 81.25em) {
     .build-composition__modal {
       height: 700px;
@@ -13356,13 +13356,13 @@ nav.woocommerce-breadcrumb {
       height: auto;
       overflow: unset; }
     .build-modal__container.mobile .build-price__container {
+      display: flex;
       justify-content: center;
-      align-items: center;
-      display: flex; }
+      align-items: center; }
     .build-modal__container.mobile .build-price__number {
+      display: flex;
       justify-content: center;
-      align-items: center;
-      display: flex; }
+      align-items: center; }
     .build-modal__container.mobile .build_lista {
       color: #2A3D42; }
       .build-modal__container.mobile .build_lista ul {

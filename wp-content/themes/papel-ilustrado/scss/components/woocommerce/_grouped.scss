@@ -53,7 +53,7 @@
                   border-radius: 50%;
                   background-color: $color-salmon;
                   color: $color-white;
-                  @include f-center(center, center);
+                  @include d-flex(center, center);
                   &::before {
                      content: 'X';
                      font-size: 20px;

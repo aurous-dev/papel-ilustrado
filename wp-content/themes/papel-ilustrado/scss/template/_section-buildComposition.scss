@@ -6,13 +6,12 @@
     }
   }
   &__modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
     position: relative;
     margin: 0 auto;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    @include d-flex(flex-end, center);
     .build__bg {
       position: absolute;
       top: 0;
@@ -35,10 +34,9 @@
     }
     .build-price {
       width: 100%;
-      display: flex;
       padding: 20px;
-      justify-content: center;
-      align-items: center;
+      display: flex;
+      @include d-flex(center, center);
       background-color: rgba($color: $color-indigo, $alpha: 0.4);
       &__number {
         display: flex;
@@ -64,8 +62,7 @@
       ul {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
+        @include d-flex(center, flex-start);
         background-color: $color-white;
         width: 100%;
         padding: 20px;
@@ -142,22 +139,21 @@
               color: $color-white;
               display: flex;
               border-radius: 50%;
-              @include f-center(center, center);
+              @include d-flex(center, center);
             }
 
             .number {
+              position: absolute;
+              left: 15px;
+              top: 9px;
               width: 20px;
               height: 20px;
               background-color: $color-salmon;
               border-radius: 50%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              position: absolute;
-              left: 15px;
-              top: 9px;
               font-size: 12px;
               color: $color-white;
+              display: flex;
+              @include d-flex(center, center);
             }
           }
         }
@@ -257,12 +253,12 @@
     }
     .build-price {
       &__container {
-        @include f-center(center, center);
         display: flex;
+        @include d-flex(center, center); 
       }
       &__number {
-        @include f-center(center, center);
         display: flex;
+        @include d-flex(center, center);
       }
     }
     .build_lista {
@@ -317,7 +313,7 @@
               color: $color-white;
               display: flex;
               border-radius: 50%;
-              @include f-center(center, center);;
+              @include d-flex(center, center);;
             }
 
             .description {

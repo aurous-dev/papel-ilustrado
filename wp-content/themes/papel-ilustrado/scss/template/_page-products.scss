@@ -13,7 +13,7 @@
    padding: 20px 0;
    .slick-track {
       display: flex;
-      @include f-center(center, center);
+      @include d-flex(center, center);
    }
    .slick-slide {
       display: flex;

@@ -11,7 +11,7 @@
          a {
             display: flex;
             flex-direction: column;
-            @include f-center(center, center);
+            @include d-flex(center, center);
             &.button {
                display: none;
             }
@@ -29,7 +29,7 @@
                text-align: center;
                color: $color-indigo;
                font-size: 14px;
-               @include f-center(center, center);
+               @include d-flex(center, center);
                @include fonts-display(600);
                &::before {
                   content: 'Desde';

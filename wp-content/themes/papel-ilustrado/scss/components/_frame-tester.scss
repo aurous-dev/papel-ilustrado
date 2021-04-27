@@ -108,7 +108,7 @@
             border-radius: 50%;
             background-color: $color-salmon;
             color: $color-white;
-            @include f-center(center, center);
+            @include d-flex(center, center);
             &::before {
                content: 'X';
                font-size: 20px;
@@ -134,7 +134,7 @@
                border-radius: 50%;
                background: $color-salmon;
                margin-right: 10px;
-               @include f-center(center, center);
+               @include d-flex(center, center);
             }
          }
          .heart-icon {
@@ -243,7 +243,7 @@
          max-height: 400px;
          max-width: 100%;
          display: flex;
-         @include f-center(center, center);
+         @include d-flex(center, center);
       }
       &--info {
          padding-right: 150px;

@@ -126,7 +126,7 @@
 //message
 .woocommerce-message {
    display: flex;
-   @include f-center(center, center);
+   @include d-flex(center, center);
    margin: 10px auto 20px !important;
    background-color: rgba(229, 229, 229, 0.15) !important;
    border-bottom: 3px solid #C1CDCA;
