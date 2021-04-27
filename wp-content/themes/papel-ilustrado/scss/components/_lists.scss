@@ -1,0 +1,106 @@
+.build_lista {
+  position: absolute;
+  right: 10px;
+  color: $color-indigo;
+  top: 5px;
+  width: 40%;
+  ul {
+    display: flex;
+    flex-direction: column;
+    @include d-flex(center, flex-start);
+    background-color: $color-white;
+    width: 100%;
+    padding: 20px;
+    li {
+      display: flex;
+      margin: 0.2rem;
+      width: 100%;
+      font-size: 13px;
+
+      .no-selected {
+        width: 100%;
+        background-color: $color-light_white;
+        color: $color-indigo;
+        outline: 2px $color-dark_gray dashed !important;
+        outline-offset: -0.5rem;
+        padding: 1rem;
+        @include fonts-display(500);
+      }
+
+      .selected {
+        width: 100%;
+        position: relative;
+        display: grid;
+        text-align: left;
+        grid-template-columns: 50px auto 20px;
+        grid-template-rows: repeat(2, 18px);
+        color: $color-indigo;
+        column-gap: 0.5rem;
+
+        .artimage {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          &__container {
+            width: fit-content;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+            &::before {
+              content: "";
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              background: rgba($color: $color-indigo, $alpha: 0.4);
+            }
+          }
+        }
+
+        button {
+          grid-row: span 2;
+        }
+
+        .description {
+          display: flex;
+          align-items: center;
+          background-color: $color-light_white;
+          padding: 0 10px;
+          @include fonts-display(500);
+          border: 1px solid $color-dark_gray;
+          &:nth-child(2) {
+            border-bottom: none;
+          }
+          &:nth-child(4) {
+            border-top: none;
+          }
+        }
+
+        .selected-close {
+          position: relative;
+          top: 8px;
+          width: 20px;
+          height: 20px;
+          background-color: $color-salmon;
+          color: $color-white;
+          display: flex;
+          border-radius: 50%;
+          @include d-flex(center, center);
+        }
+
+        .number {
+          position: absolute;
+          left: 15px;
+          top: 9px;
+          width: 20px;
+          height: 20px;
+          background-color: $color-salmon;
+          border-radius: 50%;
+          font-size: 12px;
+          color: $color-white;
+          display: flex;
+          @include d-flex(center, center);
+        }
+      }
+    }
+  }
+}

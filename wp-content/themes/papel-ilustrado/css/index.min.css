@@ -13133,18 +13133,18 @@ nav.woocommerce-breadcrumb {
     /* Aqui esta esto para cuando no hay composicion seleccionada */ }
     .build-composition__modal .build__bg-noselected {
       background: #2A3D42;
-      outline: white 4px dashed;
+      outline: #FFFFFF 4px dashed;
       outline-offset: -2rem; }
   .build-composition__modal .build__btn {
     position: relative;
     top: -140px; }
   .build-composition__modal .build-price {
+    background-color: rgba(42, 61, 66, 0.4);
     width: 100%;
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: rgba(42, 61, 66, 0.4); }
+    align-items: center; }
     .build-composition__modal .build-price__number {
       display: flex;
       color: #FFFFFF;
@@ -13284,7 +13284,7 @@ nav.woocommerce-breadcrumb {
               font-size: 12px;
               padding: 1px 5px; }
           .build-composition__modal .build_lista ul li .no-selected {
-            outline: 1px white dashed !important;
+            outline: 1px #FFFFFF dashed !important;
             padding: 10px;
             font-size: 14px; } }
   @media (min-width: 20em) and (max-width: 46.24em) {
