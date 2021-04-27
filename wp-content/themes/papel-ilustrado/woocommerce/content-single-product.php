@@ -149,15 +149,19 @@ if (post_password_required()) {
 			img6 = new Image();
 			img7 = new Image();
 			img8 = new Image();
+			img9 = new Image();
+			img10 = new Image();
 
-			img1.src = "http://dev.trono.host/galerista/wp-content/uploads/2020/11/marcodorado-min2-min.png";
-			img2.src = "http://dev.trono.host/galerista/wp-content/uploads/2020/11/Marco-negro-conpaspartu-min.png";
-			img3.src = "http://dev.trono.host/galerista/wp-content/uploads/2020/11/marco-encajonado1-min.png";
-			img4.src = "http://dev.trono.host/galerista/wp-content/uploads/2020/11/maco-negro-min.png";
-			img5.src = "http://dev.trono.host/galerista/wp-content/uploads/2020/11/marco-madera-min.png";
-			img6.src = "http://dev.trono.host/galerista/wp-content/uploads/2020/11/Marco-oroplata-conpaspartu-min.png";
-			img7.src = "http://dev.trono.host/galerista/wp-content/uploads/2020/11/marco-oroplata-min.png";
-			img8.src = "http://dev.trono.host/galerista/wp-content/uploads/2020/11/Marco-madera-conpaspartu-min.png";
+			img1.src = "http://aurouslabs.cl/papelilustrado/wp-content/uploads/2021/03/plateado-simple-min.png";
+			img2.src = "http://aurouslabs.cl/papelilustrado/wp-content/uploads/2021/03/plateado-encajonado-min.png";
+			img3.src = "http://aurouslabs.cl/papelilustrado/wp-content/uploads/2021/03/negro-simple-min.png";
+			img4.src = "http://aurouslabs.cl/papelilustrado/wp-content/uploads/2021/03/negro-encajonado-min.png";
+			img5.src = "http://aurouslabs.cl/papelilustrado/wp-content/uploads/2021/03/madera-simple-min.png";
+			img6.src = "http://aurouslabs.cl/papelilustrado/wp-content/uploads/2021/03/madera-encajonado-min.png";
+			img7.src = "http://aurouslabs.cl/papelilustrado/wp-content/uploads/2021/03/dorado-simple-min.png";
+			img8.src = "http://aurouslabs.cl/papelilustrado/wp-content/uploads/2021/03/dorado-encajonado-min.png";
+			img9.src = "http://aurouslabs.cl/papelilustrado/wp-content/uploads/2021/03/blanco-simple-min.png";
+			img10.src = "http://aurouslabs.cl/papelilustrado/wp-content/uploads/2021/03/blanco-encajonado-min.png";
 		}
 	</script>
 </div>

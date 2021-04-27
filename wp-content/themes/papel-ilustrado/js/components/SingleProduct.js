@@ -8,7 +8,7 @@ const fullApi = devHosts.includes(name)
   : name.includes(".devel")
   ? `http://${name}`
   : `https://${name}`;
-const api = new API("http://localhost:8888/papel-ilustrado");
+const api = new API("http://aurouslabs.cl/papelilustrado");
 
 export const sigleProductScript = {
   el: "#sigle-product-vue",
