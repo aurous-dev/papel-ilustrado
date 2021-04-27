@@ -16,19 +16,9 @@
 
 // Add all the custom styles here
 @import './custom/global';
-@import './custom/section-paiting';
-@import './custom/section-composition';
-@import './custom/section-picture';
-@import './custom/section-instagram';
-@import './custom/section-news';
 @import './custom/woocommerce';
 
 // Pages
-@import './custom/page-cuadros';
-@import './custom/page-composiciones';
-@import './custom/page-search';
-@import './custom/page-products';
-
+@import './template/index';
 // Frames
 @import "./custom/frames/frames";
-@import "./custom/build-composition";
