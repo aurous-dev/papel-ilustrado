@@ -246,7 +246,6 @@ header.woocommerce-products-header,
    }
 }
 
-
 .filter-widgets {
    padding: 0 !important;
    margin: 0 !important;
@@ -328,187 +327,12 @@ header.woocommerce-products-header,
                   }
                }
             }
-            .tr-negro {
-               background: #000 content-box;
-            }
-            .tr-gris {
-               background: #959386 content-box;
-            }
-            .tr-blanco {
-               background: #fff content-box;
-               a {
-                  border: 1px solid #D2D2D2 !important;
-                  border-radius: 50%;
-                  // color: #000 !important;
-               }
-            }
-            .tr-burdeo {
-               background: #8e1e26 content-box;
-            }
-            .tr-rojo {
-               background: #ea3223 content-box;
-            }
-            .tr-rosa {
-               background: #f0bdc1 content-box;
-            }
-            .tr-beige {
-               background: #dec6a9 content-box;
-            }
-            .tr-cafe {
-               background: #5c472e content-box;
-            }
-            .tr-ocre {
-               background: #b28748 content-box;
-            }
-            .tr-naranja {
-               background: #e9a617 content-box;
-            }
-            .tr-militar {
-               background: #617829 content-box;
-            }
-            .tr-verde {
-               background: #5b9d2f content-box;
-            }
-            .tr-menta {
-               background: #6dad8c content-box;
-            }
-            .tr-mostaza {
-               background: #d3bb40 content-box;
-            }
-            .tr-amarillo {
-               background: #f1ce09 content-box;
-            }
-            .tr-arena {
-               background: #eee6a1 content-box;
-            }
-            .tr-azul {
-               background: #33708b content-box;
-            }
-            .tr-celeste {
-               background: #52a1c2 content-box;
-            }
-            .tr-turquesa {
-               background: #49a0b2 content-box;
-            }
-            .tr-agua {
-               background: #d1eaf1 content-box;
-            }
-            .tr-marino {
-               background: #1a3757 content-box;
-            }
-            .tr-piedra {
-               background: #496775 content-box;
-            }
-            .tr-petroleo {
-               background: #2f444b content-box;
-            }
-            .tr-morado {
-               background: #88779d content-box;
-            }
-            .tr-violeta {
-               background: #937599 content-box;
-            }
-            .tr-lila {
-               background: #cbb3ce content-box;
-            }
-            .tr-blanco-negro {
-               // background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
-               background: black content-box; /* For browsers that do not support gradients */
-               background: content-box -webkit-linear-gradient(
-                  left,
-                  white,
-                  black
-               ); /* For Safari 5.1 to 6.0 */
-               background: content-box -o-linear-gradient(
-                  right,
-                  white,
-                  black
-               ); /* For Opera 11.1 to 12.0 */
-               background: content-box -moz-linear-gradient(
-                  right,
-                  white,
-                  black
-               ); /* For Firefox 3.6 to 15 */
-               background: content-box linear-gradient(
-                  to right,
-                  white,
-                  black
-               ); /* Standard syntax (must be last) */
-               // a {
-               //     color: #000 !important;
-               // }
-            }
-            .tr-dorado {
-               // background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
-               background: black content-box; /* For browsers that do not support gradients */
-               background: content-box -webkit-linear-gradient(
-                  left,
-                  #d1a944,
-                  #f0e399,
-                  #d1a944,
-               ); /* For Safari 5.1 to 6.0 */
-               background: content-box -o-linear-gradient(
-                  right,
-                  #d1a944,
-                  #f0e399,
-                  #d1a944,
-               ); /* For Opera 11.1 to 12.0 */
-               background: content-box -moz-linear-gradient(
-                  right,
-                  #d1a944,
-                  #f0e399,
-                  #d1a944,
-               ); /* For Firefox 3.6 to 15 */
-               background: content-box linear-gradient(
-                  to right,
-                  #d1a944,
-                  #f0e399,
-                  #d1a944,
-               ); /* Standard syntax (must be last) */
-               // a {
-               //     color: #000 !important;
-               // }
-            }
-            .tr-multi {
-               // background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
-               background: red content-box; /* For browsers that do not support gradients */
-               background: content-box -webkit-linear-gradient(
-                  left,
-                  orange,
-                  green,
-                  blue,
-                  violet
-               ); /* For Safari 5.1 to 6.0 */
-               background: content-box -o-linear-gradient(
-                  right,
-                  orange,
-                  green,
-                  blue,
-                  violet
-               ); /* For Opera 11.1 to 12.0 */
-               background: content-box -moz-linear-gradient(
-                  right,
-                  orange,
-                  green,
-                  blue,
-                  violet
-               ); /* For Firefox 3.6 to 15 */
-               background: content-box linear-gradient(
-                  to right,
-                  orange,
-                  green,
-                  blue,
-                  violet
-               ); /* Standard syntax (must be last) */
-               // a {
-               //     color: #000 !important;
-               // }
-            }
+            // Todos los colores
+            @import 'colors';
          }
       }
    } 
 }
-
 
 // .dhwc_ajax_acf_filter:nth-child(1),
 // .dhwc_ajax_acf_filter:nth-child(2) {
