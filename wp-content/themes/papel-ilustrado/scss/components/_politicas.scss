@@ -9,7 +9,7 @@
          height: 250px;
          background-color: $color-dark_green;
          transition: $tr3;
-         @include f-center;
+         @include f-center(center, center);
          @include mq($from: desktop) {
             &:hover {
                color: $color-white;

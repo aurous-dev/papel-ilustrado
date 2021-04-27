@@ -1,4 +1,100 @@
 // Woocommerce custom styles
 li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads {
-    display: none !important;
+  display: none !important;
+}
+
+// Woocommerce Messeger
+.woocommerce-notices-wrapper {
+  .woocommerce-message {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 18px;
+    width: 100% !important;
+    max-width: 1140px;
+    a.button.wc-forward {
+      order: 2;
+      float: none !important;
+      margin-left: 20px;
+      font-size: 16px;
+      background-color: $color-indigo !important;
+      color: $color-white;
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border-radius: 0 !important;
+      transition: $tr3;
+      @include mq($from: desktop) {
+        &:hover,
+        &:active {
+          color: $color-white !important;
+          text-decoration: none;
+          background-color: $color-light_orange !important;
+        }
+      }
+    }
+    .restore-item {
+      margin-left: 15px;
+      background: $color-indigo;
+      color: $color-white;
+      padding: 6px 25px;
+      font-size: 16px;
+      transition: $tr3;
+      @include mq($from: desktop) {
+        &:hover,
+        &:active {
+          color: $color-white !important;
+          text-decoration: none;
+          background-color: $color-light_orange !important;
+        }
+      }
+    }
+    @include mq($from: tablet, $until: desktop) {
+      margin: 10px 15px 15px !important;
+      font-size: 16px;
+      a.button.wc-forward {
+        font-size: 14px;
+        padding: 8px 20px !important;
+      }
+    }
+    @include mq($from: mobile, $until: tablet) {
+      font-size: 14px;
+      padding: 10px 15px 10px 30px !important;
+      text-align: center;
+      align-items: center;
+      &::before {
+        position: absolute !important;
+        left: 10px !important;
+      }
+      a.button.wc-forward {
+        font-size: 13px;
+        margin: 10px auto;
+        padding: 10px 20px;
+      }
+      .restore-item {
+        margin-left: 10px;
+        padding: 6px 20px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+nav.woocommerce-breadcrumb {
+  max-width: 1140px;
+  padding: 20px 15px !important;
+  color: $color-indigo !important;
+  font-size: 14px !important;
+  margin: 0 auto !important;
+  @include fonts-display(600);
+  a {
+    font-size: 14px !important;
+    color: $color-indigo !important;
+    @include fonts-display(400);
+  }
+  @include mq($from: mobile, $until: tablet) {
+    font-size: 12px !important;
+    a {
+      font-size: 12px !important;
+    }
+  }
 }

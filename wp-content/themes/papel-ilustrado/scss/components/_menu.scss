@@ -5,7 +5,7 @@
    list-style: none;
    margin-bottom: 20px;
    letter-spacing: 0.05em;
-   @include f-center;
+   @include f-center(center, center);
    @include fonts-display(700);
    // Lista principal
    & > li {

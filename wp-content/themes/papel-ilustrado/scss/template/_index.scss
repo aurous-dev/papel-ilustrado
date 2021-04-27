@@ -1,10 +1,16 @@
+// Only used for Slider styles
 @import 'section-paiting';
 @import 'section-composition';
 @import 'section-picture';
 @import 'section-instagram';
 @import 'section-news';
+
+// Only used for Grid styles
 @import 'page-cuadros';
-@import 'page-composiciones';
 @import 'page-search';
+
+
+@import 'page-composiciones';
+@import 'page-armaComposicion';
 @import 'page-products';
-@import "build-composition";
+@import 'section-buildComposition';

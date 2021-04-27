@@ -1,6 +1,6 @@
-@mixin f-center {
-   align-items: center;
-   justify-content: center;
+@mixin f-center($justify, $align) {
+   justify-content: $justify;
+   align-items: $align;
 }
 
 @mixin bg-center {

@@ -50,7 +50,7 @@ h2.w-cart__title {
          }
          .w-cart__table--thumbnail {
             display: flex;
-            @include f-center;
+            @include f-center(center, center);
             img {
                width: 40px;
             }
