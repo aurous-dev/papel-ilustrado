@@ -84,25 +84,48 @@ export const sigleProductScript = {
     },
 
     obtenerValue: function(values, e) {
-      if(e) e.preventDefault();
       this.valor = values;
-      const inputMarco = document.querySelector('#pa_marco').children;
-      
-      // Iterador
-      for (const inputs in inputMarco) {
-        if (Object.hasOwnProperty.call(inputMarco, inputs)) {
-          const select = inputMarco[inputs];
-          const inputValue = inputMarco[inputs].value ;
-          const withoutSpace = this.valor.replace(' ', '-');
-          let [firstLetter, ...restLetter] = withoutSpace
-          const lower = `${firstLetter.toLowerCase()}${restLetter.join('')}`
+      const inputMarco = document.querySelector('#pa_marco');
+      const inputMarco2 = document.querySelector('#marco');
 
-          if(inputValue === lower) {
-            select.selected = true;
+      // Probador de Marco con el select a la izquierda
+      if(inputMarco) {
+        // Iterador
+        for (const inputs in inputMarco.children) {
+          if (Object.hasOwnProperty.call(inputMarco, inputs)) {
+            const select = inputMarco[inputs];
+            const inputValue = inputMarco[inputs].value ;
+
+            const withoutSpace = this.valor.replace(/ /gi, '-');
+            let [firstLetter, ...restLetter] = withoutSpace
+            const lower = `${firstLetter.toLowerCase()}${restLetter.join('')}`
+  
+            if(inputValue === lower) {
+              select.selected = true;
+            }
           }
         }
+        return;
       }
 
+      // Probador de Marco con el select a la derecha
+      if(inputMarco2) {
+        // Iterador
+        for (const inputs in inputMarco2.children) {
+          if (Object.hasOwnProperty.call(inputMarco2, inputs)) {
+            const select = inputMarco2[inputs];
+            const optionValue = inputMarco2[inputs].value ;
+            const valueProbador = this.valor;
+
+            // Selecciona el marco del probador
+            if(optionValue === valueProbador) {
+              select.selected = true;
+            }
+
+          }
+        }
+        return;
+      }
 
     }
   },
