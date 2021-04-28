@@ -189,10 +189,13 @@ export function inputValue(e) {
       }
 
       setTimeout(() => {
-         const qtyVal = document.querySelector(".woocommerce-Price-amount.amount");
-         if (qtyVal.innerText.length > 5) {
-            btnAdd.classList.add("woosg-disabled", 'woosg-selection');
-            btnAdd.disabled = true;
+         const qtyVal = document.querySelector("p.woocommerce-Price-amount.amount");
+
+         if(qtyVal) {
+            if (qtyVal.innerText.length > 5) {
+               btnAdd.classList.add("woosg-disabled", 'woosg-selection');
+               btnAdd.disabled = true;
+            }
          }
       }, 500);
 

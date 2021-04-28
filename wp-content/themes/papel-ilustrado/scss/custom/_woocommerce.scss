@@ -3,6 +3,18 @@ li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--
   display: none !important;
 }
 
+//woocommerce
+#sidebar {
+  display: none;
+}
+.woocommerce-page {
+  #primary {
+      min-height: 60%;
+      margin-bottom: -100px;
+      padding-bottom: 100px;
+  }
+}
+
 // Woocommerce Messeger
 .woocommerce-notices-wrapper {
   .woocommerce-message {
