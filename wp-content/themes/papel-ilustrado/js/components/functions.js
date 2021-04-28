@@ -97,14 +97,8 @@ export const observer = new MutationObserver( mutationListener => {
       if(addedNodes.length > 1) {
          if(target.classList.contains('single_variation')) {
             const price = document.querySelector('.price.simple-product__price');
-   
-            if (price.classList.contains('opacity')) {
-               price.classList.remove('opacity')
-               return
-            } else {
-               price.classList.add('opacity')
-               return
-            }
+            price.classList.add('opacity')
+            return;
          }
       }
 
