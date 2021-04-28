@@ -25,7 +25,7 @@ export const nameCheckout = document.querySelectorAll('form.w-checkout__containe
 // API
 export const cartAPI = document.querySelector('#main');
 export const observerOptions = {
-   attributes: false,
+   characterData: true,
    childList: true,
    subtree: true
 }

@@ -31,6 +31,7 @@
       .woosg_total.woosg-total.woosg-text {
          display: none !important;
       }
+      @import 'form';
    }
    &__title {
       font-size: 22px;
@@ -46,6 +47,8 @@
       padding: 0 0 13px;
       font-size: 22px !important;
       color: $color-indigo !important;
+      opacity: 1;
+      visibility: visible;
       @include fonts-display(700);
       &.woocommerce-variation-price {
          .price {
@@ -56,9 +59,14 @@
 
          }
       }
+      &.opacity {
+         opacity: 0;
+         visibility: hidden;
+      }
    }
    &__size {
       &--form {
+         position: relative;
          flex-wrap: wrap;
          display: flex;
          align-items: center;
@@ -94,6 +102,8 @@
             display: flex;
          }
          .alerta {
+            position: absolute;
+            bottom: -20px;
             p {
                color: $color-salmon;
                font-size: 12px;

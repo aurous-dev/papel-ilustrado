@@ -72,9 +72,12 @@ export function carts(element) {
 // API
 export const observer = new MutationObserver( mutationListener => {
    mutationListener.forEach( mutation => {
-      if(mutation.addedNodes.length && mutation.addedNodes[0].classList) {
-         const cartTable = mutation.addedNodes[0].classList[1];
-         const shopTable = mutation.addedNodes[0].classList[0];
+      const {addedNodes,target} = mutation
+      
+      //Carrito de compra
+      if(addedNodes.length && addedNodes[0].classList) {
+         const cartTable = addedNodes[0].classList[1];
+         const shopTable = addedNodes[0].classList[0];
 
          if (cartTable === 'w-cart__form') {
             const cartTd = document.querySelectorAll(".w-cart__table--name a");
@@ -89,6 +92,22 @@ export const observer = new MutationObserver( mutationListener => {
             return
          }
       }
+
+      // Producto Simple
+      if(addedNodes.length > 1) {
+         if(target.classList.contains('single_variation')) {
+            const price = document.querySelector('.price.simple-product__price');
+   
+            if (price.classList.contains('opacity')) {
+               price.classList.remove('opacity')
+               return
+            } else {
+               price.classList.add('opacity')
+               return
+            }
+         }
+      }
+
    } )
 })
 //------------------- SEPARAR PALABRAS EN CARRITO
@@ -162,6 +181,14 @@ export function inputValue(e) {
 
    // Confirma que el value de los dos inputs no sean vacios
    if (inputDiv1 === '' || inputDiv2 === '') {
+      const price = document.querySelector('.price.simple-product__price');
+
+      // Remover clase de opacity agregado en la funcion API 
+      if(price) {
+         if(price.classList.contains('opacity')) {
+            price.classList.remove('opacity')
+         }
+      }
 
       if (!mensaje) {
          crearUnDiv(varationsDiv);
@@ -192,6 +219,8 @@ export function inputValue(e) {
 export function reset(e) {
    const btnAdd = document.querySelector(".single_add_to_cart_button.button.alt");
    const mensaje = document.querySelector('.alerta');
+   const price = document.querySelector('.price.simple-product__price');
+
    if(mensaje) {
       mensaje.remove();
    }
@@ -202,6 +231,14 @@ export function reset(e) {
          btnAdd.disabled = false;
       }
    }, 500);
+
+   // Remover clase de opacity agregado en la funcion API 
+   if(price) {
+      if(price.classList.contains('opacity')) {
+         price.classList.remove('opacity')
+         return
+      }
+   }
 }
 export function crearUnDiv(e) {
 
