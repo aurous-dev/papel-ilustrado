@@ -10246,7 +10246,8 @@ header.woocommerce-products-header,
     color: #2A3D42; }
 
 .simple-product__modal {
-  padding: 20px 20px 50px; }
+  padding: 20px 20px 50px;
+  justify-content: space-between; }
   .simple-product__modal--img {
     max-height: 400px;
     max-width: 100%;
@@ -10338,7 +10339,9 @@ header.woocommerce-products-header,
   .simple-product__btn .buy {
     padding: 8px 20px;
     font-size: 13px;
-    width: 100%; } }
+    width: 100%; }
+  .simple-product__modal--info {
+    padding-right: 50px; } }
 
 @media (min-width: 20em) and (max-width: 46.24em) {
   .simple-product__container {

@@ -248,6 +248,7 @@
    // Ventana modal
    &__modal {
       padding: 20px 20px 50px;
+      justify-content: space-between;
       &--img {
          max-height: 400px;
          max-width: 100%;
@@ -390,6 +391,14 @@
             width: 100%;
          }
       }
+
+      // Ventana modal
+   &__modal {
+
+      &--info {
+         padding-right: 50px;
+      }
+   }
    }
    @include mq($from: mobile, $until: tablet) {
       &__container {
