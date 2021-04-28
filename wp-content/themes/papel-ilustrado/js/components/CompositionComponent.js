@@ -51,7 +51,7 @@ export const compositionComponentScript = {
     this.isLoading = true;
     await this.callCompositions(1);
     await this.slider();
-    window.addEventListener('resize', this.unslike)
+    window.addEventListener("resize", this.unslike);
     await this.callMarcos(1);
     await this.callProducts(1);
     // await this.callACF(1);
@@ -126,12 +126,12 @@ export const compositionComponentScript = {
       return 0;
     },
     urlToCart() {
-      if(this.finalArtworksInfo && this.finalArtworksInfo.length > 0) {
+      if (this.finalArtworksInfo && this.finalArtworksInfo.length > 0) {
         const productsIds = this.finalArtworksInfo.join(",");
         return `${baseUrl}/cart/?add-to-cart=${productsIds}`;
       }
-      return '#';
-    }
+      return "#";
+    },
   },
   methods: {
     console(title, info) {
@@ -183,10 +183,13 @@ export const compositionComponentScript = {
         ],
       });
       if (window.outerWidth < 500) {
-        const sliderComposition = document.querySelector('.slider-nav');
-        await sliderComposition.classList.add('slider_mobile');
-        sliderComposition.classList.remove('slider-nav', 'slick-initialized', 'slick-slider')
-
+        const sliderComposition = document.querySelector(".slider-nav");
+        await sliderComposition.classList.add("slider_mobile");
+        sliderComposition.classList.remove(
+          "slider-nav",
+          "slick-initialized",
+          "slick-slider"
+        );
       }
     },
     async callMarcos(page) {
@@ -334,23 +337,31 @@ export const compositionComponentScript = {
     changeStep(step) {
       this.step = step;
       this.stepInfo = stepsDescription[this.step];
-      console.log(step)
+      console.log(step);
       if (step >= 0) {
         this.mobile = true;
       }
     },
     unslike() {
       if (window.outerWidth < 500) {
-        const sliderComposition = document.querySelector('.slider-nav');
-        sliderComposition.classList.add('slider_mobile')
-        sliderComposition.classList.remove('slider-nav', 'slick-initialized', 'slick-slider')
+        const sliderComposition = document.querySelector(".slider-nav");
+        sliderComposition.classList.add("slider_mobile");
+        sliderComposition.classList.remove(
+          "slider-nav",
+          "slick-initialized",
+          "slick-slider"
+        );
       } else {
-        const sliderComposition = document.querySelector('.slider_mobile');
-        if(sliderComposition) {
-          sliderComposition.classList.add('slider-nav', 'slick-initialized', 'slick-slider');
-          sliderComposition.classList.remove('slider_mobile')
+        const sliderComposition = document.querySelector(".slider_mobile");
+        if (sliderComposition) {
+          sliderComposition.classList.add(
+            "slider-nav",
+            "slick-initialized",
+            "slick-slider"
+          );
+          sliderComposition.classList.remove("slider_mobile");
         }
-      } 
-    }
+      }
+    },
   },
 };

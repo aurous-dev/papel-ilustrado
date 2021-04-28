@@ -94,7 +94,7 @@
                               <div class="form__title">Selecciona un marco</div>
                               <div class="frame-option form__select">
                                 <select v-model="selectedMarco">
-                                  <option selected="true" disabled="disabled">Selecciona tu marco</option>
+                                  <option hidden value='' selected="selected" disabled="disabled">Selecciona tu marco</option>
                                   <option v-for="option in obra.marcos" :key="option.nombre_de_marco" :value="option">
                                     {{ option.nombre_de_marco }}
                                   </option>
