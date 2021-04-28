@@ -10041,7 +10041,7 @@ header.woocommerce-products-header,
   .simple-product__container div.product {
     width: 100% !important; }
   .simple-product__container .cart .form__title {
-    display: block !important;
+    display: none !important;
     font-size: 12px;
     text-transform: uppercase;
     color: #2A3D42;
@@ -10049,16 +10049,21 @@ header.woocommerce-products-header,
     margin-bottom: 0;
     font-family: 'Raleway', sans-serif;
     font-weight: 700; }
-  .simple-product__container .cart .quantity input[type='number'] {
-    height: 30px;
-    width: 50%;
-    border: 1px solid #D2D2D2;
-    font-weight: 600;
-    font-size: 14px;
-    color: #182224;
-    padding: 0 10px;
-    margin-bottom: 20px;
-    position: relative; }
+  .simple-product__container .cart .quantity {
+    display: none; }
+    .simple-product__container .cart .quantity input[type='number'] {
+      height: 30px;
+      width: 50%;
+      border: 1px solid #D2D2D2;
+      font-weight: 600;
+      font-size: 14px;
+      color: #182224;
+      padding: 0 10px;
+      margin-bottom: 20px;
+      position: relative; }
+  .simple-product__container .woocommerce-product-gallery__image {
+    pointer-events: none;
+    cursor: default; }
   .simple-product__container .woosg_total.woosg-total.woosg-text {
     display: none !important; }
   .simple-product__container form.variations_form.cart.variations--dropdown .single_variation_wrap {
@@ -10066,6 +10071,12 @@ header.woocommerce-products-header,
     .simple-product__container form.variations_form.cart.variations--dropdown .single_variation_wrap .woocommerce-variation.single_variation {
       position: absolute;
       top: -210px; }
+      @media (min-width: 46.25em) and (max-width: 61.24em) {
+        .simple-product__container form.variations_form.cart.variations--dropdown .single_variation_wrap .woocommerce-variation.single_variation {
+          top: -205px; } }
+      @media (min-width: 20em) and (max-width: 46.24em) {
+        .simple-product__container form.variations_form.cart.variations--dropdown .single_variation_wrap .woocommerce-variation.single_variation {
+          top: -245px; } }
 
 .simple-product__title {
   font-size: 22px;

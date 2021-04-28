@@ -6,7 +6,7 @@
       }
       .cart {
          .form__title {
-            display: block !important;
+            display: none !important;
             font-size: 12px;
             text-transform: uppercase;
             color: $color-indigo;
@@ -15,6 +15,7 @@
             @include fonts-display(700)
          }
          .quantity {
+            display: none;
             input[type='number'] {
                height: 30px;
                width: 50%;
@@ -27,6 +28,10 @@
                position: relative;
             }
          }
+      }
+      .woocommerce-product-gallery__image {
+         pointer-events: none;
+         cursor: default;
       }
       .woosg_total.woosg-total.woosg-text {
          display: none !important;
