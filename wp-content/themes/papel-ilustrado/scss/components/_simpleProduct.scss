@@ -6,7 +6,7 @@
       }
       .cart {
          .form__title {
-            display: none !important;
+            // display: none !important;
             font-size: 12px;
             text-transform: uppercase;
             color: $color-indigo;
@@ -46,7 +46,7 @@
                   img {
                      max-height: 550px;
                      object-fit: cover;
-                     width: 100%;
+                     width: 100% !important;
                      margin-bottom: 15px;
                   }
                }

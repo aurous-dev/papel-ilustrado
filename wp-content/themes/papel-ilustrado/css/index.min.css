@@ -10048,7 +10048,6 @@ header.woocommerce-products-header,
   .simple-product__container div.product {
     width: 100% !important; }
   .simple-product__container .cart .form__title {
-    display: none !important;
     font-size: 12px;
     text-transform: uppercase;
     color: #2A3D42;
@@ -10077,7 +10076,7 @@ header.woocommerce-products-header,
     .simple-product__container figure.woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image:first-child a img {
       max-height: 550px;
       object-fit: cover;
-      width: 100%;
+      width: 100% !important;
       margin-bottom: 15px; }
   .simple-product__container .woosg_total.woosg-total.woosg-text {
     display: none !important; }
@@ -10085,13 +10084,13 @@ header.woocommerce-products-header,
     position: relative; }
     .simple-product__container form.variations_form.cart.variations--dropdown .single_variation_wrap .woocommerce-variation.single_variation {
       position: absolute;
-      top: -170px; }
+      top: -210px; }
       @media (min-width: 46.25em) and (max-width: 61.24em) {
         .simple-product__container form.variations_form.cart.variations--dropdown .single_variation_wrap .woocommerce-variation.single_variation {
-          top: -180px; } }
+          top: -205px; } }
       @media (min-width: 20em) and (max-width: 46.24em) {
         .simple-product__container form.variations_form.cart.variations--dropdown .single_variation_wrap .woocommerce-variation.single_variation {
-          top: -210px; } }
+          top: -245px; } }
 
 .simple-product__title {
   font-size: 22px;
@@ -12141,13 +12140,15 @@ h2.w-cart__title {
   * button {
     border: none; }
 
-body, html {
+body,
+html {
   background-color: rgba(229, 229, 229, 0.15);
   overflow-x: hidden;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth; }
   @media (min-width: 81.25em) {
-    body .woocommerce, html .woocommerce {
+    body .woocommerce,
+    html .woocommerce {
       min-height: 55vh; } }
 
 #app {
@@ -12163,6 +12164,9 @@ body, html {
     color: #F4997E;
     font-size: 12px;
     margin: 8px 0 0; }
+
+.lg-image {
+  max-height: 80vh !important; }
 
 /*-------------------------------------------*\
 

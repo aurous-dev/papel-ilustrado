@@ -53,6 +53,11 @@ import regeneratorRuntime from "regenerator-runtime";
 import { sigleProductScript } from "./components/SingleProduct";
 import { compositionComponentScript } from "./components/CompositionComponent";
 
+import * as lightGallery from 'lightgallery'
+
+import lgThumbnail from 'lightgallery/modules/lg-thumbnail'
+import lgZoom from 'lightgallery/modules/lg-zoom'
+
 // Import App Vue
 const app = new Vue({
   el: "#app",
@@ -80,3 +85,11 @@ if (document.querySelector("#composition-component")) {
 // Create Composition
 
 allSliders();
+
+
+$(document).ready(function() {
+  $(".woocommerce-product-gallery__wrapper").lightGallery({
+    selector: 'a',
+    download: false,
+  }); 
+});
