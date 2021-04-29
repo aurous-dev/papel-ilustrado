@@ -1,0 +1,15 @@
+form.variations_form.cart.variations--dropdown {
+  .single_variation_wrap {
+    position: relative;
+    .woocommerce-variation.single_variation {
+      position: absolute;
+      top: -210px;
+      @include mq($from: tablet, $until: desktop) {
+        top: -205px;
+      }
+      @include mq($from: mobile, $until: tablet) {
+        top: -245px;
+      }
+    }
+  }
+}
