@@ -9310,6 +9310,11 @@ a.text-dark:hover, a.text-dark:focus {
       text-align: center;
       font-size: 11px;
       transition: all ease-in-out 0.3s; }
+  @media (min-width: 61.25em) and (max-width: 81.24em) {
+    .card__container {
+      grid-template-rows: 260px 1fr; }
+      .card__container--img-full {
+        height: 240px; } }
   @media (min-width: 46.25em) and (max-width: 61.24em) {
     .card__container {
       grid-template-rows: unset;
@@ -9318,6 +9323,8 @@ a.text-dark:hover, a.text-dark:focus {
       flex-direction: column; }
       .card__container--img {
         padding: 5px; }
+        .card__container--img-full {
+          height: 220px; }
       .card__container--twice {
         max-height: 280px; }
       .card__container--desc-price .price-off,
@@ -10061,22 +10068,30 @@ header.woocommerce-products-header,
       padding: 0 10px;
       margin-bottom: 20px;
       position: relative; }
-  .simple-product__container .woocommerce-product-gallery__image {
-    pointer-events: none;
-    cursor: default; }
+  .simple-product__container figure.woocommerce-product-gallery__wrapper {
+    max-width: 90%;
+    margin: 0 auto !important; }
+    .simple-product__container figure.woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image a img {
+      width: 90% !important;
+      object-fit: cover; }
+    .simple-product__container figure.woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image:first-child a img {
+      max-height: 550px;
+      object-fit: cover;
+      width: 100%;
+      margin-bottom: 15px; }
   .simple-product__container .woosg_total.woosg-total.woosg-text {
     display: none !important; }
   .simple-product__container form.variations_form.cart.variations--dropdown .single_variation_wrap {
     position: relative; }
     .simple-product__container form.variations_form.cart.variations--dropdown .single_variation_wrap .woocommerce-variation.single_variation {
       position: absolute;
-      top: -210px; }
+      top: -170px; }
       @media (min-width: 46.25em) and (max-width: 61.24em) {
         .simple-product__container form.variations_form.cart.variations--dropdown .single_variation_wrap .woocommerce-variation.single_variation {
-          top: -205px; } }
+          top: -180px; } }
       @media (min-width: 20em) and (max-width: 46.24em) {
         .simple-product__container form.variations_form.cart.variations--dropdown .single_variation_wrap .woocommerce-variation.single_variation {
-          top: -245px; } }
+          top: -210px; } }
 
 .simple-product__title {
   font-size: 22px;

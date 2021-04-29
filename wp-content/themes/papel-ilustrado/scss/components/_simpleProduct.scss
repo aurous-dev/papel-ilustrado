@@ -29,9 +29,30 @@
             }
          }
       }
-      .woocommerce-product-gallery__image {
-         pointer-events: none;
-         cursor: default;
+      figure.woocommerce-product-gallery__wrapper {
+         max-width: 90%;
+         margin: 0 auto !important;
+         .woocommerce-product-gallery__image {
+            // pointer-events: none;
+            // cursor: default;
+            a {
+               img {
+                  width: 90% !important;
+                  object-fit: cover;
+               }
+            }
+            &:first-child {
+               a {
+                  img {
+                     max-height: 550px;
+                     object-fit: cover;
+                     width: 100%;
+                     margin-bottom: 15px;
+                  }
+               }
+            }
+            
+         }
       }
       .woosg_total.woosg-total.woosg-text {
          display: none !important;

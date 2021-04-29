@@ -328,6 +328,14 @@
     }
   }
 
+  @include mq($from: desktop, $until: wide) {
+    grid-template-rows: 260px 1fr;
+    &--img {
+      &-full {
+        height: 240px;
+      }
+    }
+  }
   @include mq($from: tablet, $until: desktop) {
     grid-template-rows: unset;
     grid-template-columns: unset;
@@ -335,6 +343,9 @@
     flex-direction: column;
     &--img {
       padding: 5px;
+      &-full {
+        height: 220px;
+      }
     }
     &--twice {
       max-height: 280px;

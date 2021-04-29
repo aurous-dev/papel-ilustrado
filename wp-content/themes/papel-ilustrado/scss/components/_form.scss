@@ -3,12 +3,12 @@ form.variations_form.cart.variations--dropdown {
     position: relative;
     .woocommerce-variation.single_variation {
       position: absolute;
-      top: -210px;
+      top: -170px;
       @include mq($from: tablet, $until: desktop) {
-        top: -205px;
+        top: -180px;
       }
       @include mq($from: mobile, $until: tablet) {
-        top: -245px;
+        top: -210px;
       }
     }
   }
