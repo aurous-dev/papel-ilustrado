@@ -177,19 +177,19 @@ export const compositionComponentScript = {
             settings: {
               slidesToShow: 5,
               slidesToScroll: 1,
-              dots: true,
             },
           },
         ],
       });
       if (window.outerWidth < 500) {
-        const sliderComposition = document.querySelector(".slider-nav");
-        await sliderComposition.classList.add("slider_mobile");
-        sliderComposition.classList.remove(
-          "slider-nav",
-          "slick-initialized",
-          "slick-slider"
-        );
+        $(".slider-nav").slick('unslick')
+        // const sliderComposition = document.querySelector(".slider-nav");
+        // await sliderComposition.classList.add("slider_mobile");
+        // sliderComposition.classList.remove(
+        //   "slider-nav",
+        //   "slick-initialized",
+        //   "slick-slider"
+        // );
       }
     },
     async callMarcos(page) {
@@ -344,23 +344,40 @@ export const compositionComponentScript = {
     },
     unslike() {
       if (window.outerWidth < 500) {
-        const sliderComposition = document.querySelector(".slider-nav");
-        sliderComposition.classList.add("slider_mobile");
-        sliderComposition.classList.remove(
-          "slider-nav",
-          "slick-initialized",
-          "slick-slider"
-        );
+        $(".slider-nav").slick('unslick')
+        // const sliderComposition = document.querySelector(".slider-nav");
+        // sliderComposition.classList.add("slider_mobile");
+        // sliderComposition.classList.remove(
+        //   "slider-nav",
+        //   "slick-initialized",
+        //   "slick-slider"
+        // );
       } else {
-        const sliderComposition = document.querySelector(".slider_mobile");
-        if (sliderComposition) {
-          sliderComposition.classList.add(
-            "slider-nav",
-            "slick-initialized",
-            "slick-slider"
-          );
-          sliderComposition.classList.remove("slider_mobile");
-        }
+        $(".slider-nav").slick({
+          infinite: true,
+          slidesToShow: 10,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: true,
+          responsive: [
+            {
+              breakpoint: 770,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+        // const sliderComposition = document.querySelector(".slider_mobile");
+        // if (sliderComposition) {
+        //   sliderComposition.classList.add(
+        //     "slider-nav",
+        //     "slick-initialized",
+        //     "slick-slider"
+        //   );
+        //   sliderComposition.classList.remove("slider_mobile");
+        // }
       }
     },
   },
