@@ -13560,7 +13560,7 @@ nav.woocommerce-breadcrumb {
         height: 350px; } }
 
 #sigle-product-vue img {
-  max-width: 800px;
+  max-width: 100%;
   max-height: 400px; }
 
 #sigle-product-vue .inner {
