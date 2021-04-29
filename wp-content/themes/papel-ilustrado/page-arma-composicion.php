@@ -44,7 +44,8 @@ get_header();
                   <div v-else class="selected">
                      <button @click="setDimensions(art, index)" data-toggle="modal" data-target="#build-modal">
                         <div class="artimage__container">
-                           <img class="artimage" :src="selectedArtworks[index].images[0].src" alt="">
+                           <img v-if="selectedArtworks[index].images[0] && selectedArtworks[index].images[0].src" class="artimage" :src="selectedArtworks[index].images[0].src" alt="">
+                           <img v-else class="artimage" src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
                         </div>
                      </button>
                      <div class="description">{{selectedArtworks[index].name}}</div>
@@ -168,7 +169,8 @@ get_header();
                   <div v-else class="selected">
                      <button @click="setDimensions(art, index)">
                         <div class="artimage__container">
-                           <img class="artimage" :src="selectedArtworks[index].images[0].src" alt="">
+                           <img v-if="selectedArtworks[index].images[0] && selectedArtworks[index].images[0].src" class="artimage" :src="selectedArtworks[index].images[0].src" alt="">
+                           <img v-else class="artimage" src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
                         </div>
                      </button>
                      <div class="description mt-3">{{selectedArtworks[index].name}}</div>
