@@ -9106,7 +9106,7 @@ a.text-dark:hover, a.text-dark:focus {
             opacity: 1; } }
       .card__container--img-full img {
         z-index: -1;
-        height: 100%;
+        height: 100% !important;
         max-width: 100%; }
   .card__container--imgOut {
     position: relative;
