@@ -46,6 +46,8 @@ export const compositionComponentScript = {
     step: 0,
     stepInfo: stepsDescription[0],
     mobile: true,
+    productPage: 1,
+    haveMore: true,
   },
   created: async function() {
     this.isLoading = true;
@@ -182,7 +184,7 @@ export const compositionComponentScript = {
         ],
       });
       if (window.outerWidth < 500) {
-        $(".slider-nav").slick('unslick')
+        $(".slider-nav").slick("unslick");
         // const sliderComposition = document.querySelector(".slider-nav");
         // await sliderComposition.classList.add("slider_mobile");
         // sliderComposition.classList.remove(
@@ -221,25 +223,41 @@ export const compositionComponentScript = {
       }
     },
     async callProducts(page) {
-      const response = await axios.get(
-        `${baseUrl}/wp-json/wc/store/products?_fields=id,name,attributes,type,variations,categories,images,prices`,
-        {
-          params: {
-            per_page: 100,
-            page,
-            type: "variable",
-            stock_status: "instock",
-          },
+      if (!this.haveMore) return;
+
+      console.log("Llamamos obras");
+
+      try {
+        const response = await axios.get(
+          `${baseUrl}/wp-json/wc/store/products?_fields=id,name,attributes,type,variations,categories,images,prices`,
+          {
+            params: {
+              per_page: 100,
+              page,
+              type: "variable",
+              stock_status: "instock",
+            },
+          }
+        );
+        this.productPage += 1;
+
+        console.log(response.data);
+
+        const onlyVariableProducts = response.data.filter(
+          (product) => product.type === "variable"
+        );
+
+        console.log(onlyVariableProducts);
+        this.products = [...this.products, ...onlyVariableProducts];
+
+        if (onlyVariableProducts.length === 0)
+          await this.callProducts(this.productPage);
+
+        if (response.data.length !== 100) {
+          this.haveMore = false;
         }
-      );
-      const onlyVariableProducts = response.data.filter(
-        (product) => product.type === "variable"
-      );
-      this.products = [...this.products, ...onlyVariableProducts];
-      if (response.data.length === 100) {
-        await this.callProducts(page + 1);
-      } else {
-        return null;
+      } catch (err) {
+        console.error(err);
       }
     },
     async callACF(page) {
@@ -344,7 +362,7 @@ export const compositionComponentScript = {
     },
     unslike() {
       if (window.outerWidth < 500) {
-        $(".slider-nav").slick('unslick')
+        $(".slider-nav").slick("unslick");
         // const sliderComposition = document.querySelector(".slider-nav");
         // sliderComposition.classList.add("slider_mobile");
         // sliderComposition.classList.remove(
