@@ -27,12 +27,15 @@ const stepsDescription = [
 export const compositionComponentScript = {
   el: "#composition-component",
   data: {
+    listOfCategories: [],
+    selectedCategory: "",
     selectedComposition: undefined,
     selectedDimensions: {},
     selectedArtworks: [],
     selectedArtworksMap: new Map(),
     compositions: [],
     marcos: [],
+    filteredMarcos: [],
     products: [],
     isLoading: false,
     selectedMarco: "Sin marco",
@@ -48,19 +51,25 @@ export const compositionComponentScript = {
     mobile: true,
     productPage: 1,
     haveMore: true,
+    repisasIds: [],
+    repisas: new Map(),
+    availableRepisas: [],
+    selectedRepisas: [],
   },
   created: async function() {
     this.isLoading = true;
     await this.callCompositions(1);
+    await this.callRepisas();
     await this.slider();
     window.addEventListener("resize", this.unslike);
     await this.callMarcos(1);
+    await this.callCategories();
     await this.callProducts(1);
     // await this.callACF(1);
     this.isLoading = false;
   },
   computed: {
-    filteredProducts() {
+    filteredProductsBySize() {
       if (
         !this.isLoading &&
         this.selectedDimensions?.dimensions &&
@@ -80,6 +89,25 @@ export const compositionComponentScript = {
           return haveDimention;
         });
         return finalProducts;
+      }
+      return [];
+    },
+    finalFilteredProducts() {
+      if (this.filteredProductsBySize.length > 0) {
+        let filteredProducts = this.filteredProductsBySize.filter((product) => {
+          // ! Filter by category
+          let haveCategorySelected = product.categories.some(
+            (productCategory) =>
+              productCategory.slug.includes(this.selectedCategory)
+          );
+
+          // ? Final return with al filters
+          return haveCategorySelected;
+        });
+
+        if (filteredProducts.length === 0) this.callProducts(this.productPage);
+
+        return filteredProducts;
       }
       return [];
     },
@@ -129,7 +157,21 @@ export const compositionComponentScript = {
     },
     urlToCart() {
       if (this.finalArtworksInfo && this.finalArtworksInfo.length > 0) {
-        const productsIds = this.finalArtworksInfo.join(",");
+        let productsIds = this.finalArtworksInfo.join(",");
+        if (
+          this.selectedRepisas.length > 0 &&
+          this.selectedRepisas.includes(undefined)
+        ) {
+          return "#";
+        }
+        if (
+          this.selectedRepisas.length > 0 &&
+          !this.selectedRepisas.includes(undefined)
+        ) {
+          this.console("repisas", this.selectedRepisas);
+          let repisas = this.selectedRepisas.join(",");
+          productsIds = `${productsIds},${repisas}`;
+        }
         return `${baseUrl}/cart/?add-to-cart=${productsIds}`;
       }
       return "#";
@@ -152,12 +194,25 @@ export const compositionComponentScript = {
         }
       );
 
-      const compositions = response.data.map((composition) => ({
-        id: composition.id,
-        icono: composition.acf.icono,
-        imagen: composition.acf.imagen,
-        obras: composition.acf.obras.map((obra) => obra.tamano),
-      }));
+      const compositions = response.data.map((composition) => {
+        let simpleComposition = {
+          id: composition.id,
+          icono: composition.acf.icono,
+          imagen: composition.acf.imagen,
+          obras: composition.acf.obras.map((obra) => obra.tamano),
+        };
+        if (composition.acf?.repisa) {
+          let repisasToAdd = composition.acf.repisas.map(
+            (repisa) => repisa.repisa
+          );
+          this.repisasIds = [...this.repisasIds, ...repisasToAdd];
+          simpleComposition = {
+            ...simpleComposition,
+            repisas: [...repisasToAdd],
+          };
+        }
+        return simpleComposition;
+      });
 
       this.compositions = [...this.compositions, ...compositions];
       if (response.data.length === 100) {
@@ -185,13 +240,17 @@ export const compositionComponentScript = {
       });
       if (window.outerWidth < 500) {
         $(".slider-nav").slick("unslick");
-        // const sliderComposition = document.querySelector(".slider-nav");
-        // await sliderComposition.classList.add("slider_mobile");
-        // sliderComposition.classList.remove(
-        //   "slider-nav",
-        //   "slick-initialized",
-        //   "slick-slider"
-        // );
+      }
+    },
+    async callCategories() {
+      try {
+        const response = await axios.get(
+          `${baseUrl}/wp-json/wc/store/products/categories?_fields=id,name,slug`
+        );
+        const categories = response.data;
+        this.listOfCategories = [...categories];
+      } catch (error) {
+        console.error(error);
       }
     },
     async callMarcos(page) {
@@ -222,10 +281,28 @@ export const compositionComponentScript = {
         return null;
       }
     },
+    async callRepisas() {
+      const repisasList = new Set(this.repisasIds);
+      try {
+        const promises = [...repisasList].map(async (id) => {
+          if (this.repisas.has(id)) return this.repisas.get(id);
+
+          const response = await axios.get(
+            `${baseUrl}/wp-json/wc/store/products/${id}?_fields=id,name,variations,prices`
+          );
+
+          this.repisas.set(id, response.data);
+
+          return response.data;
+        });
+
+        Promise.all(promises);
+      } catch (err) {
+        console.error(err);
+      }
+    },
     async callProducts(page) {
       if (!this.haveMore) return;
-
-      console.log("Llamamos obras");
 
       try {
         const response = await axios.get(
@@ -241,13 +318,10 @@ export const compositionComponentScript = {
         );
         this.productPage += 1;
 
-        console.log(response.data);
-
         const onlyVariableProducts = response.data.filter(
           (product) => product.type === "variable"
         );
 
-        console.log(onlyVariableProducts);
         this.products = [...this.products, ...onlyVariableProducts];
 
         if (onlyVariableProducts.length === 0)
@@ -303,6 +377,16 @@ export const compositionComponentScript = {
     setComposition(index) {
       this.selectedComposition = this.compositions[index];
       this.selectedArtworks = new Array(this.selectedComposition.obras.length);
+      if (this.selectedComposition.repisas) {
+        let availableRepisas = this.selectedComposition.repisas.map((id) =>
+          this.repisas.get(id)
+        );
+        console.log(new Array(availableRepisas.length));
+        this.selectedRepisas = new Array(availableRepisas.length);
+        this.availableRepisas = [...availableRepisas];
+      } else {
+        this.availableRepisas = [];
+      }
       this.changeStep(1);
     },
     setDimensions(dimensions, selectedIndex) {
@@ -310,12 +394,10 @@ export const compositionComponentScript = {
     },
     touchArtwork(product) {
       if (this.selectedArtworksMap.has(product.id)) {
-        console.log(product.id, "Estaba seleccionado");
         if (
           this.selectedArtworksMap.get(product.id) !==
           this.selectedDimensions.index
         ) {
-          console.log(product.id, "Era de otro");
           this.removeArtwork(this.selectedArtworksMap.get(product.id));
           this.selectArtwork(product);
         } else {
@@ -324,13 +406,13 @@ export const compositionComponentScript = {
       } else {
         this.selectArtwork(product);
       }
+      this.updateMarcos();
     },
     selectArtwork(product) {
       const newSelectedArtworks = [...this.selectedArtworks];
       newSelectedArtworks[this.selectedDimensions.index] = product;
       for (let [k, v] of this.selectedArtworksMap) {
         if (v === this.selectedDimensions.index) {
-          console.log(v, "el index ya estaba ocupado");
           this.selectedArtworksMap.delete(k);
         }
       }
@@ -344,7 +426,6 @@ export const compositionComponentScript = {
       const newSelectedArtworks = [...this.selectedArtworks];
       for (let [k, v] of this.selectedArtworksMap) {
         if (v === index) {
-          console.log(v, "el index ya estaba ocupado");
           this.selectedArtworksMap.delete(k);
         }
       }
@@ -352,10 +433,36 @@ export const compositionComponentScript = {
       newSelectedArtworks[index] = undefined;
       this.selectedArtworks = [...newSelectedArtworks];
     },
+    updateMarcos() {
+      let marcos = [];
+      this.selectedArtworks.forEach((art, index) => {
+        if (art) {
+          let variations = art.variations.filter((vari) => {
+            let tamanos = vari.attributes.find((att) => att.name === "Tamaño");
+            return this.selectedComposition.obras[index] === tamanos.value;
+          });
+          let marcosToAdd = variations.map((vari) => {
+            let marcosAtt = vari.attributes.find((att) => att.name === "Marco");
+            return marcosAtt.value;
+          });
+
+          if (marcos.length === 0) {
+            marcos = [...marcosToAdd];
+          } else {
+            marcos = marcos.filter((marco) => marcosToAdd.includes(marco));
+          }
+        }
+      });
+
+      if (marcos.length > 0) {
+        this.filteredMarcos = this.marcos.filter((marco) =>
+          marcos.includes(marco.slug)
+        );
+      }
+    },
     changeStep(step) {
       this.step = step;
       this.stepInfo = stepsDescription[this.step];
-      console.log(step);
       if (step >= 0) {
         this.mobile = true;
       }
@@ -363,13 +470,6 @@ export const compositionComponentScript = {
     unslike() {
       if (window.outerWidth < 500) {
         $(".slider-nav").slick("unslick");
-        // const sliderComposition = document.querySelector(".slider-nav");
-        // sliderComposition.classList.add("slider_mobile");
-        // sliderComposition.classList.remove(
-        //   "slider-nav",
-        //   "slick-initialized",
-        //   "slick-slider"
-        // );
       } else {
         $(".slider-nav").slick({
           infinite: true,
@@ -387,16 +487,18 @@ export const compositionComponentScript = {
             },
           ],
         });
-        // const sliderComposition = document.querySelector(".slider_mobile");
-        // if (sliderComposition) {
-        //   sliderComposition.classList.add(
-        //     "slider-nav",
-        //     "slick-initialized",
-        //     "slick-slider"
-        //   );
-        //   sliderComposition.classList.remove("slider_mobile");
-        // }
       }
+    },
+  },
+  filters: {
+    formatName(slug) {
+      let words = slug.split("-");
+      words = words.map((word) => {
+        word = word.split("");
+        word[0] = word[0].toUpperCase();
+        return word.join("");
+      });
+      return words.join(" ");
     },
   },
 };
