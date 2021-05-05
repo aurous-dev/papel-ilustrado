@@ -10911,14 +10911,28 @@ header.woocommerce-products-header,
 
 .build__row {
   height: 400px;
-  overflow-x: scroll; }
+  overflow-x: scroll;
+  justify-content: center;
+  align-items: center; }
+  .build__row .btn-send {
+    background-color: #2A3D42;
+    color: #FFFFFF; }
+    @media (min-width: 61.25em) and (max-width: 81.24em) {
+      .build__row .btn-send:hover {
+        background-color: #F4997E; } }
+    @media (min-width: 20em) and (max-width: 46.24em) {
+      .build__row .btn-send {
+        margin-bottom: 15px;
+        font-size: 14px; } }
   .build__row--arts {
     margin-bottom: 20px; }
     .build__row--arts button {
-      position: relative; }
+      position: relative;
+      display: flex;
+      margin: 0 auto; }
     .build__row--arts img {
       max-width: 100%;
-      height: auto; }
+      max-height: 160px; }
 
 form.w-checkout__container {
   display: flex;
@@ -13108,7 +13122,9 @@ nav.woocommerce-breadcrumb {
           display: block;
           flex: 0 0 25%;
           max-width: 25%;
-          padding: 0 8px; }
+          padding: 0 8px;
+          min-height: 80px;
+          margin-bottom: 8px; }
           #composition-component .slider-nav button img {
             width: 100%;
             height: auto; }
@@ -13404,14 +13420,28 @@ nav.woocommerce-breadcrumb {
       height: 45px; }
   .build-modal__container .build__row {
     height: 400px;
-    overflow-x: scroll; }
+    overflow-x: scroll;
+    justify-content: center;
+    align-items: center; }
+    .build-modal__container .build__row .btn-send {
+      background-color: #2A3D42;
+      color: #FFFFFF; }
+      @media (min-width: 61.25em) and (max-width: 81.24em) {
+        .build-modal__container .build__row .btn-send:hover {
+          background-color: #F4997E; } }
+      @media (min-width: 20em) and (max-width: 46.24em) {
+        .build-modal__container .build__row .btn-send {
+          margin-bottom: 15px;
+          font-size: 14px; } }
     .build-modal__container .build__row--arts {
       margin-bottom: 20px; }
       .build-modal__container .build__row--arts button {
-        position: relative; }
+        position: relative;
+        display: flex;
+        margin: 0 auto; }
       .build-modal__container .build__row--arts img {
         max-width: 100%;
-        height: auto; }
+        max-height: 160px; }
   .build-modal__container.mobile {
     display: none; }
     .build-modal__container.mobile .build__row {

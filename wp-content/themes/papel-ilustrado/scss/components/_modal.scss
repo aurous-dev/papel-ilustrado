@@ -51,14 +51,32 @@
 .build__row {
   height: 400px;
   overflow-x: scroll;
+  justify-content: center;
+  align-items: center;
+  .btn-send {
+    background-color: $color-indigo;
+    color: $color-white;
+    @include mq($from:desktop, $until:wide) {
+      &:hover {
+        background-color: $color-salmon;
+      }
+    }
+    @include mq ($from:mobile, $until:tablet) {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+  }
   &--arts {
     margin-bottom: 20px;
     button {
       position: relative;
+      display: flex;
+      margin: 0 auto;
     }
     img {
       max-width: 100%;
-      height: auto;
+      max-height: 160px;
+
     }
   }
 }

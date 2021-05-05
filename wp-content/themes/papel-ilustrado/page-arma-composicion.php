@@ -156,7 +156,9 @@ get_header();
                                  <img v-else src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
                               </button>
                            </div>
-                           <button v-if="haveMore" @click="callProducts(productPage)" aria-label="Ver mas">Ver más</button>
+                           <div class="btn col-12">
+                              <button class="btn-send" v-if="haveMore" @click="callProducts(productPage)" aria-label="Ver mas">Ver más</button>
+                           </div>
                         </div>
                      </div>
                      <!-- Contenido-->
@@ -244,7 +246,9 @@ get_header();
                   <img v-else src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
                </button>
             </div>
-            <button v-if="haveMore" @click="callProducts(productPage)" aria-label="Ver mas">Ver más</button>
+            <div class="btn col-12">
+               <button class="btn-send" v-if="haveMore" @click="callProducts(productPage)" aria-label="Ver mas">Ver más</button>
+            </div>
          </div>
          
          <div class="build-price">
