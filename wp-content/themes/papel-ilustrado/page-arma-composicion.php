@@ -96,7 +96,7 @@ get_header();
          <div v-if="step === 2" class="build-price" v-if='selectedComposition && selectedComposition.imagen'>
             <div class="build-price__number">
                <h2>Precio Total:</h2>
-               <span>${{totalPrice}}</span>
+               <span>${{totalPrice | milesSeparator}}</span>
             </div>
             <a class="build-price__btn btn-principal" :disabled="!areAllArtsSelected" :href="urlToCart">
                Agregar al carrito
@@ -155,6 +155,8 @@ get_header();
                                  <img v-if="product.images[0]" :src="product.images[0].src" alt="">
                                  <img v-else src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
                               </button>
+                              <h5 v-html="product.name" ></h5>
+                              <span>Desde ${{product.prices.regular_price | milesSeparator}}</span>
                            </div>
                            <div class="btn col-12">
                               <button class="btn-send" v-if="haveMore" @click="callProducts(productPage)" aria-label="Ver mas">Ver más</button>
@@ -178,7 +180,7 @@ get_header();
       
       <div v-if="step > 0" class="build-modal__container mobile">
          <!-- SELECCION DE TAMAÑO DE OBRA PARA MOBILE -->
-         <div class="build_lista" v-if='selectedComposition && selectedComposition.imagen'>
+         <div class="build_lista" v-if='selectedComposition'>
             <ul>
                <li v-for="(art, index) in selectedComposition.obras">
                   <button v-if="!selectedArtworks[index]" class="no-selected" :class="{'on-selection': selectedDimensions && selectedDimensions.index === index}" @click="setDimensions(art, index)">
@@ -214,6 +216,21 @@ get_header();
             </select>
          </div>
          <!-- SELECTOR DE MARCOS -->
+         <div v-if="selectedComposition.repisas && selectedRepisas.length > 0">
+            <!-- SELECTOR DE REPISAS -->
+            <div v-for="(repisa, index) in availableRepisas" class="btn-select">
+               Selecciona el color de la repisa:
+               <select v-model="selectedRepisas[index]">
+                  <option hidden :value="undefined" selected="selected" disabled="disabled">
+                     Elige un color
+                  </option>
+                  <option v-for="option in repisa.variations" :key="option.id" :value="option.id">
+                     {{ option.attributes[0].value | formatName }}
+                  </option>
+               </select>
+            </div>
+            <!-- SELECTOR DE REPISAS -->
+         </div>
 
          <div v-if="step === 1" class="build__filter">
             <div class="build__filter--icon">
@@ -221,8 +238,9 @@ get_header();
                filtrar por
             </div>
             <form action="">
-               <select name="categoria" id="categoria">
-                  <option value="" selected> Categoría </option>
+               <select v-model="selectedCategory" name="categoria" id="categoria">
+                  <option value="" selected hidden> Categoría </option>
+                  <option v-for="category in listOfCategories" :key="category.slug" :value="category.slug" selected> {{category.name}} </option>
                </select>
                <select name="color" id="color">
                   <option value="" selected> Color </option>
@@ -245,6 +263,8 @@ get_header();
                   <img v-if="product.images[0]" :src="product.images[0].src" alt="">
                   <img v-else src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
                </button>
+               <h5 v-html="product.name" ></h5>
+               <span>Desde ${{product.prices.regular_price | milesSeparator}}</span>
             </div>
             <div class="btn col-12">
                <button class="btn-send" v-if="haveMore" @click="callProducts(productPage)" aria-label="Ver mas">Ver más</button>
@@ -271,7 +291,7 @@ get_header();
             <div class="build-price__container">
                <div class="build-price__number">
                   <h2>Precio Total:</h2>
-                  <span>${{totalPrice}}</span>
+                  <span>${{totalPrice | milesSeparator}}</span>
                </div>
 
                <!-- Añadir clase disabled para que agrege el bg correcto -->

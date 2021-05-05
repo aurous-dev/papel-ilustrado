@@ -500,5 +500,15 @@ export const compositionComponentScript = {
       });
       return words.join(" ");
     },
+    milesSeparator(num) {
+      if (num < 1000) return num;
+      let numArrayReversed = `${num}`.split("").reverse();
+      let resultArrayReversed = [];
+      for (let i = 0; i < numArrayReversed.length; i++) {
+        if (i > 0 && i % 3 === 0) resultArrayReversed.push(".");
+        resultArrayReversed.push(numArrayReversed[i]);
+      }
+      return resultArrayReversed.reverse().join("");
+    },
   },
 };
