@@ -10075,7 +10075,7 @@ header.woocommerce-products-header,
       object-fit: cover; }
     .simple-product__container figure.woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image:first-child a img {
       max-height: 550px;
-      object-fit: cover;
+      object-fit: contain;
       width: 100% !important;
       margin-bottom: 15px; }
   .simple-product__container .woosg_total.woosg-total.woosg-text {
@@ -11637,7 +11637,9 @@ h2.w-cart__title {
     width: auto; }
     .woosg_wrap.woosg-wrap .woosg-product .woosg-thumb img {
       max-width: unset;
-      width: 70px; }
+      width: 70px;
+      height: 85px;
+      object-fit: cover; }
   .woosg_wrap.woosg-wrap .woosg-product .woosg-title {
     display: flex;
     flex-wrap: wrap;
