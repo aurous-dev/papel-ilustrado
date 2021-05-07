@@ -36,6 +36,7 @@ export const compositionComponentScript = {
     compositions: [],
     marcos: [],
     filteredMarcos: [],
+    search: "",
     products: [],
     isLoading: false,
     selectedMarco: "Sin marco",
@@ -86,7 +87,16 @@ export const compositionComponentScript = {
             (dimension) => dimension.name === this.selectedDimensions.dimensions
           );
 
-          return haveDimention;
+          let isDecoration = product.categories.some(
+            (productCategory) =>
+              productCategory.slug.includes("decoracion") ||
+              productCategory.slug.includes("repisa") ||
+              productCategory.slug.includes("espejo") ||
+              productCategory.slug.includes("murales") ||
+              productCategory.slug.includes("uncategorized")
+          );
+
+          return haveDimention && !isDecoration;
         });
         return finalProducts;
       }
@@ -101,11 +111,29 @@ export const compositionComponentScript = {
               productCategory.slug.includes(this.selectedCategory)
           );
 
+          // ! Search by name
+          // let nameIsInSearch = product.name.includes(this.search);
+          let nameIsInSearch = product.name
+            .toLowerCase()
+            .normalize("NFKD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/&#038;/g, "&")
+            .replace(/\\u[\dA-F]{4}/gi, (match) =>
+              String.fromCharCode(parseInt(match.replace(/\\u/g, ""), 16))
+            )
+            .includes(
+              this.search
+                .toLowerCase()
+                .normalize("NFKD")
+                .replace(/[\u0300-\u036f]/g, "")
+            );
+
           // ? Final return with al filters
-          return haveCategorySelected;
+          return haveCategorySelected && nameIsInSearch;
         });
 
-        if (filteredProducts.length === 0) this.callProducts(this.productPage);
+        if (filteredProducts.length === 0 && this.haveMore)
+          this.callProducts(this.productPage);
 
         return filteredProducts;
       }
@@ -168,7 +196,6 @@ export const compositionComponentScript = {
           this.selectedRepisas.length > 0 &&
           !this.selectedRepisas.includes(undefined)
         ) {
-          this.console("repisas", this.selectedRepisas);
           let repisas = this.selectedRepisas.join(",");
           productsIds = `${productsIds},${repisas}`;
         }
@@ -257,7 +284,15 @@ export const compositionComponentScript = {
           `${baseUrl}/wp-json/wc/store/products/categories?_fields=id,name,slug`
         );
         const categories = response.data;
-        this.listOfCategories = [...categories];
+        const filteredCategories = categories.filter(
+          (category) =>
+            !category.slug.includes("decoracion") &&
+            !category.slug.includes("repisa") &&
+            !category.slug.includes("espejo") &&
+            !category.slug.includes("murales") &&
+            !category.slug.includes("uncategorized")
+        );
+        this.listOfCategories = [...filteredCategories];
       } catch (error) {
         console.error(error);
       }
@@ -333,7 +368,7 @@ export const compositionComponentScript = {
 
         this.products = [...this.products, ...onlyVariableProducts];
 
-        if (onlyVariableProducts.length === 0)
+        if (onlyVariableProducts.length === 0 && this.haveMore)
           await this.callProducts(this.productPage);
 
         if (response.data.length !== 100) {

@@ -134,12 +134,13 @@ get_header();
                                  <option value="" selected hidden> Categoría </option>
                                  <option v-for="category in listOfCategories" :key="category.slug" :value="category.slug" selected> {{category.name}} </option>
                               </select>
-                              <select name="color" id="color">
+                              <!-- <select name="color" id="color">
                                  <option value="" selected> Color </option>
                               </select>
                               <select name="tags" id="tags">
                                  <option value="" selected> Temas/tags </option>
-                              </select>
+                              </select> -->
+                              <input aria-label="Buscar obra" type='text' v-model='search' placeholder="Buscar obra..." />
                            </form>
                         </div>
 
@@ -152,7 +153,7 @@ get_header();
                                        {{selectedArtworksMap.get(product.id)+1 || 0}}
                                     </span>
                                  </div>
-                                 <img v-if="product.images[0]" :src="product.images[0].src" alt="">
+                                 <img v-if="product.images[0]" :src="product.images[0].src" loading="lazy" decoding="async" alt="">
                                  <img v-else src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
                               </button>
                               <h5 v-html="product.name" ></h5>
@@ -190,7 +191,7 @@ get_header();
                   <div v-else class="selected">
                      <button @click="setDimensions(art, index)">
                         <div class="artimage__container">
-                           <img v-if="selectedArtworks[index].images[0] && selectedArtworks[index].images[0].src" class="artimage" :src="selectedArtworks[index].images[0].src" alt="">
+                           <img v-if="selectedArtworks[index].images[0] && selectedArtworks[index].images[0].src" class="artimage" :src="selectedArtworks[index].images[0].src" loading="lazy" decoding="async" alt="">
                            <img v-else class="artimage" src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
                         </div>
                      </button>
@@ -242,12 +243,13 @@ get_header();
                   <option value="" selected hidden> Categoría </option>
                   <option v-for="category in listOfCategories" :key="category.slug" :value="category.slug" selected> {{category.name}} </option>
                </select>
-               <select name="color" id="color">
+               <!-- <select name="color" id="color">
                   <option value="" selected> Color </option>
                </select>
                <select name="tags" id="tags">
                   <option value="" selected> Temas/tags </option>
-               </select>
+               </select> -->
+               <input aria-label="Buscar obra" type='text' v-model='search' placeholder="Buscar obra..." />
             </form>
          </div>
 
@@ -260,7 +262,7 @@ get_header();
                         {{selectedArtworksMap.get(product.id)+1 || 0}}
                      </span>
                   </div>
-                  <img v-if="product.images[0]" :src="product.images[0].src" alt="">
+                  <img v-if="product.images[0]" :src="product.images[0].src" loading="lazy" decoding="async" alt="">
                   <img v-else src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
                </button>
                <h5 v-html="product.name" ></h5>
