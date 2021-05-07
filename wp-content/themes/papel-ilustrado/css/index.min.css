@@ -11572,6 +11572,7 @@ h2.w-cart__title {
 .woocommerce-products-loop-wrapper ul.products {
   display: flex;
   align-items: stretch;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 20px; }
   .woocommerce-products-loop-wrapper ul.products li.product {
