@@ -184,40 +184,49 @@ export const compositionComponentScript = {
       console.groupEnd();
     },
     async callCompositions(page) {
-      const response = await axios.get(
-        `${baseUrl}/wp-json/wp/v2/composicion?_fields=id,acf`,
-        {
-          params: {
-            per_page: 100,
-            page,
-          },
-        }
-      );
+      try {
+        const response = await axios.get(
+          `${baseUrl}/wp-json/wp/v2/composicion?_fields=id,acf`,
+          {
+            params: {
+              per_page: 100,
+              page,
+            },
+          }
+        );
 
-      const compositions = response.data.map((composition) => {
-        let simpleComposition = {
-          id: composition.id,
-          icono: composition.acf.icono,
-          imagen: composition.acf.imagen,
-          obras: composition.acf.obras.map((obra) => obra.tamano),
-        };
-        if (composition.acf?.repisa) {
-          let repisasToAdd = composition.acf.repisas.map(
-            (repisa) => repisa.repisa
-          );
-          this.repisasIds = [...this.repisasIds, ...repisasToAdd];
-          simpleComposition = {
-            ...simpleComposition,
-            repisas: [...repisasToAdd],
+        const compositions = response.data.map((composition) => {
+          let simpleComposition = {
+            id: composition.id,
+            icono: composition.acf.icono,
+            imagen: composition.acf.imagen,
+            obras: composition.acf.obras.map((obra) => obra.tamano),
           };
-        }
-        return simpleComposition;
-      });
+          let validateRepisa =
+            composition.acf?.repisa === "false"
+              ? false
+              : !!composition.acf?.repisa;
+          if (validateRepisa) {
+            let repisasToAdd = composition.acf.repisas.map(
+              (repisa) => repisa.repisa
+            );
+            this.repisasIds = [...this.repisasIds, ...repisasToAdd];
+            simpleComposition = {
+              ...simpleComposition,
+              repisas: [...repisasToAdd],
+            };
+          }
+          return simpleComposition;
+        });
 
-      this.compositions = [...this.compositions, ...compositions];
-      if (response.data.length === 100) {
-        await this.callCompositions(page + 1);
-      } else {
+        this.compositions = [...this.compositions, ...compositions];
+        if (response.data.length === 100) {
+          await this.callCompositions(page + 1);
+        } else {
+          return null;
+        }
+      } catch (error) {
+        console.error(error);
         return null;
       }
     },
