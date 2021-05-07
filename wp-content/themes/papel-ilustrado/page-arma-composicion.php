@@ -22,7 +22,7 @@ get_header();
          </div>
       </section>
       <!-- Slider -->
-      <div class="slider-nav">
+      <div v-bind:class="[step !== 0 ? 'ocultar' : ' ', 'slider-nav']">
          <button  class="build-composition__nav" v-for="(com, index) in compositions" :key="com.id" @click="setComposition(index)">
             <img :src="com.icono" alt="">
          </button>
@@ -180,7 +180,7 @@ get_header();
       
       <div v-if="step > 0" class="build-modal__container mobile">
          <!-- SELECCION DE TAMAÑO DE OBRA PARA MOBILE -->
-         <div class="build_lista" v-if='selectedComposition'>
+         <div id="steps" class="build_lista" v-if='selectedComposition'>
             <ul>
                <li v-for="(art, index) in selectedComposition.obras">
                   <button v-if="!selectedArtworks[index]" class="no-selected" :class="{'on-selection': selectedDimensions && selectedDimensions.index === index}" @click="setDimensions(art, index)">
@@ -253,7 +253,7 @@ get_header();
 
          <div v-if="step === 1" class="row build__row" >
             <!-- Deberian ser btn como los marcos -->
-            <div v-for="product in finalFilteredProducts" class="col-md-2 col-4 build__row--arts">
+            <a href="#steps" v-for="product in finalFilteredProducts" class="col-md-2 col-4 build__row--arts">
                <button type="button" data-dismiss="modal" :aria-label="`Seleccionar ${product.name}`" @click="touchArtwork(product)">
                   <div v-show="selectedArtworks.some(sp => sp && sp.id === product.id)" class="selected-overlay">
                      <span>
@@ -265,7 +265,7 @@ get_header();
                </button>
                <h5 v-html="product.name" ></h5>
                <span>Desde ${{product.prices.regular_price | milesSeparator}}</span>
-            </div>
+            </a>
             <div class="btn col-12">
                <button class="btn-send" v-if="haveMore" @click="callProducts(productPage)" aria-label="Ver mas">Ver más</button>
             </div>

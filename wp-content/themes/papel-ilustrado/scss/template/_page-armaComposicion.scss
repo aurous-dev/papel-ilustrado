@@ -73,7 +73,7 @@
     }
 
     .btn__mobile {
-      // display: block;
+      display: block;
       font-size: 14px;
       text-align: left;
       text-decoration: underline;
@@ -87,10 +87,17 @@
       }
     }
 
+    .ocultar {
+      opacity: 0;
+      visibility: hidden;
+      max-height: 20px;
+    }
+
     // slider mobile
     .slider-nav {
       display: flex;
       flex-wrap: wrap;
+      transition: $tr3;
       button {
         display: block;
         flex: 0 0 25%;

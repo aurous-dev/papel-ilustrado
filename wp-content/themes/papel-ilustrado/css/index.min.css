@@ -13104,6 +13104,7 @@ nav.woocommerce-breadcrumb {
       #composition-component > .mobile {
         order: 3; }
       #composition-component .btn__mobile {
+        display: block;
         font-size: 14px;
         text-align: left;
         text-decoration: underline;
@@ -13115,9 +13116,14 @@ nav.woocommerce-breadcrumb {
         #composition-component .btn__mobile svg {
           transform: rotate(180deg);
           margin-right: 5px; }
+      #composition-component .ocultar {
+        opacity: 0;
+        visibility: hidden;
+        max-height: 20px; }
       #composition-component .slider-nav {
         display: flex;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+        transition: all ease-in-out 0.3s; }
         #composition-component .slider-nav button {
           display: block;
           flex: 0 0 25%;
