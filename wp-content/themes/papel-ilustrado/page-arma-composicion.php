@@ -48,7 +48,7 @@ get_header();
                            <img v-else class="artimage" src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
                         </div>
                      </button>
-                     <div class="description">{{selectedArtworks[index].name}}</div>
+                     <div class="description"> <span v-html="selectedArtworks[index].name"></span></div>
                      <span class="selected-close" aria-hidden="true" @click="removeArtwork(index)">&times;</span>
                      <div class="description">Tamaño: {{art}}</div>
                      <div class="number">{{index+1}}</div>
@@ -255,19 +255,21 @@ get_header();
 
          <div v-if="step === 1" class="row build__row" >
             <!-- Deberian ser btn como los marcos -->
-            <a href="#steps" v-for="product in finalFilteredProducts" class="col-md-2 col-4 build__row--arts">
+            <div href="#steps" v-for="product in finalFilteredProducts" class="col-md-2 col-4 build__row--arts">
                <button type="button" data-dismiss="modal" :aria-label="`Seleccionar ${product.name}`" @click="touchArtwork(product)">
                   <div v-show="selectedArtworks.some(sp => sp && sp.id === product.id)" class="selected-overlay">
                      <span>
                         {{selectedArtworksMap.get(product.id)+1 || 0}}
                      </span>
                   </div>
-                  <img v-if="product.images[0]" :src="product.images[0].src" loading="lazy" decoding="async" alt="">
-                  <img v-else src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+                  <a href="#steps">
+                     <img v-if="product.images[0]" :src="product.images[0].src" loading="lazy" decoding="async" alt="">
+                     <img v-else src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
+                  </a>
                </button>
                <h5 v-html="product.name" ></h5>
                <span>Desde ${{product.prices.regular_price | milesSeparator}}</span>
-            </a>
+            </div>
             <div class="btn col-12">
                <button class="btn-send" v-if="haveMore" @click="callProducts(productPage)" aria-label="Ver mas">Ver más</button>
             </div>

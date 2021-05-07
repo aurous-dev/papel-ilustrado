@@ -41,9 +41,20 @@
     margin-right: 20px;
   }
   form {
+    width: 50%;
+    @include d-flex(center,center);
     select {
       width: 200px;
-      height: 45px;
+      height: 43px;
+      border: 1px solid $color-indigo;
+      margin-right: 20px;
+      padding: 5px 10px;
+    }
+    input {
+      width: 50%;
+      height: 43px;
+      border: 1px solid $color-indigo;
+      padding: 5px 10px;
     }
   }
 }
@@ -85,7 +96,7 @@
       color: $color-indigo;
       font-size: 14px;
       text-align: center;
-      margin-bottom: 3px;
+      margin: 3px 0;
       @include fonts-display(600)
     }
     & > span {
@@ -93,6 +104,7 @@
       text-align: center;
       font-size: 12px;
       text-align: center;
+      color: $color-indigo;
       @include fonts-display(500)
     }
   }

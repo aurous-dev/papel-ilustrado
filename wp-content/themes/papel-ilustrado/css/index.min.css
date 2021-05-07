@@ -10905,9 +10905,21 @@ header.woocommerce-products-header,
   margin-bottom: 50px; }
   .build__filter--icon {
     margin-right: 20px; }
-  .build__filter form select {
-    width: 200px;
-    height: 45px; }
+  .build__filter form {
+    width: 50%;
+    justify-content: center;
+    align-items: center; }
+    .build__filter form select {
+      width: 200px;
+      height: 43px;
+      border: 1px solid #2A3D42;
+      margin-right: 20px;
+      padding: 5px 10px; }
+    .build__filter form input {
+      width: 50%;
+      height: 43px;
+      border: 1px solid #2A3D42;
+      padding: 5px 10px; }
 
 .build__row {
   height: 400px;
@@ -10940,7 +10952,7 @@ header.woocommerce-products-header,
       color: #2A3D42;
       font-size: 14px;
       text-align: center;
-      margin-bottom: 3px;
+      margin: 3px 0;
       font-family: 'Raleway', sans-serif;
       font-weight: 600; }
     .build__row--arts > span {
@@ -10948,6 +10960,7 @@ header.woocommerce-products-header,
       text-align: center;
       font-size: 12px;
       text-align: center;
+      color: #2A3D42;
       font-family: 'Raleway', sans-serif;
       font-weight: 500; }
 
@@ -13297,7 +13310,6 @@ nav.woocommerce-breadcrumb {
           display: grid;
           text-align: left;
           grid-template-columns: 50px auto 20px;
-          grid-template-rows: 1fr 18px;
           color: #2A3D42;
           column-gap: 0.5rem; }
           .build-composition__modal .build_lista ul li .selected .artimage {
@@ -13328,8 +13340,6 @@ nav.woocommerce-breadcrumb {
             .build-composition__modal .build_lista ul li .selected .description:nth-child(2) {
               border-bottom: none; }
             .build-composition__modal .build_lista ul li .selected .description:nth-child(4) {
-              position: relative;
-              top: -2px;
               border-top: none; }
           .build-composition__modal .build_lista ul li .selected .selected-close {
             position: relative;
@@ -13340,18 +13350,19 @@ nav.woocommerce-breadcrumb {
             color: #FFFFFF;
             display: flex;
             border-radius: 50%;
+            align-self: center;
             justify-content: center;
             align-items: center; }
           .build-composition__modal .build_lista ul li .selected .number {
             position: absolute;
             left: 15px;
-            top: 9px;
             width: 20px;
             height: 20px;
             background-color: #F4997E;
             border-radius: 50%;
             font-size: 12px;
             color: #FFFFFF;
+            align-self: center;
             display: flex;
             justify-content: center;
             align-items: center; }
@@ -13443,9 +13454,21 @@ nav.woocommerce-breadcrumb {
     margin-bottom: 50px; }
     .build-modal__container .build__filter--icon {
       margin-right: 20px; }
-    .build-modal__container .build__filter form select {
-      width: 200px;
-      height: 45px; }
+    .build-modal__container .build__filter form {
+      width: 50%;
+      justify-content: center;
+      align-items: center; }
+      .build-modal__container .build__filter form select {
+        width: 200px;
+        height: 43px;
+        border: 1px solid #2A3D42;
+        margin-right: 20px;
+        padding: 5px 10px; }
+      .build-modal__container .build__filter form input {
+        width: 50%;
+        height: 43px;
+        border: 1px solid #2A3D42;
+        padding: 5px 10px; }
   .build-modal__container .build__row {
     height: 400px;
     overflow-x: scroll;
@@ -13477,7 +13500,7 @@ nav.woocommerce-breadcrumb {
         color: #2A3D42;
         font-size: 14px;
         text-align: center;
-        margin-bottom: 3px;
+        margin: 3px 0;
         font-family: 'Raleway', sans-serif;
         font-weight: 600; }
       .build-modal__container .build__row--arts > span {
@@ -13485,6 +13508,7 @@ nav.woocommerce-breadcrumb {
         text-align: center;
         font-size: 12px;
         text-align: center;
+        color: #2A3D42;
         font-family: 'Raleway', sans-serif;
         font-weight: 500; }
   .build-modal__container.mobile {
@@ -13509,7 +13533,8 @@ nav.woocommerce-breadcrumb {
           display: flex;
           flex: 0 0 32%;
           padding: 0 1%;
-          max-width: 32%; }
+          max-width: 32%;
+          margin-bottom: 10px; }
           .build-modal__container.mobile .build_lista ul li .selected {
             position: relative;
             display: flex;
@@ -13521,7 +13546,7 @@ nav.woocommerce-breadcrumb {
             padding-bottom: 5px; }
             .build-modal__container.mobile .build_lista ul li .selected .artimage {
               width: 100%;
-              max-height: 115px;
+              height: 115px;
               object-fit: contain; }
               .build-modal__container.mobile .build_lista ul li .selected .artimage__container {
                 width: 100%;

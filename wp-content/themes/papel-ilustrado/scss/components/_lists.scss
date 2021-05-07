@@ -32,9 +32,9 @@
         position: relative;
         display: grid;
         text-align: left;
-        align-items: center;
+        // align-items: center;
         grid-template-columns: 50px auto 20px;
-        grid-template-rows: 1fr 18px;
+        // grid-template-rows: 1fr 18px;
         color: $color-indigo;
         column-gap: 0.5rem;
 
@@ -72,8 +72,8 @@
             border-bottom: none;
           }
           &:nth-child(4) {
-            position: relative;
-            top: -2px;
+            // position: relative;
+            // top: -2px;
             border-top: none;
           }
         }
@@ -87,19 +87,21 @@
           color: $color-white;
           display: flex;
           border-radius: 50%;
+          align-self: center;
           @include d-flex(center, center);
         }
 
         .number {
           position: absolute;
           left: 15px;
-          top: 9px;
+          // top: 9px;
           width: 20px;
           height: 20px;
           background-color: $color-salmon;
           border-radius: 50%;
           font-size: 12px;
           color: $color-white;
+          align-self: center;
           display: flex;
           @include d-flex(center, center);
         }

@@ -162,6 +162,7 @@
           flex: 0 0 32%;
           padding: 0 1%;
           max-width: 32%;
+          margin-bottom: 10px;
           .selected {
             position: relative;
             display: flex;
@@ -174,7 +175,7 @@
 
             .artimage {
               width: 100%;
-              max-height: 115px;
+              height: 115px;
               object-fit: contain;
               &__container {
                 width: 100%;

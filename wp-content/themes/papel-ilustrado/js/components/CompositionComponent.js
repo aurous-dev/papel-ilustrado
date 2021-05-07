@@ -514,23 +514,6 @@ export const compositionComponentScript = {
     unslike() {
       if (window.outerWidth < 500) {
         $(".slider-nav").slick("unslick");
-      } else {
-        $(".slider-nav").slick({
-          infinite: true,
-          slidesToShow: 10,
-          slidesToScroll: 1,
-          dots: false,
-          arrows: true,
-          responsive: [
-            {
-              breakpoint: 770,
-              settings: {
-                slidesToShow: 5,
-                slidesToScroll: 1,
-              },
-            },
-          ],
-        });
       }
     },
   },
