@@ -15,7 +15,7 @@
       display: flex;
       margin: 0.2rem;
       width: 100%;
-      font-size: 13px;
+      font-size: 12px;
 
       .no-selected {
         width: 100%;
@@ -32,8 +32,9 @@
         position: relative;
         display: grid;
         text-align: left;
+        align-items: center;
         grid-template-columns: 50px auto 20px;
-        grid-template-rows: repeat(2, 18px);
+        grid-template-rows: 1fr 18px;
         color: $color-indigo;
         column-gap: 0.5rem;
 
@@ -71,6 +72,8 @@
             border-bottom: none;
           }
           &:nth-child(4) {
+            position: relative;
+            top: -2px;
             border-top: none;
           }
         }

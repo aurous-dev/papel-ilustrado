@@ -52,7 +52,7 @@
   height: 400px;
   overflow-x: scroll;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   .btn-send {
     background-color: $color-indigo;
     color: $color-white;
@@ -68,15 +68,32 @@
   }
   &--arts {
     margin-bottom: 20px;
+    padding: 0 10px;
     button {
       position: relative;
       display: flex;
       margin: 0 auto;
+      background-color: unset;
     }
     img {
       max-width: 100%;
-      max-height: 160px;
+      height: 160px;
+      object-fit: contain;
 
+    }
+    & > h5 {
+      color: $color-indigo;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 3px;
+      @include fonts-display(600)
+    }
+    & > span {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      text-align: center;
+      @include fonts-display(500)
     }
   }
 }

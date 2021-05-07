@@ -10913,7 +10913,7 @@ header.woocommerce-products-header,
   height: 400px;
   overflow-x: scroll;
   justify-content: center;
-  align-items: center; }
+  align-items: stretch; }
   .build__row .btn-send {
     background-color: #2A3D42;
     color: #FFFFFF; }
@@ -10925,14 +10925,31 @@ header.woocommerce-products-header,
         margin-bottom: 15px;
         font-size: 14px; } }
   .build__row--arts {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    padding: 0 10px; }
     .build__row--arts button {
       position: relative;
       display: flex;
-      margin: 0 auto; }
+      margin: 0 auto;
+      background-color: unset; }
     .build__row--arts img {
       max-width: 100%;
-      max-height: 160px; }
+      height: 160px;
+      object-fit: contain; }
+    .build__row--arts > h5 {
+      color: #2A3D42;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 3px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600; }
+    .build__row--arts > span {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      text-align: center;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500; }
 
 form.w-checkout__container {
   display: flex;
@@ -13264,7 +13281,7 @@ nav.woocommerce-breadcrumb {
         display: flex;
         margin: 0.2rem;
         width: 100%;
-        font-size: 13px; }
+        font-size: 12px; }
         .build-composition__modal .build_lista ul li .no-selected {
           width: 100%;
           background-color: #EEEEEE;
@@ -13280,7 +13297,7 @@ nav.woocommerce-breadcrumb {
           display: grid;
           text-align: left;
           grid-template-columns: 50px auto 20px;
-          grid-template-rows: repeat(2, 18px);
+          grid-template-rows: 1fr 18px;
           color: #2A3D42;
           column-gap: 0.5rem; }
           .build-composition__modal .build_lista ul li .selected .artimage {
@@ -13311,6 +13328,8 @@ nav.woocommerce-breadcrumb {
             .build-composition__modal .build_lista ul li .selected .description:nth-child(2) {
               border-bottom: none; }
             .build-composition__modal .build_lista ul li .selected .description:nth-child(4) {
+              position: relative;
+              top: -2px;
               border-top: none; }
           .build-composition__modal .build_lista ul li .selected .selected-close {
             position: relative;
@@ -13431,7 +13450,7 @@ nav.woocommerce-breadcrumb {
     height: 400px;
     overflow-x: scroll;
     justify-content: center;
-    align-items: center; }
+    align-items: stretch; }
     .build-modal__container .build__row .btn-send {
       background-color: #2A3D42;
       color: #FFFFFF; }
@@ -13443,14 +13462,31 @@ nav.woocommerce-breadcrumb {
           margin-bottom: 15px;
           font-size: 14px; } }
     .build-modal__container .build__row--arts {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      padding: 0 10px; }
       .build-modal__container .build__row--arts button {
         position: relative;
         display: flex;
-        margin: 0 auto; }
+        margin: 0 auto;
+        background-color: unset; }
       .build-modal__container .build__row--arts img {
         max-width: 100%;
-        max-height: 160px; }
+        height: 160px;
+        object-fit: contain; }
+      .build-modal__container .build__row--arts > h5 {
+        color: #2A3D42;
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 3px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600; }
+      .build-modal__container .build__row--arts > span {
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500; }
   .build-modal__container.mobile {
     display: none; }
     .build-modal__container.mobile .build__row {
