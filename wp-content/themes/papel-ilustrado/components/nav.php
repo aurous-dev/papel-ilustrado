@@ -71,7 +71,7 @@
             $firstname = $current_user->user_firstname; //get current user id 
             if (is_user_logged_in()) : ?>
                <div class="header__menu--sesions">
-                  <a href="/my-account">Hola, <b>
+                  <a href="<?php echo get_home_url(); ?>/my-account">Hola, <b>
                         <?php
                         if ($firstname) {
                            echo $firstname;
