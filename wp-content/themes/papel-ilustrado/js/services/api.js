@@ -26,7 +26,7 @@ export default class API {
       };
       return finalObject;
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
   async getOneFrame({ marco, precio }) {
@@ -36,7 +36,7 @@ export default class API {
       );
       return { ...response.data.acf, id: marco, precio };
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
   async getFrames(marcosArray) {
@@ -53,7 +53,7 @@ export default class API {
       }));
       return marcosInfoArray;
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 }

@@ -1,6 +1,11 @@
 <template>
   <div class="col-md-10 col-12">
-    <form @submit.prevent="handleSubmit" action="contact" method="POST" class="row">
+    <form
+      @submit.prevent="handleSubmit"
+      action="contact"
+      method="POST"
+      class="row"
+    >
       <div class="form-group col-md-6 col-12">
         <label for="nombre">Nombre</label>
         <input
@@ -8,11 +13,12 @@
           v-model="user.name"
           v-validate="'required|min:2'"
           name="nombre"
-          
           class="form-control"
           :class="{ 'is-invalid': errors.has('nombre') }"
         />
-        <div v-if="errors.has('nombre')" class="invalid-feedback">{{ errors.first("nombre") }}</div>
+        <div v-if="errors.has('nombre')" class="invalid-feedback">
+          {{ errors.first("nombre") }}
+        </div>
       </div>
       <div class="form-group col-md-6 col-12">
         <label for="apellido">Apellido</label>
@@ -21,11 +27,12 @@
           v-model="user.lastname"
           v-validate="'required|min:2'"
           name="apellido"
-          
           class="form-control"
           :class="{ 'is-invalid': errors.has('apellido') }"
         />
-        <div v-if="errors.has('nombre')" class="invalid-feedback">{{ errors.first("nombre") }}</div>
+        <div v-if="errors.has('nombre')" class="invalid-feedback">
+          {{ errors.first("nombre") }}
+        </div>
       </div>
       <div class="form-group col-12">
         <label for="email">Correo Electrónico</label>
@@ -33,13 +40,14 @@
           type="email"
           v-model="user.email"
           v-validate="'required|email'"
-          
           id="email"
           name="email"
           class="form-control"
           :class="{ 'is-invalid': errors.has('email') }"
         />
-        <div v-if="errors.has('email')" class="invalid-feedback">{{ errors.first("email") }}</div>
+        <div v-if="errors.has('email')" class="invalid-feedback">
+          {{ errors.first("email") }}
+        </div>
       </div>
       <div class="form-group col-12">
         <label for="subject">Asunto</label>
@@ -48,11 +56,12 @@
           v-model="user.subject"
           v-validate="'required|min:10'"
           name="asunto"
-          
           class="form-control"
           :class="{ 'is-invalid': errors.has('asunto') }"
         />
-        <div v-if="errors.has('asunto')" class="invalid-feedback">{{ errors.first("asunto") }}</div>
+        <div v-if="errors.has('asunto')" class="invalid-feedback">
+          {{ errors.first("asunto") }}
+        </div>
       </div>
       <div class="form-group col-12">
         <label for="message">Mensaje</label>
@@ -64,7 +73,9 @@
           class="form-control"
           :class="{ 'is-invalid': errors.has('mensaje') }"
         ></textarea>
-        <div v-if="errors.has('mensaje')" class="invalid-feedback">{{ errors.first("mensaje") }}</div>
+        <div v-if="errors.has('mensaje')" class="invalid-feedback">
+          {{ errors.first("mensaje") }}
+        </div>
       </div>
       <button class="btn btn-primary mt-2" type="submit">Enviar</button>
       <!-- <button-spinner
@@ -86,9 +97,6 @@ import ButtonSpinner from "vue-button-spinner";
 
 export default {
   name: "formu",
-  mounted() {
-    console.log("Formulario ejecutado");
-  },
   components: {
     ButtonSpinner,
   },
@@ -118,8 +126,6 @@ export default {
 
       this.homeurl = newUrl.join("");
     }
-
-    console.log(this.homeurl);
   },
   methods: {
     handleSubmit() {
