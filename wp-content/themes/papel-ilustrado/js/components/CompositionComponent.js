@@ -1,10 +1,9 @@
 import axios from "axios";
+import { baseUrlApi } from "../services/config";
 window.jQuery = $;
 window.$ = $;
 
-// const baseUrl = "http://localhost:8888/papel-ilustrado";
-// const baseUrl = "http://localhost/papel-ilustrado";
-const baseUrl = "http://aurouslabs.cl/papelilustrado";
+const baseUrl = baseUrlApi;
 
 const stepsDescription = [
   {
@@ -66,7 +65,6 @@ export const compositionComponentScript = {
     await this.callMarcos(1);
     await this.callCategories();
     await this.callProducts(1);
-    // await this.callACF(1);
     this.isLoading = false;
   },
   computed: {
@@ -205,11 +203,6 @@ export const compositionComponentScript = {
     },
   },
   methods: {
-    console(title, info) {
-      console.groupCollapsed(title);
-      console.log(info);
-      console.groupEnd();
-    },
     async callCompositions(page) {
       try {
         const response = await axios.get(
@@ -378,25 +371,6 @@ export const compositionComponentScript = {
         console.error(err);
       }
     },
-    async callACF(page) {
-      let acf = [];
-      const response = await axios.get(`${baseUrl}/wp-json/acf/v3/product`, {
-        params: {
-          per_page: 100,
-          page,
-        },
-      });
-      acf = [...acf, ...response.data];
-      this.products.forEach((product, index) => {
-        let theProd = acf.find((fields) => product.id === fields.id);
-        this.products[index] = { ...this.products[index], ...theProd };
-      });
-      if (response.data.length === 100) {
-        await this.callACF(page + 1);
-      } else {
-        return null;
-      }
-    },
     async callVariations(ids) {
       try {
         const promises = ids.map(async (id) => {
@@ -425,7 +399,6 @@ export const compositionComponentScript = {
         let availableRepisas = this.selectedComposition.repisas.map((id) =>
           this.repisas.get(id)
         );
-        console.log(new Array(availableRepisas.length));
         this.selectedRepisas = new Array(availableRepisas.length);
         this.availableRepisas = [...availableRepisas];
       } else {

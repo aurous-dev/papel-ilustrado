@@ -1,15 +1,7 @@
 import API from "../services/api";
+import { baseUrlApi } from "../services/config";
 
-const localUrl = window.location.href;
-const name = localUrl.split("/")[2];
-const devHosts = ["localhost", "localhost:8888", "dev.trono.host"];
-const fullApi = devHosts.includes(name)
-  ? `http://${name}/papel-ilustrado`
-  : name.includes(".devel")
-  ? `http://${name}`
-  : `https://${name}`;
-const api = new API("http://aurouslabs.cl/papelilustrado");
-// const api = new API("http://localhost/papel-ilustrado");
+const api = new API(baseUrlApi);
 
 export const sigleProductScript = {
   el: "#sigle-product-vue",

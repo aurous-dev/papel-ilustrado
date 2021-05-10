@@ -195,7 +195,7 @@ get_header();
                            <img v-else class="artimage" src="<?php echo get_template_directory_uri(); ?>/img/png/flower.png" alt="">
                         </div>
                      </button>
-                     <div class="description mt-3">{{selectedArtworks[index].name}}</div>
+                     <div class="description mt-3"><span v-html="selectedArtworks[index].name"></span></div>
                      <div class="description mt-1">{{art}}</div>
                      <span class="selected-close" aria-hidden="true" @click="removeArtwork(index)">&times;</span>
                      <div class="number">{{index+1}}</div>

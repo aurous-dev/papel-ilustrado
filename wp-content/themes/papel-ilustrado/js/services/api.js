@@ -1,5 +1,4 @@
 import axios from "axios";
-import WC from "@woocommerce/woocommerce-rest-api";
 
 export default class API {
   constructor(url) {
@@ -23,7 +22,6 @@ export default class API {
         name,
         prices,
         images,
-        // artista,
         marcos: [...aVerMarcos],
       };
       return finalObject;
@@ -53,12 +51,6 @@ export default class API {
         id: marco.id,
         ...marco.acf,
       }));
-      /* let marcosInfoArray = Promise.all(
-        marcosArray.map((elem) => {
-          return this.getOneFrame(elem).then((res) => res);
-        })
-      );
-      */
       return marcosInfoArray;
     } catch (error) {
       console.log(error);
